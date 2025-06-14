@@ -1,0 +1,19 @@
+.mainLayout {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  justify-content: flex-start;
+  block-size: 100dvh;
+  gap: 0;
+}
+
+.mainWrapper {
+  display: flex;
+  overflow-y: auto;
+  align-items: stretch;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  block-size: 100%;
+  gap: 20px;
+}
