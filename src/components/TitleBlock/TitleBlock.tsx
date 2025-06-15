@@ -11,7 +11,7 @@ const TitleBlock = (props: TitleBlockProps) => {
 
   return (
     <div className={cls.titleBlock}>
-      <h1 className={cls.title}>{title}</h1>
+      <h2 className={cls.title}>{title}</h2>
       {description && <p className={cls.description}>{description}</p>}
     </div>
   );
