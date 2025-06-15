@@ -8,11 +8,13 @@ const MainLayout = () => {
     <div className={cls.mainLayout}>
       <Header />
       <div className={cls.mainWrapper}>
-        <main>
-          <Suspense>
-            <Outlet />
-          </Suspense>
-        </main>
+        <div className={cls.contentWrapper}>
+          <main>
+            <Suspense>
+              <Outlet />
+            </Suspense>
+          </main>
+        </div>
       </div>
       <footer></footer>
     </div>

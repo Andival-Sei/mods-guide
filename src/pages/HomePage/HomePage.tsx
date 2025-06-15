@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import cls from './HomePage.module.scss';
+import { Link } from 'react-router-dom';
 
 interface HomePageProps {
   className?: string;
@@ -15,7 +16,7 @@ const HomePage: FC<HomePageProps> = () => {
       <p className={cls.description}>Ещё одно руководство по моддингу Скайрима.</p>
 
       <div className={cls.buttonWrapper}>
-        <button className={cls.gradientButton}>
+        <Link to="/welcome" className={cls.startBtn}>
           <span>Начать</span>
           <svg
             className={cls.buttonIcon}
@@ -26,7 +27,7 @@ const HomePage: FC<HomePageProps> = () => {
           >
             <path d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z" />
           </svg>
-        </button>
+        </Link>
       </div>
     </div>
   );
