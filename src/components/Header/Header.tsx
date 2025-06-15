@@ -13,10 +13,10 @@ const Header = () => {
 
   return (
     <header className={cls.header}>
-      <div className={cls.logoContainer}>
+      <Link to="/" className={cls.logoContainer}>
         <img src={logoImage} alt="Лого" className={cls.logo} />
         <span>Andival's Guide</span>
-      </div>
+      </Link>
 
       <nav className={cls.headerButtons}>
         <NavLink to="/">Главная</NavLink>
