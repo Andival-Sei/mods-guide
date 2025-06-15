@@ -1,6 +1,6 @@
 .mainLayout {
   display: flex;
-  overflow-y: auto;
+
   align-items: stretch;
   flex-direction: column;
   justify-content: flex-start;
@@ -10,26 +10,27 @@
 }
 
 .mainWrapper {
-  display: flex;
-  align-items: stretch;
-  flex-direction: column;
-  flex-grow: 1;
-  justify-content: space-between;
-  margin: 0 auto;
-  padding: 50px;
+  overflow-y: auto;
+  inline-size: 100%;
   block-size: 100%;
-  gap: 20px;
-  max-inline-size: 1200px;
-
-  @media (max-width: 768px) {
-    padding: 40px 10px;
-  }
 }
 
 .contentWrapper {
+  margin: 30px auto;
   padding: 30px;
   border-radius: 10px;
   background-color: var(--main-bg-color);
+  max-inline-size: 1200px;
+
+  @media (max-width: 1250px) {
+    margin: 30px 50px;
+  }
+
+  @media (max-width: 768px) {
+    margin: 30px 15px;
+  }
+
+
 }
 
 .homePageContent {
