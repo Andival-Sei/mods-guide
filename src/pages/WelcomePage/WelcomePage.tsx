@@ -1,6 +1,7 @@
 import TitleBlock from '../../components/TitleBlock/TitleBlock.tsx';
 import TextBlock from '../../components/TextBlock/TextBlock.tsx';
 import Paragraph from '../../components/Paragraph/Paragraph.tsx';
+import Message from '../../components/Message/Message.tsx';
 
 const WelcomePage = () => {
   return (
@@ -29,6 +30,13 @@ const WelcomePage = () => {
           вернуться сюда и продолжить свой путь.
         </Paragraph>
       </TextBlock>
+      <Message type="notification">
+        Моё руководство включает более 1500 модификаций, что делает его масштабным и далеко не самым
+        быстрым или лёгким проектом. Оно требует внимательности и, возможно, некоторых более
+        продвинутых навыков в моддинге. Наилучшим образом это руководство подойдёт тем, у кого уже
+        есть средний или высокий уровень опыта в установке модов. Однако даже новички смогут успешно
+        его завершить, если будут следовать инструкциям тщательно и шаг за шагом.
+      </Message>
     </>
   );
 };

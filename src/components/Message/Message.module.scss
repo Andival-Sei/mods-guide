@@ -1,0 +1,44 @@
+.message {
+  position: relative;
+  margin-bottom: 16px;
+  padding: 24px 16px 16px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  text-transform: uppercase;
+}
+
+.content {
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 10px;
+  text-align: center;
+}
+
+.notification {
+  color: #bcc0ea;
+  border-color: #636cff;
+  background-color: #212131;
+
+  .label {
+    color: #bcc0ea;
+  }
+}
+
+.warning {
+  color: #e6b541;
+  border-color: #f9b440;
+  background-color: #3c3422;
+
+  .label {
+    color: #e6b541;
+  }
+}

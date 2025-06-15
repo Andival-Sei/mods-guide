@@ -15,9 +15,13 @@
   flex-direction: column;
   flex-grow: 1;
   justify-content: space-between;
-  padding: 50px 50px;
+  padding: 50px;
   block-size: 100%;
   gap: 20px;
+
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
 }
 
 .contentWrapper {
