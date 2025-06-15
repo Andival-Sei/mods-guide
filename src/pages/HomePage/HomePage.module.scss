@@ -1,35 +1,79 @@
 .homePage {
-  max-width: 1200px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   margin: 0 auto;
   padding: 20px;
+  text-align: center;
+  max-inline-size: 1200px;
+}
 
-  h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+.title {
+  font-weight: 600;
+  line-height: 120%;
+  cursor: default;
+  letter-spacing: -.88px;
+  color: transparent;
+  background: linear-gradient(180deg, #e5dddd, #ea8732);
+  background-clip: text;
+  margin-block-start: 100px;
+}
+
+.description {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-top: 10px;
+  cursor: default;
+  color: #a9a9a9;
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.gradientButton {
+  font-weight: 600;
+  line-height: 1.5;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #1f1f23, #2a2a30);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  gap: 8px;
+
+  // Контейнер для текста
+  span {
+    color: white;
   }
 
-  p {
-    font-size: 1.1rem;
-    line-height: 1.5;
-    margin-bottom: 2rem;
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(234, 135, 50, 0.3);
+
+    .buttonIcon {
+      transform: translateX(4px);
+    }
+  }
+
+  &:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   }
 }
 
-.featuresSection,
-.gettingStartedSection {
-  margin-bottom: 2rem;
-
-  h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-  }
-
-  ul {
-    padding-left: 2rem;
-    list-style-type: disc;
-
-    li {
-      margin-bottom: 0.5rem;
-    }
-  }
+.buttonIcon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s, fill 0.3s;
+  fill: currentColor;
 }
