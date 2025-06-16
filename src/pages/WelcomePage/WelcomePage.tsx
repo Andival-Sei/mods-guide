@@ -3,6 +3,8 @@ import TextBlock from '../../components/TextBlock/TextBlock.tsx';
 import Paragraph from '../../components/Paragraph/Paragraph.tsx';
 import Message from '../../components/Message/Message.tsx';
 import TextHighlight from '../../components/TextHighlight/TextHighlight.tsx';
+import UnorderedList from '../../components/UnorderedList/UnorderedList.tsx';
+import ListItem from '../../components/ListItem/ListItem.tsx';
 
 const WelcomePage = () => {
   return (
@@ -127,11 +129,31 @@ const WelcomePage = () => {
           большой путанице. Давайте сначала попробуем разобраться в этом.
         </Paragraph>
 
-        <ol>
-          <li>
-            <TextHighlight>Что такое LE, SE и AE?</TextHighlight>
-          </li>
-        </ol>
+        <Paragraph>
+          <TextHighlight> 1. Что такое LE, SE и AE?</TextHighlight>
+        </Paragraph>
+
+        <UnorderedList>
+          <ListItem>
+            <Paragraph>
+              <TextHighlight>Skyrim Legacy Edition ("LE")</TextHighlight> - это оригинальный релиз
+              игры 2011 года, где три официальных DLC выпускались по одному в течение примерно года
+              или около того. Обычно называемая "LE", она использует более старую, менее продвинутую
+              версию игрового движка и обычно считается самой худшей версией игры (хотя все еще есть
+              достаточное количество игроков, которые все еще клянутся ей и думают, что новые версии
+              хуже).
+            </Paragraph>
+          </ListItem>
+
+          <ListItem>
+            <Paragraph>
+              <TextHighlight>Skyrim Special Edition ("SE")</TextHighlight> - эта версия считается
+              золотым стандартом игры и включает в себя все три DLC на момент выпуска. Bethesda
+              также выпустила обновленную версию движка с 64-битным исполняемым файлом, что сделало
+              проблемы с памятью LE ... ну, воспоминание.
+            </Paragraph>
+          </ListItem>
+        </UnorderedList>
       </TextBlock>
     </>
   );

@@ -1,0 +1,14 @@
+.unorderedList {
+  margin-bottom: 16px;
+  padding-left: 2rem;
+  list-style-type: disc;
+  color: var(--text-color);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 768px) {
+    padding-left: 1.5rem;
+  }
+}
