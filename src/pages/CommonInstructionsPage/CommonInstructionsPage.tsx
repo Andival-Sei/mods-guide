@@ -9,6 +9,7 @@ import cls from './CommonInstructionsPage.module.scss';
 import TextHighlight from '../../components/TextHighlight/TextHighlight.tsx';
 import Fomod from '../../components/Fomod/Fomod.tsx';
 import { exampleFomodData } from '../../components/Fomod/exampleFomodData.ts';
+import UnorderedList from '../../components/UnorderedList/UnorderedList.tsx';
 
 const CommonInstructionsPage = () => {
   return (
@@ -406,6 +407,154 @@ const CommonInstructionsPage = () => {
             <Paragraph>
               Файлы будут извлечены, но BSA-файл все еще будет присутствовать. Его можно удалить из
               своего местоположения с помощью обычных методов проводника.
+            </Paragraph>
+          </ListItem>
+        </OrderedList>
+      </TextBlock>
+
+      <TitleBlock title="Cathedral Assets Optimizer" />
+
+      <TextBlock>
+        <Paragraph>
+          Последняя общая задача, которая появится в руководстве для работы, — это запуск мода через
+          Cathedral Asset Optimizer (CAO). Как упоминалось в разделе «Конвертация плагинов»,
+          некоторые из модов, которые мы используем, взяты из Skyrim: LE, а сетки и текстуры,
+          которые с ними связаны, не всегда хорошо сочетаются со Skyrim: SE. Чтобы ваша игровая
+          система не взорвалась, было создано несколько различных профилей:
+        </Paragraph>
+
+        <UnorderedList>
+          <ListItem>
+            <Paragraph>
+              Lexy's LOTD SE - BSA: Оптимизирует сетки и текстуры, а затем упаковывает их в BSA.
+            </Paragraph>
+            <Paragraph>
+              Lexy's LOTD SE - No BSA: Оптимизирует сетки и текстуры, но оставляет их в виде
+              свободных файлов.
+            </Paragraph>
+            <Paragraph>
+              Lexy's LOTD SE - WICO: Специально настроен для оптимизации сеток и текстур для WICO -
+              Windsong Immersive Character Overhaul, следуя специальным инструкциям руководства для
+              него.
+            </Paragraph>
+            <Paragraph>
+              SSE - Downsize Textures - 1K: Уменьшает любую текстуру, размер которой превышает 1024
+              x 1024, до 1K. Если вы попытаетесь сохранить немного видеопамяти, не стесняйтесь
+              использовать этот профиль для уменьшения некоторых текстур там, где вы считаете это
+              целесообразным.
+            </Paragraph>
+            <Paragraph>
+              SSE - Downsize Textures - 2K: Уменьшает любую текстуру, размер которой превышает 2048
+              x 2048, до 2K. Если вы попытаетесь сохранить немного видеопамяти, не стесняйтесь
+              использовать этот профиль для уменьшения некоторых текстур там, где вы считаете это
+              целесообразным.
+            </Paragraph>
+          </ListItem>
+        </UnorderedList>
+
+        <Paragraph>
+          Моды, требующие такой обработки, будут иметь тег CAO вместе с тем, какой профиль вам
+          следует использовать.
+        </Paragraph>
+
+        <OrderedList>
+          <ListItem>
+            <Paragraph>
+              <TextHighlight>ЗАКРОЙТЕ MO2.</TextHighlight> CAO предназначен для работы ВНЕ Mod
+              Organizer. Не стоит его минимизировать. ЗАКРОЙТЕ ЕГО.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>Запустите CAO из исполняемого файла в папке установки.</Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Посмотрите на мод Особые указания. В нем будет указан тип профиля для использования в
+              CAO. Убедитесь, что вы используете правильный профиль.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Нажмите на кнопку <TextHighlight>«Открыть каталог».</TextHighlight> Перейдите в папку
+              с модом, который требует конвертации. Выберите эту папку.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Нажмите на кнопку <TextHighlight>«Журнал».</TextHighlight> Это покажет вам, что будет
+              обрабатывать CAO.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Нажмите кнопку <TextHighlight>Выполнить.</TextHighlight>
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>Когда CAO завершит свой прогон, закройте программу.</Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Повторите шаги 2 - 7 для всех загруженных файлов для этого мода (основных,
+              необязательных и прочих).
+            </Paragraph>
+          </ListItem>
+        </OrderedList>
+      </TextBlock>
+
+      <TitleBlock title="Mod Organizer 2 Removal Tool" />
+
+      <TextBlock>
+        <Paragraph>
+          Последняя общая задача, которая появится в Руководстве для работы, — это запуск мода через
+          Mod Organizer Removal Tool. Инструмент упрощает удаление файлов из модов.
+        </Paragraph>
+        <Paragraph>Моды, требующие такой обработки, будут иметь соответствующий тег.</Paragraph>
+
+        <OrderedList>
+          <ListItem>
+            <Paragraph>
+              Выберите опцию "MO2 Removal Tool" в меню инструментов на панели инструментов MO2
+              (значок головоломки).
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Посмотрите на мод Особые указания. В нем будут перечислены все файлы, которые
+              необходимо удалить.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Введите название мода, из которого вы хотите удалить файлы/папки (последний мод в
+              вашем списке модов выбран по умолчанию).
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>Скопируйте и вставьте контуры в поле под селектором мода.</Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>Нажмите кнопку Выполнить. Откроется еще одно диалоговое окно.</Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Просмотрите файлы, которые будут удалены. Все пути с подстановочными знаками будут
+              развернуты, чтобы показать, какие файлы были выбраны.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Нажмите «Удалить все», чтобы завершить удаление. Обратите внимание, что вы также
+              можете инвертировать выбор, чтобы удалить все, КРОМЕ того, что вы изначально ввели.
+              ЭТО ЭКСПЕРИМЕНТАЛЬНО. Помните, что вы НЕ МОЖЕТЕ отменить удаление из этого
+              инструмента, я лично рекомендую использовать опцию "mohidden" при использовании этой
+              функции.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              В корневой папке мода будет создан файл для регистрации сделанных вами удалений. Файл
+              будет называться {`{ modName }`}. {`{ 'delete' | 'mohidden'}`}.log
             </Paragraph>
           </ListItem>
         </OrderedList>
