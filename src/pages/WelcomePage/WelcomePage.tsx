@@ -356,7 +356,7 @@ const WelcomePage = () => {
 
       <NavigationControls
         prevPage={{ to: '/', name: 'Главная' }}
-        nextPage={{ to: '/instructions', name: 'Общие инструкции' }}
+        nextPage={{ to: '/commoninstructions', name: 'Общие инструкции' }}
       />
     </>
   );
