@@ -352,8 +352,6 @@ const WelcomePage = () => {
         </tbody>
       </table>
 
-      <hr />
-
       <NavigationControls
         prevPage={{ to: '/', name: 'Главная' }}
         nextPage={{ to: '/commoninstructions', name: 'Общие инструкции' }}
