@@ -1,0 +1,100 @@
+.navigationButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: white;
+  border-radius: 4px;
+  background-color: #2f3035;
+  min-inline-size: 300px;
+  min-block-size: 60px;
+
+  &:hover {
+    background-color: #353536;
+
+    .leftArrow {
+      transform: rotate(180deg) translateX(5px);
+    }
+
+    .rightArrow {
+      transform: translateX(5px);
+    }
+  }
+
+  &:active {
+    transform: scale(0.95);
+    background-color: #474747;
+  }
+
+  @media (max-width: 768px) {
+    justify-content: space-between; /* Выравнивание содержимого по левому краю */
+    width: 100%;
+    min-inline-size: 100%; /* Занимает всю доступную ширину */
+  }
+}
+
+.pageName {
+  font-weight: 500;
+  //  color: #9499ff;
+}
+
+.arrow {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.leftArrow {
+  margin-right: 12px;
+  transform: rotate(180deg);
+
+
+}
+
+.rightArrow {
+  margin-left: 12px;
+}
+
+.left {
+  margin-right: auto;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+.right {
+  margin-left: auto;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  /* Для правой кнопки на мобильных устройствах меняем порядок элементов */
+  @media (max-width: 768px) {
+    .navigationButton.right {
+      justify-content: space-between;
+    }
+  }
+}
+
+/* Дополнительные стили для очень маленьких экранов */
+@media (max-width: 480px) {
+  .navigationButton {
+    padding: 10px 16px;
+    min-block-size: 50px;
+  }
+
+  .pageName {
+    font-size: 0.9rem;
+  }
+
+  .arrow {
+    width: 20px;
+    height: 20px;
+  }
+}

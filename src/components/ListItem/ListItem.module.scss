@@ -12,3 +12,8 @@
     font-size: 0.875rem;
   }
 }
+
+// Убираем маркер для ListItem, содержащих вложенный список
+.hasNestedList {
+  list-style-type: none;
+}
