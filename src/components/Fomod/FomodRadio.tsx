@@ -1,5 +1,6 @@
 import type { FomodRadioProps } from './FomodTypes';
 import cls from './Fomod.module.scss';
+import CustomRadio from '../CustomRadio/CustomRadio';
 
 /**
  * Компонент FomodRadio - представляет радиокнопку в секции Fomod инструкции.
@@ -15,17 +16,9 @@ import cls from './Fomod.module.scss';
  */
 const FomodRadio = ({ id, name, label, checked }: FomodRadioProps) => {
   return (
-    <label className={`${cls.slider__label} ${cls.radioWrapper}`} htmlFor={id}>
-      <input
-        id={id}
-        name={name}
-        type="radio"
-        checked={checked}
-        onClick={(e) => e.preventDefault()} // Предотвращение изменения состояния при клике
-        readOnly // Радиокнопка только для чтения
-      />
-      <span className={cls.slider__label_text}>{label}</span>
-    </label>
+    <div className={cls.slider__label}>
+      <CustomRadio id={id} name={name} label={label} checked={checked} readOnly={true} />
+    </div>
   );
 };
 

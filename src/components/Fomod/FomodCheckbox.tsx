@@ -1,5 +1,6 @@
 import type { FomodCheckboxProps } from './FomodTypes';
 import cls from './Fomod.module.scss';
+import CustomCheckbox from '../CustomCheckbox/CustomCheckbox';
 
 /**
  * Компонент FomodCheckbox - представляет чекбокс в секции Fomod инструкции.
@@ -12,17 +13,9 @@ import cls from './Fomod.module.scss';
  */
 const FomodCheckbox = ({ id, label, checked }: FomodCheckboxProps) => {
   return (
-    <label className={`${cls.slider__label} ${cls.checkboxWrapper}`} htmlFor={id}>
-      <input
-        type="checkbox"
-        id={id}
-        className={cls.slider__checkbox}
-        checked={checked}
-        onClick={(e) => e.preventDefault()} // Предотвращение изменения состояния при клике
-        readOnly // Чекбокс только для чтения
-      />
-      <span className={cls.slider__label_text}>{label}</span>
-    </label>
+    <div className={cls.slider__label}>
+      <CustomCheckbox id={id} label={label} checked={checked} readOnly={true} />
+    </div>
   );
 };
 

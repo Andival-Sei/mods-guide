@@ -1,0 +1,109 @@
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.label {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.iosCheckbox {
+  --checkbox-size: 17px;
+  --checkbox-color: #8799ff;
+  --checkbox-bg: #3a3a3b;
+  --checkbox-border: #4d4d4d;
+
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.iosCheckbox input {
+  display: none;
+}
+
+.checkboxWrapper {
+  position: relative;
+  width: var(--checkbox-size);
+  height: var(--checkbox-size);
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.checkboxBg {
+  position: absolute;
+  inset: 0;
+  border-radius: 4px;
+  border: 2px solid var(--checkbox-border);
+  background: #2f3035;
+  transition: all 0.2s ease;
+}
+
+.checkboxIcon {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 80%;
+  height: 80%;
+  color: white;
+  transform: scale(0);
+  transition: all 0.2s ease;
+}
+
+.checkPath {
+  stroke-dasharray: 40;
+  stroke-dashoffset: 40;
+  transition: stroke-dashoffset 0.3s ease 0.1s;
+}
+
+/* Checked State */
+.iosCheckbox input:checked + .checkboxWrapper .checkboxBg {
+  background: var(--checkbox-color);
+  border-color: var(--checkbox-color);
+}
+
+.iosCheckbox input:checked + .checkboxWrapper .checkboxIcon {
+  transform: scale(1);
+}
+
+.iosCheckbox input:checked + .checkboxWrapper .checkPath {
+  stroke-dashoffset: 0;
+}
+
+/* Hover Effects */
+.iosCheckbox:hover .checkboxWrapper {
+  transform: scale(1.05);
+}
+
+/* Active Animation */
+.iosCheckbox:active .checkboxWrapper {
+  transform: scale(0.95);
+}
+
+/* Focus Styles */
+.iosCheckbox input:focus + .checkboxWrapper .checkboxBg {
+  box-shadow: 0 0 0 4px rgba(135, 153, 255, 0.2);
+}
+
+/* Animation */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.iosCheckbox input:checked + .checkboxWrapper {
+  animation: bounce 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
