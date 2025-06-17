@@ -392,7 +392,7 @@ const CommonInstructionsPage = () => {
           <ListItem>
             <Paragraph>
               Как только вы найдете файл, который хотите извлечь,{' '}
-              <TextHighlight>щелкните правой кнопкой</TextHighlight> мыши имя файла и выберите
+              <TextHighlight>щелкните правой кнопкой</TextHighlight> мыши имя файла и выберите{' '}
               <TextHighlight>ИЗВЛЕЧЬ.</TextHighlight>
             </Paragraph>
           </ListItem>
