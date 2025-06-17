@@ -7,6 +7,8 @@ import NavigationControls from '../../components/NavigationControls/NavigationCo
 import Tag from '../../components/Tag/Tag.tsx';
 import cls from './CommonInstructionsPage.module.scss';
 import TextHighlight from '../../components/TextHighlight/TextHighlight.tsx';
+import Fomod from '../../components/Fomod/Fomod.tsx';
+import { exampleFomodData } from '../../components/Fomod/exampleFomodData.ts';
 
 const CommonInstructionsPage = () => {
   return (
@@ -277,6 +279,8 @@ const CommonInstructionsPage = () => {
 
         <Paragraph>Пример FOMOD:</Paragraph>
       </TextBlock>
+
+      <Fomod title="Пример Fomod" pages={exampleFomodData} />
 
       <NavigationControls
         prevPage={{ to: '/welcome', name: 'Знакомство' }}

@@ -1,0 +1,414 @@
+/* Основной контейнер Fomod */
+.fomod {
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+  background-color: #2f3035;
+
+  /* Обертка для содержимого Fomod */
+  &__wrapper {
+    width: 100%;
+  }
+
+  /* Кнопка переключения видимости содержимого Fomod */
+  &__toggle {
+    padding: 10px 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+
+    /* Стили при наведении на кнопку переключения */
+    &:hover {
+      background-color: #353536;
+    }
+
+    /* Стили для активного состояния кнопки переключения */
+    &.active {
+      border-radius: 5px;
+      background-color: #353536;
+      border-block-end: 2px solid var(--contrast-bg-color);
+      border-end-start-radius: 0;
+      border-end-end-radius: 0;
+    }
+  }
+
+  /* Стили для текста в заголовке Fomod */
+  &__text {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  /* Стили для выделенного текста в заголовке */
+  &__highlight {
+    color: #8799ff;
+  }
+
+  /* Контейнер для содержимого Fomod, который открывается/закрывается */
+  &__content {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+
+    /* Стили для открытого состояния контейнера */
+    &.open {
+      max-height: 1000px;
+      transition: max-height 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+
+    /* Обертка для содержимого с анимацией прозрачности */
+    &_wrapper {
+      padding: 10px;
+      transition: opacity 0.25s ease-in-out;
+      transition-delay: 0.05s;
+      opacity: 0;
+    }
+  }
+}
+
+/* Компонент слайдера для страниц Fomod */
+.slider {
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 100%;
+
+  /* Обертка слайдера с динамической высотой */
+  &__wrapper {
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 200px;
+    transition: height 0.3s ease;
+
+    /* Дополнительный отступ снизу для больших экранов */
+    @media (min-width: 768px) {
+      padding-bottom: 20px;
+    }
+  }
+
+  /* Контейнер для слайдов с горизонтальным расположением */
+  &__slides {
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transition: transform 0.4s ease;
+
+    /* Отключение анимации во время перетаскивания для более плавного опыта */
+    &.dragging {
+      transition: none;
+    }
+  }
+
+  /* Отдельный слайд (страница Fomod) */
+  &__slide {
+    flex-shrink: 0;
+    box-sizing: border-box;
+    min-width: 100%;
+    max-width: 100%;
+    padding: 30px 80px;
+  }
+
+  /* Кнопки управления слайдером (вперед/назад) */
+  &__control {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease,
+    transform 0.2s ease;
+    transform: translateY(-50%);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--main-bg-color);
+
+    /* Стили при наведении на кнопку управления */
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Стили при нажатии на кнопку управления */
+    &:active {
+      transform: translateY(-50%) scale(0.95);
+    }
+
+    /* Стили для отключенной кнопки управления */
+    &.disabled {
+      cursor: not-allowed;
+      pointer-events: none;
+      opacity: 0.5;
+    }
+
+    /* Создание стрелки с помощью псевдоэлемента */
+    &::before {
+      display: block;
+      width: 12px;
+      height: 12px;
+      padding: 3px;
+      content: '';
+      transform-origin: center;
+      border-width: 0 2px 2px 0;
+      border-style: solid;
+      border-color: currentColor;
+    }
+
+    /* Кнопка "назад" (влево) */
+    &_prev {
+      left: 10px;
+
+      /* Поворот стрелки для кнопки "назад" */
+      &::before {
+        transform: rotate(135deg);
+      }
+    }
+
+    /* Кнопка "вперед" (вправо) */
+    &_next {
+      right: 10px;
+
+      /* Поворот стрелки для кнопки "вперед" */
+      &::before {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  /* Контейнер для страницы Fomod */
+  &__page {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #3a3a3b;
+    gap: 10px;
+  }
+
+  /* Заголовок страницы Fomod */
+  &__page_title {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 0 10px 10px;
+  }
+
+  /* Секция на странице Fomod (группа элементов) */
+  &__page_section {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 10px 16px 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #2f3035;
+    gap: 10px;
+  }
+
+  /* Заголовок секции на странице Fomod */
+  &__section_title {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 0 15px 10px;
+  }
+
+  /* Метка для элементов формы (чекбоксы, радиокнопки) */
+  &__label {
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 30px;
+  }
+
+  /* Текст метки для элементов формы */
+  &__label_text {
+    padding: 0 0 0 15px;
+  }
+
+  /* Контейнер для точек пагинации */
+  &__pagination {
+    position: relative;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    gap: 8px;
+  }
+
+  /* Отдельная точка пагинации */
+  &__pagination_dot {
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+    border-radius: 50%;
+    background-color: #4d4d4d;
+
+    /* Стили для активной точки пагинации */
+    &.active {
+      background-color: #8799ff;
+    }
+
+    /* Стили при наведении на точку пагинации */
+    &:hover {
+      background-color: #6d6d6d;
+    }
+  }
+}
+
+/* Общие стили для обертки чекбоксов и радиокнопок */
+.checkboxWrapper, .radioWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: default;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+  .fomod {
+    &__text {
+      font-size: 15px;
+    }
+  }
+
+  .slider {
+    &__slide {
+      padding: 20px 50px;
+    }
+
+    &__control {
+      width: 40px;
+      height: 40px;
+
+      &_prev {
+        left: 10px;
+      }
+
+      &_next {
+        right: 10px;
+      }
+    }
+
+  }
+}
+
+/* Специальная обработка для средне-маленьких экранов */
+@media (max-width: 600px) {
+  .fomod {
+    &__text {
+      font-size: 14px;
+    }
+  }
+
+  .slider {
+    &__slide {
+      padding: 15px 40px;
+    }
+
+    &__control {
+      width: 35px;
+      height: 35px;
+
+      &_prev {
+        left: 5px;
+      }
+
+      &_next {
+        right: 5px;
+      }
+    }
+
+  }
+}
+
+/* Специальная обработка для диапазона 500-520px, где нарушается макет */
+@media (max-width: 520px) {
+  .fomod {
+    &__toggle {
+      padding: 10px 20px;
+    }
+
+    &__text {
+      font-size: 13.5px;
+    }
+  }
+
+  .slider {
+    &__slide {
+      padding: 15px 30px;
+    }
+
+    &__control {
+      top: 50%; /* Сохранение кнопок управления в середине */
+      width: 35px;
+      height: 35px;
+      transform: translateY(-50%);
+
+      &:active {
+        transform: translateY(-50%) scale(0.95);
+      }
+
+      &_prev {
+        left: 5px;
+      }
+
+      &_next {
+        right: 5px;
+      }
+    }
+
+  }
+}
+
+/* Стили для очень маленьких экранов */
+@media (max-width: 480px) {
+  .fomod {
+    &__text {
+      font-size: 13px;
+    }
+  }
+
+  .slider {
+    &__slide {
+      padding: 15px 15px;
+    }
+
+    &__label {
+      margin: 0 0 0 15px;
+    }
+
+    &__page_title, &__section_title {
+      font-size: 14px;
+      margin: 0 0 5px 5px;
+    }
+
+    &__label_text {
+      font-size: 14px;
+      padding: 0 0 0 10px;
+    }
+
+    &__page {
+      padding: 8px;
+      gap: 8px;
+    }
+
+    &__page_section {
+      padding: 8px 8px 12px 8px;
+      gap: 8px;
+    }
+
+  }
+}
