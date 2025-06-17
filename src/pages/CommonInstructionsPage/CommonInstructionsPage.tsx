@@ -562,7 +562,7 @@ const CommonInstructionsPage = () => {
 
       <NavigationControls
         prevPage={{ to: '/welcome', name: 'Знакомство' }}
-        nextPage={{ to: '/', name: 'Предустановки' }}
+        nextPage={{ to: '/preinstall', name: 'Предустановки' }}
       />
     </>
   );
