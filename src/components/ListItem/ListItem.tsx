@@ -1,6 +1,7 @@
 import cls from './ListItem.module.scss';
 import { Children, isValidElement, type ReactNode } from 'react';
 import UnorderedList from '../UnorderedList/UnorderedList.tsx';
+import OrderedList from '../OrderedList/OrderedList.tsx';
 
 interface ListItemProps {
   children: ReactNode;
@@ -10,9 +11,9 @@ interface ListItemProps {
 const ListItem = (props: ListItemProps) => {
   const { children, className } = props;
 
-  // Проверяем, содержит ли ListItem компонент UnorderedList как прямого потомка
+  // Проверяем, содержит ли ListItem компонент UnorderedList или OrderedList как прямого потомка
   const hasNestedList = Children.toArray(children).some(
-    (child) => isValidElement(child) && child.type === UnorderedList
+    (child) => isValidElement(child) && (child.type === UnorderedList || child.type === OrderedList)
   );
 
   // Добавляем специальный класс, если есть вложенный список

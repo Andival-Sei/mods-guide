@@ -1,7 +1,7 @@
 import TitleBlock from '../../components/TitleBlock/TitleBlock.tsx';
 import TextBlock from '../../components/TextBlock/TextBlock.tsx';
 import Paragraph from '../../components/Paragraph/Paragraph.tsx';
-import UnorderedList from '../../components/UnorderedList/UnorderedList.tsx';
+import OrderedList from '../../components/OrderedList/OrderedList.tsx';
 import ListItem from '../../components/ListItem/ListItem.tsx';
 import NavigationControls from '../../components/NavigationControls/NavigationControls.tsx';
 import Tag from '../../components/Tag/Tag.tsx';
@@ -25,7 +25,7 @@ const CommonInstructionsPage = () => {
           данный момент).
         </Paragraph>
 
-        <UnorderedList>
+        <OrderedList>
           <ListItem>
             <Paragraph>
               Я являюсь носителем русского языка. Таким образом, именно такую настройку я использую
@@ -47,7 +47,7 @@ const CommonInstructionsPage = () => {
               Lexy, а не моё.
             </Paragraph>
           </ListItem>
-        </UnorderedList>
+        </OrderedList>
       </TextBlock>
 
       <TitleBlock title="Пояснения к тегам модификаций" />
