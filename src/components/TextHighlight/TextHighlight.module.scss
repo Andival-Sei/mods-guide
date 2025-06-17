@@ -1,3 +1,8 @@
 .highlight {
   color: var(--text-primary-color);
 }
+
+.underline {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
