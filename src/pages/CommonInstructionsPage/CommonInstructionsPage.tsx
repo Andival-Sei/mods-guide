@@ -4,6 +4,8 @@ import Paragraph from '../../components/Paragraph/Paragraph.tsx';
 import UnorderedList from '../../components/UnorderedList/UnorderedList.tsx';
 import ListItem from '../../components/ListItem/ListItem.tsx';
 import NavigationControls from '../../components/NavigationControls/NavigationControls.tsx';
+import Tag from '../../components/Tag/Tag.tsx';
+import cls from './CommonInstructionsPage.module.scss';
 
 const CommonInstructionsPage = () => {
   return (
@@ -64,6 +66,117 @@ const CommonInstructionsPage = () => {
           мода, пока не будет написано об этом.
         </Paragraph>
       </TextBlock>
+
+      <table className={cls.tagsTable}>
+        <tbody>
+          <tr>
+            <td>
+              <Tag type="cao" />
+            </td>
+            <td>
+              <Paragraph>Моды, требующие обработки Cathedral Assets Optimizer.</Paragraph>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <Tag type="classic" />
+            </td>
+            <td>
+              <Paragraph>Моды, которые загружаются из классического Skyrim.</Paragraph>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <Tag type="creation-kit-resave" />
+            </td>
+            <td>
+              <Paragraph>
+                Моды, чьи ESP должны быть преобразованы в форму 44 в SSE Creation Kit.
+              </Paragraph>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <Tag type="esl" />
+            </td>
+            <td>
+              <Paragraph>
+                Моды, чьи ESP можно безопасно пометить как ESL, чтобы еще больше сократить общее
+                количество плагинов.
+              </Paragraph>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <Tag type="bsa" />
+            </td>
+            <td>
+              <Paragraph>
+                Моды, чьи BSA необходимо извлечь с помощью экстрактора BSA в Mod Organizer 2.
+              </Paragraph>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <Tag type="loot" />
+            </td>
+            <td>
+              <Paragraph>
+                Моды, для которых правила LOOT должны быть установлены на странице финиша.
+              </Paragraph>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <Tag type="removal-tool" />
+            </td>
+            <td>
+              <Paragraph>
+                Инструмент для удаления файлов в модах, которые требуют обработки с помощью MO2
+                Removal Tool.
+              </Paragraph>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <Tag type="tool" />
+            </td>
+            <td>
+              <Paragraph>
+                Утилита для моддинга, которую можно использовать во время вашего приключения в
+                моддинге.
+              </Paragraph>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <Tag type="xedit-qac" />
+            </td>
+            <td>
+              <Paragraph>Моды, чьи ESP очищаются xEdit.</Paragraph>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <Tag type="zmerge" />
+            </td>
+            <td>
+              <Paragraph>
+                Моды, чьи ESP будут объединены позже, используют zMerge для уменьшения общего
+                количества ESP.
+              </Paragraph>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <Tag type="special-instructions" />
+            </td>
+            <td>
+              <Paragraph>Специальные ситуативные инструкции для конкретного мода.</Paragraph>
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
       <NavigationControls
         prevPage={{ to: '/welcome', name: 'Знакомство' }}

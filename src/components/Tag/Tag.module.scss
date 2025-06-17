@@ -1,0 +1,70 @@
+.tag {
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 10px;
+  white-space: nowrap;
+  border-radius: 16px;
+}
+
+.tagName {
+  margin: 0;
+}
+
+// Цвета тегов
+.tag--cao {
+  color: white;
+  background-color: #2f8a16;
+}
+
+.tag--classic {
+  color: white;
+  background-color: #195c14;
+}
+
+.tag--creation-kit-resave {
+  color: white;
+  background-color: #d21913;
+}
+
+.tag--esl {
+  color: white;
+  background-color: #0808ef;
+}
+
+.tag--bsa {
+  color: white;
+  background-color: #3da19c;
+}
+
+.tag--loot {
+  color: white;
+  background-color: #806056;
+}
+
+.tag--removal-tool {
+  color: white;
+  background-color: #206caf;
+}
+
+.tag--tool {
+  color: white;
+  background-color: #636363;
+}
+
+.tag--xedit-qac {
+  color: white;
+  background-color: #d79a40;
+}
+
+.tag--zmerge {
+  color: white;
+  background-color: #831482;
+}
+
+.tag--special-instructions {
+  color: white;
+  background-color: #9a1c9a;
+}
