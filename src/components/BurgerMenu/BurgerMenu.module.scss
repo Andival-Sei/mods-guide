@@ -67,6 +67,7 @@
   top: 0;
   right: -280px;
   display: flex;
+  overflow-y: auto;
   flex-direction: column;
   width: 280px;
   height: 100%;
@@ -96,5 +97,71 @@
       font-weight: 600;
       color: #9499ff;
     }
+  }
+}
+
+.dropdownSection {
+  overflow: hidden;
+  margin-bottom: 15px;
+  border-radius: 12px; // Increased border radius
+}
+
+.dropdownLabel {
+  font-size: 1.1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 15px; // Increased padding
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  color: #919198; // As specified in the requirements
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  //  border-radius: 8px; // Rounded corners
+
+  &:hover, &.active {
+    //    background-color: rgba(255, 255, 255, 0.05);
+  }
+}
+
+.dropdownArrow {
+  font-size: 0.8rem;
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+
+  &.open {
+    transform: rotate(180deg);
+  }
+}
+
+.dropdownItems {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  max-height: 0;
+  padding-left: 15px;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+
+  &.open {
+    max-height: 500px; // Large enough to fit all items
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+
+.dropdownItem {
+  font-size: 1rem !important;
+  margin: 4px 0; // Added margin
+  padding: 10px 15px !important; // Increased padding
+  transition: background-color 0.2s ease !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+  border-radius: 8px !important; // Rounded corners
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+  }
+
+  &:last-child {
+    border-bottom: none !important;
   }
 }

@@ -1,0 +1,64 @@
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownToggle {
+  font-size: 0.9rem;
+  font-weight: 500;
+  position: relative;
+  padding: 6px 4px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  color: var(--text-color);
+
+  &:hover, &.active {
+    color: #919198; // As specified in the requirements
+  }
+}
+
+.dropdownMenu {
+  position: absolute;
+  z-index: 10;
+  top: 100%;
+  left: 0;
+  visibility: hidden;
+  min-width: 200px;
+  margin-top: 5px;
+  padding: 12px 0; // Increased padding
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  transform: translateY(-10px);
+  opacity: 0;
+  border-radius: 12px; // Increased border radius
+  background-color: #202126; // As specified in the requirements
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); // Enhanced shadow
+
+  &.visible {
+    visibility: visible;
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.dropdownItem {
+  display: block;
+  margin: 8px 16px; // Added margin for better spacing
+  padding: 12px 20px; // Increased padding
+  transition: color 0.2s ease, background-color 0.2s ease;
+  text-decoration: none;
+  color: var(--text-color);
+  border-radius: 8px; // Rounded corners for items
+
+  &:hover {
+    color: #9499ff; // Same color as other links in header
+    background-color: rgba(255, 255, 255, 0.1); // More visible background highlight
+  }
+}
+
+// Mobile styles
+@media (max-width: 768px) {
+  .dropdown {
+    // In mobile view, the dropdown will be handled by the BurgerMenu component
+    // so we don't need special styling here
+  }
+}
