@@ -31,8 +31,8 @@ export interface ModProps {
   specialInstructions?: {
     blocks: Array<{
       type: 'paragraph' | 'unordered_list' | 'ordered_list';
-      text?: string;
-      items?: string[];
+      content?: Array<{ text: string; highlight?: boolean }>;
+      items?: Array<Array<{ text: string; highlight?: boolean }>>;
     }>;
   };
 }

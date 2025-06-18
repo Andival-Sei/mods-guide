@@ -323,6 +323,38 @@ const PreInstallPage = () => {
 
       <Mod modName="Creation Kit Platform Extended for Skyrim" />
 
+      <TitleBlock
+        title="Инструменты для моддинга"
+        description="Как сделать Skyrim великим: одно изменение за раз"
+      />
+
+      <TextBlock>
+        <Paragraph>
+          Настоятельно рекомендуется создать папку для всех ваших инструментов для моддинга, в
+          идеале в корне диска, например, C:\Modding Tools.
+        </Paragraph>
+        <Paragraph>
+          Инструменты должны быть извлечены из своих архивов (например, не могут оставаться в файле
+          .7z) и должны иметь свои собственные индивидуальные папки. Инструменты не должны
+          находиться в папке Steam и ее подпапках, и{' '}
+          <TextHighlight>
+            они НЕ ДОЛЖНЫ устанавливаться в области, защищенной UAC, например, на рабочем столе, в
+            Program Files
+          </TextHighlight>
+          .
+        </Paragraph>
+      </TextBlock>
+
+      <Mod modName="LOOT - Load Order Optimisation Tool" />
+
+      <Mod modName="xEdit" />
+
+      <Mod modName="Mators xEdit Patching Framework" />
+
+      <Mod modName="TES5EditScripts" />
+
+      <Mod modName="WICO cleanup script" />
+
       <NavigationControls
         prevPage={{ to: '/commoninstructions', name: 'Общие инструкции' }}
         nextPage={{ to: '/preinstall', name: 'Установка модов - Часть 1' }}

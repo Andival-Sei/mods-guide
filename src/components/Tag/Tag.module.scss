@@ -7,6 +7,12 @@
   padding: 4px 10px;
   white-space: nowrap;
   border-radius: 16px;
+
+  @media (max-width: 768px) {
+    font-size: 0.75rem;
+    padding: 3px 8px;
+    border-radius: 12px;
+  }
 }
 
 .tagName {
