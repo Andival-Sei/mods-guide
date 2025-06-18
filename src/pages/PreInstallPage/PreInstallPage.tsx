@@ -145,6 +145,11 @@ const PreInstallPage = () => {
 
       <Mod modName="Microsoft Visual C++ Redistributable for Visual Studio 2015, 2017, 2019, and 2022" />
 
+      <TitleBlock
+        title="Официальный контент Bethesda"
+        description="В комплекте с официальными ошибками Bethesda"
+      />
+
       <NavigationControls
         prevPage={{ to: '/commoninstructions', name: 'Общие инструкции' }}
         nextPage={{ to: '/preinstall', name: 'Установка модов - Часть 1' }}
