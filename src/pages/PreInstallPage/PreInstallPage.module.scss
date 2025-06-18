@@ -1,0 +1,22 @@
+.mod-error,
+.mod-loading {
+  margin-bottom: 24px;
+  padding: 24px;
+  color: white;
+  border-radius: 8px;
+  background-color: #272626;
+  min-height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mod-error {
+  color: #ff6b6b;
+  flex-direction: column;
+}
+
+.mod-error p {
+  font-size: 1.1rem;
+  margin: 0;
+}

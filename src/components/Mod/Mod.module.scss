@@ -1,0 +1,134 @@
+.mod {
+  margin-bottom: 24px;
+  padding: 24px;
+  color: white;
+  border-radius: 8px;
+  background-color: #272626;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  &__tags {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px;
+    align-self: flex-start;
+    flex-shrink: 0;
+    width: auto;
+  }
+
+  &__info {
+    flex: 1;
+  }
+
+  &__name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 16px 0;
+  }
+
+  &__details {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    @media (max-width: 768px) {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+
+  &__link {
+    font-weight: 500;
+    display: inline-block;
+    padding: 8px 16px;
+    transition: background-color 0.2s;
+    text-decoration: none;
+    color: white;
+    border-radius: 4px;
+    background-color: #4a4a4a;
+
+    &:hover {
+      background-color: #5a5a5a;
+    }
+  }
+
+  &__version, &__author {
+    display: flex;
+    gap: 6px;
+  }
+
+  &__label {
+    color: #a0a0a0;
+  }
+
+  &__version_label {
+    color: #f1f1f1;
+    font-style: italic;
+  }
+
+  &__divider {
+    height: 1px;
+    margin: 16px 0;
+    background-color: #4a4a4a;
+  }
+
+  &__description {
+    line-height: 1.5;
+    margin: 16px 0;
+  }
+
+  &__files {
+    margin-top: 24px;
+    padding: 16px;
+    border-radius: 6px;
+    background-color: #323030;
+  }
+
+  &__files_title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0 0 16px 0;
+  }
+
+  &__files_list {
+    padding-left: 0 !important; // Переопределение стилей UnorderedList
+    list-style-type: none !important; // Убираем точки перед пунктами
+  }
+
+  &__file_item {
+    padding: 8px 0;
+    border-bottom: 1px solid #3a3a3a;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  // File type colors
+  &__file_type--main-files {
+    color: #8196ec;
+  }
+
+  &__file_type--update-files {
+    color: #32a597;
+  }
+
+  &__file_type--optional-files {
+    color: #228d00;
+  }
+
+  &__file_type--miscellaneous-files {
+    color: #eeee28;
+  }
+
+  &__file_type--old-files {
+    color: #ce9933;
+  }
+}
