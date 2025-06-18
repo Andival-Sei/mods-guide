@@ -9,11 +9,7 @@ interface TextHighlightProps {
 const TextHighlight = (props: TextHighlightProps) => {
   const { children, underline } = props;
 
-  return (
-    <span className={`${cls.highlight} ${underline ? cls.underline : ''}`}>
-      {children}
-    </span>
-  );
+  return <span className={`${cls.highlight} ${underline ? cls.underline : ''}`}>{children}</span>;
 };
 
 export default TextHighlight;

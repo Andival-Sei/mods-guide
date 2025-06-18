@@ -6,6 +6,9 @@ import Paragraph from '../../components/Paragraph/Paragraph.tsx';
 import OrderedList from '../../components/OrderedList/OrderedList.tsx';
 import ListItem from '../../components/ListItem/ListItem.tsx';
 import TextHighlight from '../../components/TextHighlight/TextHighlight.tsx';
+import TextEmphasis from '../../components/TextEmphasis/TextEmphasis.tsx';
+import TextLink from '../../components/TextLink/TextLink.tsx';
+import FilePath from '../../components/FilePath/FilePath.tsx';
 import Mod from '../../components/Mod/Mod.tsx';
 
 const PreInstallPage = () => {
@@ -149,6 +152,176 @@ const PreInstallPage = () => {
         title="Официальный контент Bethesda"
         description="В комплекте с официальными ошибками Bethesda"
       />
+
+      <Mod modName="Skyrim Special Edition" />
+
+      <Mod modName="Skyrim Anniversary Upgrade" />
+
+      <TextBlock>
+        <Paragraph>
+          <TextEmphasis>Защита от обновлений Skyrim</TextEmphasis>
+        </Paragraph>
+
+        <Paragraph>
+          Bethesda периодически может обновлять игру. Это означает, что SKSE (и куча модов, которые
+          его используют) больше не будет работать. Для того, чтобы STEAM не обновлял то что
+          сломается, необходимо выполнить следующие действия:
+        </Paragraph>
+
+        <OrderedList>
+          <ListItem>
+            <Paragraph>
+              В <TextHighlight>STEAM</TextHighlight> щелкните правой кнопкой мыши по{' '}
+              <TextHighlight>The Elder Scrolls V: Skyrim Special Edition</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              В появившемся меню нажмите на <TextHighlight>«Свойства»</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Во всплывающем окне выберите вкладку <TextHighlight>«Обновления»</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              В поле выбора в разделе <TextHighlight>«Автоматические обновления»</TextHighlight>{' '}
+              выберите <TextHighlight>«Обновлять при запуске»</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>Закройте окно.</Paragraph>
+          </ListItem>
+        </OrderedList>
+
+        <Paragraph>
+          Несмотря на формулировку, никаких обновлений игры не произойдет, если вы не запустите игру
+          через STEAM. Поскольку мы будем запускать Skyrim через MO2 и программу запуска SKSE,
+          триггерное событие не произойдет, и ваша установка Skyrim останется в том же состоянии,
+          что и сейчас, пока вы не выполните обновление самостоятельно.
+        </Paragraph>
+      </TextBlock>
+
+      <TextBlock>
+        <Paragraph>
+          <TextEmphasis>Настройка Skyrim</TextEmphasis>
+        </Paragraph>
+
+        <Paragraph>
+          Прежде чем мы сможем начать заниматься моддингом, нам нужно настроить Skyrim Special
+          Edition, чтобы у нас была начальная базовая конфигурация.
+        </Paragraph>
+        <Paragraph>
+          Запустите The Elder Scrolls V: Skyrim Special Edition через контекстное меню Steam, чтобы
+          открыть программу запуска Skyrim Special Edition по умолчанию.
+        </Paragraph>
+
+        <OrderedList>
+          <ListItem>
+            <Paragraph>
+              Нажмите <TextHighlight>Настройки</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Нажмите кнопку <TextHighlight>Ультра</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Установите <TextHighlight>Соотношение сторон</TextHighlight> и{' '}
+              <TextHighlight>Разрешение</TextHighlight> в выпадающем списке. Они должны быть
+              настроены на оптимальное разрешение ваших мониторов.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Установите для параметра <TextHighlight>Сглаживание</TextHighlight> значение{' '}
+              <TextHighlight>Выкл</TextHighlight> в выпадающем списке. Это происходит в рамках
+              подготовки к установке ENB.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Убедитесь, что <TextHighlight>флажок</TextHighlight> для параметра{' '}
+              <TextHighlight>«Оконный режим»</TextHighlight> снят.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Нажмите кнопку <TextHighlight>Принять</TextHighlight>, чтобы закрыть и сохранить.
+            </Paragraph>
+          </ListItem>
+        </OrderedList>
+      </TextBlock>
+
+      <Mod modName="Skyrim Special Edition: Creation Kit" />
+
+      <TextBlock>
+        <Paragraph>
+          Как и в случае со Skyrim, Creation Kit не поставляется с предварительно настроенным .ini,
+          а «стандартная» конфигурация генерируется при первом запуске инструмента.
+        </Paragraph>
+        <Paragraph>
+          Хотя в этом руководстве вы не будете создавать новые моды, вы будете импортировать моды,
+          изначально разработанные для Skyrim LE, а Creation Kit позволит вам повторно сохранять (и,
+          таким образом, обновлять) их для работы со Skyrim SE.
+        </Paragraph>
+
+        <OrderedList>
+          <ListItem>
+            <Paragraph>Скачайте и установите Special Editon: Creation Kit.</Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>Запустите Creation Kit через Steam.</Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              При запуске программа предложит извлечь папку «Scripts», сделайте это.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>После загрузки Creation Kit выйдите из программы.</Paragraph>
+          </ListItem>
+        </OrderedList>
+
+        <Paragraph>
+          Необходимо внести несколько правок, прежде чем вы сможете использовать CK для переноса
+          модов.
+        </Paragraph>
+
+        <OrderedList>
+          <ListItem>
+            <Paragraph>
+              Скачать готовый CreationKitCustom.ini{' '}
+              <TextLink href="https://lexyslotd.com/download/creation-kit-custom-ini/">
+                можно здесь
+              </TextLink>
+              .
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Извлеките его в <FilePath>Steam\steamapps\common\Skyrim Special Edition</FilePath>
+            </Paragraph>
+          </ListItem>
+        </OrderedList>
+
+        <Paragraph>
+          Пользовательский INI файл настраивает CK для разрешения нескольких мастеров и правильной
+          загрузки содержимого DLC.
+        </Paragraph>
+      </TextBlock>
+
+      <Message type="notification">
+        Архив скриптов в папке data может оставаться на месте после извлечения скриптов во время
+        установки. Они не причиняют вреда, не оказывают дополнительного влияния на саму игру или
+        Creation Kit, и их можно смело игнорировать.
+      </Message>
+
+      <Mod modName="Creation Kit Platform Extended for Skyrim" />
 
       <NavigationControls
         prevPage={{ to: '/commoninstructions', name: 'Общие инструкции' }}
