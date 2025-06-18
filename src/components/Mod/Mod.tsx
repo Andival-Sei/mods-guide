@@ -5,6 +5,7 @@ import ListItem from '../ListItem/ListItem';
 import Loader from '../Loader/Loader';
 import { useEffect, useState } from 'react';
 import { getModByName } from '../../services/modService';
+import SpecialInstructions from '../SpecialInstructions/SpecialInstructions';
 
 export type FileType =
   | 'Main Files'
@@ -27,6 +28,13 @@ export interface ModProps {
   downloadLink: string;
   files: ModFile[];
   tags?: TagType[];
+  specialInstructions?: {
+    blocks: Array<{
+      type: 'paragraph' | 'unordered_list' | 'ordered_list';
+      text?: string;
+      items?: string[];
+    }>;
+  };
 }
 
 interface ModComponentProps {
@@ -86,7 +94,16 @@ const Mod = ({ modName }: ModComponentProps) => {
     );
   }
 
-  const { name, version, author, description, downloadLink, files, tags = [] } = modData;
+  const {
+    name,
+    version,
+    author,
+    description,
+    downloadLink,
+    files,
+    tags = [],
+    specialInstructions,
+  } = modData;
 
   return (
     <article className={cls.mod}>
@@ -152,6 +169,11 @@ const Mod = ({ modName }: ModComponentProps) => {
           ))}
         </UnorderedList>
       </div>
+
+      {/* Блок со специальными инструкциями */}
+      {specialInstructions && tags.includes('special-instructions') && (
+        <SpecialInstructions instructions={specialInstructions} />
+      )}
     </article>
   );
 };

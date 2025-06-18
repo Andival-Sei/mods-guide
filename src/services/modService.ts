@@ -42,6 +42,20 @@ export async function getModByName(name: string): Promise<ModProps | null> {
     // Преобразуем теги в нужный формат
     const tags = tagData.map((t) => t.tag);
 
+    // Получаем специальные инструкции, если у мода есть тег special-instructions
+    let specialInstructions = null;
+    if (tags.includes('special-instructions')) {
+      const { data: instructionsData, error: instructionsError } = await supabase
+        .from('mod_special_instructions')
+        .select('content_json')
+        .eq('mod_name', name)
+        .single();
+
+      if (!instructionsError && instructionsData) {
+        specialInstructions = instructionsData.content_json;
+      }
+    }
+
     // Собираем все данные в формат ModProps
     return {
       name: mod.name,
@@ -51,7 +65,9 @@ export async function getModByName(name: string): Promise<ModProps | null> {
       downloadLink: mod.downloadlink || mod.downloadLink, // Учитываем возможное различие в регистре
       files: files as ModFile[],
       tags: tags,
+      specialInstructions: specialInstructions,
     };
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (error) {
     return null;
   }
@@ -74,6 +90,7 @@ export async function getAllMods(): Promise<ModProps[]> {
     );
 
     return modsWithDetails.filter((mod) => mod !== null) as ModProps[];
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (error) {
     return [];
   }
@@ -128,6 +145,7 @@ export async function addMod(mod: ModProps): Promise<boolean> {
     }
 
     return true;
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (error) {
     return false;
   }
