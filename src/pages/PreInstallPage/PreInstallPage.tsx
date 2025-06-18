@@ -6,29 +6,9 @@ import Paragraph from '../../components/Paragraph/Paragraph.tsx';
 import OrderedList from '../../components/OrderedList/OrderedList.tsx';
 import ListItem from '../../components/ListItem/ListItem.tsx';
 import TextHighlight from '../../components/TextHighlight/TextHighlight.tsx';
-import Mod, { type ModProps } from '../../components/Mod/Mod.tsx';
-import Loader from '../../components/Loader/Loader.tsx';
-import { useEffect, useState } from 'react';
-import { getModByName } from '../../services/modService.ts';
-import cls from './PreInstallPage.module.scss';
+import Mod from '../../components/Mod/Mod.tsx';
 
 const PreInstallPage = () => {
-  const [skyuiMod, setSkyuiMod] = useState<ModProps | null>(null);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    async function loadModData() {
-      try {
-        const data = await getModByName('.NET 8.0 SDK');
-        setSkyuiMod(data);
-      } catch (err) {
-        setError('Не удалось загрузить данные мода');
-      }
-    }
-
-    loadModData();
-  }, []);
-
   return (
     <>
       <Message type="warning">
@@ -161,17 +141,7 @@ const PreInstallPage = () => {
 
       <TitleBlock title="Главные утилиты" description="Предотвращаем беспорядки" />
 
-      {error ? (
-        <div className={cls['mod-error']}>
-          <p>{error}</p>
-        </div>
-      ) : skyuiMod ? (
-        <Mod {...skyuiMod} />
-      ) : (
-        <div className={cls['mod-loading']}>
-          <Loader />
-        </div>
-      )}
+      <Mod modName=".NET 8.0 SDK" />
 
       <NavigationControls
         prevPage={{ to: '/commoninstructions', name: 'Общие инструкции' }}

@@ -2,6 +2,9 @@ import cls from './Mod.module.scss';
 import Tag, { type TagType } from '../Tag/Tag';
 import UnorderedList from '../UnorderedList/UnorderedList';
 import ListItem from '../ListItem/ListItem';
+import Loader from '../Loader/Loader';
+import { useEffect, useState } from 'react';
+import { getModByName } from '../../services/modService';
 
 export type FileType =
   | 'Main Files'
@@ -26,8 +29,64 @@ export interface ModProps {
   tags?: TagType[];
 }
 
-const Mod = (props: ModProps) => {
-  const { name, version, author, description, downloadLink, files, tags = [] } = props;
+interface ModComponentProps {
+  modName: string;
+}
+
+const Mod = ({ modName }: ModComponentProps) => {
+  const [modData, setModData] = useState<ModProps | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    async function loadModData() {
+      try {
+        setLoading(true);
+        const data = await getModByName(modName);
+        if (data) {
+          setModData(data);
+        } else {
+          setError(`Не удалось загрузить данные мода "${modName}"`);
+        }
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      } catch (err) {
+        setError('Произошла ошибка при загрузке данных мода');
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    loadModData().catch((_err) => {
+      // Ошибка уже обрабатывается внутри функции
+      // Этот обработчик нужен только для правильной обработки Promise
+    });
+  }, [modName]);
+
+  if (loading) {
+    return (
+      <div className={cls.mod__loading}>
+        <Loader />
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className={cls.mod__error}>
+        <p>{error}</p>
+      </div>
+    );
+  }
+
+  if (!modData) {
+    return (
+      <div className={cls.mod__error}>
+        <p>Данные мода не найдены</p>
+      </div>
+    );
+  }
+
+  const { name, version, author, description, downloadLink, files, tags = [] } = modData;
 
   return (
     <article className={cls.mod}>
