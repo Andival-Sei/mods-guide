@@ -1,5 +1,6 @@
 .mod {
-  margin-bottom: 24px;
+  margin-top: 24px;
+  margin-bottom: 70px;
   padding: 24px;
   color: white;
   border-radius: 8px;
@@ -7,20 +8,20 @@
 
   &__loading,
   &__error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
     margin-bottom: 24px;
     padding: 24px;
     color: white;
     border-radius: 8px;
     background-color: #272626;
-    min-height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   &__error {
-    color: #ff6b6b;
     flex-direction: column;
+    color: #ff6b6b;
 
     p {
       font-size: 1.1rem;
@@ -40,18 +41,18 @@
 
   &__tags {
     display: inline-flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    gap: 8px;
     align-self: flex-start;
     flex-shrink: 0;
+    flex-wrap: wrap;
+    justify-content: flex-end;
     width: auto;
+    gap: 8px;
 
     @media (max-width: 768px) {
-      justify-content: flex-end;
-      margin-bottom: 12px;
-      width: 100%; /* Make sure it spans full width in mobile view */
       display: flex; /* Change from inline-flex to flex for full width */
+      justify-content: flex-end;
+      width: 100%; /* Make sure it spans full width in mobile view */
+      margin-bottom: 12px;
     }
   }
 
@@ -103,8 +104,8 @@
   }
 
   &__version_label {
-    color: #f1f1f1;
     font-style: italic;
+    color: #f1f1f1;
   }
 
   &__divider {
