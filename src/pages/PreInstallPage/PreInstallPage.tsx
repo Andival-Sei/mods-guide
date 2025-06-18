@@ -143,6 +143,8 @@ const PreInstallPage = () => {
 
       <Mod modName=".NET 8.0 SDK" />
 
+      <Mod modName="Microsoft Visual C++ Redistributable for Visual Studio 2015, 2017, 2019, and 2022" />
+
       <NavigationControls
         prevPage={{ to: '/commoninstructions', name: 'Общие инструкции' }}
         nextPage={{ to: '/preinstall', name: 'Установка модов - Часть 1' }}
