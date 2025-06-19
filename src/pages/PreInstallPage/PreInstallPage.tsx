@@ -357,6 +357,10 @@ const PreInstallPage = () => {
 
       <Mod modName="Dark Face Issue Reporter" />
 
+      <Mod modName="Dark Face Issue Reporter Ignore" />
+
+      <Mod modName="Synthesis" />
+
       <NavigationControls
         prevPage={{ to: '/commoninstructions', name: 'Общие инструкции' }}
         nextPage={{ to: '/preinstall', name: 'Установка модов - Часть 1' }}
