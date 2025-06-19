@@ -355,6 +355,8 @@ const PreInstallPage = () => {
 
       <Mod modName="WICO cleanup script" />
 
+      <Mod modName="Dark Face Issue Reporter" />
+
       <NavigationControls
         prevPage={{ to: '/commoninstructions', name: 'Общие инструкции' }}
         nextPage={{ to: '/preinstall', name: 'Установка модов - Часть 1' }}
