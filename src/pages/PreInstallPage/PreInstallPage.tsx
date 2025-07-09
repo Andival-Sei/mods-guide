@@ -10,6 +10,7 @@ import TextEmphasis from '../../components/TextEmphasis/TextEmphasis.tsx';
 import TextLink from '../../components/TextLink/TextLink.tsx';
 import FilePath from '../../components/FilePath/FilePath.tsx';
 import Mod from '../../components/Mod/Mod.tsx';
+import UnorderedList from '../../components/UnorderedList/UnorderedList.tsx';
 
 const PreInstallPage = () => {
   return (
@@ -415,6 +416,200 @@ const PreInstallPage = () => {
       <Mod modName="Bethini Pie (Performance INI Editor)" />
 
       <TitleBlock title="Запуск BethINI" description="Беги, БетИНИ, Беги" />
+
+      <TextBlock>
+        <OrderedList>
+          <ListItem>
+            <Paragraph>Запустите BethINI Pie.</Paragraph>
+          </ListItem>
+
+          <ListItem>
+            <Paragraph>
+              Если вы запускаете BethINI Pie впервые, появится всплывающее окно с просьбой выбрать
+              игру. Выберите <TextHighlight>Skyrim Special Edition</TextHighlight> в раскрывающемся
+              меню.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Если вы используете BethINI Pie впервые, другое всплывающее окно должно попросить вас
+              настроить:
+            </Paragraph>
+          </ListItem>
+
+          <UnorderedList>
+            <ListItem>
+              <Paragraph>
+                Путь к игре: Убедитесь, что он указывает на{' '}
+                <FilePath>Steam\steamapps\common\Skyrim Special Edition</FilePath>
+              </Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>
+                Путь INI: убедитесь, что он указывает на{' '}
+                <FilePath>Документы\My Games\Skyrim Special Edition</FilePath>
+              </Paragraph>
+            </ListItem>
+          </UnorderedList>
+
+          <ListItem>
+            <Paragraph>
+              Как только это будет сделано, нажмите <TextHighlight>OK</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+        </OrderedList>
+      </TextBlock>
+
+      <TextBlock>
+        <Paragraph>
+          <TextEmphasis>Вкладка Basic</TextEmphasis>
+        </Paragraph>
+
+        <OrderedList>
+          <ListItem>
+            <Paragraph>
+              Нажмите кнопку <TextHighlight>Reset to Default</TextHighlight> и подождите, пока не
+              отобразится сообщение <TextHighlight>Preset Default Applied</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Нажмите на предустановку <TextHighlight>High</TextHighlight> и подождите, пока не
+              отобразится сообщение <TextHighlight>Preset Bethini Hight Applied</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              <TextHighlight>
+                Пожалуйста, избегайте искушения нажать Ultra, даже если ваш компьютер
+                высокопроизводительный.
+              </TextHighlight>
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Нажмите кнопку <TextHighlight>Apply Recommended Tweaks</TextHighlight> и подождите,
+              пока не появится сообщение <TextHighlight>Preset recommended applied</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>Display:</Paragraph>
+          </ListItem>
+
+          <UnorderedList>
+            <ListItem>
+              <Paragraph>
+                Resolution: Это должно быть собственное разрешение вашей системы.
+              </Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>
+                Display Mode: <TextHighlight>Borderless Windowed</TextHighlight>
+              </Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>
+                Default World FOV: <TextHighlight>85</TextHighlight>
+              </Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>
+                Default FOV: <TextHighlight>85</TextHighlight>
+              </Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>
+                Default 1st Person World FOV: <TextHighlight>85</TextHighlight>
+              </Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>
+                64 Bit render Targets: <TextHighlight>Включено</TextHighlight>
+              </Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>
+                Vsync: <TextHighlight>Отключено</TextHighlight>
+              </Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>
+                Lock Framerate: <TextHighlight>Отключено</TextHighlight>
+              </Paragraph>
+            </ListItem>
+          </UnorderedList>
+
+          <ListItem>
+            <Paragraph>Adjustments:</Paragraph>
+          </ListItem>
+          <UnorderedList>
+            <ListItem>
+              <Paragraph>
+                Bloom Boost: <TextHighlight>5.0</TextHighlight>
+              </Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>
+                Freebies Seen: <TextHighlight>Включено</TextHighlight>
+              </Paragraph>
+            </ListItem>
+          </UnorderedList>
+        </OrderedList>
+      </TextBlock>
+
+      <TextBlock>
+        <Paragraph>
+          <TextEmphasis>Вкладка General</TextEmphasis>
+        </Paragraph>
+
+        <OrderedList>
+          <ListItem>
+            <Paragraph>Saved Games:</Paragraph>
+          </ListItem>
+          <UnorderedList>
+            <ListItem>
+              <Paragraph>
+                Autosaves: <TextHighlight>Отключено</TextHighlight>
+              </Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>
+                Save on Pause: <TextHighlight>Отключено</TextHighlight>
+              </Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>
+                Save on Travel: <TextHighlight>Отключено</TextHighlight>
+              </Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>
+                Save on wait: <TextHighlight>Отключено</TextHighlight>
+              </Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>
+                Save on rest: <TextHighlight>Отключено</TextHighlight>
+              </Paragraph>
+            </ListItem>
+          </UnorderedList>
+          <ListItem>
+            <Paragraph>Papyrus:</Paragraph>
+          </ListItem>
+          <UnorderedList>
+            <ListItem>
+              <Paragraph>
+                Post-Load Update Time: <TextHighlight>2000</TextHighlight>
+              </Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>
+                Max Allocated Memory: <TextHighlight>500000</TextHighlight>
+              </Paragraph>
+            </ListItem>
+          </UnorderedList>
+        </OrderedList>
+      </TextBlock>
 
       <NavigationControls
         prevPage={{ to: '/commoninstructions', name: 'Общие инструкции' }}
