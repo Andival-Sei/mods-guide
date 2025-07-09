@@ -384,16 +384,16 @@ export const modsData: ModProps[] = [
   },
   {
     name: 'Synthesis',
-    version: '0.34.0',
+    version: '0.35.0',
     author: 'Noggog',
     description:
       'Фреймворк и графический интерфейс для создания одного игрового патча Bethesda из множества источников патчеров. Разработано для того, чтобы любая программа могла работать в качестве патчера, если она соответствует CLI API.',
-    downloadLink: 'https://github.com/Mutagen-Modding/Synthesis/releases/tag/0.34.0',
+    downloadLink: 'https://github.com/Mutagen-Modding/Synthesis/releases/tag/0.35.0',
     files: [
       {
         type: 'Main Files',
         name: 'Synthesis.zip',
-        version: '0.34.0',
+        version: '0.35.0',
       },
     ],
     tags: ['tool'],

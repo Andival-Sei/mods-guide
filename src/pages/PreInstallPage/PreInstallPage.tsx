@@ -257,6 +257,41 @@ const PreInstallPage = () => {
         </OrderedList>
       </TextBlock>
 
+      <TextBlock>
+        <Paragraph>
+          <TextEmphasis>Загрузка Anniversary контента</TextEmphasis>
+        </Paragraph>
+
+        <OrderedList>
+          <ListItem>
+            <Paragraph>Запустите Skyrim Special Edition через Steam.</Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>В появившемся меню нажмите Играть.</Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              В главном меню игры нажмите на кнопку загрузки, когда вам будет предложено.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>Дождитесь загрузки всех дополнений и выйдите из игры.</Paragraph>
+          </ListItem>
+        </OrderedList>
+
+        <Paragraph>
+          На этом этапе <TextHighlight>ОЧЕНЬ ВАЖНО</TextHighlight>, чтобы все файлы творческого
+          клуба были установлены.
+        </Paragraph>
+
+        <Paragraph>
+          Если вы не видите кнопку «Загрузить», закройте игру, перейдите на компьютере в раздел{' '}
+          <FilePath>Документы\My Games\Skyrim Special Edition</FilePath>, удалите 2 ini-файла Skyrim
+          (Skyrim.ini и SkyrimPrefs.ini) и перезапустите игру из Steam. Кнопка загрузки должна
+          появиться.
+        </Paragraph>
+      </TextBlock>
+
       <Mod modName="Skyrim Special Edition: Creation Kit" />
 
       <TextBlock>
@@ -378,6 +413,8 @@ const PreInstallPage = () => {
       <TitleBlock title="BethINI" description="Skyrim INI файлы стали проще" />
 
       <Mod modName="Bethini Pie (Performance INI Editor)" />
+
+      <TitleBlock title="Запуск BethINI" description="Беги, БетИНИ, Беги" />
 
       <NavigationControls
         prevPage={{ to: '/commoninstructions', name: 'Общие инструкции' }}
