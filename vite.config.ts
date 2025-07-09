@@ -7,5 +7,6 @@ export default defineConfig({
   server: {
     host: '0.0.0.0', // Прослушивать все сетевые интерфейсы
     port: 5173,
+    open: true,
   },
 });
