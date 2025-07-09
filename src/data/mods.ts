@@ -493,4 +493,49 @@ export const modsData: ModProps[] = [
     ],
     tags: ['tool'],
   },
+  {
+    name: 'Skyrim Script Extender - Special Edition',
+    version: '2.2.6',
+    author: 'SKSE Team',
+    description:
+      'SKSE абсолютно необходима. Это расширяет возможности написания сценариев в игре, позволяя модам делать вещи, которые обычно невозможны в базовом движке Skyrim. Многие моды зависят от него.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/30379?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Skyrim Script Extender (SKSE64)',
+        version: '2.2.6',
+      },
+    ],
+    tags: ['tool', 'special-instructions'],
+    specialInstructions: {
+      blocks: [
+        {
+          type: 'paragraph',
+          content:
+            'Установите ТОЛЬКО следующие файлы в основной каталог <hl>Skyrim Special Edition</hl>:',
+        },
+        {
+          type: 'unordered_list',
+          items: ['SKSE64.exe', 'SKSE64_config.ini'],
+        },
+      ],
+    },
+  },
+  {
+    name: 'Bethini Pie (Performance INI Editor)',
+    version: '4.15',
+    author: 'DoubleYou',
+    description:
+      'Bethini Pie (Performance INI Editor) - это универсальный инструмент для упрощения редактирования файлов конфигурации INI через графический пользовательский интерфейс.',
+    downloadLink: 'https://www.nexusmods.com/site/mods/631',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Bethini Pie',
+        version: '4.15',
+      },
+    ],
+    tags: ['tool'],
+  },
 ];

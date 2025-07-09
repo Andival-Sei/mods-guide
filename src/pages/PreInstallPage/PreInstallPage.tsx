@@ -371,6 +371,14 @@ const PreInstallPage = () => {
 
       <Mod modName="zEdit" />
 
+      <TitleBlock title="Script Extenders" description="Там, где происходит настоящее волшебство" />
+
+      <Mod modName="Skyrim Script Extender - Special Edition" />
+
+      <TitleBlock title="BethINI" description="Skyrim INI файлы стали проще" />
+
+      <Mod modName="Bethini Pie (Performance INI Editor)" />
+
       <NavigationControls
         prevPage={{ to: '/commoninstructions', name: 'Общие инструкции' }}
         nextPage={{ to: '/preinstall', name: 'Установка модов - Часть 1' }}
