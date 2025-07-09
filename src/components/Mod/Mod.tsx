@@ -2,7 +2,6 @@ import cls from './Mod.module.scss';
 import Tag, { type TagType } from '../Tag/Tag';
 import UnorderedList from '../UnorderedList/UnorderedList';
 import ListItem from '../ListItem/ListItem';
-import Loader from '../Loader/Loader';
 import { observer } from 'mobx-react-lite';
 import { useStore } from '../../stores/index';
 import SpecialInstructions from '../SpecialInstructions/SpecialInstructions';
