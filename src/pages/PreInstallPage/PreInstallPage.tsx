@@ -361,6 +361,10 @@ const PreInstallPage = () => {
 
       <Mod modName="Synthesis" />
 
+      <Mod modName="Lexy's LOTD Synthesis Profile" />
+
+      <Mod modName="Cathedral Assets Optimizer" />
+
       <NavigationControls
         prevPage={{ to: '/commoninstructions', name: 'Общие инструкции' }}
         nextPage={{ to: '/preinstall', name: 'Установка модов - Часть 1' }}

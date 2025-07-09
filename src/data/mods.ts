@@ -398,4 +398,43 @@ export const modsData: ModProps[] = [
     ],
     tags: ['tool'],
   },
+  {
+    name: "Lexy's LOTD Synthesis Profile",
+    version: '0.33.3',
+    author: 'Darkladylexy and The Community',
+    description: 'Этот мод представляет собой готовый профиль для использования с Synthesis.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/85672?',
+    files: [
+      {
+        type: 'Main Files',
+        name: "Lexy's LOTD Synthesis Profile",
+        version: '0.33.3',
+      },
+    ],
+    tags: ['tool', 'special-instructions'],
+    specialInstructions: {
+      blocks: [
+        {
+          type: 'paragraph',
+          content: 'Распакуйте содержимое архива туда, где вы установили Synthesis.',
+        },
+      ],
+    },
+  },
+  {
+    name: 'Cathedral Assets Optimizer',
+    version: '5.3.15',
+    author: 'G_k',
+    description:
+      'Cathedral Assets Optimizer — это инструмент, предназначенный для автоматизации конвертации и оптимизации активов для Skyrim Special Edition.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/23316',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Cathedral Assets Optimizer 64',
+        version: '5.3.15',
+      },
+    ],
+    tags: ['tool'],
+  },
 ];
