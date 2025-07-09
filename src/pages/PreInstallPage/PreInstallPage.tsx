@@ -365,6 +365,12 @@ const PreInstallPage = () => {
 
       <Mod modName="Cathedral Assets Optimizer" />
 
+      <Mod modName="Lexy's LOTD CAO Profiles" />
+
+      <Mod modName="Wrye Bash" />
+
+      <Mod modName="zEdit" />
+
       <NavigationControls
         prevPage={{ to: '/commoninstructions', name: 'Общие инструкции' }}
         nextPage={{ to: '/preinstall', name: 'Установка модов - Часть 1' }}

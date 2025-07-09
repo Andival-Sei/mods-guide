@@ -437,4 +437,60 @@ export const modsData: ModProps[] = [
     ],
     tags: ['tool'],
   },
+  {
+    name: "Lexy's LOTD CAO Profiles",
+    version: '5.3.14.1',
+    author: 'Darkladylexy and The Community',
+    description: "Профили Cathedral Assets Optimizer для Lexy's LOTD Skyrim Special Edition.",
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/85672',
+    files: [
+      {
+        type: 'Main Files',
+        name: "Lexy's LOTD CAO Profiles",
+        version: '5.3.14.1',
+      },
+    ],
+    tags: ['tool', 'special-instructions'],
+    specialInstructions: {
+      blocks: [
+        {
+          type: 'paragraph',
+          content:
+            'После загрузки извлеките содержимое профилей <hl>CAO Lexy LOTD</hl> в папку <hl>Cathedral Assets Optimizer</hl>.',
+        },
+      ],
+    },
+  },
+  {
+    name: 'Wrye Bash',
+    version: '314',
+    author: 'Wrye Bash Team',
+    description:
+      'Функция этого инструмента заключается в управлении модами и создании Bashed Patches. Bashed Patches объединяет списки уровней из установленных модов и имеет некоторую ограниченную функциональность для объединения модов и настройки игровых ценностей. В этом руководстве вы будете использовать только функционал Bashed Patch.',
+    downloadLink: 'https://www.nexusmods.com/site/mods/591?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Wrye Bash 314 - Standalone Executable',
+        version: '314',
+      },
+    ],
+    tags: ['tool'],
+  },
+  {
+    name: 'zEdit',
+    version: '0.6.7',
+    author: 'matortheeternal',
+    description:
+      'Этот инструмент похож на SSEEdit. Он включает в себя zMerge, который используется для объединения плагинов.',
+    downloadLink: 'https://github.com/z-edit/zedit/releases/tag/0.6.7',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'zEdit_v0.6.7_-_Portable_x64.7z',
+        version: '0.6.7',
+      },
+    ],
+    tags: ['tool'],
+  },
 ];
