@@ -1,19 +1,13 @@
 import { makeAutoObservable } from 'mobx';
 import { createContext, useContext } from 'react';
+import { ModStore } from './modStore';
 
 export class RootStore {
-  counter = 0;
+  modStore: ModStore;
 
   constructor() {
+    this.modStore = new ModStore();
     makeAutoObservable(this);
-  }
-
-  increment() {
-    this.counter++;
-  }
-
-  decrement() {
-    this.counter--;
   }
 }
 

@@ -97,13 +97,7 @@ export const modsData: ModProps[] = [
       blocks: [
         {
           type: 'unordered_list',
-          items: [
-            [
-              {
-                text: 'Вручную распакуйте мод и поместите в основной каталог Skyrim Special Edition.',
-              },
-            ],
-          ],
+          items: ['Вручную распакуйте мод и поместите в основной каталог Skyrim Special Edition.'],
         },
       ],
     },
@@ -127,266 +121,77 @@ export const modsData: ModProps[] = [
       blocks: [
         {
           type: 'paragraph',
-          content: [
-            {
-              text: 'При первой загрузке у LOOT не будет данных мастер-листа или групп модов по умолчанию. (Цветной текст указывает на цвет узла (по умолчанию).',
-            },
-          ],
+          content:
+            'При первой загрузке у LOOT не будет данных мастер-листа или групп модов по умолчанию. (Цветной текст указывает на цвет узла (по умолчанию).',
         },
         {
           type: 'ordered_list',
           items: [
-            [
-              {
-                text: 'Выключите Mod Organizer 2, если он открыт. (Если вы следуете руководству впервые, MO2 еще даже не установлен.)',
-              },
-            ],
-            [{ text: 'Запустите LOOT из установленного места.' }],
-            [
-              {
-                text: 'После загрузки LOOT отсортируйте порядок загрузки, нажав на иконку с надписью «Сортировать плагины» (она имеет три строки друг над другом). Это в верхнем левом углу',
-              },
-            ],
+            'Выключите Mod Organizer 2, если он открыт. (Если вы следуете руководству впервые, MO2 еще даже не установлен.)',
+            'Запустите LOOT из установленного места.',
+            'После загрузки LOOT отсортируйте порядок загрузки, нажав на иконку с надписью «Сортировать плагины» (она имеет три строки друг над другом). Это в верхнем левом углу',
           ],
         },
         {
           type: 'paragraph',
-          content: [
-            {
-              text: 'Если вы ранее установили LOOT, вам необходимо очистить все старые пользовательские правила, которые вы могли добавить:',
-            },
-          ],
+          content:
+            'Если вы ранее установили LOOT, вам необходимо очистить все старые пользовательские правила, которые вы могли добавить:',
         },
         {
           type: 'ordered_list',
           items: [
-            [
-              { text: 'Найдите и нажмите ' },
-              { text: '«Игра»', highlight: true },
-              { text: ' в верхнем меню, затем выберите ' },
-              { text: '«Очистить все метаданные пользователя...»', highlight: true },
-              { text: ', затем нажмите ' },
-              { text: '«Да»', highlight: true },
-              { text: '. Это гарантирует, что у вас будет четкий набор правил.' },
-            ],
+            'Найдите и нажмите <hl>«Игра»</hl> в верхнем меню, затем выберите <hl>«Очистить все метаданные пользователя...»</hl>, затем нажмите <hl>«Да»</hl>. Это гарантирует, что у вас будет четкий набор правил.',
           ],
         },
         {
           type: 'paragraph',
-          content: [
-            {
-              text: 'Руководство требует добавления новых групп модов LOOT для правильной сортировки порядка загрузки:',
-            },
-          ],
+          content:
+            'Руководство требует добавления новых групп модов LOOT для правильной сортировки порядка загрузки:',
         },
         {
           type: 'ordered_list',
           items: [
-            [
-              {
-                text: 'Запустите LOOT (если он все еще не загружен с последнего шага. Если вы закрыли его, вы можете загрузить его через MO2 на этом этапе, если хотите.)',
-              },
-            ],
-            [
-              { text: 'В верхнем меню найдите и нажмите «' },
-              { text: 'Игра', highlight: true },
-              { text: '».' },
-            ],
-            [
-              { text: 'Нажмите кнопку ' },
-              { text: 'Редактировать группы', highlight: true },
-              { text: '.' },
-            ],
-            [
-              { text: 'В поле «Название группы» введите ' },
-              { text: '«Village Mods»', highlight: true },
-              { text: ', затем нажмите кнопку «' },
-              { text: 'Добавить новую группу', highlight: true },
-              { text: '».' },
-            ],
-            [
-              { text: 'Щелкните левой кнопкой мыши узел ' },
-              { text: '«Alternate Start', highlight: true },
-              { text: '», чтобы выбрать его.' },
-            ],
-            [
-              { text: 'Дважды щелкните и удерживайте, перетаскивая линию от ' },
-              { text: 'Alternate Start', highlight: true },
-              { text: ' к узлу ' },
-              { text: 'Village Mods', highlight: true },
-              { text: ', который вы создали. ' },
-              { text: 'Village Mods', highlight: true },
-              { text: ' должны стать зелеными.' },
-            ],
-            [
-              { text: 'Создайте новую группу под названием ' },
-              { text: 'Trivial Smelters of Skyrim', highlight: true },
-              { text: ',' },
-            ],
-            [
-              { text: 'Подключите ' },
-              { text: 'Village Mods', highlight: true },
-              { text: ' к созданному вами узлу ' },
-              { text: 'Trivial Smelters of Skyrim', highlight: true },
-              { text: '. ' },
-              { text: 'Trivial Smelters of Skyrim', highlight: true },
-              { text: ' должны стать зелеными.' },
-            ],
-            [
-              { text: 'Подключите ' },
-              { text: 'Trivial Smelters of Skyrim', highlight: true },
-              { text: ' к ' },
-              { text: 'Follower Frameworks', highlight: true },
-              { text: ', Trivial Smelters of Skyrim должны стать серыми.' },
-            ],
-            [
-              { text: 'Создайте новую группу с именем ' },
-              { text: 'CCOR Patches', highlight: true },
-            ],
-            [
-              { text: 'Щелкните левой кнопкой мыши и перетащите линию от ' },
-              { text: 'Cell Encounter Zones', highlight: true },
-              { text: ' к узлу ' },
-              { text: 'CCOR Patches', highlight: true },
-              { text: ', который вы создали. CCOR Patches должны стать зелеными.' },
-            ],
-            [
-              { text: 'Создайте новую группу с именем ' },
-              { text: 'CACO Patches', highlight: true },
-            ],
-            [
-              { text: 'Подключите ' },
-              { text: 'CCOR Patches', highlight: true },
-              { text: ' к созданному узлу ' },
-              { text: 'CACO Patches', highlight: true },
-              { text: '. CACO Patches должны стать зелеными.' },
-            ],
-            [{ text: 'Создайте новую группу с именем ' }, { text: 'OWL', highlight: true }],
-            [
-              { text: 'Подключите ' },
-              { text: 'патчи CACO', highlight: true },
-              { text: ' к созданному узлу ' },
-              { text: 'OWL', highlight: true },
-              { text: '. OWL должен стать зеленым.' },
-            ],
-            [
-              { text: 'Создайте новую группу под названием ' },
-              { text: 'Snazzy Patches', highlight: true },
-            ],
-            [
-              { text: 'Подключите ' },
-              { text: 'OWL', highlight: true },
-              { text: ' к ноде ' },
-              { text: 'Snazzy Patches', highlight: true },
-              { text: ', которую вы создали. Snazzy Patches должны стать зелеными.' },
-            ],
-            [
-              { text: 'Создайте новую группу под названием ' },
-              { text: 'Merge Patches', highlight: true },
-            ],
-            [
-              { text: 'Подключите ' },
-              { text: 'Snazzy Patches', highlight: true },
-              { text: ' к ноду ' },
-              { text: 'Merge Patches', highlight: true },
-              { text: ', который вы создали. Merge Patches должно стать зеленым.' },
-            ],
-            [
-              { text: 'Подключите ' },
-              { text: 'Merge Patches к', highlight: true },
-              { text: ' ' },
-              { text: 'Cell Water', highlight: true },
-              { text: '. Merge Patches должны стать серыми.' },
-            ],
-            [{ text: 'Создайте новую группу под названием ' }, { text: 'LUX', highlight: true }],
-            [
-              { text: 'Щелкните левой кнопкой мыши и перетащите линию от ' },
-              { text: 'Cell Weathers & Lighting', highlight: true },
-              { text: ' к узлу ' },
-              { text: 'LUX', highlight: true },
-              { text: ', который вы создали, LUX должен стать зеленым.' },
-            ],
-            [
-              { text: 'Создайте новую группу под названием ' },
-              { text: 'LUX Orbis', highlight: true },
-            ],
-            [
-              { text: 'Подключите ' },
-              { text: 'LUX', highlight: true },
-              { text: ' к ноде ' },
-              { text: 'LUX Orbis', highlight: true },
-              { text: ', который вы создали, LUX Orbis должен стать зеленым.' },
-            ],
-            [
-              { text: 'Создайте новую группу под названием ' },
-              { text: 'LUX Via', highlight: true },
-            ],
-            [
-              { text: 'Подключите ' },
-              { text: 'LUX Orbis', highlight: true },
-              { text: ' к узлу ' },
-              { text: 'LUX Via', highlight: true },
-              { text: ', который вы создали, LUX Via должен стать зеленым.' },
-            ],
-            [
-              { text: 'Подключите ' },
-              { text: 'LUX Via', highlight: true },
-              { text: ' к ' },
-              { text: 'Open Cities Skyrim', highlight: true },
-              { text: ', LUX Via должен стать серым.' },
-            ],
-            [
-              { text: 'Создайте новую группу с именем ' },
-              { text: 'NPC Retextures', highlight: true },
-            ],
-            [
-              { text: 'Щелкните левой кнопкой мыши и перетащите линию из раздела ' },
-              { text: 'Khajiit Speak', highlight: true },
-              { text: ' в узел ' },
-              { text: 'NPC Retextures', highlight: true },
-              { text: ', который вы создали, NPC Retextures должны стать зелеными.' },
-            ],
-            [
-              { text: 'Создайте новую группу с именем ' },
-              { text: 'Consistency Patches', highlight: true },
-            ],
-            [
-              { text: 'Подключите ' },
-              { text: 'NPC Retextures', highlight: true },
-              { text: ' к ' },
-              { text: 'Consistency Patches', highlight: true },
-              { text: '. Consistency Patches должны стать зелеными.' },
-            ],
-            [
-              { text: 'Создайте новую группу с именем ' },
-              { text: 'Conflict Resolution', highlight: true },
-            ],
-            [
-              { text: 'Подключите ' },
-              { text: 'Consistency Patches', highlight: true },
-              { text: ' к ' },
-              { text: 'Conflict Resolution', highlight: true },
-              { text: ' Conflict Resolution должно стать зеленым.' },
-            ],
-            [
-              { text: 'Подключите ' },
-              { text: 'Conflict Resolution', highlight: true },
-              { text: ' к ' },
-              { text: 'Leveled List Modifiers', highlight: true },
-              { text: '. Conflict Resolution должно стать серым.' },
-            ],
-            [
-              {
-                text: 'Убедитесь, что все вновь добавленные группы отображаются серым цветом. Нажмите ',
-              },
-              { text: 'кнопку «Автоупорядочивание групп»', highlight: true },
-              { text: ', чтобы очистить групповые подключения. ' },
-              { text: 'Нажмите Сохранить', highlight: true },
-              { text: ', чтобы выйти из этого интерфейса.' },
-            ],
+            'Запустите LOOT (если он все еще не загружен с последнего шага. Если вы закрыли его, вы можете загрузить его через MO2 на этом этапе, если хотите.)',
+            'В верхнем меню найдите и нажмите <hl>Игра</hl>.',
+            'Нажмите кнопку <hl>Редактировать группы</hl>.',
+            'В поле «Название группы» введите <hl>«Village Mods»</hl>, затем нажмите кнопку <hl>Добавить новую группу</hl>.',
+            'Щелкните левой кнопкой мыши узел <hl>«Alternate Start</hl>», чтобы выбрать его.',
+            'Дважды щелкните и удерживайте, перетаскивая линию от <hl>Alternate Start</hl> к узлу <hl>Village Mods</hl>, который вы создали. <hl>Village Mods</hl> должны стать зелеными.',
+            'Создайте новую группу под названием <hl>Trivial Smelters of Skyrim</hl>,',
+            'Подключите <hl>Village Mods</hl> к созданному вами узлу <hl>Trivial Smelters of Skyrim</hl>. <hl>Trivial Smelters of Skyrim</hl> должны стать зелеными.',
+            'Подключите <hl>Trivial Smelters of Skyrim</hl> к <hl>Follower Frameworks</hl>, Trivial Smelters of Skyrim должны стать серыми.',
+            'Создайте новую группу с именем <hl>CCOR Patches</hl>',
+            'Щелкните левой кнопкой мыши и перетащите линию от <hl>Cell Encounter Zones</hl> к узлу <hl>CCOR Patches</hl>, который вы создали. CCOR Patches должны стать зелеными.',
+            'Создайте новую группу с именем <hl>CACO Patches</hl>',
+            'Подключите <hl>CCOR Patches</hl> к созданному узлу <hl>CACO Patches</hl>. CACO Patches должны стать зелеными.',
+            'Создайте новую группу с именем <hl>OWL</hl>',
+            'Подключите <hl>патчи CACO</hl> к созданному узлу <hl>OWL</hl>. OWL должен стать зеленым.',
+            'Создайте новую группу под названием <hl>Snazzy Patches</hl>',
+            'Подключите <hl>OWL</hl> к ноде <hl>Snazzy Patches</hl>, которую вы создали. Snazzy Patches должны стать зелеными.',
+            'Создайте новую группу под названием <hl>Merge Patches</hl>',
+            'Подключите <hl>Snazzy Patches</hl> к ноду <hl>Merge Patches</hl>, который вы создали. Merge Patches должно стать зеленым.',
+            'Подключите <hl>Merge Patches к</hl> <hl>Cell Water</hl>. Merge Patches должны стать серыми.',
+            'Создайте новую группу под названием <hl>LUX</hl>',
+            'Щелкните левой кнопкой мыши и перетащите линию от <hl>Cell Weathers & Lighting</hl> к узлу <hl>LUX</hl>, который вы создали, LUX должен стать зеленым.',
+            'Создайте новую группу под названием <hl>LUX Orbis</hl>',
+            'Подключите <hl>LUX</hl> к ноде <hl>LUX Orbis</hl>, который вы создали, LUX Orbis должен стать зеленым.',
+            'Создайте новую группу под названием <hl>LUX Via</hl>',
+            'Подключите <hl>LUX Orbis</hl> к узлу <hl>LUX Via</hl>, который вы создали, LUX Via должен стать зеленым.',
+            'Подключите <hl>LUX Via</hl> к <hl>Open Cities Skyrim</hl>, LUX Via должен стать серым.',
+            'Создайте новую группу с именем <hl>NPC Retextures</hl>',
+            'Щелкните левой кнопкой мыши и перетащите линию из раздела <hl>Khajiit Speak</hl> в узел <hl>NPC Retextures</hl>, который вы создали, NPC Retextures должны стать зелеными.',
+            'Создайте новую группу с именем <hl>Consistency Patches</hl>',
+            'Подключите <hl>NPC Retextures</hl> к <hl>Consistency Patches</hl>. Consistency Patches должны стать зелеными.',
+            'Создайте новую группу с именем <hl>Conflict Resolution</hl>',
+            'Подключите <hl>Consistency Patches</hl> к <hl>Conflict Resolution</hl> Conflict Resolution должно стать зеленым.',
+            'Подключите <hl>Conflict Resolution</hl> к <hl>Leveled List Modifiers</hl>. Conflict Resolution должно стать серым.',
+            'Убедитесь, что все вновь добавленные группы отображаются серым цветом. Нажмите <hl>кнопку «Автоупорядочивание групп»</hl>, чтобы очистить групповые подключения. <hl>Нажмите Сохранить</hl>, чтобы выйти из этого интерфейса.',
           ],
         },
-        { type: 'paragraph', content: [{ text: 'Теперь вы можете закрыть LOOT.' }] },
+        {
+          type: 'paragraph',
+          content: 'Теперь вы можете закрыть LOOT.',
+        },
       ],
     },
   },
@@ -410,59 +215,41 @@ export const modsData: ModProps[] = [
       blocks: [
         {
           type: 'paragraph',
-          content: [
-            {
-              text: 'После загрузки файла распакуйте содержимое архива и переименуйте следующие файлы:',
-            },
-          ],
+          content:
+            'После загрузки файла распакуйте содержимое архива и переименуйте следующие файлы:',
         },
         {
           type: 'unordered_list',
           items: [
-            [{ text: 'xDump.exe в ' }, { text: 'SSEDump.exe', highlight: true }],
-            [{ text: 'xDump64.exe в ' }, { text: 'SSEDump64.exe', highlight: true }],
-            [{ text: 'xTESEdit.exe в ' }, { text: 'SSEEdit.exe', highlight: true }],
-            [{ text: 'xTESEdit64.exe в ' }, { text: 'SSEEdit64.exe', highlight: true }],
+            'xDump.exe в <hl>SSEDump.exe</hl>',
+            'xDump64.exe в <hl>SSEDump64.exe</hl>',
+            'xTESEdit.exe в <hl>SSEEdit.exe</hl>',
+            'xTESEdit64.exe в <hl>SSEEdit64.exe</hl>',
           ],
         },
         {
           type: 'paragraph',
-          content: [
-            {
-              text: 'скопируйте и вставьте SSEEdit64.exe (создав вторую версию exe) и переименуйте эту копию в ',
-            },
-            { text: 'SSEEditQuickAutoClean.exe', highlight: true },
-          ],
+          content:
+            'скопируйте и вставьте SSEEdit64.exe (создав вторую версию exe) и переименуйте эту копию в <hl>SSEEditQuickAutoClean.exe</hl>',
         },
-        { type: 'paragraph', content: [{ text: 'Родные 4K-мониторы', highlight: true }] },
         {
           type: 'paragraph',
-          content: [
-            {
-              text: 'Поскольку многие 4K-мониторы теперь имеют формат Native 4K, необходимо быстро изменить настройки, чтобы сделать инструкции xEdit, особенно в разнообразии, простыми для выполнения. Без этого многие кнопки будут нечитаемы и приведут к путанице.',
-            },
-          ],
+          content: '<hl>Родные 4K-мониторы</hl>',
+        },
+        {
+          type: 'paragraph',
+          content:
+            'Поскольку многие 4K-мониторы теперь имеют формат Native 4K, необходимо быстро изменить настройки, чтобы сделать инструкции xEdit, особенно в разнообразии, простыми для выполнения. Без этого многие кнопки будут нечитаемы и приведут к путанице.',
         },
         {
           type: 'ordered_list',
           items: [
-            [
-              { text: 'Щелкните правой кнопкой мыши на файле ' },
-              { text: 'SSEEdit64.EXE', highlight: true },
-            ],
-            [{ text: 'Выберите ' }, { text: '"Properties"', highlight: true }],
-            [{ text: 'Выберите вкладку  ' }, { text: '"Compatibility"', highlight: true }],
-            [{ text: 'Нажмите на ' }, { text: '"Change High DPI Settings"', highlight: true }],
-            [
-              { text: 'Убедитесь, что установлен флажок ' },
-              { text: '"Override High DPI Scaling Behavior"', highlight: true },
-              { text: ' отмечен.' },
-            ],
-            [
-              { text: 'Масштабирование должно выполняться ' },
-              { text: '"SYSTEM"', highlight: true },
-              { text: '.' },
-            ],
+            'Щелкните правой кнопкой мыши на файле <hl>SSEEdit64.EXE</hl>',
+            'Выберите <hl>"Properties"</hl>',
+            'Выберите вкладку <hl>"Compatibility"</hl>',
+            'Нажмите на <hl>"Change High DPI Settings"</hl>',
+            'Убедитесь, что установлен флажок <hl>"Override High DPI Scaling Behavior"</hl> отмечен.',
+            'Масштабирование должно выполняться <hl>"SYSTEM"</hl>.',
           ],
         },
       ],
@@ -487,15 +274,8 @@ export const modsData: ModProps[] = [
       blocks: [
         {
           type: 'paragraph',
-          content: [
-            { text: 'После загрузки извлеките содержимое папки ' },
-            { text: 'Edit Scripts', highlight: true },
-            { text: ' из архива в папку ' },
-            { text: 'Edit Scripts', highlight: true },
-            { text: ', которая находится в главной папке установки ' },
-            { text: 'SSEEdit', highlight: true },
-            { text: '.' },
-          ],
+          content:
+            'После загрузки извлеките содержимое папки <hl>Edit Scripts</hl> из архива в папку <hl>Edit Scripts</hl>, которая находится в главной папке установки <hl>SSEEdit</hl>.',
         },
       ],
     },
@@ -518,25 +298,12 @@ export const modsData: ModProps[] = [
       blocks: [
         {
           type: 'paragraph',
-          content: [
-            { text: 'Нажмите ' },
-            { text: 'Code', highlight: true },
-            { text: ', затем нажмите ' },
-            { text: 'Download zip', highlight: true },
-            { text: '.' },
-          ],
+          content: 'Нажмите <hl>Code</hl>, затем нажмите <hl>Download zip</hl>.',
         },
         {
           type: 'paragraph',
-          content: [
-            { text: 'После загрузки извлеките содержимое папки ' },
-            { text: 'Edit Scripts', highlight: true },
-            { text: ' из архива в папку ' },
-            { text: 'Edit Scripts', highlight: true },
-            { text: ', которая находится в главной папке установки ' },
-            { text: 'SSEEdit', highlight: true },
-            { text: '.' },
-          ],
+          content:
+            'После загрузки извлеките содержимое папки <hl>Edit Scripts</hl> из архива в папку <hl>Edit Scripts</hl>, которая находится в главной папке установки <hl>SSEEdit</hl>.',
         },
       ],
     },
@@ -560,15 +327,8 @@ export const modsData: ModProps[] = [
       blocks: [
         {
           type: 'paragraph',
-          content: [
-            { text: 'После загрузки извлеките содержимое папки ' },
-            { text: 'Hishy_NPC_RecordForwarding.pas-5049-2-5b', highlight: true },
-            { text: ' из архива в папку ' },
-            { text: 'Edit Scripts', highlight: true },
-            { text: ', которая находится в главной папке установки ' },
-            { text: 'SSEEdit', highlight: true },
-            { text: '.' },
-          ],
+          content:
+            'После загрузки извлеките содержимое папки <hl>Hishy_NPC_RecordForwarding.pas-5049-2-5b</hl> из архива в папку <hl>Edit Scripts</hl>, которая находится в главной папке установки <hl>SSEEdit</hl>.',
         },
       ],
     },
@@ -591,35 +351,8 @@ export const modsData: ModProps[] = [
       blocks: [
         {
           type: 'paragraph',
-          content: [
-            { text: 'После загрузки извлеките содержимое архива ' },
-            { text: 'DarkFaceIssueReporter', highlight: true },
-            { text: ' в папку ' },
-            { text: 'Edit Scripts', highlight: true },
-            { text: ', которая находится в главной папке установки ' },
-            { text: 'SSEEdit', highlight: true },
-            { text: '.' },
-          ],
-        },
-        {
-          type: 'paragraph',
-          content: [
-            { text: 'После установки измените ' },
-            { text: 'darkfaceissuereporter.ini', highlight: true },
-            { text: ' следующим образом:' },
-          ],
-        },
-        {
-          type: 'unordered_list',
-          items: [
-            [{ text: 'CreateDebugLogFile=' }, { text: 'True', highlight: true }],
-            [{ text: 'CreateConsoleCommandBatchFile=' }, { text: 'True', highlight: true }],
-            [{ text: 'CreateDarkFaceCollector=' }, { text: 'True', highlight: true }],
-            [
-              { text: 'DarkFaceCollectorFilename=' },
-              { text: 'darkfacecollector.esp', highlight: true },
-            ],
-          ],
+          content:
+            'После загрузки извлеките содержимое архива <hl>DarkFaceIssueReporter</hl> в папку <hl>Edit Scripts</hl>, которая находится в главной папке установки <hl>SSEEdit</hl>.',
         },
       ],
     },
@@ -643,11 +376,8 @@ export const modsData: ModProps[] = [
       blocks: [
         {
           type: 'paragraph',
-          content: [
-            { text: 'После загрузки извлеките содержимое архива и поместите INI-файл в папку ' },
-            { text: 'SSEEdit/Edit Scripts', highlight: true },
-            { text: '.' },
-          ],
+          content:
+            'После загрузки извлеките содержимое архива и поместите INI-файл в папку <hl>SSEEdit/Edit Scripts</hl>.',
         },
       ],
     },

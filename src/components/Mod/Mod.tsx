@@ -3,8 +3,8 @@ import Tag, { type TagType } from '../Tag/Tag';
 import UnorderedList from '../UnorderedList/UnorderedList';
 import ListItem from '../ListItem/ListItem';
 import Loader from '../Loader/Loader';
-import { useEffect, useState } from 'react';
-import { getModByName } from '../../services/modService';
+import { observer } from 'mobx-react-lite';
+import { useStore } from '../../stores/index';
 import SpecialInstructions from '../SpecialInstructions/SpecialInstructions';
 
 export type FileType =
@@ -20,6 +20,7 @@ export interface ModFile {
   version: string;
 }
 
+// Новый формат specialInstructions - простые строки с <hl> тегами
 export interface ModProps {
   name: string;
   version: string;
@@ -31,8 +32,8 @@ export interface ModProps {
   specialInstructions?: {
     blocks: Array<{
       type: 'paragraph' | 'unordered_list' | 'ordered_list';
-      content?: Array<{ text: string; highlight?: boolean }>;
-      items?: Array<Array<{ text: string; highlight?: boolean }>>;
+      content?: string; // Простая строка с <hl>текст</hl> тегами
+      items?: string[]; // Массив строк с <hl>текст</hl> тегами
     }>;
   };
 }
@@ -41,55 +42,15 @@ interface ModComponentProps {
   modName: string;
 }
 
-const Mod = ({ modName }: ModComponentProps) => {
-  const [modData, setModData] = useState<ModProps | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+const Mod = observer(({ modName }: ModComponentProps) => {
+  const { modStore } = useStore();
+  const modData = modStore.getMod(modName);
 
-  useEffect(() => {
-    async function loadModData() {
-      try {
-        setLoading(true);
-        const data = await getModByName(modName);
-        if (data) {
-          setModData(data);
-        } else {
-          setError(`Не удалось загрузить данные мода "${modName}"`);
-        }
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      } catch (err) {
-        setError('Произошла ошибка при загрузке данных мода');
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    loadModData().catch((_err) => {
-      // Ошибка уже обрабатывается внутри функции
-      // Этот обработчик нужен только для правильной обработки Promise
-    });
-  }, [modName]);
-
-  if (loading) {
-    return (
-      <div className={cls.mod__loading}>
-        <Loader />
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className={cls.mod__error}>
-        <p>{error}</p>
-      </div>
-    );
-  }
-
+  // Если мод не найден
   if (!modData) {
     return (
       <div className={cls.mod__error}>
-        <p>Данные мода не найдены</p>
+        <p>Мод "{modName}" не найден в базе данных</p>
       </div>
     );
   }
@@ -176,6 +137,6 @@ const Mod = ({ modName }: ModComponentProps) => {
       )}
     </article>
   );
-};
+});
 
 export default Mod;

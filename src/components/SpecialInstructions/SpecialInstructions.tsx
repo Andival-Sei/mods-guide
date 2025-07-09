@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import Paragraph from '../Paragraph/Paragraph';
 import UnorderedList from '../UnorderedList/UnorderedList';
 import OrderedList from '../OrderedList/OrderedList';
@@ -6,29 +7,30 @@ import TextBlock from '../TextBlock/TextBlock';
 import TextHighlight from '../TextHighlight/TextHighlight';
 import cls from './SpecialInstructions.module.scss';
 
-interface TextSegment {
-  text: string;
-  highlight?: boolean;
-}
-
 interface SpecialInstructionsProps {
   instructions: {
     blocks: Array<{
       type: 'paragraph' | 'unordered_list' | 'ordered_list';
-      content?: TextSegment[];
-      items?: TextSegment[][];
+      content?: string; // Строка с <hl>текст</hl> тегами
+      items?: string[]; // Массив строк с <hl>текст</hl> тегами
     }>;
   };
 }
 
 const SpecialInstructions = ({ instructions }: SpecialInstructionsProps) => {
-  // Функция для рендеринга текста с подсветкой
-  const renderTextWithHighlights = (segments: TextSegment[]) => {
-    return segments.map((segment, index) => {
-      if (segment.highlight) {
-        return <TextHighlight key={index}>{segment.text}</TextHighlight>;
+  // Функция для парсинга текста с <hl> тегами
+  const parseTextWithHighlights = (text: string): ReactNode[] => {
+    // Разбиваем текст по тегам <hl>...</hl>
+    const parts = text.split(/(<hl>.*?<\/hl>)/g);
+
+    return parts.map((part, index) => {
+      // Если часть содержит тег подсветки
+      if (part.startsWith('<hl>') && part.endsWith('</hl>')) {
+        const highlightText = part.replace('<hl>', '').replace('</hl>', '');
+        return <TextHighlight key={index}>{highlightText}</TextHighlight>;
       }
-      return <span key={index}>{segment.text}</span>;
+      // Обычный текст
+      return <span key={index}>{part}</span>;
     });
   };
 
@@ -41,16 +43,14 @@ const SpecialInstructions = ({ instructions }: SpecialInstructionsProps) => {
             case 'paragraph':
               return (
                 <Paragraph key={blockIndex}>
-                  {block.content ? renderTextWithHighlights(block.content) : ''}
+                  {block.content ? parseTextWithHighlights(block.content) : ''}
                 </Paragraph>
               );
             case 'unordered_list':
               return (
                 <UnorderedList key={blockIndex}>
                   {block.items?.map((item, itemIndex) => (
-                    <ListItem key={itemIndex}>
-                      {renderTextWithHighlights(item)}
-                    </ListItem>
+                    <ListItem key={itemIndex}>{parseTextWithHighlights(item)}</ListItem>
                   ))}
                 </UnorderedList>
               );
@@ -58,9 +58,7 @@ const SpecialInstructions = ({ instructions }: SpecialInstructionsProps) => {
               return (
                 <OrderedList key={blockIndex}>
                   {block.items?.map((item, itemIndex) => (
-                    <ListItem key={itemIndex}>
-                      {renderTextWithHighlights(item)}
-                    </ListItem>
+                    <ListItem key={itemIndex}>{parseTextWithHighlights(item)}</ListItem>
                   ))}
                 </OrderedList>
               );
