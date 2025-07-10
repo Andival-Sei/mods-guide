@@ -538,4 +538,21 @@ export const modsData: ModProps[] = [
     ],
     tags: ['tool'],
   },
+  {
+    name: 'Mod Organizer 2',
+    version: '2.5.3 - Beta 2',
+    author: 'Tannin - MO2 Team',
+    description:
+      'Это инструмент, который мы будем использовать для загрузки, установки и управления модами. Не волнуйтесь, если это выглядит пугающим, мы исправим это в ближайшее время.',
+    downloadLink:
+      'https://onedrive.live.com/?redeem=aHR0cHM6Ly8xZHJ2Lm1zL3UvYy8zNzEyNzJjNDlhMzdjYzRhL0VkZkZlYjdEdGpkR3J6a0NTUEN0SEJjQkdGMXpwbzRnelRtc1pzQWhiNGZYaUE&cid=371272C49A37CC4A&id=371272C49A37CC4A%21sbe79c5d7b6c34637af390248f0ad1c17&parId=371272C49A37CC4A%21148600&o=OneUp',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Mod.Organizer-2.5.3beta2.exe',
+        version: '2.5.3 - Beta 2',
+      },
+    ],
+    tags: ['tool'],
+  },
 ];

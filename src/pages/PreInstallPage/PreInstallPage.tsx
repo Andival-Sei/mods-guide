@@ -611,6 +611,277 @@ const PreInstallPage = () => {
         </OrderedList>
       </TextBlock>
 
+      <TextBlock>
+        <Paragraph>
+          <TextEmphasis>Вкладка Gameplay</TextEmphasis>
+        </Paragraph>
+        <UnorderedList>
+          <ListItem>
+            <Paragraph>
+              NPC Use Ammo: <TextHighlight>Включено</TextHighlight>
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Over Encumbered Reminder: <TextHighlight>300</TextHighlight>
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Tutorials: <TextHighlight>Отключено</TextHighlight>
+            </Paragraph>
+          </ListItem>
+        </UnorderedList>
+      </TextBlock>
+
+      <TextBlock>
+        <Paragraph>
+          <TextEmphasis>Вкладка Interface</TextEmphasis>
+        </Paragraph>
+        <UnorderedList>
+          <ListItem>
+            <Paragraph>
+              Bethesda Modding Platform: <TextHighlight>Отключено</TextHighlight>
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Mod Manager Menu: <TextHighlight>Отключено</TextHighlight>
+            </Paragraph>
+          </ListItem>
+        </UnorderedList>
+      </TextBlock>
+
+      <TextBlock>
+        <Paragraph>
+          <TextEmphasis>Вкладка Environment</TextEmphasis>
+        </Paragraph>
+        <OrderedList>
+          <ListItem>
+            <Paragraph>Grass:</Paragraph>
+          </ListItem>
+          <UnorderedList>
+            <ListItem>
+              <Paragraph>
+                Density: <TextHighlight>60</TextHighlight>
+              </Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>
+                Diversity: <TextHighlight>15</TextHighlight>
+              </Paragraph>
+            </ListItem>
+          </UnorderedList>
+
+          <ListItem>
+            <Paragraph>Water:</Paragraph>
+          </ListItem>
+          <UnorderedList>
+            <ListItem>
+              <Paragraph>
+                Reflect Sky: <TextHighlight>Отключено</TextHighlight>
+              </Paragraph>
+            </ListItem>
+          </UnorderedList>
+        </OrderedList>
+      </TextBlock>
+
+      <TextBlock>
+        <Paragraph>
+          <TextEmphasis>Вкладка Shadows</TextEmphasis>
+        </Paragraph>
+        <OrderedList>
+          <ListItem>
+            <Paragraph>Ambient Occlusion:</Paragraph>
+          </ListItem>
+          <UnorderedList>
+            <ListItem>
+              <Paragraph>
+                Ambient Occlusion: <TextHighlight>Отключено</TextHighlight>
+              </Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>
+                SAO Bias: <TextHighlight>0.5</TextHighlight>
+              </Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>
+                SAO Exp Factor: <TextHighlight>0.22</TextHighlight>
+              </Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>
+                SAO Intensity: <TextHighlight>12</TextHighlight>
+              </Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>
+                SAO Radius: <TextHighlight>850</TextHighlight>
+              </Paragraph>
+            </ListItem>
+          </UnorderedList>
+        </OrderedList>
+      </TextBlock>
+
+      <TextBlock>
+        <Paragraph>
+          <TextEmphasis>Вкладка Visuals</TextEmphasis>
+        </Paragraph>
+        <OrderedList>
+          <ListItem>
+            <Paragraph>Sun:</Paragraph>
+          </ListItem>
+          <UnorderedList>
+            <ListItem>
+              <Paragraph>
+                Sun Base Size: <TextHighlight>200</TextHighlight>
+              </Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>
+                Sun Glare Size: <TextHighlight>282</TextHighlight>
+              </Paragraph>
+            </ListItem>
+          </UnorderedList>
+          <ListItem>
+            <Paragraph>Effects:</Paragraph>
+          </ListItem>
+          <UnorderedList>
+            <ListItem>
+              <Paragraph>
+                Particles: <TextHighlight>7500</TextHighlight>
+              </Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>
+                Lens Flare: <TextHighlight>Отключено</TextHighlight>
+              </Paragraph>
+            </ListItem>
+          </UnorderedList>
+        </OrderedList>
+      </TextBlock>
+
+      <TextBlock>
+        <Paragraph>
+          <TextEmphasis>Вкладка View Distance</TextEmphasis>
+        </Paragraph>
+        <OrderedList>
+          <ListItem>
+            <Paragraph>Distant Details:</Paragraph>
+          </ListItem>
+          <UnorderedList>
+            <ListItem>
+              <Paragraph>
+                Tree LOD Distance: <TextHighlight>0</TextHighlight> (Если вы НЕ собираетесь
+                запускать DynDOLOD Ultra Trees, оставьте это значение по умолчанию)
+              </Paragraph>
+            </ListItem>
+          </UnorderedList>
+        </OrderedList>
+      </TextBlock>
+
+      <TextBlock>
+        <OrderedList>
+          <ListItem>
+            <Paragraph>
+              Как только все будет сделано, нажмите File и затем Save, чтобы сохранить настройки.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>Теперь вы можете выйти и закрыть BethINI Pie.</Paragraph>
+          </ListItem>
+        </OrderedList>
+      </TextBlock>
+
+      <TitleBlock title="Менеджер модов" description="Не принимайте заменители" />
+
+      <Message type="notification">
+        Это руководство было написано и предполагает использование Mod Organizer 2 и его встроенных
+        плагинов и функций. Использование любой другой программы управления модами НЕ ПОДДЕРЖИВАЕТСЯ
+        Руководством.
+      </Message>
+
+      <Mod modName="Mod Organizer 2" />
+
+      <TextBlock>
+        <Paragraph>
+          <TextEmphasis>Установка Mod Organizer 2</TextEmphasis>
+        </Paragraph>
+
+        <OrderedList>
+          <ListItem>
+            <Paragraph>Запустите установочный файл Mod Organizer 2.</Paragraph>
+          </ListItem>
+
+          <UnorderedList>
+            <ListItem>
+              <Paragraph>
+                Если вы используете MO2 впервые, Защитник Windows может выдать предупреждение о том,
+                что он не распознает приложение и запретил его запуск. В этом случае нажмите кнопку
+                ДОПОЛНИТЕЛЬНАЯ ИНФОРМАЦИЯ, а затем нажмите кнопку ВЫПОЛНИТЬ В ЛЮБОМ СЛУЧАЕ.
+              </Paragraph>
+            </ListItem>
+          </UnorderedList>
+
+          <ListItem>
+            <Paragraph>Выберите место установки,</Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              После завершения установки запустите MO2 из расположения установленного файла.
+            </Paragraph>
+          </ListItem>
+          <OrderedList>
+            <ListItem>
+              <Paragraph>
+                В появившемся запросе <TextHighlight>«Create New Instance»</TextHighlight> выберите{' '}
+                <TextHighlight>«Create a Portable Instance»</TextHighlight>.
+              </Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>
+                В следующем предложении выберите{' '}
+                <TextHighlight>Skyrim: Special Edition</TextHighlight>.
+              </Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>
+                В следующем запросе выберите <TextHighlight>Steam</TextHighlight>.
+              </Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>
+                В следующем запросе отметьте флажками{' '}
+                <TextHighlight>Use profile-specific game INI files</TextHighlight> и{' '}
+                <TextHighlight>Use profile-specific save games</TextHighlight>.
+              </Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>
+                В следующем запросе убедитесь, что поле местоположение(путь) совпадает с
+                местоположением, где был установлен MO2.
+              </Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>
+                В следующем запросе нажмите кнопку <TextHighlight>Finish</TextHighlight>.
+              </Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>
+                В следующем запросе выберите <TextHighlight>Do Nothing</TextHighlight>.
+              </Paragraph>
+            </ListItem>
+          </OrderedList>
+        </OrderedList>
+      </TextBlock>
+
+      <Message type="warning">
+        Mod Organizer 2 ДОЛЖЕН быть установлен в Portable режиме. Это необходимо для того, чтобы все
+        инструменты, используемые в процессе, работали так, как задумано.
+      </Message>
+
       <NavigationControls
         prevPage={{ to: '/commoninstructions', name: 'Общие инструкции' }}
         nextPage={{ to: '/preinstall', name: 'Установка модов - Часть 1' }}
