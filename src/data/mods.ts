@@ -555,4 +555,35 @@ export const modsData: ModProps[] = [
     ],
     tags: ['tool'],
   },
+  {
+    name: 'Fluency Themes for Mod Organizer 2',
+    version: '1.5',
+    author: 'memphisfml',
+    description:
+      'Набор тем, созданных в стиле Windows 11. Имеет 3 темы с чистым и последовательным внешним видом, а также пользовательские иконки.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/71449?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Fluency Themes',
+        version: '1.5',
+      },
+    ],
+    tags: ['tool'],
+  },
+  {
+    name: 'Clean Splash Screens for Mod Organizer 2',
+    version: '1.0',
+    author: '6788',
+    description: 'Чистые и современные заставки для Mod Organizer 2.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/71449?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Clean Splash Screens for Mod Organizer 2',
+        version: '1.0',
+      },
+    ],
+    tags: ['tool'],
+  },
 ];

@@ -882,6 +882,145 @@ const PreInstallPage = () => {
         инструменты, используемые в процессе, работали так, как задумано.
       </Message>
 
+      <TextBlock>
+        <Paragraph>
+          <TextEmphasis>Настройка Mod Organizer 2</TextEmphasis>
+        </Paragraph>
+
+        <Paragraph>
+          Mod Organizer 2 теперь полностью установлен. Есть некоторые дополнительные настройки
+          конфигурации, которые обеспечат полную интеграцию с Nexus и обеспечат дополнительный
+          уровень комфорта пользователя при установке руководства.
+        </Paragraph>
+
+        <Paragraph>
+          <TextHighlight underline>1. Переключение языка</TextHighlight>
+        </Paragraph>
+
+        <OrderedList>
+          <ListItem>
+            <Paragraph>
+              На панели инструментов Mod Organizer 2 найдите кнопку «Настройки» (значок гаечного
+              ключа и отвертки).
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>В настроке language выберите русский язык.</Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              В меню настроек Mod Organizer 2 нажмите <TextHighlight>OK</TextHighlight>, чтобы
+              закрыть окно.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>Перезапустите Mod Organizer 2.</Paragraph>
+          </ListItem>
+        </OrderedList>
+
+        <Paragraph>
+          <TextHighlight underline>2. Mod Organizer 2 должен быть подключен к NEXUS</TextHighlight>
+        </Paragraph>
+
+        <Paragraph>
+          Чтобы оптимизировать и полностью интегрировать MO2 с Nexus (откуда поступает подавляющее
+          большинство модов, которые вы будете загружать), вам потребуется учетная запись Nexus.
+          Если у вас его нет, вы можете создать его{' '}
+          <TextLink href="https://www.nexusmods.com/skyrimspecialedition">здесь</TextLink>. Эта
+          учетная запись не взимает комиссию (хотя бесплатная учетная запись также будет очень
+          ограничена в пропускной способности). Подписка Premium без ограничения пропускной
+          способности доступна на ежемесячной основе. Особенности этих подписок Premium можно найти
+          на веб-сайте NEXUS.
+        </Paragraph>
+
+        <OrderedList>
+          <ListItem>
+            <Paragraph>
+              На панели инструментов Mod Organizer 2 найдите кнопку «Настройки».
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              В верхней части появившегося окна нажмите на вкладку{' '}
+              <TextHighlight>Nexus</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Нажмите на кнопку <TextHighlight>«Подключиться к Nexus»</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              В вашем браузере откроется новое окно. Nexus запросит разрешение на привязку Mod
+              Organizer 2 к вашей учетной записи Nexus. Разрешив это, вы можете закрыть окно
+              браузера.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              В меню настроек Mod Organizer 2 нажмите <TextHighlight>OK</TextHighlight>, чтобы
+              закрыть окно.
+            </Paragraph>
+          </ListItem>
+        </OrderedList>
+
+        <Paragraph>
+          <TextHighlight underline>3. Темы Mod Organizer 2</TextHighlight>
+        </Paragraph>
+
+        <Paragraph>
+          Некоторые пользователи могут посчитать стандартную тему Mod Organizer 2 слишком яркой,
+          жесткой или каким-либо другим образом неприятной. Я предлагаю это изменить. И заодно
+          иконку запуска.
+        </Paragraph>
+      </TextBlock>
+
+      <Mod modName="Fluency Themes for Mod Organizer 2" />
+
+      <Mod modName="Clean Splash Screens for Mod Organizer 2" />
+
+      <TextBlock>
+        <Paragraph>Чтобы заменить иконку:</Paragraph>
+        <OrderedList>
+          <ListItem>
+            <Paragraph>Откройте архив Clean Splash Screens for Mod Organizer 2.</Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>В папке 4K найдите файл Splash.png</Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Переместите файл Splash.png в папку, где установлен Mod Organizer 2 и подтвердите
+              замену, если потребуется.
+            </Paragraph>
+          </ListItem>
+        </OrderedList>
+        <Paragraph>Чтобы заменить тему:</Paragraph>
+        <OrderedList>
+          <ListItem>
+            <Paragraph>Откройте архив Fluency Themes for Mod Organizer 2.</Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Перенесите всё содержимое архива в папку stylesheets, которая находится в папке Mod
+              Organizer 2.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Откройте Mod Organizer 2 и в меню настроек перейдите на вкладку Тема.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              В настройке Стиль выберите <TextHighlight>Fluency Midnight</TextHighlight>(либо любую
+              другую, которая вам нравится).
+            </Paragraph>
+          </ListItem>
+        </OrderedList>
+      </TextBlock>
+
       <NavigationControls
         prevPage={{ to: '/commoninstructions', name: 'Общие инструкции' }}
         nextPage={{ to: '/preinstall', name: 'Установка модов - Часть 1' }}
