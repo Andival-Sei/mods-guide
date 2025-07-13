@@ -1,6 +1,7 @@
 import { makeAutoObservable } from 'mobx';
 import { modsData } from '../data/mods';
 import type { ModProps } from '../components/Mod/Mod';
+import type { TagType } from '../components/Tag/Tag';
 
 export class ModStore {
   private modsMap = new Map<string, ModProps>();
@@ -27,8 +28,8 @@ export class ModStore {
     return Array.from(this.modsMap.values());
   }
 
-  getModsByTag(tag: string): ModProps[] {
-    return this.getAllMods().filter((mod) => mod.tags?.includes(tag as any));
+  getModsByTag(tag: TagType): ModProps[] {
+    return this.getAllMods().filter((mod) => mod.tags?.includes(tag));
   }
 
   // Метод для поиска модов (если понадобится в будущем)
