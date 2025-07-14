@@ -1110,6 +1110,115 @@ const PreInstallPage = () => {
         возможность самоочищения папки загрузок, что позволяет не беспокоиться о ее заполнении.
       </Message>
 
+      <TextBlock>
+        <Paragraph>
+          <TextEmphasis>Создание профиля в Mod Organizer 2</TextEmphasis>
+        </Paragraph>
+
+        <Paragraph>
+          «Профили» — это функция Mod Organizer 2, которая позволяет использовать несколько «версий»
+          модифицированной установки Skyrim в некоторых пределах. Мы будем использовать его в
+          основном для помощи в создании объединенных плагинов на поздних этапах установки
+          руководства. На этом этапе потребуется процесс создания нового профиля, но сейчас мы
+          создадим базовый профиль, чтобы ознакомить вас с необходимыми шагами.
+        </Paragraph>
+
+        <Paragraph>
+          По умолчанию MO2 использует профиль "Default". Мы создадим "Ванильный" профиль, который
+          будет использоваться для определения рабочей базы и для устранения неполадок.
+        </Paragraph>
+
+        <Paragraph>Создаём профиль "Vanilla"</Paragraph>
+        <OrderedList>
+          <ListItem>
+            <Paragraph>
+              Найдите и нажмите кнопку <TextHighlight>«Настроить профили»</TextHighlight> (в
+              большинстве тем MO2 она отображается в виде значка, похожего на человечка, но он может
+              отличаться).
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              В окне "Профили" выберите <TextHighlight>"Создать"</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Во всплывающем окне введите <TextHighlight>Vanilla Skyrim SE</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Убедитесь, что флажок <TextHighlight>«Настройки INI игры по умолчанию»</TextHighlight>{' '}
+              снят.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Нажмите <TextHighlight>OK</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Убедитесь, что <TextHighlight>Vanilla Skyrim SE</TextHighlight> отображается в списке
+              слева.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Убедитесь, что установлен флажок{' '}
+              <TextHighlight>Использовать привязанные к профилю сохранения</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Убедитесь, что установлен флажок{' '}
+              <TextHighlight>Использовать привязанные к профилю INI-файлы</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Выйдите из окна "Профили", нажав клавишу <TextHighlight>Закрыть</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              В выпадающем списке «Профиль» над списком модов (также известном как «левая панель»)
+              выберите <TextHighlight>Vanilla Skyrim SE</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>Снова перейдите в настройки профилей.</Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Нажмите и выделите профиль по умолчанию <TextHighlight>(Default)</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Нажмите <TextHighlight>Удалить</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              В появившемся всплывающем окне выберите <TextHighlight>Да</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Выйдите из окна "Профили", нажав клавишу <TextHighlight>Закрыть</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Убедитесь, что <TextHighlight>Vanilla Skyrim SE</TextHighlight> отображается как
+              выбранный профиль (показан над левой панелью).
+            </Paragraph>
+          </ListItem>
+        </OrderedList>
+      </TextBlock>
+
       <NavigationControls
         prevPage={{ to: '/commoninstructions', name: 'Общие инструкции' }}
         nextPage={{ to: '/preinstall', name: 'Установка модов - Часть 1' }}
