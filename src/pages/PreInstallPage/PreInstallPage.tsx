@@ -1219,6 +1219,89 @@ const PreInstallPage = () => {
         </OrderedList>
       </TextBlock>
 
+      <TextBlock>
+        <Paragraph>
+          <TextEmphasis>Интеграция инструментов в Mod Organizer 2</TextEmphasis>
+        </Paragraph>
+
+        <Paragraph>
+          Последним важным шагом является настройка многих ранее установленных инструментов для
+          работы в Mod Organizer. Запуск этих инструментов через лаунчер Mod Organizer 2 позволит
+          другим инструментам использовать виртуальную файловую систему (VFS) и видеть файлы из
+          установленных модов так же, как это делает игра при запуске и загрузке.
+        </Paragraph>
+
+        <Message type="notification">
+          Некоторые программы, которые были установлены, будут автоматически обнаружены MO2. К ним
+          относятся SKSE, Skyrim, Skyrim Launcher и Creation Kit. Они появятся в программе запуска
+          MO2 (прямо над правой панелью) и предварительно настроены. LOOT также может быть
+          обнаружен, но последние изменения в программе могут потребовать от вас создания
+          исполняемого файла. В этом случае приведенные ниже инструкции также относятся к LOOT.
+        </Message>
+
+        <OrderedList>
+          <ListItem>
+            <Paragraph>
+              Найдите и нажмите кнопку <TextHighlight>«Исполняемые файлы»</TextHighlight> (в Fluent
+              теме она выглядит как {'</>'}).
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Появится всплывающее окно. Найдите и нажмите кнопку "+ (
+              <TextHighlight>Добавить исполняемый файл</TextHighlight>)".
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Во всплывающем окне выберите <TextHighlight>«Добавить из файла...»</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              В открывшейся папке Windows перейдите к <TextHighlight>SSEEdit64.exe</TextHighlight> в
+              ее установленном месте и дважды щелкните по ней.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Выберите <TextHighlight>«Применить»</TextHighlight> в правом нижнем углу всплывающего
+              окна.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Повторите шаги с 1 по 6 для <TextHighlight>SSEEditQuickAutoClean.exe</TextHighlight>,{' '}
+              <TextHighlight>Wrye Bash</TextHighlight>, <TextHighlight>Synthesis</TextHighlight>,{' '}
+              <TextHighlight>zEdit</TextHighlight> и <TextHighlight>LOOT</TextHighlight>, выбирая
+              соответствующий исполняемый файл в каждом случае.
+            </Paragraph>
+          </ListItem>
+          <UnorderedList>
+            <ListItem>
+              <Paragraph>
+                В поле аргумента <TextHighlight>"SSEdit"</TextHighlight> добавьте{' '}
+                <TextHighlight>-appMode="merge"</TextHighlight>.
+              </Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>
+                В поле аргумента <TextHighlight>"zEdit"</TextHighlight> добавьте{' '}
+                <TextHighlight>-C:"(Буква диска):\(Путь до папки)\SSEEdit\CACHE\"</TextHighlight>.{' '}
+                Скобки не нужны, ими я только обозначаю что там нужно писать.
+              </Paragraph>
+            </ListItem>
+          </UnorderedList>
+          <ListItem>
+            <Paragraph>
+              После того, как все программы будут добавлены, нажмите на кнопку{' '}
+              <TextHighlight>«ОК»</TextHighlight> в правом нижнем углу окна{' '}
+              <TextHighlight>«Изменить исполняемый файл»</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+        </OrderedList>
+      </TextBlock>
+
       <NavigationControls
         prevPage={{ to: '/commoninstructions', name: 'Общие инструкции' }}
         nextPage={{ to: '/preinstall', name: 'Установка модов - Часть 1' }}
