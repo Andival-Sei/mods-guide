@@ -610,4 +610,56 @@ export const modsData: ModProps[] = [
       ],
     },
   },
+  {
+    name: 'Merge Plugins Hide',
+    version: '1.4',
+    author: 'deorder',
+    description:
+      'Это плагин для Mod Organizer 2, который позволяет легко скрывать объединенные плагины.',
+    downloadLink: 'https://github.com/deorder/mo2-plugins/releases/tag/1.4',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'deorder-plugins.zip',
+        version: '1.4',
+      },
+      {
+        type: 'Main Files',
+        name: 'link-deploy.zip',
+        version: '1.4',
+      },
+      {
+        type: 'Main Files',
+        name: 'merge-plugins-hide.zip',
+        version: '1.4',
+      },
+      {
+        type: 'Main Files',
+        name: 'sync-mod-order.zip',
+        version: '1.4',
+      },
+    ],
+    tags: ['tool', 'special-instructions'],
+    specialInstructions: {
+      blocks: [
+        {
+          type: 'ordered_list',
+          items: [
+            'Перейдите в папку Plugins в папке MO2.',
+            'Распакуйте содержимое архивов в папку плагинов MO2.',
+            'Перезапустите Mod Organizer 2 и перейдите в настройки.',
+            'Перейдите на вкладку «Плагины».',
+            'Прокрутите вниз, пока не найдете <hl>Merge Plugins Hide</hl>.',
+            'В правом поле измените <hl>hide-type</hl> на <hl>optional</hl> (должен быть полностью строчным)',
+            'Нажмите <hl>OK</hl>.',
+          ],
+        },
+        {
+          type: 'paragraph',
+          content:
+            'Функция «Скрыть объединенные плагины» теперь настроена и перемещает объединенные плагины в необязательный каталог в Mod Organizer 2. Доступ к нему можно получить с помощью значка головоломки в Mod Organizer 2.',
+        },
+      ],
+    },
+  },
 ];

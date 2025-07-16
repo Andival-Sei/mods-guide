@@ -11,6 +11,7 @@ import TextLink from '../../components/TextLink/TextLink.tsx';
 import FilePath from '../../components/FilePath/FilePath.tsx';
 import Mod from '../../components/Mod/Mod.tsx';
 import UnorderedList from '../../components/UnorderedList/UnorderedList.tsx';
+import CodeBlock from '../../components/CodeBlock/CodeBlock';
 
 const PreInstallPage = () => {
   return (
@@ -1717,7 +1718,66 @@ const PreInstallPage = () => {
           Вставьте следующее в SKSE.ini файл. Вы можете сделать это с помощью текстового редактора
           по своему выбору, но проще всего использовать Блокнот.
         </Paragraph>
+        <CodeBlock>
+          {`[General]
+ClearInvalidRegistrations=1
+
+[Display]
+iTintTextureResolution=2048`}
+        </CodeBlock>
+
+        <Paragraph>Сохраните и закройте SKSE.ini, затем выйдите из проводника.</Paragraph>
       </TextBlock>
+
+      <TextBlock>
+        <Paragraph>
+          <TextEmphasis>Проверка Skyrim</TextEmphasis>
+        </Paragraph>
+
+        <Paragraph>
+          Мы только что проделали МНОГО подготовительной работы, так что пришло время провести
+          тестовый прогон. Это позволит убедиться, что SKSE установлен и работает правильно.
+        </Paragraph>
+
+        <OrderedList>
+          <ListItem>
+            <Paragraph>Запустите Skyrim: SE с помощью исполняемого файла SKSE в MO2.</Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              После того, как игра загрузится в главное меню (послушайте, будет ли играть тема
+              Skyrim), откройте консоль клавишей ~ (по умолчанию).
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              В открывшейся консоли введите getskseversion и нажмите клавишу Enter.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Убедитесь, что в консоли появилась новая строка, указывающая на установленную версию
+              SKSE.
+            </Paragraph>
+          </ListItem>
+          <UnorderedList>
+            <ListItem>
+              <Paragraph>
+                Если выходных данных нет или отображается версия, отличная от той, которую вы
+                установили, переустановите SKSE с правильными файлами или проверьте правильность
+                установки в соответствии с инструкциями, приведенными выше.
+              </Paragraph>
+            </ListItem>
+          </UnorderedList>
+          <ListItem>
+            <Paragraph>Выйдите из Skyrim.</Paragraph>
+          </ListItem>
+        </OrderedList>
+      </TextBlock>
+
+      <TitleBlock title="Плагины Mod Organizer 2" description="Плагины... На будущее..." />
+
+      <Mod modName="Merge Plugins Hide" />
 
       <NavigationControls
         prevPage={{ to: '/commoninstructions', name: 'Общие инструкции' }}
