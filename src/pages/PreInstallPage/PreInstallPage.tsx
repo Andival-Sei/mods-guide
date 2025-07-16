@@ -2054,6 +2054,153 @@ iTintTextureResolution=2048`}
         </OrderedList>
       </TextBlock>
 
+      <TextBlock>
+        <Paragraph>
+          <TextEmphasis>Ручная очистка xEdit</TextEmphasis>
+        </Paragraph>
+
+        <Paragraph>
+          <TextHighlight>Dawnguard.ESM</TextHighlight> должен обрабатываться немного иначе, чем
+          другие файлы ESM, так как он имеет небольшое количество ручных правок, которые также
+          необходимо выполнить. <TextHighlight>Внимательно</TextHighlight> следуйте приведенным ниже
+          инструкциям. Вы же не хотите случайно удалить то, что не должны... Это одна из причин, по
+          которой у вас есть эти резервные копии.
+        </Paragraph>
+
+        <OrderedList>
+          <ListItem>
+            <Paragraph>
+              Запустите <TextHighlight>SSEEdit</TextHighlight> через MO2.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              В окне выбора плагина щелкните правой кнопкой мыши по любому плагину. Выберите{' '}
+              <TextHighlight>Select none</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Поставьте галочку в поле рядом с <TextHighlight>Dawnguard.esm</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Нажмите OK. Dawnguard теперь будет загружен в xEdit вместе со всеми другими
+              необходимыми файлами.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              После того, как все плагины полностью загружены, в левой панели нажмите на{' '}
+              <TextHighlight>+</TextHighlight> рядом с <TextHighlight>Dawnguard.esm</TextHighlight>.
+              Его дерево файлов будет расширяться.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Найдите и нажмите <TextHighlight>+</TextHighlight> рядом с пунктом{' '}
+              <TextHighlight>Cell</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Найдите и нажмите <TextHighlight>+</TextHighlight> рядом с{' '}
+              <TextHighlight>Block 5</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Найдите и нажмите <TextHighlight>+</TextHighlight> рядом с{' '}
+              <TextHighlight>Sub-Block 3</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Найдите и нажмите на <TextHighlight>00016BCF</TextHighlight>. Теперь на правой панели
+              будут отображаться все записи, связанные с этой записью ячейки.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              На правой панели прокрутите вниз и найдите подзапись{' '}
+              <TextHighlight>XEZN</TextHighlight>, которая относится к{' '}
+              <TextHighlight>RiftenRatwayZone [ECZN:0009FBB9]</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Щелкните правой кнопкой мыши по вышеуказанной записи в столбце{' '}
+              <TextHighlight>Dawnguard.esm</TextHighlight> и выберите{' '}
+              <TextHighlight>Remove</TextHighlight>. Может появиться окно, предупреждающее вас о
+              том, что вы вносите изменения в файл — когда это возможно, разрешите изменение. ВАМ
+              НУЖНО ТОЛЬКО УДАЛИТЬ <TextHighlight>RiftenRatwayZone [ECZN:0009FBB9]</TextHighlight>{' '}
+              СПРАВА, А НЕ ВСЮ ЗАПИСЬ в левой части программы.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>Выполните ту же процедуру, что и выше, для:</Paragraph>
+          </ListItem>
+          <UnorderedList>
+            <ListItem>
+              <Paragraph>
+                <TextHighlight>Block 2</TextHighlight> &rarr;{' '}
+                <TextHighlight>Sub-Block 1</TextHighlight> &rarr;{' '}
+                <TextHighlight>0001FA4C CWGuardTemplates</TextHighlight>
+              </Paragraph>
+            </ListItem>
+            <UnorderedList>
+              <ListItem>
+                <Paragraph>Удалите всю записи.</Paragraph>
+              </ListItem>
+            </UnorderedList>
+            <ListItem>
+              <Paragraph>
+                <TextHighlight>Block 8</TextHighlight> &rarr;{' '}
+                <TextHighlight>Sub-Block 1</TextHighlight>
+              </Paragraph>
+            </ListItem>
+            <UnorderedList>
+              <ListItem>
+                <Paragraph>Удалите весь подблок.</Paragraph>
+              </ListItem>
+            </UnorderedList>
+          </UnorderedList>
+          <ListItem>
+            <Paragraph>
+              Закройте xEdit и сохраните, нажав <TextHighlight>X</TextHighlight> в строке заголовка
+              программы, после чего нажав <TextHighlight>OK</TextHighlight> для применения
+              изменений.
+            </Paragraph>
+          </ListItem>
+        </OrderedList>
+
+        <Paragraph>
+          <TextHighlight>Теперь, когда этот процесс завершен, мы можем:</TextHighlight>
+        </Paragraph>
+
+        <UnorderedList>
+          <ListItem>
+            <Paragraph>
+              Запустите Skyrim через профиль MO2 "Vanilla Skyrim", используя SKSE в выпадающем
+              списке, в результате чего вы получите ванильный опыт.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Запустите Skyrim через профиль MO2 "Legacy of the Dragonborn - Special Edition",
+              используя SKSE в выпадающем списке, в результате чего вы получите опыт
+              модифицированной игры, когда мы со всем закончим.
+            </Paragraph>
+          </ListItem>
+        </UnorderedList>
+
+        <Paragraph>
+          С этого момента, если не указано иное, будет считаться, что вы всегда будете запускать
+          Skyrim, используя второй вариант.
+        </Paragraph>
+      </TextBlock>
+
       <NavigationControls
         prevPage={{ to: '/commoninstructions', name: 'Общие инструкции' }}
         nextPage={{ to: '/preinstall', name: 'Установка модов - Часть 1' }}
