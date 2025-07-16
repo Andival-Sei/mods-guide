@@ -1302,6 +1302,199 @@ const PreInstallPage = () => {
         </OrderedList>
       </TextBlock>
 
+      <TextBlock>
+        <Paragraph>
+          <TextEmphasis>Первичный порядок загрузки</TextEmphasis>
+        </Paragraph>
+
+        <Paragraph>
+          Skyrim: SE автоматически загрузит и установит базовую игру и DLC-файлы для Skyrim. MO2
+          обнаружит эти файлы, но будет упорядочивать их, что не является желаемым порядком
+          загрузки. Вы также заметите, что под заголовком "категория" все они будут указаны как
+          "Non-MO", что указывает на то, что эти файлы находятся в базовом каталоге Skyrim, а НЕ в
+          системе модов MO2. Но сейчас мы это подправим.
+        </Paragraph>
+
+        <Mod modName="Kezyma's Curation Club for Mod Organizer" />
+
+        <OrderedList>
+          <ListItem>
+            <Paragraph>
+              После установки плагина Curation Club в разделе инструментов MO2 должен появиться
+              пункт Curation Club. Выберите его.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Во всплывающем окне поставьте флажок Root Builder Support и нажмите
+              <TextHighlight>OK</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Теперь все дополнения из Creation Club станут модами в MO2. Активируйте их, нажав на
+              флажок перед названием (либо выделив все моды и выбрав Включить выбранное).
+            </Paragraph>
+          </ListItem>
+        </OrderedList>
+
+        <Paragraph>
+          <TextHighlight underline>
+            1. При первоначальном обнаружении Skyrim DLC активы будут размещены в неправильном
+            порядке. Их следует отсортировать.
+          </TextHighlight>
+        </Paragraph>
+
+        <Paragraph>На левой панели перетащите файлы в следующем порядке (сверху вниз):</Paragraph>
+        <UnorderedList>
+          <ListItem>
+            <Paragraph>Клуб творчества: _ResourcePack</Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>DLC: Dawnguard</Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>DLC: HearthFires</Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>DLC: Dragonborn</Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>Все моды из Creation Club</Paragraph>
+          </ListItem>
+        </UnorderedList>
+
+        <Paragraph>
+          <TextHighlight underline>
+            2. Порядок загрузки плагинов Skyrim DLC может быть подтвержден LOOT.
+          </TextHighlight>
+        </Paragraph>
+
+        <OrderedList>
+          <ListItem>
+            <Paragraph>
+              В выпадающем списке исполняемых файлов (справа, над списком плагинов) выберите LOOT.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>Нажмите кнопку Запустить.</Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              После того, как загрузка LOOT завершится, найдите кнопку «Сортировать плагины» в
+              верхнем левом углу и нажмите на нее. Его иконка представляет собой три горизонтальные
+              линии друг над другом.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>LOOT отсортирует ваш текущий заказ на погрузку.</Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Нажмите «Применить отсортированный порядок загрузки», чтобы принять сгенерированный
+              LOOT заказ на погрузку (если LOOT внес какие-либо изменения). Если изменения не
+              вносились (что случается изредка), кнопка «Применить» может не появиться. Это
+              нормально и не вызывает беспокойства.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Закройте LOOT с помощью кнопки <TextHighlight>X</TextHighlight> в правом верхнем углу
+              окна LOOT.
+            </Paragraph>
+          </ListItem>
+        </OrderedList>
+      </TextBlock>
+
+      <TextBlock>
+        <Paragraph>Этот процесс научил вас трем процессам:</Paragraph>
+        <UnorderedList>
+          <ListItem>
+            <Paragraph>Как вручную перемещать элементы вашего заказа на загрузку.</Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Загрузка LOOT через Mod Organizer. Этот же процесс применяется ко всем программам,
+              загруженным через MO2, и не будет повторяться на других этапах в процессе установки
+              моддинга. Если инструмент необходимо загрузить каким-либо другим способом, эти
+              инструкции будут записаны при необходимости.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Сортировка заказа на загрузку с помощью LOOT. Это будет сделано только один раз в
+              руководстве, ближе к концу процесса. Тем не менее, этот процесс универсален для ЛЮБОГО
+              списка модов и может быть применен во многих других обстоятельствах.
+            </Paragraph>
+          </ListItem>
+        </UnorderedList>
+      </TextBlock>
+      <Message type="notification">
+        Профиль Vanilla Skyrim SE теперь настроен правильно. Этот профиль следует сохранить для
+        возможных целей устранения неполадок, но в противном случае оставить в покое.
+      </Message>
+
+      <TextBlock>
+        <Paragraph>
+          <TextEmphasis>Создание профиля Legacy Of The Dragonborn</TextEmphasis>
+        </Paragraph>
+
+        <Paragraph>
+          На данный момент мы установили и настроили Mod Organizer 2 для работы со всеми
+          необходимыми инструментами и загрузки с ванильным профилем. У вас также есть возможность
+          загрузить Skyrim SE одним щелчком мыши, что может быть полезно для устранения неполадок,
+          но не очень хорошо для игры в модифицированную игру. Следующее, что нужно сделать, это
+          создать новый профиль, в который мы будем устанавливать все моды.
+        </Paragraph>
+
+        <Paragraph>
+          <TextHighlight underline>1. Создайте модифицированный профиль Skyrim</TextHighlight>
+        </Paragraph>
+
+        <OrderedList>
+          <ListItem>
+            <Paragraph>
+              Следуя приведенным ранее инструкциям по созданию ванильного профиля, создайте новый
+              профиль с именем "Legacy of the Dragonborn - Special Edition" (или другим именем по
+              вашему выбору).
+            </Paragraph>
+          </ListItem>
+          <UnorderedList>
+            <ListItem>
+              <Paragraph>
+                Убедитесь, что установлен флажок{' '}
+                <TextHighlight>Использовать привязанные к профилю INI-файлы</TextHighlight>.
+              </Paragraph>
+            </ListItem>
+            <UnorderedList>
+              <ListItem>
+                <Paragraph>
+                  Когда вы создаете новый профиль, Mod Organizer создает новые копии Skyrim.ini и
+                  SkyrimPrefs.ini для использования этим профилем и только этим профилем. Если и
+                  когда вы вносите изменения в эти файлы через MO2, вы будете вносить изменения в
+                  версии этих файлов, относящиеся к профилю, а не в те, которые находятся в вашем
+                  каталоге «Документы».
+                </Paragraph>
+              </ListItem>
+            </UnorderedList>
+            <ListItem>
+              <Paragraph>
+                Кроме того, убедитесь, что в каждом новом профиле установлен флажок{' '}
+                <TextHighlight>Использовать привязанные к профилю сохранения</TextHighlight>.
+              </Paragraph>
+            </ListItem>
+          </UnorderedList>
+
+          <ListItem>
+            <Paragraph>
+              Обратите внимание, что изменение порядка DLC из базовой игры, которое мы сделали для
+              Vanilla Profile, НЕ ПЕРЕНОСИТСЯ. Поэтому вам нужно будет сделать это снова для нового
+              профиля.
+            </Paragraph>
+          </ListItem>
+        </OrderedList>
+      </TextBlock>
+
       <NavigationControls
         prevPage={{ to: '/commoninstructions', name: 'Общие инструкции' }}
         nextPage={{ to: '/preinstall', name: 'Установка модов - Часть 1' }}

@@ -586,4 +586,28 @@ export const modsData: ModProps[] = [
     ],
     tags: ['tool'],
   },
+  {
+    name: "Kezyma's Curation Club for Mod Organizer",
+    version: '1.1.0',
+    author: 'Kezyma',
+    description:
+      'Curation Club — это плагин для Mod Organizer 2, позволяющий пользователям импортировать контент Creation Club в Mod Organizer в виде отдельных модов.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/60552?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Curation Club 1.1.0',
+        version: '1.1.0',
+      },
+    ],
+    tags: ['tool', 'special-instructions'],
+    specialInstructions: {
+      blocks: [
+        {
+          type: 'paragraph',
+          content: 'После загрузки извлеките содержимое архива в папку plugins в папке MO2.',
+        },
+      ],
+    },
+  },
 ];
