@@ -2201,6 +2201,116 @@ iTintTextureResolution=2048`}
         </Paragraph>
       </TextBlock>
 
+      <TitleBlock
+        title="Уровень детализации"
+        description="Даже то, что происходит на заднем плане, выглядит красиво..."
+      />
+
+      <Mod modName="xLODGen" />
+
+      <Mod modName="ACMOS Road Generator" />
+
+      <Mod modName="DynDOLOD 3 Alpha" />
+
+      <TitleBlock
+        title="Инструменты для объединения плагинов"
+        description="Делаем количество плагинов немного менее страшным"
+      />
+
+      <TextBlock>
+        <TextEmphasis>Настройка zMerge</TextEmphasis>
+
+        <Paragraph>
+          В этом разделе вы настроите zMerge, чтобы в дальнейшем можно было создавать объединенные
+          моды.
+        </Paragraph>
+
+        <OrderedList>
+          <ListItem>
+            <Paragraph>
+              Откройте zEdit и выберите <TextHighlight>zMerge</TextHighlight> в раскрывающемся меню.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Нажмите кнопку <TextHighlight>Start Session</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>Нажмите на шестеренку в правом верхнем углу.</Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              В разделе <TextHighlight>Mod Manager</TextHighlight> выберите{' '}
+              <TextHighlight>Mod Organizer 2</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              В разделе <TextHighlight>MO2 Instance</TextHighlight> выберите{' '}
+              <TextHighlight>Portable</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              В разделе <TextHighlight>Mod manager path</TextHighlight> заполните путь к вашей
+              основной папке Mod Organizer 2.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              В разделе <TextHighlight>Mod manager mods path</TextHighlight> введите путь к папке
+              <TextHighlight>mods</TextHighlight> в вашей основной папке Mod Organizer 2.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Перейдите в раздел <TextHighlight>Merge Settings</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              В разделе <TextHighlight>Merge output path</TextHighlight> укажите путь к папке{' '}
+              <TextHighlight>mods</TextHighlight> в Mod Organizer 2.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Снимите флажок <TextHighlight>Disable plugins</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>Перейдите в раздел Archive Creation Settings.</Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              В разделе <TextHighlight>Advanced</TextHighlight> измените значение параметра{' '}
+              <TextHighlight>Minimum Files Per Archive</TextHighlight> на{' '}
+              <TextHighlight>999999</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              В разделе <TextHighlight>Advanced</TextHighlight> убедитесь, что флажок{' '}
+              <TextHighlight>Create texture archives</TextHighlight> снят.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Нажмите <TextHighlight>OK</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>Закройте zMerge.</Paragraph>
+          </ListItem>
+        </OrderedList>
+
+        <Paragraph>
+          Посмотрите <TextLink href="https://imgur.com/a/fqKYyWS">эти изображения</TextLink>, чтобы
+          узнать, как настроить zMerge, если у вас возникли проблемы.
+        </Paragraph>
+      </TextBlock>
+
       <NavigationControls
         prevPage={{ to: '/commoninstructions', name: 'Общие инструкции' }}
         nextPage={{ to: '/preinstall', name: 'Установка модов - Часть 1' }}

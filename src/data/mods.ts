@@ -767,4 +767,100 @@ export const modsData: ModProps[] = [
       ],
     },
   },
+  {
+    name: 'xLODGen',
+    version: 'beta 132',
+    author: 'Sheson',
+    description:
+      'Это утилита, используемая для создания сеток и текстур LOD «в точности», как у CK.',
+    downloadLink: 'https://github.com/sheson/xLODGen/releases/download/v132/xLODGen.132.7z',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'xLODGen.132.7z',
+        version: 'beta 132',
+      },
+    ],
+    tags: ['tool', 'special-instructions'],
+    specialInstructions: {
+      blocks: [
+        {
+          type: 'ordered_list',
+          items: [
+            'Разархивируйте архив как отдельную программу среди других инструментов для Skyrim.',
+            'Создайте папку с именем <hl>SSELODGen_Output</hl> в корне вашего диска.',
+            'Как только вышеуказанное будет сделано, откройте Mod Organizer 2 и добавьте <hl>xLODGenx64.exe</hl> как исполняемый файл.',
+            'В поле "Аргументы" введите <hl>-sse -o:"Буква диска:\\SSELODGen_Output"</hl>',
+          ],
+        },
+      ],
+    },
+  },
+  {
+    name: 'ACMOS Road Generator',
+    version: '4.0',
+    author: 'DoubleYou',
+    description:
+      'ACMOS Road Generator рисует дороги и/или тропинки на вашем LODGen-LODen, предоставляя вам идеальную карту мира с дорогами, которая соответствует установленным вами ландшафтным модам. Поддерживаются все основные моды мирового пространства.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/79205',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'ACMOS Road Generator',
+        version: '4.0',
+      },
+    ],
+    tags: ['tool', 'special-instructions'],
+    specialInstructions: {
+      blocks: [
+        {
+          type: 'paragraph',
+          content:
+            'Разархивируйте архив как отдельную программу среди других инструментов для Skyrim. После загрузки добавьте ACMOS Road Generator.exe в качестве исполняемого файла в MO2.',
+        },
+      ],
+    },
+  },
+  {
+    name: 'DynDOLOD 3 Alpha',
+    version: 'Alpha-194',
+    author: 'Sheson',
+    description:
+      'Это утилита, используемая для создания мода на основе порядка загрузки, который добавляет пользовательский, удаленный LOD для объектов в Skyrim.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/68518?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'DynDOLOD 3.00',
+        version: 'Alpha-194',
+      },
+    ],
+    tags: ['tool', 'special-instructions'],
+    specialInstructions: {
+      blocks: [
+        {
+          type: 'ordered_list',
+          items: [
+            'Разархивируйте архив как отдельную программу среди других инструментов для Skyrim.',
+            'Как только вышеуказанное будет сделано, откройте Mod Organizer 2 и добавьте <hl>TexGenx64</hl> и <hl>DynDOLODx64</hl> в качестве исполняемых файлов.',
+            'В поле Аргументы введите <hl>-sse</hl> для каждого исполняемого файла.',
+          ],
+        },
+        {
+          type: 'paragraph',
+          content: 'Включите режимы Expert и Level32 в DynDOLOD:',
+        },
+        {
+          type: 'ordered_list',
+          items: [
+            'Перейдите в Блокнот и откройте <hl>...\\DynDOLOD\\Edit Scripts\\DynDOLOD\\DynDOLOD_SSE.ini</hl>',
+            'С помощью <hl>CTRL-F</hl> найдите Expert. Замените <hl>0</hl> на <hl>1</hl>.',
+            'С помощью <hl>CTRL-F</hl> найдите Level32. Замените <hl>0</hl> на <hl>1</hl>.',
+            'Используя <hl>CTRL-F</hl>, найдите "DoubleSidedTextureMask". Удалите точку с запятой ( ; ) перед этой строкой. Это «раскомментирует» строку, чтобы она могла повлиять на генерацию LOD. Теперь он должен выглядеть следующим образом <hl>DoubleSidedTextureMask=mountain,mtn</hl>',
+            'Сохраните и выйдите.',
+          ],
+        },
+      ],
+    },
+  },
 ];
