@@ -1787,6 +1787,273 @@ iTintTextureResolution=2048`}
 
       <Mod modName="Set CPU Affinity for Mod Organizer" />
 
+      <TitleBlock
+        title="Обслуживание файлов Bethesda ESM"
+        description="Отладка отлаженных ошибок"
+      />
+
+      <TextBlock>
+        <Paragraph>
+          Прежде чем мы начнем загрузку новых файлов модификаций, у нас есть несколько моментов
+          моддинга, которые нужно сделать с базовыми файлами плагина ESM. Система создания плагинов
+          Bethesda иногда может быть привередливой. Неудивительно, что даже у них, как и у многих
+          авторов модов, было случайное и непреднамеренное дублирование записей в файлах плагина
+          DLC.
+        </Paragraph>
+        <Paragraph>
+          Эти непреднамеренные дубликаты называются записями{' '}
+          <TextHighlight>IDENTICAL TO MASTER</TextHighlight> или ITMs. В большинстве случаев эти
+          дубликаты не нарушают ход игры, но могут иметь непредвиденные эффекты в сильно
+          модифицированной игре. Как правило, по этой причине их можно игнорировать. В сильно
+          модифицированной игре, однако... которую вы собираетесь начать создавать... Они могут
+          иметь очень нежелательные последствия.
+        </Paragraph>
+        <Paragraph>
+          Еще одной распространенной и нежелательной проблемой являются{' '}
+          <TextHighlight>DELETED RECORDS</TextHighlight>. Вы можете подумать, что когда вы удаляете
+          что-то в Creation Kit, он удаляет все ссылки на этот элемент в файле плагина. Это не так -
+          вместо этого он ставит флаг на пластинку. Это то, что называется UDR, и такого рода ошибки
+          всегда должны быть исправлены, так как они могут привести к ошибкам CTD... А этого никто
+          не хочет. Правильное решение этой проблемы — восстановить записи и пометить их как
+          отключенные.
+        </Paragraph>
+        <Paragraph>
+          Как ITM, так и UDR-процедуры существуют в плагинах Bethesda DLC и нуждаются в очистке. К
+          счастью, у нас есть инструмент, который может сделать эту работу за нас.
+        </Paragraph>
+        <Paragraph>
+          Обратите внимание, что описанный ниже процесс универсален для ВСЕХ МОДОВ, которые
+          нуждаются в очистке. Если мод, который вы загрузите позже, содержит специальные
+          инструкции, в которых упоминается очистка, вам нужно будет следовать этому процессу. Это
+          не будет повторяться ни для каких других модов в дальнейшем.
+        </Paragraph>
+
+        <Paragraph>
+          <TextHighlight>ИНСТРУКЦИИ ПО ОЧИСТКЕ</TextHighlight>
+        </Paragraph>
+
+        <Paragraph>1. Создайте резервную копию исходных файлов.</Paragraph>
+
+        <OrderedList>
+          <ListItem>
+            <Paragraph>
+              Перейдите в раздел <FilePath>...\Skyrim Special Edition\Data</FilePath>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Скопируйте и вставьте следующие файлы на рабочий стол или в любое другое
+              легкодоступное место:
+            </Paragraph>
+          </ListItem>
+          <UnorderedList>
+            <ListItem>
+              <Paragraph>Update.esm</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>Dawnguard.esm</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>HearthFires.esm</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>Dragonborn.esm</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>_ResourcePack.esl</Paragraph>
+            </ListItem>
+          </UnorderedList>
+          <ListItem>
+            <Paragraph>
+              Перейдите в раздел <FilePath>...\MO2\mods</FilePath>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Повторите тоже самое действие с другими файлами(так как в mods у нас лежат папки, а не
+              просто файлы, вы можете использовать встроенный поиск в проводнике Windows):
+            </Paragraph>
+          </ListItem>
+          <UnorderedList>
+            <ListItem>
+              <Paragraph>ccasvsse001-almsivi.esm</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>ccBGSSSE001-Fish.esm</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>ccbgssse003-zombies.esl</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>ccbgssse004-ruinsedge.esl</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>ccbgssse005-goldbrand.esl</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>ccbgssse008-wraithguard.esl</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>ccbgssse016-umbra.esm</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>ccbgssse018-shadowrend.esl</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>ccBGSSSE025-AdvDSGS.esm</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>ccbgssse005-goldbrand.esl</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>ccbgssse005-goldbrand.esl</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>ccbgssse031-advcyrus.esm</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>ccbgssse034-mntuni.esl</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>ccBGSSSE037-Curios.esl</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>ccbgssse038-bowofshadows.esl</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>ccbgssse040-advobgobs.esl</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>ccbgssse041-netchleather.esl</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>ccbgssse043-crosselv.esl</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>ccbgssse045-hasedoki.esl</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>ccbgssse050-ba_daedric.esl</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>ccbgssse051-ba_daedricmail.esl</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>ccbgssse057-ba_stalhrim.esl</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>ccbgssse059-ba_dragonplate.esl</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>ccbgssse060-ba_dragonscale.esl</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>ccbgssse061-ba_dwarven.esl</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>ccbgssse062-ba_dwarvenmail.esl</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>ccbgssse067-daedinv.esm</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>ccedhsse001-norjewel.esl</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>ccedhsse002-splkntset.esl</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>ccedhsse003-redguard.esl</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>cceejsse001-hstead.esm</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>cceejsse004-hall.esl</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>cceejsse005-cave.esm</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>ccffbsse001-imperialdragon.esl</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>cckrtsse001_altar.esl</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>ccmtysse002-ve.esl</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>ccpewsse002-armsofchaos.esl</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>ccQDRSSE001-SurvivalMode.esl</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>ccrmssse001-necrohouse.esl</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>cctwbsse001-puzzledungeon.esm</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>ccvsvsse002-pets.esl</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>ccvsvsse003-necroarts.esl</Paragraph>
+            </ListItem>
+            <ListItem>
+              <Paragraph>ccvsvsse004-beafarmer.esl</Paragraph>
+            </ListItem>
+          </UnorderedList>
+        </OrderedList>
+
+        <Paragraph>2. Очистите исходные файлы.</Paragraph>
+
+        <OrderedList>
+          <ListItem>
+            <Paragraph>Запустите Mod Organizer 2, если он еще не запущен.</Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              В выпадающем меню исполняемых файлов выберите SSEEdit - Quick Auto Clean.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>Нажмите кнопку Запустить.</Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              В появившемся меню выбора файлов поставьте галочку напротив{' '}
+              <TextHighlight>Update.esm</TextHighlight> и{' '}
+              <TextHighlight>только на нём</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>Нажмите OK.</Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>Теперь xEdit запустит процесс очистки автоматически.</Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Дождитесь завершения процесса, о чем свидетельствует сообщение Quick Clean Mode
+              finished.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Когда сообщение появится, закройте xEdit, нажав на <TextHighlight>X</TextHighlight> в
+              строке заголовка приложения.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Повторите шаги со 2 по 8 для каждого из файлов, которые мы копировали ранее.
+            </Paragraph>
+          </ListItem>
+        </OrderedList>
+      </TextBlock>
+
       <NavigationControls
         prevPage={{ to: '/commoninstructions', name: 'Общие инструкции' }}
         nextPage={{ to: '/preinstall', name: 'Установка модов - Часть 1' }}
