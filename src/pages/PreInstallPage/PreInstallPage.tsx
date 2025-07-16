@@ -1495,6 +1495,60 @@ const PreInstallPage = () => {
         </OrderedList>
       </TextBlock>
 
+      <TitleBlock title="Конфигурация xEdit" />
+
+      <TextBlock>
+        <Paragraph>В MO2 запустите SSEEdit и выполните следующие действия:</Paragraph>
+
+        <OrderedList>
+          <ListItem>
+            <Paragraph>
+              Во всплывающем окне нажмите <TextHighlight>OK</TextHighlight>, чтобы загрузить
+              выбранные плагины (в самую первую загрузку ещё может появиться рекламное окно, его
+              можно просто закрыть).
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Дождитесь загрузки плагинов. Вы увидите сообщение{' '}
+              <TextHighlight>Background Loader: finished</TextHighlight>, когда загрузка программы
+              завершится.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Щелкните правой кнопкой мыши любой плагин в списке в левой части экрана.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Во всплывающем меню перейдите в раздел <TextHighlight>Other → Options</TextHighlight>;
+              Должно появиться новое всплывающее окно.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Снимите галочку с{' '}
+              <TextHighlight>
+                Simple records LAND, NAVI, NAVM, CELL, WRLD (requires restart)
+              </TextHighlight>
+              .
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>Нажмите OK.</Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>Выйдите из SSEEdit.</Paragraph>
+          </ListItem>
+        </OrderedList>
+
+        <Paragraph>
+          Также в Options вы можете перейти на вкладку UI Theme и настроить тему по вашему вкусу (у
+          меня выбрана Windows 11 Modern Dark).
+        </Paragraph>
+      </TextBlock>
+
       <NavigationControls
         prevPage={{ to: '/commoninstructions', name: 'Общие инструкции' }}
         nextPage={{ to: '/preinstall', name: 'Установка модов - Часть 1' }}
