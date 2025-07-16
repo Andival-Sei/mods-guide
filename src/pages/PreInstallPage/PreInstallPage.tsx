@@ -1779,6 +1779,14 @@ iTintTextureResolution=2048`}
 
       <Mod modName="Merge Plugins Hide" />
 
+      <Mod modName="Mod Organizer 2 Removal Tool" />
+
+      <Mod modName="Prepare Merge - Mod Organizer 2 Plugin" />
+
+      <Mod modName="FOMOD Plus - A Mod Installation Overhaul for Mod Organizer 2" />
+
+      <Mod modName="Set CPU Affinity for Mod Organizer" />
+
       <NavigationControls
         prevPage={{ to: '/commoninstructions', name: 'Общие инструкции' }}
         nextPage={{ to: '/preinstall', name: 'Установка модов - Часть 1' }}

@@ -540,17 +540,16 @@ export const modsData: ModProps[] = [
   },
   {
     name: 'Mod Organizer 2',
-    version: '2.5.3 - Beta 2',
+    version: '2.5.2',
     author: 'Tannin - MO2 Team',
     description:
       'Это инструмент, который мы будем использовать для загрузки, установки и управления модами. Не волнуйтесь, если это выглядит пугающим, мы исправим это в ближайшее время.',
-    downloadLink:
-      'https://onedrive.live.com/?redeem=aHR0cHM6Ly8xZHJ2Lm1zL3UvYy8zNzEyNzJjNDlhMzdjYzRhL0VkZkZlYjdEdGpkR3J6a0NTUEN0SEJjQkdGMXpwbzRnelRtc1pzQWhiNGZYaUE&cid=371272C49A37CC4A&id=371272C49A37CC4A%21sbe79c5d7b6c34637af390248f0ad1c17&parId=371272C49A37CC4A%21148600&o=OneUp',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/6194',
     files: [
       {
         type: 'Main Files',
-        name: 'Mod.Organizer-2.5.3beta2.exe',
-        version: '2.5.3 - Beta 2',
+        name: 'Mod Organizer 2',
+        version: '2.5.2',
       },
     ],
     tags: ['tool'],
@@ -658,6 +657,112 @@ export const modsData: ModProps[] = [
           type: 'paragraph',
           content:
             'Функция «Скрыть объединенные плагины» теперь настроена и перемещает объединенные плагины в необязательный каталог в Mod Organizer 2. Доступ к нему можно получить с помощью значка головоломки в Mod Organizer 2.',
+        },
+      ],
+    },
+  },
+  {
+    name: 'Mod Organizer 2 Removal Tool',
+    version: '2.4.1',
+    author: 'DeltaJordan',
+    description:
+      'Этот инструмент для Mod Organizer 2 упрощает удаление файлов из модов. Он поддерживает относительные пути с подстановочными знаками (*).',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/117306?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'MO2 File Removal Tool',
+        version: '2.4.1',
+      },
+    ],
+    tags: ['tool', 'special-instructions'],
+    specialInstructions: {
+      blocks: [
+        {
+          type: 'ordered_list',
+          items: [
+            'Перейдите в папку Plugins в папке MO2.',
+            'Распакуйте содержимое архивов в папку плагинов MO2.',
+            'Перезапустите Mod Organizer 2 и перейдите в настройки.',
+            'Перейдите на вкладку «Плагины».',
+            'Прокрутите вниз, пока не найдете <hl>MO2 Removal Tool</hl>.',
+            'В правом поле измените <hl>plugin-optional</hl> на <hl>true</hl>',
+            'В правом поле измените <hl>removal-type</hl> на <hl>mohidden</hl>',
+            'Нажмите <hl>OK</hl>.',
+          ],
+        },
+      ],
+    },
+  },
+  {
+    name: 'Prepare Merge - Mod Organizer 2 Plugin',
+    version: '1.2.3',
+    author: 'Sosorinai',
+    description:
+      'Этот плагин для Mod Organizer 2 находит и включает моды, содержащие выбранный список плагинов и их необходимые мастера. Затем он помещает выбранные плагины в конец заказа на загрузку. Полезно для подготовки слияния плагинов, например, с zMerge.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/47791',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Prepare Merge',
+        version: '1.2.3',
+      },
+    ],
+    tags: ['tool', 'special-instructions'],
+    specialInstructions: {
+      blocks: [
+        {
+          type: 'paragraph',
+          content:
+            'После загрузки извлеките содержимое архива в папку plugins в папке MO2. Затем перезапустите Mod Organizer 2 и перейдите в настройки.',
+        },
+      ],
+    },
+  },
+  {
+    name: 'FOMOD Plus - A Mod Installation Overhaul for Mod Organizer 2',
+    version: '1.15.0',
+    author: 'aglowinthefield',
+    description:
+      'Полная переработка опыта работы с FOMOD. Показывайте и устанавливайте предыдущие варианты, фильтруйте свой список модов по установленным FOMOD модам, сканируйте для предварительного заполнения обнаружения содержимого FOMOD, неблокирующего, умно изменяющего размер окна установщика и многое другое!',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/47791',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'FOMOD Plus',
+        version: '1.15.0',
+      },
+    ],
+    tags: ['tool', 'special-instructions'],
+    specialInstructions: {
+      blocks: [
+        {
+          type: 'paragraph',
+          content: 'После загрузки извлеките содержимое архива в папку MO2 (не плагины).',
+        },
+      ],
+    },
+  },
+  {
+    name: 'Set CPU Affinity for Mod Organizer',
+    version: '1.2.0',
+    author: 'MaskedRPGFan',
+    description:
+      'Этот плагин для Mod Organizer 2 автоматически рассчитывает и устанавливает сродство процессора для Skyrim Priority SE AE - skse plugin от Boring3.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/94636?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Set CPU Affinity',
+        version: '1.2.0',
+      },
+    ],
+    tags: ['tool', 'special-instructions'],
+    specialInstructions: {
+      blocks: [
+        {
+          type: 'paragraph',
+          content: 'После загрузки извлеките содержимое архива в папку плагинов MO2.',
         },
       ],
     },
