@@ -1549,6 +1549,176 @@ const PreInstallPage = () => {
         </Paragraph>
       </TextBlock>
 
+      <TitleBlock title="Полная установка SKSE" />
+
+      <TextBlock>
+        <Paragraph>
+          Возможно, вы помните, что ранее при установке SKSE мы устанавливали только два файла
+          непосредственно в основной каталог Skyrim. Мы установили не все файлы скриптов. Мы будем
+          использовать это сейчас, чтобы показать, как установить мод из архива, что будет
+          необходимым навыком для модов, которые мы установим позже.
+        </Paragraph>
+
+        <Paragraph>
+          На этом этапе я буду показывать всё так, что папки загрузки MO2 равноценна папке загрузок
+          в Windows. Если у вас это не так, то вам нужно будет либо вручную перетаскивать моды в
+          папку загрузок MO2, либо на странице мода использовать кнопку Mod Manager download.
+        </Paragraph>
+
+        <OrderedList>
+          <ListItem>
+            <Paragraph>
+              Убедитесь, что только что созданный профиль «Legacy» выбран в верхней части левой
+              панели в Mod Organizer 2.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              В правой части экрана откройте вкладку Загрузки и дважды кликните левой кнопкой мыши
+              по Skyrim Script Extender (SKSE64) (либо правой кнопкой мыши и выбрать Установить).
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              В следующем появившемся окне, если вы видите это окно впервые (а я предполагаю, что
+              это так), MO2 даст вам краткое руководство по использованию этого инструмента.
+              Прочтите его, чтобы смочь понять следующие инструкции. Нажмите на мигающие инструкции,
+              чтобы продолжить.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Архив SKSE не настроен должным образом для автоматической установки. В дереве файлов
+              перейдите к папке <TextHighlight>Data</TextHighlight>. Щелкните правой кнопкой мыши по
+              пункту <TextHighlight>Data</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              В контекстном меню выберите пункт{' '}
+              <TextHighlight>Установить {'<data>'} как каталог с данными</TextHighlight>.
+              Отображение должно измениться, чтобы отображалась только папка Scripts. Зеленый текст{' '}
+              <TextHighlight>Содержимое {'<data>'} выглядит подходящим</TextHighlight> появится в
+              нижней части окна, если вы сделали это правильно.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Нажмите <TextHighlight>OK</TextHighlight> в правом нижнем углу окна.
+            </Paragraph>
+          </ListItem>
+        </OrderedList>
+
+        <Paragraph>
+          На левой панели должна появиться новая запись c пустым флажком рядом с ней. Это означает,
+          что мод был установлен, но не активирован. АКТИВИРУЙТЕ мод, нажав на пустую галочку. Это
+          нужно делать для ВСЕХ МОДОВ по мере их установки.
+        </Paragraph>
+      </TextBlock>
+
+      <TitleBlock title="Конфигурация SKSE" />
+
+      <TextBlock>
+        <Paragraph>
+          Теперь, когда файлы скриптов установлены, мы настроим SKSE для установки.
+        </Paragraph>
+
+        <Paragraph>
+          <TextHighlight underline>1. Настройка SKSE для мониторов 4K</TextHighlight>
+        </Paragraph>
+
+        <OrderedList>
+          <ListItem>
+            <Paragraph>
+              Перейдите в корневую папку Skyrim (
+              <FilePath>steamapps\common\Skyrim Special Edition</FilePath>)
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Щелкните правой кнопкой мыши по <TextHighlight>skse64_loader.exe</TextHighlight>
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Выберите <TextHighlight>Свойства</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Выберите вкладку <TextHighlight>Совместимость</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Нажмите <TextHighlight>Изменить параметры высокого DPI</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Установите флажок{' '}
+              <TextHighlight>
+                Переопределите режим масштабирования высокого разрешения. Масштабирование
+                выполняется:
+              </TextHighlight>
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              В раскрывающемся меню выберите <TextHighlight>Приложение</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Нажмите <TextHighlight>OK</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Нажмите <TextHighlight>Применить</TextHighlight>.
+            </Paragraph>
+          </ListItem>
+        </OrderedList>
+
+        <Paragraph>
+          <TextHighlight underline>2. Создание SKSE INI-файла</TextHighlight>
+        </Paragraph>
+
+        <OrderedList>
+          <ListItem>
+            <Paragraph>
+              Щелкните правой кнопкой мыши по Skyrim Script Extender (SKSE64) в списке модов Mod
+              Organizer.
+            </Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>Выберите «Открыть в проводнике».</Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>Создайте новую папку под названием "SKSE".</Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>Перейдите в только что созданную папку SKSE.</Paragraph>
+          </ListItem>
+          <ListItem>
+            <Paragraph>
+              Создайте и откройте текстовый файл с именем <FilePath>SKSE.ini</FilePath>. Это должно
+              дать вам структуру{' '}
+              <FilePath>...\mods\Skyrim Script Extender (SKSE64)\SKSE\SKSE.ini</FilePath>
+            </Paragraph>
+          </ListItem>
+        </OrderedList>
+
+        <Paragraph>
+          <TextHighlight underline>3. Отредактируйте SKSE.ini</TextHighlight>
+        </Paragraph>
+
+        <Paragraph>
+          Вставьте следующее в SKSE.ini файл. Вы можете сделать это с помощью текстового редактора
+          по своему выбору, но проще всего использовать Блокнот.
+        </Paragraph>
+      </TextBlock>
+
       <NavigationControls
         prevPage={{ to: '/commoninstructions', name: 'Общие инструкции' }}
         nextPage={{ to: '/preinstall', name: 'Установка модов - Часть 1' }}
