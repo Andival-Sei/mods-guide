@@ -2317,7 +2317,7 @@ iTintTextureResolution=2048`}
 
       <NavigationControls
         prevPage={{ to: '/commoninstructions', name: 'Общие инструкции' }}
-        nextPage={{ to: '/preinstall', name: 'Установка модов - Часть 1' }}
+        nextPage={{ to: '/installmodspart1', name: 'Установка модов — Часть 1' }}
       />
     </>
   );

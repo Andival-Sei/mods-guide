@@ -888,4 +888,38 @@ export const modsData: ModProps[] = [
       ],
     },
   },
+  {
+    name: 'Project Clarity AIO - Skyrim Textures Redone',
+    version: '3.2',
+    author: 'Iconic',
+    description: 'Компиляция всех модов Project Clarity.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/45306?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Project Clarity AIO Half Res Loose',
+        version: '3.2',
+      },
+    ],
+  },
+  {
+    name: 'Creation Club Anniversary Cleaned and Upscaled',
+    version: '1.1',
+    author: 'kartoffel',
+    description:
+      'Очищенные текстуры. (Бетесда, у вас есть DTX11. Зачем использовать BC1 в 2021 году?) Увеличенная броня и оружие из 2k -> 4k.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/58801?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'CC_Content_Anniversary_Cleaned_and_Upscaled',
+        version: '1',
+      },
+      {
+        type: 'Update Files',
+        name: 'CC_Content_Anniversary_Cleaned_and_Upscaled_Update',
+        version: '1.1',
+      },
+    ],
+  },
 ];

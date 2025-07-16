@@ -36,6 +36,7 @@ const Header = () => {
             { to: '/welcome', label: 'Знакомство' },
             { to: '/commoninstructions', label: '  Общие инструкции' },
             { to: '/preinstall', label: '  Предустановки' },
+            { to: '/installmodspart1', label: '  Установка модов — Часть 1' },
           ]}
         />
         <Link to="/">Изменения</Link>
