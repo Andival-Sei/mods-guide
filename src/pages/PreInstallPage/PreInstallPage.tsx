@@ -2311,6 +2311,10 @@ iTintTextureResolution=2048`}
         </Paragraph>
       </TextBlock>
 
+      <TitleBlock title="Постобработка ENB" description="Симпатичные еще симпатичнее" />
+
+      <Mod modName="ENB Series Binaries" />
+
       <NavigationControls
         prevPage={{ to: '/commoninstructions', name: 'Общие инструкции' }}
         nextPage={{ to: '/preinstall', name: 'Установка модов - Часть 1' }}

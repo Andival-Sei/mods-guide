@@ -863,4 +863,29 @@ export const modsData: ModProps[] = [
       ],
     },
   },
+  {
+    name: 'ENB Series Binaries',
+    version: '0.503',
+    author: 'Boris Vorontsov',
+    description:
+      'Это библиотека модификации графики, предназначенная для того, чтобы геймеры могли настраивать свои игры по своему вкусу.',
+    downloadLink: 'http://enbdev.com/enbseries_skyrimse_v0503.zip',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'ENBSeries for TES Skyrim SE',
+        version: '0.503',
+      },
+    ],
+    tags: ['tool', 'special-instructions'],
+    specialInstructions: {
+      blocks: [
+        {
+          type: 'paragraph',
+          content:
+            'После загрузки файла откройте папку Wrapper Version, заключенную в архив, и извлеките ТОЛЬКО файлы <hl>d3d11.dll</hl> и <hl>d3dcompiler_46e.dll</hl>. Поместите их в основной каталог Skyrim Special Edition.',
+        },
+      ],
+    },
+  },
 ];
