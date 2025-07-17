@@ -1260,4 +1260,19 @@ export const modsData: ModProps[] = [
       },
     ],
   },
+  {
+    name: 'Papyrus Tweaks NG',
+    version: '4.1.0',
+    author: 'Nightfallstorm',
+    description:
+      'Коллекция исправлений, доработок и улучшений производительности для скриптового движка Skyrim.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/77779?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Papyrus Tweaks 4.1.0',
+        version: '4.1.0',
+      },
+    ],
+  },
 ];

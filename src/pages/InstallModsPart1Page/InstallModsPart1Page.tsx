@@ -39,6 +39,8 @@ const InstallModsPart1Page: FC = () => {
 
       <Mod modName="powerofthree's Papyrus Extender" />
 
+      <Mod modName="Papyrus Tweaks NG" />
+
       <NavigationControls
         prevPage={{ to: '/preinstall', name: 'Предустановки' }}
         nextPage={{ to: '/installmodspart1', name: 'Установка модов — Часть 2 (заглушка)' }}
