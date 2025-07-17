@@ -907,7 +907,7 @@ export const modsData: ModProps[] = [
     version: '1.1',
     author: 'kartoffel',
     description:
-      'Очищенные текстуры. (Бетесда, у вас есть DTX11. Зачем использовать BC1 в 2021 году?) Увеличенная броня и оружие из 2k -> 4k.',
+      'Очищенные текстуры. (Бефесда, у вас есть DTX11. Зачем использовать BC1 в 2021 году?) Увеличенная броня и оружие из 2k -> 4k.',
     downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/58801?',
     files: [
       {
@@ -1274,5 +1274,152 @@ export const modsData: ModProps[] = [
         version: '4.1.0',
       },
     ],
+  },
+  {
+    name: "powerofthree's Tweaks",
+    version: '1.13.1',
+    author: 'powerofthree',
+    description:
+      'Этот мод представляет собой коллекцию исправлений ошибок и настроек движка. Плагин SKSE.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/51073?',
+    files: [
+      {
+        type: 'Main Files',
+        name: "powerofthree's Tweaks",
+        version: '1.13.1',
+      },
+    ],
+    fomods: [
+      {
+        title: "powerofthree's Tweaks",
+        pages: [
+          {
+            title: 'Main',
+            sections: [
+              {
+                title: 'DLL',
+                type: 'radio',
+                items: [
+                  {
+                    label: 'SSE v1.6.629+ ("Anniversary Edition")',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    name: 'Recursion Monitor',
+    version: '1.2',
+    author: 'Nightfallstorm',
+    description:
+      'Обнаруживает сломанные папирусные скрипты, застрявшие в рекурсии, и предотвращает огромные задержки частоты кадров.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/76867?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Recursion Fix',
+        version: '1.2',
+      },
+    ],
+  },
+  {
+    name: 'Scaleform Translation Plus Plus NG',
+    version: '1.8',
+    author: 'Ryan---VersuchDrei',
+    description: 'Этот плагин обеспечивает вложение нативного перевода, присутствующего в SkyUI.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/77359?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'ScaleformTranslationPP',
+        version: '1.8',
+      },
+    ],
+  },
+  {
+    name: 'Scrambled Bugs',
+    version: '21',
+    author: 'Magicockerel',
+    description: 'Коллекция исправлений ошибок и патчей движка.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/43532?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Scrambled Bugs - Anniversary Edition (1.6.629.0 and later)',
+        version: '21',
+      },
+    ],
+  },
+  {
+    name: 'Skyrim Priority SE AE - CPU Performance FPS Optimizer',
+    version: '3.4.0',
+    author: 'Boring3',
+    description:
+      'Этот мод позволяет Skyrim всегда брать на себя большую часть загрузки процессора, увеличивает FPS и предотвращает внезапные задержки, вызванные другими процессами.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/43532?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Skyrim Priority SE AE (3.4.0)',
+        version: '3.4.0',
+      },
+    ],
+    tags: ['special-instructions'],
+    specialInstructions: {
+      blocks: [
+        {
+          type: 'paragraph',
+          content: 'Нам нужно настроить это следующим образом:',
+        },
+        {
+          type: 'ordered_list',
+          items: [
+            'После установки мода перезапустите Mod Organizer 2 и нажмите на иконку «Инструменты»:',
+            'Выберите инструмент <hl>Set CPU Affinity</hl>.',
+            'Инструмент спросит, хотите ли вы установить соответствующее значение.',
+            'Нажмите <hl>OK</hl>.',
+          ],
+        },
+      ],
+    },
+  },
+  {
+    name: 'SSE Display Tweaks',
+    version: '0.5.16',
+    author: 'SlavicPotato',
+    description:
+      'Универсальное решение для игры с более высокой частотой кадров. Исправление физики, совместимой с OSD, улучшение полноэкранной производительности без границ, контроль частоты обновления, настраиваемое ограничение частоты кадров, а также несколько исправлений и оптимизаций.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/34705?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'SSE Display Tweaks',
+        version: '0.5.16',
+      },
+    ],
+    tags: ['special-instructions'],
+    specialInstructions: {
+      blocks: [
+        {
+          type: 'paragraph',
+          content:
+            'После установки откройте <fp>SKSE\\Plugins\\SSEDisplayTweaks.ini</fp> и измените следующее:',
+        },
+        {
+          type: 'code',
+          content: [
+            'Borderless=true (Удалите # в начале строки.)',
+            'BorderlessUpscale=true',
+            'Resolution= Укажите ваше разрешение монитора(например моё 3840x2160) и удалите # в начале строки.',
+            'UIFramerateLimitMap=60',
+          ].join('\n'),
+        },
+      ],
+    },
   },
 ];

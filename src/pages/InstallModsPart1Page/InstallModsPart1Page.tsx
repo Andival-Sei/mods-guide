@@ -41,6 +41,20 @@ const InstallModsPart1Page: FC = () => {
 
       <Mod modName="Papyrus Tweaks NG" />
 
+      <Mod modName="powerofthree's Tweaks" />
+
+      <Mod modName="Recursion Monitor" />
+
+      <Mod modName="Scaleform Translation Plus Plus NG" />
+
+      <Mod modName="Scrambled Bugs" />
+
+      <Mod modName="Skyrim Priority SE AE - CPU Performance FPS Optimizer" />
+
+      <Mod modName="SSE Display Tweaks" />
+
+      <TitleBlock title="Фреймворки расширений - Расширенная функциональность" />
+
       <NavigationControls
         prevPage={{ to: '/preinstall', name: 'Предустановки' }}
         nextPage={{ to: '/installmodspart1', name: 'Установка модов — Часть 2 (заглушка)' }}
