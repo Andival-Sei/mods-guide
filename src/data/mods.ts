@@ -1083,4 +1083,33 @@ export const modsData: ModProps[] = [
       },
     ],
   },
+  {
+    name: 'Equip Enchantment Fix',
+    version: '1.3.6',
+    author: 'SlavicPotato',
+    description:
+      'Этот мод исправляет ошибки движка, из-за которых чары предметов не применяются при экипировке или перестают работать, пока предмет все еще экипирован. Плагин SKSE64.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/42839?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Equip Enchantment Fix for 1.6.629 and newer',
+        version: '1.3.6',
+      },
+    ],
+  },
+  {
+    name: 'Fix Note icon for SkyUI (SKSE64 plugin)',
+    version: '1.2.6',
+    author: '0xC0000005',
+    description: 'Плагин SKSE64, который исправляет иконку и тип буквы/заметки для SkyUI.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/32561?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'FixNotesForSkyUI Skyrim AE',
+        version: '1.2.6',
+      },
+    ],
+  },
 ];

@@ -25,6 +25,10 @@ const InstallModsPart1Page: FC = () => {
 
       <Mod modName="Bug Fixes SSE" />
 
+      <Mod modName="Equip Enchantment Fix" />
+
+      <Mod modName="Fix Note icon for SkyUI (SKSE64 plugin)" />
+
       <NavigationControls
         prevPage={{ to: '/preinstall', name: 'Предустановки' }}
         nextPage={{ to: '/installmodspart1', name: 'Установка модов — Часть 2 (заглушка)' }}
