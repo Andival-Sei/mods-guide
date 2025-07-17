@@ -5,6 +5,7 @@ import ListItem from '../ListItem/ListItem';
 import { observer } from 'mobx-react-lite';
 import { useStore } from '../../stores/index';
 import SpecialInstructions from '../SpecialInstructions/SpecialInstructions';
+import Fomod from '../Fomod/Fomod'; // Импортируем Fomod синхронно
 
 export type FileType =
   | 'Main Files'
@@ -28,6 +29,8 @@ export interface ModProps {
   downloadLink: string;
   files: ModFile[];
   tags?: TagType[];
+  // Новый блок: массив Fomod (может быть undefined или пустым)
+  fomods?: import('../Fomod/FomodTypes').FomodProps[];
   specialInstructions?: {
     blocks: Array<{
       type: 'paragraph' | 'unordered_list' | 'ordered_list';
@@ -62,6 +65,7 @@ const Mod = observer(({ modName }: ModComponentProps) => {
     downloadLink,
     files,
     tags = [],
+    fomods = [], // добавляем fomods
     specialInstructions,
   } = modData;
 
@@ -129,6 +133,15 @@ const Mod = observer(({ modName }: ModComponentProps) => {
           ))}
         </UnorderedList>
       </div>
+
+      {/* Fomod-блоки, если есть */}
+      {/* Если у мода есть один или несколько Fomod, отображаем их после файлов и перед специнструкциями */}
+      {fomods &&
+        fomods.length > 0 &&
+        fomods.map((fomod, idx) => (
+          // Рендерим каждый Fomod для данного мода
+          <Fomod key={idx} title={fomod.title} pages={fomod.pages} />
+        ))}
 
       {/* Блок со специальными инструкциями */}
       {specialInstructions && tags.includes('special-instructions') && (

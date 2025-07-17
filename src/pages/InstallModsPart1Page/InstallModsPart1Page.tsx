@@ -13,6 +13,10 @@ const InstallModsPart1Page: FC = () => {
 
       <Mod modName="Creation Club Anniversary Cleaned and Upscaled" />
 
+      <TitleBlock title="Фреймворки расширений - Исправления к движку" />
+
+      <Mod modName="Address Library for SKSE Plugins" />
+
       <NavigationControls
         prevPage={{ to: '/preinstall', name: 'Предустановки' }}
         nextPage={{ to: '/installmodspart1', name: 'Установка модов — Часть 2 (заглушка)' }}

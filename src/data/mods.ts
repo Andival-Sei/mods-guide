@@ -921,5 +921,117 @@ export const modsData: ModProps[] = [
         version: '1.1',
       },
     ],
+    // Пример Fomod для данного мода
+    fomods: [
+      {
+        title: 'CC_Content_Anniversary_Cleaned_and_Upscaled',
+        pages: [
+          {
+            title: 'well?', // Название первой страницы
+            sections: [
+              {
+                title: 'WELL?', // Название секции
+                type: 'radio',
+                items: [
+                  {
+                    id: 'well-radio-1',
+                    name: 'well-radio-group',
+                    label: 'INSTALL EVERYTHING',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            title: 'MWAHAHAHA', // Название второй страницы
+            sections: [
+              {
+                title: 'poggers', // Название секции
+                type: 'checkbox',
+                items: [
+                  {
+                    id: 'poggers-checkbox-1',
+                    label: 'poggers',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    name: 'Address Library for SKSE Plugins',
+    version: '11',
+    author: 'meh321',
+    description:
+      'Этот мод содержит заголовочный файл и базу данных, чтобы сделать версию плагинов SKSE DLL независимой.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/32444?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'All in one (1.6.X)',
+        version: '11',
+      },
+    ],
+    tags: ['removal-tool', 'special-instructions'],
+    specialInstructions: {
+      blocks: [
+        {
+          type: 'paragraph',
+          content: 'Удалите следующие файлы:',
+        },
+        {
+          type: 'unordered_list',
+          items: [
+            'SKSE\\Plugins\\versionlib-1-6-317-0.bin',
+            'SKSE\\Plugins\\versionlib-1-6-318-0.bin',
+            'SKSE\\Plugins\\versionlib-1-6-323-0.bin',
+            'SKSE\\Plugins\\versionlib-1-6-342-0.bin',
+            'SKSE\\Plugins\\versionlib-1-6-353-0.bin',
+            'SKSE\\Plugins\\versionlib-1-6-629-0.bin',
+            'SKSE\\Plugins\\versionlib-1-6-640-0.bin',
+            'SKSE\\Plugins\\versionlib-1-6-659-0.bin',
+            'SKSE\\Plugins\\versionlib-1-6-1130-0.bin',
+            'SKSE\\Plugins\\versionlib-1-6-1179-0.bin',
+          ],
+        },
+      ],
+    },
+  },
+  {
+    name: 'SSE Engine Fixes (skse64 plugin)',
+    version: '6.1.1',
+    author: 'aers - Nukem - Ryan',
+    description:
+      'Этот мод содержит заголовочный файл и базу данных, чтобы сделать версию плагинов SKSE DLL независимой.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/32444?',
+    files: [
+      {
+        type: 'Main Files',
+        name: '(Part 1) SSE Engine Fixes for 1.6.1170 and newer',
+        version: '6.2',
+      },
+      {
+        type: 'Main Files',
+        name: '(Part 2) Engine Fixes - skse64 Preloader and TBB Lib',
+        version: '2020.3',
+      },
+    ],
+    tags: ['special-instructions'],
+    specialInstructions: {
+      blocks: [
+        {
+          type: 'ordered_list',
+          items: [
+            'После установки откройте и измените следующее: \\skse\\plugins\\EngineFixes.toml',
+            'Извлеките исправления движка (Часть 2) - предварительный загрузчик skse64 и TBB Lib и установите файлы в папку каталога Main Skyrim Special Edition.',
+          ],
+        },
+      ],
+    },
   },
 ];
