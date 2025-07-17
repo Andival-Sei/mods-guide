@@ -19,6 +19,12 @@ const InstallModsPart1Page: FC = () => {
 
       <Mod modName="SSE Engine Fixes (skse64 plugin)" />
 
+      <Mod modName="Actor Limit Fix" />
+
+      <Mod modName="Barter Limit Fix" />
+
+      <Mod modName="Bug Fixes SSE" />
+
       <NavigationControls
         prevPage={{ to: '/preinstall', name: 'Предустановки' }}
         nextPage={{ to: '/installmodspart1', name: 'Установка модов — Часть 2 (заглушка)' }}

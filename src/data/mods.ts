@@ -1039,4 +1039,48 @@ export const modsData: ModProps[] = [
       ],
     },
   },
+  {
+    name: 'Actor Limit Fix',
+    version: '9',
+    author: 'meh321',
+    description:
+      'Увеличивает количество актеров, которые могут двигаться, делать мимику и синхронизировать губы с репликами голоса в любой момент времени.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/32349?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Actor Limit Fix - Anniversary Edition (1.6.629.0 and later)',
+        version: '9',
+      },
+    ],
+  },
+  {
+    name: 'Barter Limit Fix',
+    version: '1.0',
+    author: 'powerofthree and KernalsEgg',
+    description:
+      'Плагин SKSE, который исправляет торговлю с торговцами с более чем 32 767 золотом.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/77173?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Barter Limit Fix',
+        version: '1.0',
+      },
+    ],
+  },
+  {
+    name: 'Bug Fixes SSE',
+    version: '10',
+    author: 'meh321',
+    description: 'Этот мод исправляет некоторые ошибки с кодом игры.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/33261?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Bug Fixes SSE - Anniversary Edition (1.6.629.0 and later)',
+        version: '10',
+      },
+    ],
+  },
 ];
