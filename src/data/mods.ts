@@ -1112,4 +1112,162 @@ export const modsData: ModProps[] = [
       },
     ],
   },
+  {
+    name: "I'm Walkin' Here NG with Pets",
+    version: '1.0.0',
+    author: 'Ryan--VersuchDrei--golovatris',
+    description:
+      'Плагин, который изо всех сил старается игнорировать коллизии между игроком и союзниками/призывами союзников/питомцами или во время диалогов.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/122516?',
+    files: [
+      {
+        type: 'Main Files',
+        name: "I'm Walkin' Here NG with Pets",
+        version: '1.0.0',
+      },
+    ],
+  },
+  {
+    name: 'Keyword Item Distributor (KID)',
+    version: '3.4.0',
+    author: 'powerofthree',
+    description:
+      'Плагин SKSE, который распределяет ключевые слова для оружия/брони/магических эффектов и других предметов, используя конфигурационные файлы.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/55728?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Keyword Item Distributor',
+        version: '3.4.0',
+      },
+    ],
+    fomods: [
+      {
+        title: 'Keyword Item Distributor',
+        pages: [
+          {
+            title: 'Main', // Название первой страницы
+            sections: [
+              {
+                title: 'DLL', // Название секции
+                type: 'radio',
+                items: [
+                  {
+                    id: 'well-radio-1',
+                    name: 'well-radio-group',
+                    label: 'SSE v1.6+ ("Anniversary Edition")',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    name: "Mum's the Word NG",
+    version: '2.1',
+    author: 'Ryan---VersuchDrei',
+    description:
+      "Этот мод удаляет украденную метку с бесполезных предметов, которые вы крадете, до тех пор, пока никто этого не заметит. Это преобразование Mum's the Word в CLib-NG создает один файл .dll, который работает во всех версиях Skyrim SE, включая AE 1.6.629+ и VR!",
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/77409',
+    files: [
+      {
+        type: 'Main Files',
+        name: "Mum's the Word",
+        version: '2.1',
+      },
+    ],
+  },
+  {
+    name: 'NPC AI Process Position Fix - NG',
+    version: '1.1.1',
+    author: 'doodlum',
+    description:
+      'Плагин DLL, который исправляет ошибку ванильного игрового движка, из-за которой позиции процесса ИИ NPC не могли обновляться после того, как вы ждете/спите/быстро перемещаетесь.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/69326?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'NPC AI Process Position Fix - NG',
+        version: '1.1.1',
+      },
+    ],
+    fomods: [
+      {
+        title: 'NPC AI Process Position Fix - NG',
+        pages: [
+          {
+            title: 'Files',
+            sections: [
+              {
+                title: 'Plugin',
+                type: 'checkbox',
+                items: [
+                  {
+                    id: 'plugin-checkbox-1',
+                    label: 'DLL and INI file',
+                    checked: true,
+                  },
+                ],
+              },
+              {
+                title: 'Patches',
+                type: 'radio',
+                items: [
+                  {
+                    id: 'patches-radio-1',
+                    name: 'patches-radio-group',
+                    label: 'Al Overhaul',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    name: "powerofthree's Papyrus Extender",
+    version: '6.0.3',
+    author: 'powerofthree',
+    description:
+      'Плагин SKSE64/VR, расширяющий функциональность скрипта Papyrus, с более чем 220 новыми функциями Papyrus и 25 событиями.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/22854',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Papyrus Extender',
+        version: '6.0.3',
+      },
+    ],
+    fomods: [
+      {
+        title: 'Papyrus Extender',
+        pages: [
+          {
+            title: 'Main',
+            sections: [
+              {
+                title: 'DLL',
+                type: 'radio',
+                items: [
+                  {
+                    id: 'patches-radio-1',
+                    name: 'patches-radio-group',
+                    label: 'SSE v1.6.1170+ ("Anniversary Edition")',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ];

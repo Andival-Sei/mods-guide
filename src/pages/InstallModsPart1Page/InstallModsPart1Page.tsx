@@ -29,6 +29,16 @@ const InstallModsPart1Page: FC = () => {
 
       <Mod modName="Fix Note icon for SkyUI (SKSE64 plugin)" />
 
+      <Mod modName="I'm Walkin' Here NG with Pets" />
+
+      <Mod modName="Keyword Item Distributor (KID)" />
+
+      <Mod modName="Mum's the Word NG" />
+
+      <Mod modName="NPC AI Process Position Fix - NG" />
+
+      <Mod modName="powerofthree's Papyrus Extender" />
+
       <NavigationControls
         prevPage={{ to: '/preinstall', name: 'Предустановки' }}
         nextPage={{ to: '/installmodspart1', name: 'Установка модов — Часть 2 (заглушка)' }}
