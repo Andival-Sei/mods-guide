@@ -2,8 +2,6 @@ import React from 'react';
 import styles from './CustomCheckbox.module.scss';
 
 export interface CustomCheckboxProps {
-  /** Уникальный идентификатор чекбокса */
-  id: string;
   /** Текстовая метка чекбокса */
   label: string;
   /** Состояние чекбокса (отмечен/не отмечен) */
@@ -24,7 +22,6 @@ export interface CustomCheckboxProps {
  * @param readOnly - Только для чтения (опционально)
  */
 const CustomCheckbox: React.FC<CustomCheckboxProps> = ({
-  id,
   label,
   checked,
   onChange,
@@ -37,11 +34,10 @@ const CustomCheckbox: React.FC<CustomCheckboxProps> = ({
   };
 
   return (
-    <label className={styles.checkboxContainer} htmlFor={id}>
+    <label className={styles.checkboxContainer}>
       <div className={styles.iosCheckbox}>
         <input
           type="checkbox"
-          id={id}
           checked={checked}
           onChange={onChange}
           onClick={readOnly ? handleClick : undefined}

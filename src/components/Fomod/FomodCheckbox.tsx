@@ -1,4 +1,3 @@
-import type { FomodCheckboxProps } from './FomodTypes';
 import cls from './Fomod.module.scss';
 import CustomCheckbox from '../CustomCheckbox/CustomCheckbox';
 
@@ -11,10 +10,10 @@ import CustomCheckbox from '../CustomCheckbox/CustomCheckbox';
  * @param label - Текстовая метка чекбокса
  * @param checked - Состояние чекбокса (отмечен/не отмечен)
  */
-const FomodCheckbox = ({ id, label, checked }: FomodCheckboxProps) => {
+const FomodCheckbox = ({ label, checked }: { label: string; checked: boolean }) => {
   return (
     <div className={cls.slider__label}>
-      <CustomCheckbox id={id} label={label} checked={checked} readOnly={true} />
+      <CustomCheckbox label={label} checked={checked} readOnly={true} />
     </div>
   );
 };

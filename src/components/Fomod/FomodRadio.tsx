@@ -1,4 +1,3 @@
-import type { FomodRadioProps } from './FomodTypes';
 import cls from './Fomod.module.scss';
 import CustomRadio from '../CustomRadio/CustomRadio';
 
@@ -14,10 +13,10 @@ import CustomRadio from '../CustomRadio/CustomRadio';
  * @param label - Текстовая метка радиокнопки
  * @param checked - Состояние радиокнопки (выбрана/не выбрана)
  */
-const FomodRadio = ({ id, name, label, checked }: FomodRadioProps) => {
+const FomodRadio = ({ label, checked }: { label: string; checked: boolean }) => {
   return (
     <div className={cls.slider__label}>
-      <CustomRadio id={id} name={name} label={label} checked={checked} readOnly={true} />
+      <CustomRadio label={label} checked={checked} readOnly={true} />
     </div>
   );
 };

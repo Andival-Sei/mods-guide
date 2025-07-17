@@ -2,10 +2,6 @@ import React from 'react';
 import styles from './CustomRadio.module.scss';
 
 export interface CustomRadioProps {
-  /** Уникальный идентификатор радиокнопки */
-  id: string;
-  /** Имя группы радиокнопок (для объединения в группу) */
-  name: string;
   /** Текстовая метка радиокнопки */
   label: string;
   /** Состояние радиокнопки (выбрана/не выбрана) */
@@ -27,8 +23,6 @@ export interface CustomRadioProps {
  * @param readOnly - Только для чтения (опционально)
  */
 const CustomRadio: React.FC<CustomRadioProps> = ({
-  id,
-  name,
   label,
   checked,
   onChange,
@@ -41,11 +35,9 @@ const CustomRadio: React.FC<CustomRadioProps> = ({
   };
 
   return (
-    <label className={styles.label} htmlFor={id}>
+    <label className={styles.label}>
       <input
         type="radio"
-        id={id}
-        name={name}
         checked={checked}
         onChange={onChange}
         onClick={readOnly ? handleClick : undefined}

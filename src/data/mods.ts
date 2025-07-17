@@ -934,8 +934,6 @@ export const modsData: ModProps[] = [
                 type: 'radio',
                 items: [
                   {
-                    id: 'well-radio-1',
-                    name: 'well-radio-group',
                     label: 'INSTALL EVERYTHING',
                     checked: true,
                   },
@@ -951,7 +949,6 @@ export const modsData: ModProps[] = [
                 type: 'checkbox',
                 items: [
                   {
-                    id: 'poggers-checkbox-1',
                     label: 'poggers',
                     checked: true,
                   },
@@ -1153,8 +1150,6 @@ export const modsData: ModProps[] = [
                 type: 'radio',
                 items: [
                   {
-                    id: 'well-radio-1',
-                    name: 'well-radio-group',
                     label: 'SSE v1.6+ ("Anniversary Edition")',
                     checked: true,
                   },
@@ -1207,7 +1202,6 @@ export const modsData: ModProps[] = [
                 type: 'checkbox',
                 items: [
                   {
-                    id: 'plugin-checkbox-1',
                     label: 'DLL and INI file',
                     checked: true,
                   },
@@ -1218,8 +1212,6 @@ export const modsData: ModProps[] = [
                 type: 'radio',
                 items: [
                   {
-                    id: 'patches-radio-1',
-                    name: 'patches-radio-group',
                     label: 'Al Overhaul',
                     checked: true,
                   },
@@ -1257,8 +1249,6 @@ export const modsData: ModProps[] = [
                 type: 'radio',
                 items: [
                   {
-                    id: 'patches-radio-1',
-                    name: 'patches-radio-group',
                     label: 'SSE v1.6.1170+ ("Anniversary Edition")',
                     checked: true,
                   },

@@ -19,20 +19,14 @@ const FomodSection = ({ title, type, items }: FomodSectionProps) => {
 
       {/* Отображение чекбоксов, если тип секции - 'checkbox' */}
       {type === 'checkbox' &&
-        (items as FomodCheckboxProps[]).map((item) => (
-          <FomodCheckbox key={item.id} id={item.id} label={item.label} checked={item.checked} />
+        (items as FomodCheckboxProps[]).map((item, idx) => (
+          <FomodCheckbox key={item.label + idx} label={item.label} checked={item.checked} />
         ))}
 
       {/* Отображение радиокнопок, если тип секции - 'radio' */}
       {type === 'radio' &&
-        (items as FomodRadioProps[]).map((item) => (
-          <FomodRadio
-            key={item.id}
-            id={item.id}
-            name={item.name}
-            label={item.label}
-            checked={item.checked}
-          />
+        (items as FomodRadioProps[]).map((item, idx) => (
+          <FomodRadio key={item.label + idx} label={item.label} checked={item.checked} />
         ))}
     </fieldset>
   );
