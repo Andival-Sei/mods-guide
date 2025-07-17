@@ -4,7 +4,9 @@ import UnorderedList from '../UnorderedList/UnorderedList';
 import ListItem from '../ListItem/ListItem';
 import { observer } from 'mobx-react-lite';
 import { useStore } from '../../stores/index';
-import SpecialInstructions from '../SpecialInstructions/SpecialInstructions';
+import SpecialInstructions, {
+  type SpecialInstructionsProps,
+} from '../SpecialInstructions/SpecialInstructions';
 import Fomod from '../Fomod/Fomod'; // Импортируем Fomod синхронно
 
 export type FileType =
@@ -31,13 +33,7 @@ export interface ModProps {
   tags?: TagType[];
   // Новый блок: массив Fomod (может быть undefined или пустым)
   fomods?: import('../Fomod/FomodTypes').FomodProps[];
-  specialInstructions?: {
-    blocks: Array<{
-      type: 'paragraph' | 'unordered_list' | 'ordered_list';
-      content?: string; // Простая строка с <hl>текст</hl> тегами
-      items?: string[]; // Массив строк с <hl>текст</hl> тегами
-    }>;
-  };
+  specialInstructions?: SpecialInstructionsProps['instructions'];
 }
 
 interface ModComponentProps {

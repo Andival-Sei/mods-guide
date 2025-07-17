@@ -17,6 +17,8 @@ const InstallModsPart1Page: FC = () => {
 
       <Mod modName="Address Library for SKSE Plugins" />
 
+      <Mod modName="SSE Engine Fixes (skse64 plugin)" />
+
       <NavigationControls
         prevPage={{ to: '/preinstall', name: 'Предустановки' }}
         nextPage={{ to: '/installmodspart1', name: 'Установка модов — Часть 2 (заглушка)' }}

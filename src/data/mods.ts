@@ -985,8 +985,8 @@ export const modsData: ModProps[] = [
           content: 'Удалите следующие файлы:',
         },
         {
-          type: 'unordered_list',
-          items: [
+          type: 'code',
+          content: [
             'SKSE\\Plugins\\versionlib-1-6-317-0.bin',
             'SKSE\\Plugins\\versionlib-1-6-318-0.bin',
             'SKSE\\Plugins\\versionlib-1-6-323-0.bin',
@@ -997,7 +997,7 @@ export const modsData: ModProps[] = [
             'SKSE\\Plugins\\versionlib-1-6-659-0.bin',
             'SKSE\\Plugins\\versionlib-1-6-1130-0.bin',
             'SKSE\\Plugins\\versionlib-1-6-1179-0.bin',
-          ],
+          ].join('\n'),
         },
       ],
     },
@@ -1027,8 +1027,13 @@ export const modsData: ModProps[] = [
         {
           type: 'ordered_list',
           items: [
-            'После установки откройте и измените следующее: \\skse\\plugins\\EngineFixes.toml',
-            'Извлеките исправления движка (Часть 2) - предварительный загрузчик skse64 и TBB Lib и установите файлы в папку каталога Main Skyrim Special Edition.',
+            'После установки откройте и измените следующее: <fp>\\skse\\plugins\\EngineFixes.toml</fp>',
+            {
+              type: 'code',
+              language: 'toml',
+              content: `[Patches]\nMaxStdio = 8192\nRegularQuicksaves = true\n[Experimental]\nSaveGameMaxSize = true`,
+            },
+            'Извлеките (Part 2) Engine Fixes - skse64 Preloader and TBB Lib и установите файлы в папку каталога Main Skyrim Special Edition.',
           ],
         },
       ],
