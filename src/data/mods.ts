@@ -1559,7 +1559,7 @@ export const modsData: ModProps[] = [
           type: 'unordered_list',
           items: [
             'Перейдите к <fp>Crash Logger SSE AE VR - PDB support\\SKSE\\Plugins\\CrashLogger.ini</fp>',
-            'Откройте ini и найдите ; Директория вывода Crashlog. По умолчанию "Документы\\мои игры\\[Skyrim]\\SKSE"',
+            'Откройте ini и найдите ;Crashlog output directory. Defaults to "Documents\\my games\\[Skyrim]\\SKSE"',
             'add Crashlog Directory = Тут напишите путь до папки overwrite по примеру C:\\Modding\\Skyrim\\MO2\\overwrite',
             'Сохраните и закройте ini',
           ],
