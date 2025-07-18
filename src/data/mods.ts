@@ -1556,7 +1556,7 @@ export const modsData: ModProps[] = [
             'Нам нужно изменить местоположение, где сохраняются журналы сбоев, выполните следующие действия:',
         },
         {
-          type: 'unordered_list',
+          type: 'ordered_list',
           items: [
             'Перейдите к <fp>Crash Logger SSE AE VR - PDB support\\SKSE\\Plugins\\CrashLogger.ini</fp>',
             'Откройте ini и найдите ;Crashlog output directory. Defaults to "Documents\\my games\\[Skyrim]\\SKSE"',
