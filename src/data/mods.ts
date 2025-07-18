@@ -1422,4 +1422,153 @@ export const modsData: ModProps[] = [
       ],
     },
   },
+  {
+    name: 'Base Object Swapper',
+    version: '3.4.1',
+    author: 'powerofthree',
+    description:
+      'Плагин SKSE и фреймворк для подмены базовых объектов и ссылок с помощью конфигурационных файлов.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/60805',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Base Object Swapper',
+        version: '3.4.1',
+      },
+    ],
+    fomods: [
+      {
+        title: 'Base Object Swapper',
+        pages: [
+          {
+            title: 'Main',
+            sections: [
+              {
+                title: 'DLL',
+                type: 'radio',
+                items: [
+                  {
+                    label: 'SSE v1.6.1130+ ("Anniversary Edition")',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    name: 'Behavior Data Injector',
+    version: 'v0.13',
+    author: 'Maxsu and Dropkicker',
+    description:
+      'Плагин SKSE, который позволяет добавлять новые переменные анимации и события через конфигурационные файлы без патча Nemesis.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/78146?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Behavior Data Injector',
+        version: 'v0.13',
+      },
+    ],
+  },
+  {
+    name: 'Behavior Data Injector Universal Support',
+    version: 'v0.13.0.1',
+    author: 'doodlum',
+    description:
+      'Новейший плагин Behavior Data Injector SKSE с добавленной поддержкой AE и VR с PDB для отладки.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/78159?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Behavior Data Injector Universal Support',
+        version: 'v0.13.0.1',
+      },
+    ],
+  },
+  {
+    name: 'Better Combat Escape - SSE',
+    version: 'v0.83',
+    author: 'Maxsu',
+    description:
+      'Плагин SKSE, который улучшает механизм побега / остановки боя в ванильной игре, чтобы вы не застревали в боевом состоянии с очень далеким врагом.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/43936',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Better Combat Escape - SSE V0.83',
+        version: 'v0.83',
+      },
+    ],
+  },
+  {
+    name: 'Better Combat Escape - NG',
+    version: '1.0.1',
+    author: 'doodlum',
+    description: 'Обновление Better Combat Escape, с добавленной поддержкой SE и AE в одну DLL.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/72901?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Better Combat Escape - NG',
+        version: '1.0.1',
+      },
+    ],
+  },
+  {
+    name: 'Container Distribution Framework',
+    version: '3.0.2',
+    author: 'SeaSparrow',
+    description:
+      'Фреймворк SKSE, который распределяет элементы по ссылкам на контейнеры на основе таких правил, как расположение, ссылка, количество, ключевое слово элемента и т. д.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/120152?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Container Distribution Framework',
+        version: '3.0.2',
+      },
+    ],
+  },
+  {
+    name: 'Crash Logger SSE AE VR - PDB support',
+    version: '1.15.0',
+    author: 'alandtse',
+    description:
+      'Генерирует журналы сбоев, когда игра просто работает™. Это порт SSE/AE/VR, использующий источник MIT от fudgyduff. Он может читать PDB-файлы, которые могут распространять авторы модов.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/59818',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'CrashLogger',
+        version: '1.15.0',
+      },
+    ],
+    tags: ['special-instructions'],
+    specialInstructions: {
+      blocks: [
+        {
+          type: 'paragraph',
+          content:
+            'Нам нужно изменить местоположение, где сохраняются журналы сбоев, выполните следующие действия:',
+        },
+        {
+          type: 'unordered_list',
+          items: [
+            'Перейдите к <fp>Crash Logger SSE AE VR - PDB support\\SKSE\\Plugins\\CrashLogger.ini</fp>',
+            'Откройте ini и найдите ; Директория вывода Crashlog. По умолчанию "Документы\\мои игры\\[Skyrim]\\SKSE"',
+            'add Crashlog Directory = Тут напишите путь до папки overwrite по примеру C:\\Modding\\Skyrim\\MO2\\overwrite',
+            'Сохраните и закройте ini',
+          ],
+        },
+        {
+          type: 'paragraph',
+          content: 'Журналы сбоев теперь должны выводиться в папку Mod Organizer 2 Overwrite.',
+        },
+      ],
+    },
+  },
 ];

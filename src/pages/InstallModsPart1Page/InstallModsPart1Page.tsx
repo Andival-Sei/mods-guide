@@ -55,6 +55,20 @@ const InstallModsPart1Page: FC = () => {
 
       <TitleBlock title="Фреймворки расширений - Расширенная функциональность" />
 
+      <Mod modName="Base Object Swapper" />
+
+      <Mod modName="Behavior Data Injector" />
+
+      <Mod modName="Behavior Data Injector Universal Support" />
+
+      <Mod modName="Better Combat Escape - SSE" />
+
+      <Mod modName="Better Combat Escape - NG" />
+
+      <Mod modName="Container Distribution Framework" />
+
+      <Mod modName="Crash Logger SSE AE VR - PDB support" />
+
       <NavigationControls
         prevPage={{ to: '/preinstall', name: 'Предустановки' }}
         nextPage={{ to: '/installmodspart1', name: 'Установка модов — Часть 2 (заглушка)' }}
