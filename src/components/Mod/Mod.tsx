@@ -22,6 +22,15 @@ export interface ModFile {
   version: string;
 }
 
+// Интерфейс для перевода мода
+export interface ModTranslation {
+  version: string;
+  author: string;
+  downloadLink: string;
+  files: ModFile[];
+  fomods?: import('../Fomod/FomodTypes').FomodProps[];
+}
+
 // Новый формат specialInstructions - простые строки с <hl> тегами
 export interface ModProps {
   name: string;
@@ -34,6 +43,8 @@ export interface ModProps {
   // Новый блок: массив Fomod (может быть undefined или пустым)
   fomods?: import('../Fomod/FomodTypes').FomodProps[];
   specialInstructions?: SpecialInstructionsProps['instructions'];
+  // Опциональный перевод мода
+  translation?: ModTranslation;
 }
 
 interface ModComponentProps {
@@ -63,6 +74,7 @@ const Mod = observer(({ modName }: ModComponentProps) => {
     tags = [],
     fomods = [], // добавляем fomods
     specialInstructions,
+    translation,
   } = modData;
 
   return (
@@ -142,6 +154,71 @@ const Mod = observer(({ modName }: ModComponentProps) => {
       {/* Блок со специальными инструкциями */}
       {specialInstructions && tags.includes('special-instructions') && (
         <SpecialInstructions instructions={specialInstructions} />
+      )}
+
+      {/* Перевод мода, если есть */}
+      {translation && (
+        <>
+          {/* Соединительная линия между модом и переводом */}
+          <div className={cls.mod__translation_connector}></div>
+
+          {/* Блок перевода */}
+          <div className={cls.mod__translation}>
+            <div className={cls.mod__translation_header}>
+              <h3 className={cls.mod__translation_title}>Перевод</h3>
+
+              <div className={cls.mod__translation_details}>
+                <a
+                  href={translation.downloadLink}
+                  className={cls.mod__link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Скачать перевод
+                </a>
+
+                <div className={cls.mod__version}>
+                  <span className={cls.mod__version_label}>Версия:</span> {translation.version}
+                </div>
+
+                <div className={cls.mod__author}>
+                  <span className={cls.mod__label}>Автор:</span> {translation.author}
+                </div>
+              </div>
+            </div>
+
+            {/* Файлы перевода */}
+            <div className={cls.mod__files}>
+              <h4 className={cls.mod__files_title}>Файлы для скачивания</h4>
+
+              <UnorderedList className={cls.mod__files_list}>
+                {translation.files.map((file, index) => (
+                  <ListItem key={index} className={cls.mod__file_item}>
+                    <span
+                      className={
+                        cls[`mod__file_type--${file.type.replace(/\s+/g, '-').toLowerCase()}`]
+                      }
+                    >
+                      {file.type}
+                    </span>
+                    {`  —  `}
+                    {file.name}
+                    {`  —  `}
+                    <span className={cls.mod__version_label}>Версия:</span>
+                    {` ${file.version}`}
+                  </ListItem>
+                ))}
+              </UnorderedList>
+            </div>
+
+            {/* Fomod-блоки перевода, если есть */}
+            {translation.fomods &&
+              translation.fomods.length > 0 &&
+              translation.fomods.map((fomod, idx) => (
+                <Fomod key={idx} title={fomod.title} pages={fomod.pages} />
+              ))}
+          </div>
+        </>
       )}
     </article>
   );

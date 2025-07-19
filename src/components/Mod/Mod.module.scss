@@ -5,13 +5,17 @@
   color: white;
   border-radius: 8px;
   background-color: #272626;
-  background-image: 
+  background-image:
     linear-gradient(135deg, rgba(45, 45, 45, 0.4) 0%, rgba(20, 20, 20, 0.4) 100%),
     url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
-  background-size: 100% 100%, 200px 200px;
+  background-size:
+    100% 100%,
+    200px 200px;
   position: relative;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition:
+    transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
 
   &:hover {
     transform: translateY(-5px);
@@ -29,13 +33,17 @@
     color: white;
     border-radius: 8px;
     background-color: #272626;
-    background-image: 
+    background-image:
       linear-gradient(135deg, rgba(45, 45, 45, 0.4) 0%, rgba(20, 20, 20, 0.4) 100%),
       url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
-    background-size: 100% 100%, 200px 200px;
+    background-size:
+      100% 100%,
+      200px 200px;
     position: relative;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition:
+      transform 0.3s ease-in-out,
+      box-shadow 0.3s ease-in-out;
   }
 
   &__error {
@@ -113,7 +121,8 @@
     }
   }
 
-  &__version, &__author {
+  &__version,
+  &__author {
     display: flex;
     gap: 6px;
   }
@@ -184,5 +193,52 @@
 
   &__file_type--old-files {
     color: #ce9933;
+  }
+
+  // Стили для перевода мода
+  &__translation_connector {
+    height: 2px;
+    margin: 24px 0;
+    background: linear-gradient(90deg, #4a4a4a 0%, #6a6a6a 50%, #4a4a4a 100%);
+    position: relative;
+  }
+
+  &__translation {
+    margin-top: 16px;
+    padding: 20px;
+    border-radius: 6px;
+    background-color: #323232 !important;
+    background-image: none !important;
+    position: relative;
+  }
+
+  &__translation_header {
+    margin-bottom: 16px;
+  }
+
+  &__translation_title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 0 16px 0;
+    color: #e0e0e0;
+  }
+
+  &__translation_details {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    @media (max-width: 768px) {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+
+  // Стили для блока файлов внутри перевода
+  &__translation .mod__files {
+    background-color: #2a2a2a;
+    border: 1px solid #3a3a3a;
   }
 }

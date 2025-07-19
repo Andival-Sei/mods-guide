@@ -1965,5 +1965,17 @@ export const modsData: ModProps[] = [
         version: '1.5',
       },
     ],
+    translation: {
+      version: '1.5.0',
+      author: 'Andiwahl',
+      downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/109247?',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'Whose Quest is it Anyway RU',
+          version: '1.5.0',
+        },
+      ],
+    },
   },
 ];
