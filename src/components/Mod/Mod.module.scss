@@ -205,10 +205,7 @@
 
   &__translation {
     margin-top: 16px;
-    padding: 20px;
     border-radius: 6px;
-    background-color: #323232 !important;
-    background-image: none !important;
     position: relative;
   }
 
@@ -234,11 +231,5 @@
       flex-direction: column;
       gap: 12px;
     }
-  }
-
-  // Стили для блока файлов внутри перевода
-  &__translation .mod__files {
-    background-color: #2a2a2a;
-    border: 1px solid #3a3a3a;
   }
 }
