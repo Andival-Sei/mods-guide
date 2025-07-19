@@ -69,6 +69,30 @@ const InstallModsPart1Page: FC = () => {
 
       <Mod modName="Crash Logger SSE AE VR - PDB support" />
 
+      <Mod modName="Don't send me there again (dosemetha)" />
+
+      <Mod modName="Dynamic String Distributor (DSD)" />
+
+      <Mod modName="FormList Manipulator - FLM" />
+
+      <Mod modName="Favorite Misc Items" />
+
+      <Mod modName="MergeMapper" />
+
+      <Mod modName="Object Categorization Framework" />
+
+      <Mod modName="PAPER" />
+
+      <Mod modName="Regional Save Names" />
+
+      <Mod modName="Simple Offence Suppression" />
+
+      <Mod modName="Skyrim Save System Overhaul 3 (SSSO 3)" />
+
+      <Mod modName="Spell Perk Item Distributor (SPID)" />
+
+      <Mod modName="Whose Quest is it Anyway NG" />
+
       <NavigationControls
         prevPage={{ to: '/preinstall', name: 'Предустановки' }}
         nextPage={{ to: '/installmodspart1', name: 'Установка модов — Часть 2 (заглушка)' }}
