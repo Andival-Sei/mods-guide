@@ -2283,5 +2283,730 @@ export const modsData: ModProps[] = [
         version: '1.6.1',
       },
     ],
+    fomods: [
+      {
+        title: 'Navigator - Navmesh Fixes',
+        pages: [
+          {
+            title: 'Navigator',
+            sections: [
+              {
+                title: 'AIO or Modular',
+                type: 'radio',
+                items: [
+                  {
+                    label: 'All-in-one',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            title: 'All-in-one',
+            sections: [
+              {
+                title: 'All-in-one',
+                type: 'radio',
+                items: [
+                  {
+                    label: '.esl',
+                    checked: true,
+                  },
+                ],
+              },
+              {
+                title: 'Interesting NPCs',
+                type: 'checkbox',
+                items: [
+                  {
+                    label: 'Interesting NPCs',
+                    checked: true,
+                  },
+                ],
+              },
+              {
+                title: 'Sunder and Wraithguard',
+                type: 'radio',
+                items: [
+                  {
+                    label: 'Sunder and Wraithguard - Editable Vault Cell',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            title: 'Optional Fixes',
+            sections: [
+              {
+                title: 'Skyrim Sewers',
+                type: 'checkbox',
+                items: [
+                  {
+                    label: 'Skyrim Sewers',
+                    checked: true,
+                  },
+                ],
+              },
+              {
+                title: 'Vigilant',
+                type: 'checkbox',
+                items: [
+                  {
+                    label: 'Vigilant',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            title: 'Optional Extras',
+            sections: [
+              {
+                title: 'Abandoned Prison',
+                type: 'radio',
+                items: [
+                  {
+                    label: 'Abandoned Prison AS-LAL',
+                    checked: true,
+                  },
+                ],
+              },
+              {
+                title: 'Rift Watchtower',
+                type: 'checkbox',
+                items: [
+                  {
+                    label: 'Оставьте пустым',
+                    checked: false,
+                  },
+                ],
+              },
+              {
+                title: 'Broken Oar script tweak',
+                type: 'checkbox',
+                items: [
+                  {
+                    label: 'Оставьте пустым',
+                    checked: false,
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+    translation: {
+      version: '1.6.1',
+      author: 'Andiewahl',
+      downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/155197',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'Navigator - Navmesh Fixes RU',
+          version: '1.6.1',
+        },
+      ],
+    },
+  },
+  {
+    name: "Unofficial Skyrim Modder's Patch - USMP SE",
+    version: '2.6.6',
+    author: 'The Community - PlagueHush - sattyre',
+    description:
+      'Обширная подборка исправлений для исправлений ошибок, несоответствий и ошибок, которые могут быть обнаружены в модифицированном Skyrim и его DLC. Тщательно подобранная как для создателей модов, так и для игроков, чтобы помочь игровому опыту и служить базой, чтобы авторам модов не нужно было постоянно искать, исправлять и обходить одни и те же старые проблемы.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/49616',
+    files: [
+      {
+        type: 'Main Files',
+        name: "Unofficial Skyrim Modder's Patch - USMP SE 2.6.6",
+        version: '2.6.6',
+      },
+    ],
+    translation: {
+      version: '2.6.6',
+      author: 'The Community - PlagueHush - sattyre and NB - Nillck - translator',
+      downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/154565?',
+      files: [
+        {
+          type: 'Main Files',
+          name: "Unofficial Skyrim Modder's Patch - USMP SE - RU",
+          version: '2.6.6',
+        },
+      ],
+    },
+  },
+  {
+    name: 'Skyrim Extended Cut - Saints and Seducers',
+    version: '1.0.0.6',
+    author: 'ECSS Dev Group',
+    description:
+      'Skyrim: Extended Cut - Saints and Seducers - это переработка и расширение официального творения Saints & Seducers. Несколько элементов из оригинального квеста были сохранены и расширены в новый, полностью озвученный квест.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/72772?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Skyrim Extended Cut - Saints and Seducers',
+        version: '1.0.0.6',
+      },
+    ],
+    fomods: [
+      {
+        title: 'Название_FOMOD',
+        pages: [
+          {
+            title: 'Core Files',
+            sections: [
+              {
+                title: 'Extended Cut: Saints and Seducers',
+                type: 'radio',
+                items: [
+                  {
+                    label: 'Core Files',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            title: 'Creation Club Integrations',
+            sections: [
+              {
+                title: 'Creation Club Integrations',
+                type: 'checkbox',
+                items: [
+                  {
+                    label: "Ruin's Edge",
+                    checked: true,
+                  },
+                  {
+                    label: 'Shadowrend',
+                    checked: true,
+                  },
+                  {
+                    label: 'Staff of Sheogorath',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            title: 'Patches',
+            sections: [
+              {
+                title: 'Patches',
+                type: 'checkbox',
+                items: [
+                  {
+                    label: 'Оставьте пустым',
+                    checked: false,
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+    translation: {
+      version: '1.0.0.6',
+      author: 'Nocturn---Andiewahl',
+      downloadLink:
+        'https://drive.google.com/file/d/1EtTHcu46DmUp6T-PDzAqNWUlOTJzjWCk/view?usp=sharing',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'Skyrim Extended Cut - Saints and Seducers RU.7z',
+          version: '1.0.0.6',
+        },
+      ],
+    },
+  },
+  {
+    name: 'Skyrim Extended Cut Saints and Seducers - Quest Patch',
+    version: '2.0',
+    author: 'imamurlocmurgle',
+    description:
+      'Skyrim Extended Cut: Saints and Seducers представляет новое мировое пространство с новыми квестами и NPC, что означает, что он теоретически совместим с большинством модов из коробки. Проблема, по большей части, возникает из-за того, что один NPC редактируется, а не получает новый экземпляр.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/83336?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'esl plugin',
+        version: 'V2',
+      },
+    ],
+    translation: {
+      version: 'V2',
+      author: 'Andiwahl',
+      downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/102974',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'esl plugin RU',
+          version: 'V2',
+        },
+      ],
+    },
+  },
+  {
+    name: 'Bard Instrumentals Mostly - Sing Rarely',
+    version: '1.0',
+    author: 'BanjoBunny',
+    description: 'Этот мод делает так, что барды реже поют в тавернах.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/10927',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Bard Instrumentals Mostly - Sing Rarely',
+        version: '1.0',
+      },
+    ],
+  },
+  {
+    name: 'Beard Mask Fix - Beards Use Slot 44 SKSE Plugin',
+    version: '1.0.1',
+    author: 'Parapets',
+    description:
+      'Этот мод дает возможность носить маски для лица персонажам с растительностью на лице без застревания бороды в маске.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/80232',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Beard Mask Fix',
+        version: '1.0.1',
+      },
+    ],
+    fomods: [
+      {
+        title: 'Beard Mask Fix',
+        pages: [
+          {
+            title: 'Game Version',
+            sections: [
+              {
+                title: 'Game Version',
+                type: 'radio',
+                items: [
+                  {
+                    label: 'Skyrim Special Edition',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            title: 'Extras',
+            sections: [
+              {
+                title: 'Select Addons',
+                type: 'checkbox',
+                items: [
+                  {
+                    label: 'Vanilla Masks',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+    translation: {
+      version: '1.0.1.0',
+      author: 'DrunkRussianGun',
+      downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/101510',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'Beard Mask Fix RUS',
+          version: '1.0.1.0',
+        },
+      ],
+      fomods: [
+        {
+          title: 'Beard Mask Fix RUS',
+          pages: [
+            {
+              title: 'Версия игры',
+              sections: [
+                {
+                  title: 'Версия игры',
+                  type: 'radio',
+                  items: [
+                    {
+                      label: 'Skyrim Special Edition',
+                      checked: true,
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              title: 'Дополнительно',
+              sections: [
+                {
+                  title: 'Выбор дополнений',
+                  type: 'checkbox',
+                  items: [
+                    {
+                      label: 'Маски Vanilla',
+                      checked: true,
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  },
+  {
+    name: 'Better Jumping SE',
+    version: '1.8.6',
+    author: 'meh321 and z65536',
+    description:
+      'Этот мод позволяет прыгать во время спринта. Также вы можете настроить множитель высоты прыжка, сколько раз вы можете прыгнуть (двойной прыжок, как в экшн-играх).',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/18967',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Better Jumping (1.6.X)',
+        version: '1.8.6',
+      },
+    ],
+  },
+  {
+    name: 'College of Winterhold Quest Start Fixes',
+    version: '0.4',
+    author: 'wankingSkeever',
+    description:
+      'Исправлены ошибки, из-за которых Коллегия Винтерхолда MG07 "Посох Магнуса", MG08 "Око Магнуса", MG05 "Содержание" и MGRArniel03 "Усилие Арниэля" Часть 3 отказывалась запускаться из-за незаполненных зарезервированных псевдонимов заданий.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/53817?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'College of Winterhold Quest Start Fixes',
+        version: '0.4',
+      },
+    ],
+    fomods: [
+      {
+        title: 'Название_FOMOD',
+        pages: [
+          {
+            title: 'Страница 1',
+            sections: [
+              {
+                title: 'Секция 1',
+                type: 'radio',
+                items: [
+                  {
+                    label: 'Vanilla (Regular)',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+    translation: {
+      version: '0.4',
+      author: 'Hainiji',
+      downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/114910',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'College of Winterhold Quest Start Fixes',
+          version: '0.4',
+        },
+      ],
+      fomods: [
+        {
+          title: 'College of Winterhold Quest Start Fixes',
+          pages: [
+            {
+              title: 'Страница 1',
+              sections: [
+                {
+                  title: 'Секция 1',
+                  type: 'radio',
+                  items: [
+                    {
+                      label: 'Vanilla (Regular)',
+                      checked: true,
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  },
+  {
+    name: 'Combat Music Fix - Papyrus',
+    version: '2.0.0',
+    author: 'SeaSparrow',
+    description:
+      'Исправлена ошибка, из-за которой боевая музыка могла зацикливаться после окончания боя. Эта версия использует Papyrus и не требует SKSE.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/78057',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Combat Music Fix - Papyrus',
+        version: '2.0.0',
+      },
+    ],
+  },
+  {
+    name: 'Dual Casting Fix',
+    version: '1.0',
+    author: 'powerofthree',
+    description:
+      'Плагин SKSE, который исправляет ванильную ошибку, из-за которой игра обрабатывает двойные заклинания, как если бы они были одинарными.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/92454',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Dual Casting Fix',
+        version: '1.0',
+      },
+    ],
+    fomods: [
+      {
+        title: 'Dual Casting Fix',
+        pages: [
+          {
+            title: 'Main',
+            sections: [
+              {
+                title: 'DLL',
+                type: 'radio',
+                items: [
+                  {
+                    label: 'SSE v1.6+ ("Anniversary Edition")',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    name: 'Fuz Ro D-oh - Silent Voice',
+    version: '2.5',
+    author: 'Плагин SKSE64, который добавляет поддержку неозвученных диалогов в игре.',
+    description: 'Описание_мода',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/15109',
+    files: [
+      {
+        type: 'Main Files',
+        name: "Fuz Ro D'oh",
+        version: '2.5',
+      },
+    ],
+  },
+  {
+    name: 'High Gate Ruins Puzzle Reset Fix',
+    version: '0.3',
+    author: 'wankingSkeever',
+    description:
+      'Исправлена ошибка, из-за которой головоломка «Руины высоких ворот» не сбрасывалась должным образом, блокируя половину подземелья при последующих посещениях.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/53643?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'High Gate Ruins Puzzle Reset Fix',
+        version: '0.3',
+      },
+    ],
+  },
+  {
+    name: 'Horse Save Load Fix',
+    version: '0.2',
+    author: 'wankingSkeever',
+    description: 'Исправлена ошибка, из-за которой лошадь взлетала в небо при загрузке сохранения.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/132110',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Horse Save Load Fix',
+        version: '0.2',
+      },
+    ],
+  },
+  {
+    name: 'Hunters Not Bandits',
+    version: '4.2',
+    author: 'raccoondance',
+    description:
+      'NPC не будут использовать насмешки или оскорбления во время боя с животными. В частности, охотники будут вести себя более реалистично, а также исправлять странное поведение, когда враги желают вам доброго утра, и другие неуместные диалоги сразу после того, как они вас убили.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/1547',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Hunters Not Bandits 4.2',
+        version: '4.2',
+      },
+    ],
+    translation: {
+      version: '4.2',
+      author: 'raccoondance and NB - Nillck - translator',
+      downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/154568',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'Hunters Not Bandits - RU',
+          version: '4.2',
+        },
+      ],
+    },
+  },
+  {
+    name: "King Olaf's Fire Festival Not Ending Fix",
+    version: '0.1',
+    author: 'wankingSkeever',
+    description:
+      'Задним числом исправлена ошибка, из-за которой застрял Огненный фестиваль «Сожжение короля Олафа».',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/65849?',
+    files: [
+      {
+        type: 'Main Files',
+        name: "King Olaf's Fire Festival Not Ending Fix",
+        version: '0.1',
+      },
+    ],
+  },
+  {
+    name: 'LeveledList Crash Fix',
+    version: '1.1.1',
+    author: 'SeaSparrow',
+    description:
+      'Простой мод SKSE, который не позволяет AddForm добавлять формы в уровненные списки с 255 элементами, предотвращая сбои.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/129136?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Leveled List Crash Fix',
+        version: '1.1.1',
+      },
+    ],
+  },
+  {
+    name: 'Magic Student (WIChangeLocation04) Quest Fix',
+    version: '0.1',
+    author: 'wankingSkeever',
+    description: 'Исправлены цели заданий, которые никогда не исчезают из журнала заданий.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/80676?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Magic Student (WIChangeLocation04) Quest Fix',
+        version: '0.1',
+      },
+    ],
+  },
+  {
+    name: "Neloth's Experimental Subject Quest (DLC2TTR4a) Fix",
+    version: '0.1',
+    author: 'wankingSkeever',
+    description:
+      'Исправлена ошибка, из-за которой задание Нелота на подопытного (DLC2TTR4a) застревало.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/64016?',
+    files: [
+      {
+        type: 'Main Files',
+        name: "Neloth's Experimental Subject Quest (DLC2TTR4a) Fix",
+        version: '0.1',
+      },
+    ],
+  },
+  {
+    name: 'No More Blinding Fog - SSE Port',
+    version: '0.1',
+    author: 'wSkeever',
+    description:
+      'Делает частицы тумана, прикрепленные к камере, более тонкими, чтобы предотвратить появление тумана на экране.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/87342?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'No More Blinding Fog',
+        version: '0.1',
+      },
+    ],
+  },
+  {
+    name: 'NPC Stuck in Bleedout fix',
+    version: '0.1.3',
+    author: 'wankingSkeever',
+    description:
+      'Иногда NPC застревают в кровотечении навсегда с полным здоровьем. Это исправляет ситуацию.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/95489?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'NPC Stuck in Bleedout fix',
+        version: '0.2',
+      },
+    ],
+  },
+  {
+    name: "Rogue's Gallery",
+    version: '1.0.0.1',
+    author: 'Noah',
+    description: 'Разнообразная библиотека папирусов для личного и общественного пользования.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/99482?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'RG Main File',
+        version: '1.0.0.1',
+      },
+    ],
+  },
+  {
+    name: 'To Your Face SE - AE - VR',
+    version: '1.0r',
+    author: 'underthesky and xILARTH',
+    description: 'NPC не будут здороваться в спину Драконорожденного. Плагин SKSE.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/24720?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'To Your Face AE',
+        version: '1.0u',
+      },
+    ],
+  },
+  {
+    name: 'WIDeadBodyCleanupScript Crash Fix',
+    version: '0.4',
+    author: 'wankingSkeever',
+    description: 'Исправлен редкий сбой при сохранении из-за wideadbodycleanupscript.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/62413',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'WIDeadBodyCleanupScript Crash Fix',
+        version: '0.4',
+      },
+    ],
   },
 ];

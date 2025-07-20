@@ -33,10 +33,8 @@ const BurgerMenu = ({ links }: BurgerMenuProps) => {
   };
 
   const toggleDropdown = (index: number) => {
-    setOpenDropdowns(prev => 
-      prev.includes(index) 
-        ? prev.filter(i => i !== index) 
-        : [...prev, index]
+    setOpenDropdowns((prev) =>
+      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
     );
   };
 
@@ -61,7 +59,7 @@ const BurgerMenu = ({ links }: BurgerMenuProps) => {
             const isDropdownOpen = openDropdowns.includes(index);
             return (
               <div key={index} className={cls.dropdownSection}>
-                <div 
+                <div
                   className={`${cls.dropdownLabel} ${isDropdownOpen ? cls.active : ''}`}
                   onClick={() => toggleDropdown(index)}
                 >
@@ -72,9 +70,9 @@ const BurgerMenu = ({ links }: BurgerMenuProps) => {
                 </div>
                 <div className={`${cls.dropdownItems} ${isDropdownOpen ? cls.open : ''}`}>
                   {link.dropdownItems.map((item, itemIndex) => (
-                    <Link 
-                      key={`${index}-${itemIndex}`} 
-                      to={item.to} 
+                    <Link
+                      key={`${index}-${itemIndex}`}
+                      to={item.to}
                       onClick={closeMenu}
                       className={cls.dropdownItem}
                     >

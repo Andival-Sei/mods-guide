@@ -7,7 +7,7 @@ import { StoreContext, rootStore } from './stores/index.ts';
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <StoreContext.Provider value={rootStore}>
-    <App />
+      <App />
     </StoreContext.Provider>
   </StrictMode>
 );

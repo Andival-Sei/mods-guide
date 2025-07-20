@@ -129,6 +129,52 @@ const InstallModsPart1Page: FC = () => {
 
       <Mod modName="Navigator - Navmesh Fixes" />
 
+      <Mod modName="Unofficial Skyrim Modder's Patch - USMP SE" />
+
+      <Mod modName="Skyrim Extended Cut - Saints and Seducers" />
+
+      <Mod modName="Skyrim Extended Cut Saints and Seducers - Quest Patch" />
+
+      <TitleBlock title="Основные исправления ошибок" />
+
+      <Mod modName="Bard Instrumentals Mostly - Sing Rarely" />
+
+      <Mod modName="Beard Mask Fix - Beards Use Slot 44 SKSE Plugin" />
+
+      <Mod modName="Better Jumping SE" />
+
+      <Mod modName="College of Winterhold Quest Start Fixes" />
+
+      <Mod modName="Combat Music Fix - Papyrus" />
+
+      <Mod modName="Dual Casting Fix" />
+
+      <Mod modName="Fuz Ro D-oh - Silent Voice" />
+
+      <Mod modName="High Gate Ruins Puzzle Reset Fix" />
+
+      <Mod modName="Horse Save Load Fix" />
+
+      <Mod modName="Hunters Not Bandits" />
+
+      <Mod modName="King Olaf's Fire Festival Not Ending Fix" />
+
+      <Mod modName="LeveledList Crash Fix" />
+
+      <Mod modName="Magic Student (WIChangeLocation04) Quest Fix" />
+
+      <Mod modName="Neloth's Experimental Subject Quest (DLC2TTR4a) Fix" />
+
+      <Mod modName="No More Blinding Fog - SSE Port" />
+
+      <Mod modName="NPC Stuck in Bleedout fix" />
+
+      <Mod modName="Rogue's Gallery" />
+
+      <Mod modName="To Your Face SE - AE - VR" />
+
+      <Mod modName="WIDeadBodyCleanupScript Crash Fix" />
+
       <NavigationControls
         prevPage={{ to: '/preinstall', name: 'Предустановки' }}
         nextPage={{ to: '/installmodspart1', name: 'Установка модов — Часть 2 (заглушка)' }}
