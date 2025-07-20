@@ -1978,4 +1978,268 @@ export const modsData: ModProps[] = [
       ],
     },
   },
+  {
+    name: 'Widescreen Scale Removed for 1-6-1130 and higher',
+    version: '1.0.3',
+    author: 'SkyHorizon',
+    description:
+      'Плагин SKSE, который удаляет широкоэкранную реализацию Bethesda с версии 1.6.1130+.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/136793?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Widescreen Scale Removed',
+        version: '1.0.3',
+      },
+    ],
+  },
+  {
+    name: 'Yes Im Sure',
+    version: '1.7.0',
+    author: 'Ryan',
+    description:
+      'Этот мод отключает раздражающие сообщения с вопросом, уверены ли вы, что хотели бы создать/улучшить/выйти из меню.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/24898',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'YesImSure',
+        version: '1.7.0',
+      },
+    ],
+  },
+  {
+    name: 'Project New Reign - Nemesis Unlimited Behavior Engine',
+    version: '0.84-beta',
+    author: 'Shikyo Kira',
+    description: 'Наш инструмент для анимаций.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/60033',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Nemesis Unlimited Behavior Engine',
+        version: 'v0.84-beta',
+      },
+    ],
+    tags: ['tool', 'special-instructions'],
+    specialInstructions: {
+      blocks: [
+        {
+          type: 'ordered_list',
+          items: [
+            'Установите Nemesis как обычный мод.',
+            '<fp>Nemesis\\Nemesis_Engine\\Nemesis Unlimited Behavior Engine.exe</fp> должен быть добавлен в качестве исполняемого файла в Mod Organizer 2.',
+          ],
+        },
+      ],
+    },
+  },
+  {
+    name: 'Open Animation Replacer',
+    version: '2.3.6',
+    author: 'Ersh',
+    description:
+      'Плагин фреймворка SKSE, который заменяет анимацию в зависимости от настраиваемых условий.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/92109',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Open Animation Replacer',
+        version: '2.3.6',
+      },
+    ],
+  },
+  {
+    name: 'Animation Queue Fix',
+    version: '1.0.1',
+    author: 'Ersh',
+    description:
+      'Исправлена ошибка, из-за которой очередь перегружалась, когда в очереди на загрузку одновременно находится много анимаций',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/82395',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Animation Queue Fix',
+        version: '1.0.1',
+      },
+    ],
+  },
+  {
+    name: 'Custom Skills Framework',
+    version: '3.1.0',
+    author: 'meh321 and Parapets',
+    description:
+      'Этот мод позволяет авторам модов создавать неограниченное количество новых пользовательских навыков с помощью собственных деревьев перков.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/41780?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Custom Skills Framework',
+        version: '3.1.0',
+      },
+    ],
+  },
+  {
+    name: 'Custom Skills Menu - A Custom Skills Framework Unified Menu',
+    version: '1.1.5',
+    author: 'OsmosisWrench',
+    description:
+      'Добавляет пользовательское меню для удобного доступа ко всем деревьям навыков Custom Skills Framework. Напрямую интегрирован в ванильное меню анимации и поддерживает ввод с помощью мыши, клавиатуры и контроллера.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/62423',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Custom Skill Menu',
+        version: '1.1.7',
+      },
+    ],
+    translation: {
+      version: '1.1.5',
+      author: 'GGGDragonborn',
+      downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/123618?',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'A Custom Skills Framework Unified Menu (Russian)',
+          version: '1.1.7',
+        },
+      ],
+    },
+  },
+  {
+    name: 'Custom Skills Menu - Custom Icons',
+    version: '2.0',
+    author: 'monkeyangie',
+    description:
+      'Добавляет пользовательские иконки для пользовательских навыков, у которых их не было или которые мне показалось, выглядели немного устаревшими, и все это с помощью Custom Skills Menu - унифицированного меню и искусственного интеллекта Custom Skills Framework',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/106000?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Custom Icons CSF',
+        version: '2.0',
+      },
+    ],
+  },
+  {
+    name: 'Experience',
+    version: '3.6.1',
+    author: 'zax',
+    description:
+      'Повышайте уровень, выполняя задания и исследуя. Навыки больше не влияют на уровень персонажа!',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/17751',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Experience',
+        version: '3.6.1',
+      },
+    ],
+    fomods: [
+      {
+        title: 'Experience',
+        pages: [
+          {
+            title: 'Step 1',
+            sections: [
+              {
+                title: 'Plugin version',
+                type: 'radio',
+                items: [
+                  {
+                    label: 'AE',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            title: 'Step 2',
+            sections: [
+              {
+                title: 'Aspect ratio',
+                type: 'radio',
+                items: [
+                  {
+                    label: '16:9',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    name: "Lexy's Experience ini",
+    version: '1.13',
+    author: 'Darkladylexy and The Community',
+    description:
+      'Этот мод представляет собой пользовательский INI-файл для мода Experience, специально предназначенный для использования с руководством.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/85672',
+    files: [
+      {
+        type: 'Main Files',
+        name: "Lexy's Experience ini",
+        version: '1.13',
+      },
+    ],
+  },
+  {
+    name: 'Skyrim Skill Uncapper for SE and AE',
+    version: '2.2.3',
+    author: 'Kasplat',
+    description:
+      'Позволяет изменять конфигурацию максимального уровня и максимального эффективного уровня навыков. Исправляет ряд ошибок в оригинальной реализации и добавляет новые функции.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/82558?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Skyrim Skill Uncapper for SE and AE',
+        version: '2.2.3',
+      },
+    ],
+  },
+  {
+    name: "Lexy's LOTD - Uncapper INI",
+    version: '1.03',
+    author: 'Darkladylexy and The Community',
+    description: 'Настройки для пользовательского Uncapper INI.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/85672?',
+    files: [
+      {
+        type: 'Main Files',
+        name: "Lexy's LOTD - Uncapper INI",
+        version: '1.03',
+      },
+    ],
+  },
+  {
+    name: 'Unofficial High Definition Audio Project',
+    version: '1.0',
+    author: 'sharrken',
+    description:
+      'Восстановление оригинальных голосов и музыки Skyrim в высоком разрешении, основанное на гораздо более высоком качестве звука PS4 в качестве источника.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/18115',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Music - HQ',
+        version: '1.0',
+      },
+      {
+        type: 'Optional Files',
+        name: 'Voices RU - Part 1',
+        version: '1.0',
+      },
+      {
+        type: 'Optional Files',
+        name: 'Voices RU - Part 2',
+        version: '1.0',
+      },
+    ],
+  },
 ];

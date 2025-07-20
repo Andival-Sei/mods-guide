@@ -93,6 +93,36 @@ const InstallModsPart1Page: FC = () => {
 
       <Mod modName="Whose Quest is it Anyway NG" />
 
+      <Mod modName="Widescreen Scale Removed for 1-6-1130 and higher" />
+
+      <Mod modName="Yes Im Sure" />
+
+      <TitleBlock title="Фреймворки расширений - Анимации и Движок поведения" />
+
+      <Mod modName="Project New Reign - Nemesis Unlimited Behavior Engine" />
+
+      <Mod modName="Open Animation Replacer" />
+
+      <Mod modName="Animation Queue Fix" />
+
+      <TitleBlock title="Фреймворки расширений - Перки и прокачка" />
+
+      <Mod modName="Custom Skills Framework" />
+
+      <Mod modName="Custom Skills Menu - A Custom Skills Framework Unified Menu" />
+
+      <Mod modName="Custom Skills Menu - Custom Icons" />
+
+      <Mod modName="Experience" />
+
+      <Mod modName="Lexy's Experience ini" />
+
+      <Mod modName="Skyrim Skill Uncapper for SE and AE" />
+
+      <TitleBlock title="Исправления и ресурсы - Неофициальные патчи" />
+
+      <Mod modName="Unofficial High Definition Audio Project" />
+
       <NavigationControls
         prevPage={{ to: '/preinstall', name: 'Предустановки' }}
         nextPage={{ to: '/installmodspart1', name: 'Установка модов — Часть 2 (заглушка)' }}
