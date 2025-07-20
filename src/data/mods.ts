@@ -3009,4 +3009,49 @@ export const modsData: ModProps[] = [
       },
     ],
   },
+  {
+    name: 'Word Wall Transparency Fix for ENB',
+    version: '0.3',
+    author: 'wankingSkeever',
+    description:
+      'Убирает тонкий темный прямоугольник вокруг слова силы на стенах со словами и крики седобородых для пользователей ENB.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/41463',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Word Wall Transparency Fix for ENB',
+        version: '0.3',
+      },
+    ],
+  },
+  {
+    name: 'World Encounter Hostility Fix',
+    version: '0.4',
+    author: 'wankingSkeever',
+    description:
+      'Не позволяйте NPC, столкнувшимся с ванильным миром, становиться враждебными, когда вы применяете невраждебные заклинания.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/91403?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'World Encounter Hostility Fix -Performance Version',
+        version: '0.4',
+      },
+    ],
+  },
+  {
+    name: 'Zero Bounty Hostility Fix',
+    version: '0.4',
+    author: 'wankingSkeever',
+    description:
+      'Снимает враждебность, которая остается даже после того, как вы заплатите награду или убьете свидетелей. Работает только на ванильных холдах.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/95989?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Zero Bounty Hostility Fix',
+        version: '0.4',
+      },
+    ],
+  },
 ];

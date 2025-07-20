@@ -175,6 +175,14 @@ const InstallModsPart1Page: FC = () => {
 
       <Mod modName="WIDeadBodyCleanupScript Crash Fix" />
 
+      <Mod modName="Word Wall Transparency Fix for ENB" />
+
+      <Mod modName="World Encounter Hostility Fix" />
+
+      <Mod modName="Zero Bounty Hostility Fix" />
+
+      <TitleBlock title="Интерфейс - Консоль" />
+
       <NavigationControls
         prevPage={{ to: '/preinstall', name: 'Предустановки' }}
         nextPage={{ to: '/installmodspart1', name: 'Установка модов — Часть 2 (заглушка)' }}
