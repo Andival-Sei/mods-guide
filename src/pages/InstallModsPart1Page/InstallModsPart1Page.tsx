@@ -119,6 +119,8 @@ const InstallModsPart1Page: FC = () => {
 
       <Mod modName="Skyrim Skill Uncapper for SE and AE" />
 
+      <Mod modName="Lexy's LOTD - Uncapper INI" />
+
       <TitleBlock title="Исправления и ресурсы - Неофициальные патчи" />
 
       <Mod modName="Unofficial High Definition Audio Project" />
