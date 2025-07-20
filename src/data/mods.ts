@@ -2226,11 +2226,6 @@ export const modsData: ModProps[] = [
     downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/18115',
     files: [
       {
-        type: 'Main Files',
-        name: 'Music - HQ',
-        version: '1.0',
-      },
-      {
         type: 'Optional Files',
         name: 'Voices RU - Part 1',
         version: '1.0',
@@ -2239,6 +2234,53 @@ export const modsData: ModProps[] = [
         type: 'Optional Files',
         name: 'Voices RU - Part 2',
         version: '1.0',
+      },
+      {
+        type: 'Miscellaneous Files',
+        name: 'Music - UHQ',
+        version: '1.0',
+      },
+    ],
+  },
+  {
+    name: 'Unofficial Skyrim Special Edition Patch - USSEP',
+    version: '4.3.5',
+    author: 'The Unofficial Patch Project Team',
+    description:
+      'Комплексный мод для исправления ошибок для The Elder Scrolls V: Skyrim - Special Edition. Цель неофициального патча Skyrim Special Edition (также известного как USSEP) — в конечном итоге исправить все ошибки в Skyrim Special Edition, официально не разрешенные разработчиками, до пределов Creation Kit и инструментов, разработанных сообществом, в одном простом в установке пакете.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/266',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Unofficial Skyrim Special Edition Patch',
+        version: '4.3.5',
+      },
+    ],
+    translation: {
+      version: '4.3.5',
+      author: 'dem6nd',
+      downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/129696?',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'Unofficial Skyrim Special Edition Patch - Russian',
+          version: '4.3.5',
+        },
+      ],
+    },
+  },
+  {
+    name: 'Navigator - Navmesh Fixes',
+    version: '1.6.1',
+    author: 'tarlazo',
+    description:
+      'Этот мод улучшает некоторые из плохо оптимизированных ванильных навигационных сеток.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/52641',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Navigator - Navmesh Fixes',
+        version: '1.6.1',
       },
     ],
   },

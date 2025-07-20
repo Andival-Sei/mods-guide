@@ -125,6 +125,10 @@ const InstallModsPart1Page: FC = () => {
 
       <Mod modName="Unofficial High Definition Audio Project" />
 
+      <Mod modName="Unofficial Skyrim Special Edition Patch - USSEP" />
+
+      <Mod modName="Navigator - Navmesh Fixes" />
+
       <NavigationControls
         prevPage={{ to: '/preinstall', name: 'Предустановки' }}
         nextPage={{ to: '/installmodspart1', name: 'Установка модов — Часть 2 (заглушка)' }}
