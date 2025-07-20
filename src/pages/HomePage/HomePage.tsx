@@ -14,7 +14,7 @@ const HomePage: FC<HomePageProps> = () => {
         The Elder Scrolls V: Skyrim <br />
         Anniversary Edition
       </h1>
-      <p className={cls.description}>Ещё одно руководство по моддингу Скайрима.</p>
+      <p className={cls.description}>Пошаговое руководство по установке модов для Skyrim AE.</p>
 
       <div className={cls.buttonWrapper}>
         <Link to="/welcome" className={cls.startBtn}>

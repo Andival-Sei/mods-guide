@@ -3,36 +3,100 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   margin: 0 auto;
   padding: 20px;
   text-align: center;
   max-inline-size: 1200px;
+  min-height: 100vh;
 }
 
 .title {
-  font-weight: 600;
-  line-height: 120%;
+  font-weight: 700;
+  line-height: 1.1;
   cursor: default;
-  letter-spacing: -.88px;
+  letter-spacing: -1.2px;
   color: transparent;
-  background: linear-gradient(180deg, #e5dddd, #ea8732);
+  background: linear-gradient(180deg, #f8f9fa, #ea8732);
   background-clip: text;
+  -webkit-background-clip: text;
   margin-block-start: 100px;
+  margin-bottom: 20px;
+  font-size: 4rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  animation: titleAppear 1.2s ease-out;
+
+  @media (max-width: 768px) {
+    font-size: 2.8rem;
+    letter-spacing: -0.8px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 2.2rem;
+    letter-spacing: -0.6px;
+  }
+}
+
+@keyframes titleAppear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .description {
-  font-size: 1.2rem;
-  line-height: 1.5;
+  font-size: 1.3rem;
+  line-height: 1.6;
   margin-top: 10px;
   cursor: default;
-  color: #a9a9a9;
+  color: #b8c5d6;
+  font-weight: 400;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: descriptionAppear 1.2s ease-out 0.3s both;
+  opacity: 0.9;
+
+  @media (max-width: 768px) {
+    font-size: 1.3rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.1rem;
+  }
+}
+
+@keyframes descriptionAppear {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .buttonWrapper {
   display: flex;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 50px;
+  animation: buttonAppear 1.2s ease-out 0.6s both;
+}
+
+@keyframes buttonAppear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .startBtn {
@@ -42,41 +106,82 @@
   position: relative;
   display: flex;
   align-items: center;
-  padding: 12px 24px;
+  padding: 14px 28px;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   color: white;
   border: none;
-  border-radius: 12px;
-  background: linear-gradient(90deg, #1f1f23, #2a2a30);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 14px;
+  background: linear-gradient(135deg, #2a2a30 0%, #1f1f23 100%);
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.3),
+    0 1px 3px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  gap: 10px;
+  overflow: hidden;
 
-  gap: 8px;
+  // Тонкая граница
+  border: 1px solid rgba(255, 255, 255, 0.1);
 
+  // Эффект свечения при наведении
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(234, 135, 50, 0.1), transparent);
+    transition: left 0.6s ease;
+  }
 
-  // Контейнер для текста
   span {
     color: white;
+    position: relative;
+    z-index: 1;
+    font-weight: 600;
   }
 
   &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(234, 135, 50, 0.3);
+    transform: translateY(-3px);
+    box-shadow:
+      0 8px 25px rgba(234, 135, 50, 0.25),
+      0 4px 12px rgba(0, 0, 0, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    border-color: rgba(234, 135, 50, 0.3);
+
+    &::before {
+      left: 100%;
+    }
 
     .buttonIcon {
-      transform: translateX(4px);
+      transform: translateX(5px);
+      fill: #ea8732;
     }
   }
 
   &:active {
-    transform: translateY(1px);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transform: translateY(-1px);
+    box-shadow:
+      0 4px 15px rgba(234, 135, 50, 0.2),
+      0 2px 8px rgba(0, 0, 0, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  // Фокус для доступности
+  &:focus {
+    outline: none;
+    box-shadow:
+      0 0 0 2px rgba(234, 135, 50, 0.5),
+      0 4px 12px rgba(0, 0, 0, 0.3);
   }
 }
 
 .buttonIcon {
-  width: 24px;
-  height: 24px;
-  transition: transform 0.3s, fill 0.3s;
-  fill: currentColor;
+  width: 20px;
+  height: 20px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  fill: #d1d5db;
+  position: relative;
+  z-index: 1;
 }
