@@ -183,6 +183,22 @@ const InstallModsPart1Page: FC = () => {
 
       <TitleBlock title="Интерфейс - Консоль" />
 
+      <Mod modName="Console Commands Extender - Anniversary Edition Update" />
+
+      <Mod modName="ConsoleUtilSSE NG" />
+
+      <Mod modName="ConsolePlusPlus" />
+
+      <Mod modName="More Informative Console" />
+
+      <TitleBlock title="Интерфейс - Меню" />
+
+      <Mod modName="ImGui Icons" />
+
+      <Mod modName="Constructible Object Custom Keyword System" />
+
+      <Mod modName="Versatile Item and Group Re-Assignment - C.O.C.K.S. Enhanced" />
+
       <NavigationControls
         prevPage={{ to: '/preinstall', name: 'Предустановки' }}
         nextPage={{ to: '/installmodspart1', name: 'Установка модов — Часть 2 (заглушка)' }}
