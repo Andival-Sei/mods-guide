@@ -1,4 +1,4 @@
-import mod, { type ModProps } from '../components/Mod/Mod';
+import { type ModProps } from '../components/Mod/Mod';
 
 export const modsData: ModProps[] = [
   {
@@ -3344,7 +3344,8 @@ export const modsData: ModProps[] = [
     name: 'Skyrim SE Skill Interface Re-Texture',
     version: 'v4.1',
     author: 'Arndas',
-    description: 'Этот мод меняет интерфейс навыков, используемый при повышении уровня и выборе перков.',
+    description:
+      'Этот мод меняет интерфейс навыков, используемый при повышении уровня и выборе перков.',
     downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/1523',
     files: [
       {
@@ -3353,7 +3354,147 @@ export const modsData: ModProps[] = [
         version: 'v4.1',
       },
     ],
-    
+    fomods: [
+      {
+        title: 'SSIRT SE v4.1',
+        pages: [
+          {
+            title: 'Introduction',
+            sections: [
+              {
+                title: 'Introduction',
+                type: 'checkbox',
+                items: [
+                  {
+                    label: 'Please Read',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            title: 'Background',
+            sections: [
+              {
+                title: 'Background',
+                type: 'radio',
+                items: [
+                  {
+                    label: 'Background - Irradiant Stars - HDR Nebula',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            title: 'Perk Lines',
+            sections: [
+              {
+                title: 'Perk Lines',
+                type: 'radio',
+                items: [
+                  {
+                    label: 'Perk Lines - Option 3',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            title: 'Perk Line Colours',
+            sections: [
+              {
+                title: 'Perk Line Colours',
+                type: 'radio',
+                items: [
+                  {
+                    label: 'Perk Line Colour - Yellow',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            title: 'Constellations',
+            sections: [
+              {
+                title: 'Constellation',
+                type: 'radio',
+                items: [
+                  {
+                    label: 'Constellations - Option 2',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            title: 'Perk Stars',
+            sections: [
+              {
+                title: 'Perk Stars',
+                type: 'radio',
+                items: [
+                  {
+                    label: 'Perk Stars - Option 2',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            title: 'Dawnguard Moons and Stars',
+            sections: [
+              {
+                title: 'Dawnguard Moons and Stars',
+                type: 'radio',
+                items: [
+                  {
+                    label: 'HD Masser and Secunda and More Stars',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            title: 'Vampire Background',
+            sections: [
+              {
+                title: 'Vampire Nebula Background',
+                type: 'radio',
+                items: [
+                  {
+                    label: 'HDR Nebula',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            title: 'Thanks',
+            sections: [
+              {
+                title: 'Thanks',
+                type: 'checkbox',
+                items: [
+                  {
+                    label: 'Thank You',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
   },
-  
 ];
