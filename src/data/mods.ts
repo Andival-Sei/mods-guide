@@ -1,4 +1,4 @@
-import type { ModProps } from '../components/Mod/Mod';
+import mod, { type ModProps } from '../components/Mod/Mod';
 
 export const modsData: ModProps[] = [
   {
@@ -3340,4 +3340,20 @@ export const modsData: ModProps[] = [
       ],
     },
   },
+  {
+    name: 'Skyrim SE Skill Interface Re-Texture',
+    version: 'v4.1',
+    author: 'Arndas',
+    description: 'Этот мод меняет интерфейс навыков, используемый при повышении уровня и выборе перков.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/1523',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'SSIRT SE v4.1',
+        version: 'v4.1',
+      },
+    ],
+    
+  },
+  
 ];
