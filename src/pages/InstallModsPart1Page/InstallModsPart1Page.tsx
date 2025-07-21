@@ -199,6 +199,16 @@ const InstallModsPart1Page: FC = () => {
 
       <Mod modName="Versatile Item and Group Re-Assignment - C.O.C.K.S. Enhanced" />
 
+      <Mod modName="Constructible Object Custom Keyword System - Seperate Weapon and Armor" />
+
+      <Mod modName="Cooking Categories Improvement (Constructible Object Custom Keyword System - Fixes)" />
+
+      <Mod modName="Dialogue History" />
+
+      <Mod modName="Extended UI" />
+
+      <Mod modName="UIExtensions" />
+
       <NavigationControls
         prevPage={{ to: '/preinstall', name: 'Предустановки' }}
         nextPage={{ to: '/installmodspart1', name: 'Установка модов — Часть 2 (заглушка)' }}

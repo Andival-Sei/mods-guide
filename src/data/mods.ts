@@ -3182,4 +3182,162 @@ export const modsData: ModProps[] = [
       ],
     },
   },
+  {
+    name: 'Constructible Object Custom Keyword System - Seperate Weapon and Armor',
+    version: '1.0.0',
+    author: 'murrayj',
+    description:
+      'Улучшена система пользовательских ключевых слов для конструируемых объектов за счет разделения категорий брони и оружия.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/81787',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Constructible Object Custom Keyword System - Seperate Weapon and Armor',
+        version: '1.0.0',
+      },
+    ],
+    translation: {
+      version: '1.0.0',
+      author: 'Koul99',
+      downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/136350',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'COCKS - Seperate Weapon and Armor_SSE_v1.0.0_RU_NX',
+          version: '1.0.0',
+        },
+      ],
+    },
+  },
+  {
+    name: 'Cooking Categories Improvement (Constructible Object Custom Keyword System - Fixes)',
+    version: '2.0.1',
+    author: 'Dylan James - Parapets',
+    description:
+      'Добавляет продуманные, бесконфликтные подкатегории на станции приготовления и выпечки с помощью COCKS!',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/84875',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Cooking Categories Improvement (2.0.1)',
+        version: '2.0.1',
+      },
+    ],
+    translation: {
+      version: '2.0.1',
+      author: 'outlndrr',
+      downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/85339',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'Cooking Categories Improvement',
+          version: '2.0.1',
+        },
+      ],
+    },
+  },
+  {
+    name: 'Dialogue History',
+    version: '2.2.0',
+    author: 'powerofthree',
+    description: 'Отслеживайте свои разговоры с помощью «Истории диалогов». Плагин SKSE.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/114238',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Dialogue History',
+        version: '2.2.0',
+      },
+    ],
+    fomods: [
+      {
+        title: 'Dialogue History',
+        pages: [
+          {
+            title: 'Main',
+            sections: [
+              {
+                title: 'DLL',
+                type: 'radio',
+                items: [
+                  {
+                    label: 'SSE v1.6.1130+ ("Anniversary Edition")',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+    translation: {
+      version: '2.2.0',
+      author: 'Andiewahl',
+      downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/155236',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'Dialogue History RU',
+          version: '2.2.0',
+        },
+      ],
+    },
+  },
+  {
+    name: 'Extended UI',
+    version: '1.2.0d',
+    author: 'MrJack',
+    description:
+      'Расширенный пользовательский интерфейс — это проект, который пытается исправить части пользовательского интерфейса. В настоящее время предполагается, что Extended UI станет дополнением к SkyUI, а не заменит его части.',
+    downloadLink: 'https://www.nexusmods.com/skyrim/mods/57873',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Extended UI',
+        version: '1.2.0d',
+      },
+    ],
+    tags: ['classic', 'creation-kit-resave', 'cao'],
+    translation: {
+      version: '1.2.0d',
+      author: 'k©קaso√®',
+      downloadLink:
+        'https://gamer-mods.ru/load/skyrim_le/interfejs/rasshirennyj_interfejs_navykov_exui/84-1-0-2400',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'Extended UI-57873-1-2-0d.7z',
+          version: '1.2.0d',
+        },
+      ],
+    },
+  },
+  {
+    name: 'UIExtensions',
+    version: '1.2.0',
+    author: 'Expired',
+    description:
+      'Этот мод добавляет в Skyrim различные пользовательские меню для использования моддерами.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/17561',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'UIExtensions v1-2-0',
+        version: '1.2.0',
+      },
+    ],
+    translation: {
+      version: '1.2.0',
+      author: 'k©קaso√®',
+      downloadLink: 'https://gamer-mods.ru/load/skyrim_se/interfejs/uiextensions_se/154-1-0-7187',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'UIExtensions v1-2-0-17561-1-2-0.7z',
+          version: '1.2.0',
+        },
+      ],
+    },
+  },
 ];
