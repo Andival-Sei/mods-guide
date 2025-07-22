@@ -5,7 +5,6 @@ import Message from '../../components/Message/Message.tsx';
 import TextHighlight from '../../components/TextHighlight/TextHighlight.tsx';
 import OrderedList from '../../components/OrderedList/OrderedList.tsx';
 import ListItem from '../../components/ListItem/ListItem.tsx';
-import cls from './ChangelogPage.module.scss';
 import NavigationControls from '../../components/NavigationControls/NavigationControls.tsx';
 
 // TODO: Реализовать полноценную страницу изменений с реальной историей версий
@@ -15,8 +14,8 @@ const ChangelogPage = () => {
   return (
     <>
       <Message type="warning">
-        ⚠️ Это страница-заглушка. Полноценная страница изменений находится в разработке. 
-        Здесь будет отображаться реальная история обновлений руководства.
+        ⚠️ Это страница-заглушка. Полноценная страница изменений находится в разработке. Здесь будет
+        отображаться реальная история обновлений руководства.
       </Message>
 
       <TitleBlock title={'Изменения'} description={'История обновлений руководства'} />

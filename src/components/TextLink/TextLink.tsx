@@ -4,13 +4,14 @@ import cls from './TextLink.module.scss';
 interface TextLinkProps {
   children: ReactNode;
   href?: string;
+  target?: string;
 }
 
 const TextLink = (props: TextLinkProps) => {
-  const { children, href } = props;
+  const { children, href, target = '_blank' } = props;
 
   return (
-    <span className={cls.link} onClick={href ? () => window.open(href, '_blank') : undefined}>
+    <span className={cls.link} onClick={href ? () => window.open(href, target) : undefined}>
       {children}
     </span>
   );

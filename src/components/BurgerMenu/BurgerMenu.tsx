@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { DropdownArrowIcon } from '../icons';
 import cls from './BurgerMenu.module.scss';
 
