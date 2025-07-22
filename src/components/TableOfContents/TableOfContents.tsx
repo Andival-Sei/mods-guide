@@ -1,5 +1,5 @@
 import type { FC } from 'react';
-import { useEffect, useState } from 'react';
+import { useRef } from 'react';
 import cls from './TableOfContents.module.scss';
 
 interface TableOfContentsItem {
@@ -12,52 +12,35 @@ interface TableOfContentsProps {
   items: TableOfContentsItem[];
   isVisible: boolean;
   isLoading: boolean;
+  activeItem: string;
 }
 
-const TableOfContents: FC<TableOfContentsProps> = ({ items, isVisible, isLoading }) => {
-  const [activeItem, setActiveItem] = useState<string>('');
+const TableOfContents: FC<TableOfContentsProps> = ({ items, isVisible, isLoading, activeItem }) => {
+  const scrollTimeoutRef = useRef<number | null>(null);
 
-  // Отслеживаем активный элемент при прокрутке
-  useEffect(() => {
-    if (!items.length) return;
-
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      const headerHeight = 80;
-      const offset = 100; // Отступ для определения активного элемента
-
-      let currentActive = '';
-
-      for (let i = items.length - 1; i >= 0; i--) {
-        const item = items[i];
-        const elementTop = item.element.offsetTop;
-
-        if (scrollTop + headerHeight + offset >= elementTop) {
-          currentActive = item.id;
-          break;
-        }
-      }
-
-      setActiveItem(currentActive);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Вызываем сразу для установки начального состояния
-
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [items]);
-
-  // Плавная прокрутка к элементу
+  // Плавная прокрутка к элементу с учетом высоты хедера
   const scrollToElement = (item: TableOfContentsItem) => {
     const element = item.element;
-    const elementTop = element.offsetTop;
-    const headerHeight = 80; // Примерная высота хедера
-    const offset = 20; // Дополнительный отступ
+    if (!element) return;
 
-    window.scrollTo({
-      top: elementTop - headerHeight - offset,
-      behavior: 'smooth',
-    });
+    // Предотвращаем множественные вызовы прокрутки
+    if (scrollTimeoutRef.current) {
+      window.clearTimeout(scrollTimeoutRef.current);
+    }
+
+    scrollTimeoutRef.current = window.setTimeout(() => {
+      const elementTop = element.offsetTop;
+      const headerHeight = 80; // Высота хедера
+      const offset = 20; // Дополнительный отступ для комфортного просмотра
+
+      // Плавная прокрутка к элементу
+      window.scrollTo({
+        top: elementTop - headerHeight - offset,
+        behavior: 'smooth',
+      });
+
+      scrollTimeoutRef.current = null;
+    }, 100); // Небольшая задержка для предотвращения спама
   };
 
   if (!isVisible || !items.length) {
@@ -75,6 +58,8 @@ const TableOfContents: FC<TableOfContentsProps> = ({ items, isVisible, isLoading
                 className={`${cls.link} ${activeItem === item.id ? cls.active : ''}`}
                 onClick={() => scrollToElement(item)}
                 type="button"
+                aria-current={activeItem === item.id ? 'location' : undefined}
+                aria-label={`Перейти к разделу: ${item.title}`}
               >
                 {item.title}
               </button>

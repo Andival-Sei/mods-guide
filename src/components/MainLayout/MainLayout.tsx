@@ -9,7 +9,7 @@ const MainLayout = () => {
   const location = useLocation();
   const isHomePage = location.pathname === '/';
   const mainWrapperRef = useRef<HTMLDivElement>(null);
-  const { items, isVisible, isLoading } = useTableOfContents();
+  const { items, isVisible, isLoading, activeItem } = useTableOfContents();
   const [sidebarKey, setSidebarKey] = useState(0);
 
   // Обновляем ключ при смене маршрута для принудительного пересоздания компонента
@@ -44,6 +44,7 @@ const MainLayout = () => {
           items={items}
           isVisible={isVisible}
           isLoading={isLoading}
+          activeItem={activeItem}
         />
       )}
       <footer></footer>
