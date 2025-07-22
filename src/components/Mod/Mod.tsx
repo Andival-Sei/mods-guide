@@ -143,7 +143,7 @@ const Mod = observer(({ modName }: ModComponentProps) => {
       </div>
 
       {/* Fomod-блоки, если есть */}
-      {/* Если у мода есть один или несколько Fomod, отображаем их после файлов и перед специнструкциями */}
+      {/* Если у мода есть один или несколько Fomod, отображаем их после файлов */}
       {fomods &&
         fomods.length > 0 &&
         fomods.map((fomod, idx) => (
@@ -151,12 +151,7 @@ const Mod = observer(({ modName }: ModComponentProps) => {
           <Fomod key={idx} title={fomod.title} pages={fomod.pages} />
         ))}
 
-      {/* Блок со специальными инструкциями */}
-      {specialInstructions && tags.includes('special-instructions') && (
-        <SpecialInstructions instructions={specialInstructions} />
-      )}
-
-      {/* Перевод мода, если есть */}
+      {/* Перевод мода, если есть - перемещён выше специальных инструкций */}
       {translation && (
         <>
           {/* Соединительная линия между модом и переводом */}
@@ -219,6 +214,11 @@ const Mod = observer(({ modName }: ModComponentProps) => {
               ))}
           </div>
         </>
+      )}
+
+      {/* Блок со специальными инструкциями - теперь в самом конце */}
+      {specialInstructions && tags.includes('special-instructions') && (
+        <SpecialInstructions instructions={specialInstructions} />
       )}
     </article>
   );
