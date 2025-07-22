@@ -3497,4 +3497,72 @@ export const modsData: ModProps[] = [
       },
     ],
   },
+  {
+    name: 'SkyUI',
+    version: '5.2SE',
+    author: 'SkyUI Team',
+    description:
+      'Этот мод заменяет консольный пользовательский интерфейс на более всеобъемлющий и функциональный, подходящий для среды ПК.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/12604',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'SkyUI_5_2_SE',
+        version: '5.2SE',
+      },
+    ],
+    tags: ['special-instructions', 'bsa'],
+    translation: {
+      version: '5.2SE',
+      author: 'k©קaso√®',
+      downloadLink: 'https://gamer-mods.ru/load/skyrim_se/interfejs/skyui_se_ae/154-1-0-6195',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'SkyUI 5.2 SE-АЕ (для игры Skyrim SE 1.5.97.0.8 или Skyrim AE 1.6.318.0.8 и выше) (1.1 mb)',
+          version: '5.2SE',
+        },
+      ],
+    },
+    specialInstructions: {
+      blocks: [
+        {
+          type: 'paragraph',
+          content: 'Проблема: SkyUI_SE.esp будет выдавать ошибки в SSEEdit.',
+        },
+        {
+          type: 'paragraph',
+          content: 'Решение: Добавьте Skyrim.esm в заголовок файла плагина.',
+        },
+        {
+          type: 'ordered_list',
+          items: [
+            'Загружайте только SkyUI_SE.esp и Skyrim.esm в SSEEdit.',
+            'Щелкните правой кнопкой мыши по SkyUI_SE.esp и выберите <hl>Add Masters...</hl>.',
+            'Должно появиться всплывающее окно. Выберите Skyrim.esm и нажмите <hl>OK</hl>.',
+            'Сохраните и выйдите.',
+          ],
+        },
+        {
+          type: 'paragraph',
+          content: 'SkyUI_SE.esp можно смело помечать как ESM и ESL.',
+        },
+        {
+          type: 'ordered_list',
+          items: [
+            'Загрузите мод в SSEEdit.',
+            'Нажмите на маленький плюс рядом с заголовком мода.',
+            'Нажмите левой кнопкой мыши на <hl>File Header</hl> мод в раскрывшемся списке.',
+            'В появившемся окне справа нажмите на плюс рядом с <hl>Record Header</hl>.',
+            'В раскрывшемся новом списке дважды щелкните на пустое поле рядом с <hl>Record Flags</hl>.',
+            'Отметьте флажки <hl>ESM</hl> и <hl>ESL</hl>.',
+          ],
+        },
+        {
+          type: 'paragraph',
+          content: 'Это превратит ESP в ESP с флагом ESM и ESL.',
+        },
+      ],
+    },
+  },
 ];
