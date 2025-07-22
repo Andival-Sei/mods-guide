@@ -1,5 +1,5 @@
 import type { FC } from 'react';
-import { useRef, useEffect, useState, useCallback } from 'react';
+import { useRef, useEffect, useCallback } from 'react';
 import cls from './TableOfContents.module.scss';
 
 interface TableOfContentsItem {
@@ -18,22 +18,19 @@ interface TableOfContentsProps {
 const TableOfContents: FC<TableOfContentsProps> = ({ items, isVisible, isLoading, activeItem }) => {
   const scrollTimeoutRef = useRef<number | null>(null);
   const listRef = useRef<HTMLUListElement>(null);
-  const [activeItemIndex, setActiveItemIndex] = useState(0);
   const lastActiveItemRef = useRef<string>('');
 
   // Оптимизированная функция для обновления позиции синей линии
   const updateLinePosition = useCallback(() => {
     if (!activeItem || !items.length || !listRef.current) return;
-    
+
     // Предотвращаем лишние вычисления
     if (lastActiveItemRef.current === activeItem) return;
-    
+
     lastActiveItemRef.current = activeItem;
 
     const activeIndex = items.findIndex((item) => item.id === activeItem);
     if (activeIndex === -1) return;
-
-    setActiveItemIndex(activeIndex);
 
     // Находим активный элемент в DOM для точного вычисления позиции
     const activeButton = listRef.current.querySelector(`[aria-current="location"]`) as HTMLElement;
