@@ -179,6 +179,17 @@ const CommonInstructionsPage = () => {
               <Paragraph>Специальные ситуативные инструкции для конкретного мода.</Paragraph>
             </td>
           </tr>
+          <tr>
+            <td>
+              <Tag type="quality-choice" />
+            </td>
+            <td>
+              <Paragraph>
+                Моды, при установке которых пользователь может выбрать между различными уровнями
+                качества (например, текстуры 2K vs 4K, стандартное vs высокое качество).
+              </Paragraph>
+            </td>
+          </tr>
         </tbody>
       </table>
 

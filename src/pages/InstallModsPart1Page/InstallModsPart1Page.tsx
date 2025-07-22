@@ -223,6 +223,8 @@ const InstallModsPart1Page: FC = () => {
 
       <Mod modName="Sovngarde - Mist's Font Replacer" />
 
+      <Mod modName="The Elder Scrolls Legends - Loading Screens" />
+
       <NavigationControls
         prevPage={{ to: '/preinstall', name: 'Предустановки' }}
         nextPage={{ to: '/installmodspart1', name: 'Установка модов — Часть 2 (заглушка)' }}

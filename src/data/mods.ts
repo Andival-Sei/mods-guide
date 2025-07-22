@@ -3738,5 +3738,115 @@ export const modsData: ModProps[] = [
         version: '2.0.0',
       },
     ],
+    tags: ['quality-choice'],
+    fomods: [
+      {
+        title: 'TESL - Loading Screens - ESP and Meshes',
+        pages: [
+          {
+            title: 'Aspect Ratio',
+            sections: [
+              {
+                title: 'Aspect Ratio',
+                type: 'radio',
+                items: [
+                  {
+                    label: '16×9',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            title: 'Ini Compatibility Settings',
+            sections: [
+              {
+                title: 'Ini Compatibility Settings',
+                type: 'radio',
+                items: [
+                  {
+                    label: 'Vanilla',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            title: 'Border Options',
+            sections: [
+              {
+                title: 'Border Options',
+                type: 'radio',
+                items: [
+                  {
+                    label: 'FixedHeight',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            title: 'Display Messages',
+            sections: [
+              {
+                title: 'Display Messages',
+                type: 'radio',
+                items: [
+                  {
+                    label: 'Yes',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            title: 'Loading Screen Priority',
+            sections: [
+              {
+                title: 'Loading Screen Priority',
+                type: 'radio',
+                items: [
+                  {
+                    label: 'Mcm',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            title: 'Loading Screen Frequency',
+            sections: [
+              {
+                title: 'Loading Screen Frequency',
+                type: 'radio',
+                items: [
+                  {
+                    label: '50%',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+    translation: {
+      version: '2.1.1',
+      author: 'Andiewahl',
+      downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/155330',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'TESL - Loading Screens - ESP and Meshes RU',
+          version: '2.1.1',
+        },
+      ],
+    },
   },
 ];

@@ -12,7 +12,8 @@ export type TagType =
   | 'tool'
   | 'xedit-qac'
   | 'zmerge'
-  | 'special-instructions';
+  | 'special-instructions'
+  | 'quality-choice';
 
 interface TagProps {
   type: TagType;
@@ -31,6 +32,7 @@ const tagTextMap: Record<TagType, string> = {
   'xedit-qac': 'xEdit - Quick Auto Clean',
   zmerge: 'zMerge',
   'special-instructions': 'Special Instructions',
+  'quality-choice': 'Quality Choice',
 };
 
 const Tag = (props: TagProps) => {
