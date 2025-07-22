@@ -1,18 +1,17 @@
 .tableOfContents {
   position: fixed;
-  top: 0;
-  right: 0;
+  top: 110px; // 80px высота хедера + 30px отступ контента
+  left: calc(50% + 600px + 30px); // 50% + половина ширины контента (1200px/2) + отступ
   width: 280px;
-  height: 100vh;
-  padding: 100px 0 40px;
+  max-height: calc(100vh - 140px); // Учитываем высоту хедера и отступы
   overflow-y: auto;
   z-index: 10;
   background: transparent;
   pointer-events: none;
   transition: opacity 0.4s ease;
 
-  @media (max-width: 1775px) {
-    display: none;
+  @media (max-width: 1830px) {
+    display: none; // Скрываем сайдбар на экранах меньше 1830px
   }
 
   // Состояние загрузки при переходе между страницами
@@ -20,22 +19,20 @@
     opacity: 0;
     transition: opacity 0s; // Мгновенное исчезновение
   }
-
-  // Простое позиционирование справа
-  @media (min-width: 1776px) {
-    right: 20px;
-  }
 }
 
 .container {
   pointer-events: auto;
   background: var(--main-bg-color);
   border-radius: 8px;
-  margin: 0 20px;
   padding: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   animation: slideIn 0.3s ease-out;
   position: relative; // Для позиционирования синей линии
+
+  @media (max-width: 1400px) {
+    margin: 0;
+  }
 }
 
 @keyframes slideIn {

@@ -27,26 +27,28 @@ const MainLayout = () => {
     <div className={cls.mainLayout}>
       <Header />
       <div ref={mainWrapperRef} className={cls.mainWrapper}>
-        <div
-          className={`${cls.contentWrapper} ${isHomePage ? cls.homePageContent : ''}`}
-          data-content-wrapper
-        >
-          <main>
-            <Suspense>
-              <Outlet />
-            </Suspense>
-          </main>
+        <div className={cls.contentArea}>
+          <div
+            className={`${cls.contentWrapper} ${isHomePage ? cls.homePageContent : ''}`}
+            data-content-wrapper
+          >
+            <main>
+              <Suspense>
+                <Outlet />
+              </Suspense>
+            </main>
+          </div>
+          {!isHomePage && (
+            <TableOfContents
+              key={sidebarKey}
+              items={items}
+              isVisible={isVisible}
+              isLoading={isLoading}
+              activeItem={activeItem}
+            />
+          )}
         </div>
       </div>
-      {!isHomePage && (
-        <TableOfContents
-          key={sidebarKey}
-          items={items}
-          isVisible={isVisible}
-          isLoading={isLoading}
-          activeItem={activeItem}
-        />
-      )}
       <footer></footer>
     </div>
   );

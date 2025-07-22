@@ -15,26 +15,35 @@
   block-size: 100%;
 }
 
-.contentWrapper {
-  margin: 30px auto;
+.contentArea {
+  position: relative;
+  max-inline-size: 1600px;
+  margin: 0 auto;
   padding: 30px;
-  border-radius: 10px;
-  background-color: var(--main-bg-color);
-  max-inline-size: 1200px;
 
-  @media (max-width: 1250px) {
-    margin: 30px 50px;
+  @media (max-width: 1400px) {
+    padding: 20px;
   }
 
   @media (max-width: 768px) {
-    margin: 30px 15px;
+    padding: 15px;
+  }
+}
+
+.contentWrapper {
+  margin: 0 auto;
+  max-inline-size: 1200px;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: var(--main-bg-color);
+
+  @media (max-width: 1250px) {
+    margin: 0 50px;
   }
 
-  // На больших экранах contentWrapper остается по центру
-  @media (min-width: 1401px) {
-    margin: 30px auto;
-    max-inline-size: 1200px;
-    // Сайдбар позиционируется поверх контента справа
+  @media (max-width: 768px) {
+    margin: 0 15px;
+    padding: 20px;
   }
 }
 
