@@ -225,6 +225,22 @@ const InstallModsPart1Page: FC = () => {
 
       <Mod modName="The Elder Scrolls Legends - Loading Screens" />
 
+      <TitleBlock title="Интерфейс - HUD" />
+
+      <Mod modName="A Matter of Time - A HUD clock widget" />
+
+      <Mod modName="Immersive HUD - iHUD Special Edition" />
+
+      <Mod modName="SkyHUD" />
+
+      <Mod modName="moreHUD SE" />
+
+      <Mod modName="moreHUD Inventory Edition" />
+
+      <Mod modName="TrueHUD - HUD Additions" />
+
+      <TitleBlock title="Интерфейс - Камера" />
+
       <NavigationControls
         prevPage={{ to: '/preinstall', name: 'Предустановки' }}
         nextPage={{ to: '/installmodspart1', name: 'Установка модов — Часть 2 (заглушка)' }}
