@@ -1,5 +1,14 @@
 .highlight {
   color: var(--text-primary-color);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+  // Медиа-запрос для мобильных устройств
+  @media (max-width: 768px) {
+    white-space: normal;
+    word-break: break-word;
+    line-height: 1.4;
+  }
 }
 
 .underline {

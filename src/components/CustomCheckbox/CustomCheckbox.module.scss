@@ -1,16 +1,33 @@
 .checkboxContainer {
   display: flex;
-  align-items: center;
+  align-items: flex-start; // Изменяем на flex-start для лучшего выравнивания длинного текста
   gap: 15px;
   cursor: pointer;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+  // Медиа-запрос для мобильных устройств
+  @media (max-width: 768px) {
+    align-items: flex-start;
+    gap: 12px;
+  }
 }
 
 .label {
   color: #fff;
   margin: 0;
   padding: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+  // Медиа-запрос для мобильных устройств
+  @media (max-width: 768px) {
+    white-space: normal;
+    word-break: break-word;
+    line-height: 1.4;
+  }
 }
 
 .iosCheckbox {
@@ -24,6 +41,12 @@
   cursor: pointer;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
+  flex-shrink: 0; // Предотвращаем сжатие checkbox
+
+  // Медиа-запрос для мобильных устройств
+  @media (max-width: 768px) {
+    --checkbox-size: 15px; // Немного уменьшаем размер на мобильных
+  }
 }
 
 .iosCheckbox input {

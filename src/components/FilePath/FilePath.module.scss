@@ -5,4 +5,15 @@
   border-radius: 3px;
   font-family: monospace;
   font-size: 0.95em;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  
+  // Медиа-запрос для мобильных устройств
+  @media (max-width: 768px) {
+    white-space: normal;
+    word-break: break-all; // Принудительный перенос для длинных путей
+    line-height: 1.4;
+    display: inline-block; // Позволяет элементу переноситься
+    max-width: 100%; // Ограничиваем ширину
+  }
 }

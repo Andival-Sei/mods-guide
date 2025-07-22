@@ -91,6 +91,16 @@
     font-size: 1.5rem;
     font-weight: 600;
     margin: 0 0 16px 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
+    // Медиа-запрос для мобильных устройств
+    @media (max-width: 768px) {
+      white-space: normal;
+      word-break: break-word;
+      line-height: 1.3;
+      font-size: 1.3rem;
+    }
   }
 
   &__details {
@@ -134,6 +144,7 @@
   &__version_label {
     font-style: italic;
     color: #f1f1f1;
+    flex-shrink: 0; // Предотвращаем сжатие метки версии
   }
 
   &__divider {
@@ -145,6 +156,15 @@
   &__description {
     line-height: 1.5;
     margin: 16px 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
+    // Медиа-запрос для мобильных устройств
+    @media (max-width: 768px) {
+      white-space: normal;
+      word-break: break-word;
+      line-height: 1.4;
+    }
   }
 
   &__files {
@@ -158,6 +178,15 @@
     font-size: 1.1rem;
     font-weight: 500;
     margin: 0 0 16px 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
+    // Медиа-запрос для мобильных устройств
+    @media (max-width: 768px) {
+      white-space: normal;
+      word-break: break-word;
+      line-height: 1.3;
+    }
   }
 
   &__files_list {
@@ -168,31 +197,49 @@
   &__file_item {
     padding: 8px 0;
     border-bottom: 1px solid #3a3a3a;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 
     &:last-child {
       border-bottom: none;
+    }
+
+    // Добавляем стили для мобильных устройств
+    @media (max-width: 768px) {
+      // Обеспечиваем перенос длинных названий файлов
+      white-space: normal;
+      word-break: break-word;
+      line-height: 1.4;
+      
+      // Добавляем отступы для лучшей читаемости
+      padding: 10px 0;
     }
   }
 
   // File type colors
   &__file_type--main-files {
     color: #8196ec;
+    flex-shrink: 0; // Предотвращаем сжатие типа файла
   }
 
   &__file_type--update-files {
     color: #32a597;
+    flex-shrink: 0; // Предотвращаем сжатие типа файла
   }
 
   &__file_type--optional-files {
     color: #228d00;
+    flex-shrink: 0; // Предотвращаем сжатие типа файла
   }
 
   &__file_type--miscellaneous-files {
     color: #eeee28;
+    flex-shrink: 0; // Предотвращаем сжатие типа файла
   }
 
   &__file_type--old-files {
     color: #ce9933;
+    flex-shrink: 0; // Предотвращаем сжатие типа файла
   }
 
   // Стили для перевода мода
@@ -218,6 +265,15 @@
     font-weight: 600;
     margin: 0 0 16px 0;
     color: #e0e0e0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
+    // Медиа-запрос для мобильных устройств
+    @media (max-width: 768px) {
+      white-space: normal;
+      word-break: break-word;
+      line-height: 1.3;
+    }
   }
 
   &__translation_details {

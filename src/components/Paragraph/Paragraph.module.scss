@@ -3,6 +3,8 @@
   line-height: 1.6;
   margin-bottom: 16px;
   color: var(--text-color);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   //  max-inline-size: 800px;
 
   &:last-child {
@@ -11,5 +13,8 @@
 
   @media (max-width: 768px) {
     font-size: 0.875rem;
+    white-space: normal;
+    word-break: break-word;
+    line-height: 1.5;
   }
 }

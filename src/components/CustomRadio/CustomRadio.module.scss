@@ -23,6 +23,15 @@
   background-color: #2f3035;
   border: 2px solid #4d4d4d;
   cursor: pointer;
+  flex-shrink: 0; // Предотвращаем сжатие radio кнопки
+  
+  // Медиа-запрос для мобильных устройств
+  @media (max-width: 768px) {
+    width: 15px; // Немного уменьшаем размер на мобильных
+    height: 15px;
+    min-width: 15px; // Гарантируем минимальную ширину
+    min-height: 15px; // Гарантируем минимальную высоту
+  }
 }
 
 .label input[type="radio"]:checked {
@@ -39,6 +48,12 @@
   transition: all 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
   background-color: #fff;
   transform: scale(0);
+  
+  // Медиа-запрос для мобильных устройств
+  @media (max-width: 768px) {
+    width: 5px; // Уменьшаем размер внутреннего кружка
+    height: 5px;
+  }
 }
 
 .label input[type="radio"]:checked::before {
