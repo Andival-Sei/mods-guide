@@ -59,7 +59,10 @@ const TableOfContents: FC<TableOfContentsProps> = ({ items, isVisible, isLoading
   // Плавная прокрутка к элементу с учетом высоты хедера
   const scrollToElement = (item: TableOfContentsItem) => {
     const element = item.element;
-    if (!element) return;
+    if (!element) {
+      console.log('Элемент не найден для скролла');
+      return;
+    }
 
     // Предотвращаем множественные вызовы прокрутки
     if (scrollTimeoutRef.current) {
@@ -67,15 +70,31 @@ const TableOfContents: FC<TableOfContentsProps> = ({ items, isVisible, isLoading
     }
 
     scrollTimeoutRef.current = window.setTimeout(() => {
-      const elementTop = element.offsetTop;
-      const headerHeight = 80; // Высота хедера
-      const offset = 20; // Дополнительный отступ для комфортного просмотра
-
-      // Плавная прокрутка к элементу
-      window.scrollTo({
-        top: elementTop - headerHeight - offset,
-        behavior: 'smooth',
+      console.log('Скролл к элементу:', {
+        elementId: item.id,
+        elementTitle: item.title,
       });
+
+      // Используем scrollIntoView для более надежного скролла
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+        inline: 'nearest'
+      });
+
+      // Дополнительный отступ для хедера
+      setTimeout(() => {
+        const mainWrapper = document.querySelector('.mainWrapper') as HTMLElement;
+        if (mainWrapper) {
+          const headerHeight = 80;
+          const offset = 20;
+          const currentScrollTop = mainWrapper.scrollTop;
+          mainWrapper.scrollTo({
+            top: currentScrollTop - headerHeight - offset,
+            behavior: 'smooth'
+          });
+        }
+      }, 200);
 
       scrollTimeoutRef.current = null;
     }, 100); // Небольшая задержка для предотвращения спама
