@@ -4,67 +4,214 @@
 }
 
 .dropdownToggle {
-  font-size: 0.9rem;
-  font-weight: 500;
   position: relative;
-  padding: 6px 4px;
-  cursor: pointer;
-  transition: color 0.2s ease;
+  font-size: 0.95rem;
+  font-weight: 500;
   color: var(--text-color);
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  font-family: inherit;
+  z-index: 1;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #3d3d40;
+    border-radius: 8px;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #9499ff, #646cff);
+    transform: translateX(-50%);
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 1px;
+    z-index: 1;
+  }
 
   &:hover,
   &.active {
-    color: #919198; // As specified in the requirements
+    color: #9499ff;
+    transform: translateY(-1px);
+
+    &::before {
+      opacity: 1;
+      background-color: #27272a;
+    }
+
+    &::after {
+      width: 80%;
+    }
+  }
+
+  &:focus {
+    color: #9499ff;
+    transform: translateY(-1px);
+
+    &::before {
+      opacity: 1;
+      background-color: #27272a;
+    }
+
+    &::after {
+      width: 80%;
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px solid #9499ff;
+    outline-offset: 2px;
+  }
+}
+
+.dropdownArrow {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: currentColor;
+
+  &.open {
+    transform: rotate(180deg);
   }
 }
 
 .dropdownMenu {
   position: absolute;
-  z-index: 20; // Увеличиваем z-index, чтобы меню было поверх сайдбара
-  top: 100%;
-  left: 0;
+  z-index: 1001;
+  top: calc(100% + 0.5rem);
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
   visibility: hidden;
-  min-width: 200px;
-  margin-top: 5px;
-  padding: 12px 0; // Increased padding
-  transition:
-    opacity 0.3s ease,
-    visibility 0.3s ease,
-    transform 0.3s ease;
-  transform: translateY(-10px);
+  min-width: 240px;
+  padding: 0.75rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   opacity: 0;
-  border-radius: 12px; // Increased border radius
-  background-color: #202126; // As specified in the requirements
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); // Enhanced shadow
+  border-radius: 16px;
+  background-color: #202126;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    0 4px 16px rgba(0, 0, 0, 0.2);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    background-color: #202126;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: none;
+    border-right: none;
+    transform: translateX(-50%) rotate(45deg);
+  }
 
   &.visible {
     visibility: visible;
-    transform: translateY(0);
+    transform: translateX(-50%) translateY(0);
     opacity: 1;
   }
 }
 
 .dropdownItem {
   display: block;
-  margin: 8px 16px; // Added margin for better spacing
-  padding: 12px 20px; // Increased padding
-  transition:
-    color 0.2s ease,
-    background-color 0.2s ease;
+  margin: 0.25rem 0;
+  padding: 0.75rem 1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
   color: var(--text-color);
-  border-radius: 8px; // Rounded corners for items
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #3d3d40;
+    border-radius: 8px;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+  }
 
   &:hover {
-    color: #9499ff; // Same color as other links in header
-    background-color: rgba(255, 255, 255, 0.1); // More visible background highlight
+    color: #9499ff;
+    transform: translateX(4px);
+
+    &::before {
+      opacity: 1;
+      background-color: #27272a;
+    }
+  }
+
+  &:focus {
+    color: #9499ff;
+    transform: translateX(4px);
+
+    &::before {
+      opacity: 1;
+      background-color: #27272a;
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px solid #9499ff;
+    outline-offset: 2px;
   }
 }
 
-// Mobile styles
+// Анимация появления элементов
+.dropdownItem {
+  animation: slideInRight 0.3s cubic-bezier(0.4, 0, 0.2, 1) both;
+
+  @for $i from 1 through 10 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{$i * 0.05}s;
+    }
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Медиа-запросы для мобильных устройств
 @media (max-width: 768px) {
   .dropdown {
-    // In mobile view, the dropdown will be handled by the BurgerMenu component
-    // so we don't need special styling here
+    // На мобильных устройствах дропдаун обрабатывается через BurgerMenu
+    display: none;
   }
 }

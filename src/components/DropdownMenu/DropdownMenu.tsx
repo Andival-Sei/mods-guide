@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { DropdownArrowIcon } from '../icons';
 import cls from './DropdownMenu.module.scss';
 
 interface DropdownMenuProps {
@@ -15,7 +16,7 @@ const DropdownMenu = ({ label, items }: DropdownMenuProps) => {
   const dropdownRef = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<number | null>(null);
 
-  // Close dropdown when clicking outside
+  // Закрываем дропдаун при клике вне его
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
@@ -26,15 +27,37 @@ const DropdownMenu = ({ label, items }: DropdownMenuProps) => {
     document.addEventListener('mousedown', handleClickOutside);
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
-      // Clear any existing timeout when component unmounts
+      // Очищаем таймаут при размонтировании компонента
       if (timeoutRef.current !== null) {
         window.clearTimeout(timeoutRef.current);
       }
     };
   }, []);
 
+  // Обработка клавиатуры для доступности
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (!isOpen) return;
+
+      switch (event.key) {
+        case 'Escape':
+          setIsOpen(false);
+          break;
+        case 'ArrowDown':
+          event.preventDefault();
+          // Фокус на первый элемент меню
+          const firstItem = dropdownRef.current?.querySelector('a') as HTMLElement;
+          firstItem?.focus();
+          break;
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen]);
+
   const handleMouseEnter = () => {
-    // Clear any existing timeout
+    // Очищаем существующий таймаут
     if (timeoutRef.current !== null) {
       window.clearTimeout(timeoutRef.current);
       timeoutRef.current = null;
@@ -43,10 +66,29 @@ const DropdownMenu = ({ label, items }: DropdownMenuProps) => {
   };
 
   const handleMouseLeave = () => {
-    // Set a timeout to close the menu to give user time to move to the menu
+    // Устанавливаем таймаут для закрытия меню, давая пользователю время переместиться к меню
     timeoutRef.current = window.setTimeout(() => {
       setIsOpen(false);
-    }, 300); // 300ms delay before closing
+    }, 300); // 300ms задержка перед закрытием
+  };
+
+  const handleToggleClick = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleToggleKeyDown = (event: React.KeyboardEvent) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      handleToggleClick();
+    } else if (event.key === 'ArrowDown') {
+      event.preventDefault();
+      setIsOpen(true);
+      // Фокус на первый элемент меню
+      setTimeout(() => {
+        const firstItem = dropdownRef.current?.querySelector('a') as HTMLElement;
+        firstItem?.focus();
+      }, 100);
+    }
   };
 
   return (
@@ -56,11 +98,52 @@ const DropdownMenu = ({ label, items }: DropdownMenuProps) => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <span className={`${cls.dropdownToggle} ${isOpen ? cls.active : ''}`}>{label}</span>
+      <button
+        className={`${cls.dropdownToggle} ${isOpen ? cls.active : ''}`}
+        onClick={handleToggleClick}
+        onKeyDown={handleToggleKeyDown}
+        aria-expanded={isOpen}
+        aria-haspopup="true"
+        aria-label={`${label} - нажмите для открытия меню`}
+      >
+        {label}
+        <DropdownArrowIcon className={`${cls.dropdownArrow} ${isOpen ? cls.open : ''}`} />
+      </button>
 
-      <div className={`${cls.dropdownMenu} ${isOpen ? cls.visible : ''}`}>
+      <div
+        className={`${cls.dropdownMenu} ${isOpen ? cls.visible : ''}`}
+        role="menu"
+        aria-label={`Подменю ${label}`}
+      >
         {items.map((item, index) => (
-          <Link key={index} to={item.to} className={cls.dropdownItem}>
+          <Link
+            key={index}
+            to={item.to}
+            className={cls.dropdownItem}
+            role="menuitem"
+            tabIndex={isOpen ? 0 : -1}
+            onKeyDown={(event) => {
+              if (event.key === 'ArrowDown') {
+                event.preventDefault();
+                const nextItem = event.currentTarget.nextElementSibling as HTMLElement;
+                nextItem?.focus();
+              } else if (event.key === 'ArrowUp') {
+                event.preventDefault();
+                const prevItem = event.currentTarget.previousElementSibling as HTMLElement;
+                if (prevItem) {
+                  prevItem.focus();
+                } else {
+                  // Возвращаемся к кнопке
+                  const toggleButton = dropdownRef.current?.querySelector('button') as HTMLElement;
+                  toggleButton?.focus();
+                }
+              } else if (event.key === 'Escape') {
+                setIsOpen(false);
+                const toggleButton = dropdownRef.current?.querySelector('button') as HTMLElement;
+                toggleButton?.focus();
+              }
+            }}
+          >
             {item.label}
           </Link>
         ))}

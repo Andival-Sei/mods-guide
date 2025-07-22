@@ -13,6 +13,11 @@
   overflow-y: auto;
   inline-size: 100%;
   block-size: 100%;
+  padding-top: 80px; // Отступ для фиксированного хэдэра
+
+  @media (max-width: 768px) {
+    padding-top: 70px; // Меньший отступ для мобильных устройств
+  }
 }
 
 .contentArea {

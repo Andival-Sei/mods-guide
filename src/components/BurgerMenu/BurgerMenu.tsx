@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { DropdownArrowIcon } from '../icons';
 import cls from './BurgerMenu.module.scss';
 
 interface DropdownItem {
@@ -64,40 +65,39 @@ const BurgerMenu = ({ links }: BurgerMenuProps) => {
                   onClick={() => toggleDropdown(index)}
                 >
                   {link.label}
-                  <span className={`${cls.dropdownArrow} ${isDropdownOpen ? cls.open : ''}`}>
-                    ▼
-                  </span>
+                  <DropdownArrowIcon
+                    className={`${cls.dropdownArrow} ${isDropdownOpen ? cls.open : ''}`}
+                    style={{ width: '16px', height: '16px' }}
+                  />
                 </div>
                 <div className={`${cls.dropdownItems} ${isDropdownOpen ? cls.open : ''}`}>
                   {link.dropdownItems.map((item, itemIndex) => (
-                    <Link
+                    <NavLink
                       key={`${index}-${itemIndex}`}
                       to={item.to}
                       onClick={closeMenu}
-                      className={cls.dropdownItem}
+                      className={({ isActive }) =>
+                        `${cls.dropdownItem} ${isActive ? cls.active : ''}`
+                      }
                     >
                       {item.label}
-                    </Link>
+                    </NavLink>
                   ))}
                 </div>
               </div>
             );
           }
 
-          // Handle regular links
-          return link.exact ? (
+          // Handle regular links - используем NavLink для всех ссылок
+          return (
             <NavLink
               key={index}
               to={link.to}
               onClick={closeMenu}
-              className={({ isActive }) => (isActive ? cls.active : '')}
+              className={({ isActive }) => `${cls.navLink} ${isActive ? cls.active : ''}`}
             >
               {link.label}
             </NavLink>
-          ) : (
-            <Link key={index} to={link.to} onClick={closeMenu}>
-              {link.label}
-            </Link>
           );
         })}
       </nav>

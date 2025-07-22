@@ -8,7 +8,7 @@
 
 .burgerButton {
   position: relative;
-  z-index: 10;
+  z-index: 1002;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -18,14 +18,33 @@
   cursor: pointer;
   border: none;
   background: transparent;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    background: transparent;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #9499ff;
+    outline-offset: 2px;
+  }
 
   span {
     display: block;
     width: 100%;
     height: 3px;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     border-radius: 3px;
     background-color: var(--main-text-color, #fff);
+    transform-origin: center;
+
+    &:first-child {
+      transform-origin: center;
+    }
+
+    &:last-child {
+      transform-origin: center;
+    }
   }
 
   &.open {
@@ -35,6 +54,7 @@
 
     span:nth-child(2) {
       opacity: 0;
+      transform: scale(0);
     }
 
     span:last-child {
@@ -45,15 +65,16 @@
 
 .menuOverlay {
   position: fixed;
-  z-index: 5;
+  z-index: 1000;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   opacity: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
 
   &.visible {
     visibility: visible;
@@ -63,47 +84,130 @@
 
 .menuContent {
   position: fixed;
-  z-index: 6;
+  z-index: 1001;
   top: 0;
-  right: -280px;
+  right: -320px;
   display: flex;
   overflow-y: auto;
   flex-direction: column;
-  width: 280px;
-  height: 100%;
-  padding: 80px 20px 20px;
-  transition: right 0.3s ease;
+  width: 320px;
+  height: 100vh;
+  padding: 100px 2rem 2rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   background-color: var(--main-bg-color);
-  gap: 20px;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  gap: 1.5rem;
 
   &.open {
     right: 0;
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    box-shadow:
+      -8px 0 32px rgba(0, 0, 0, 0.4),
+      -4px 0 16px rgba(0, 0, 0, 0.2);
   }
 
   a {
     font-size: 1.1rem;
     font-weight: 500;
-    padding: 10px 0;
-    transition: color 0.2s ease;
+    padding: 1rem 1.5rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     color: var(--text-color);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(148, 153, 255, 0.1), rgba(100, 108, 255, 0.1));
+      transform: translateX(-100%);
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
     &:hover {
       color: #9499ff;
+      transform: translateX(8px);
+
+      &::before {
+        transform: translateX(0);
+      }
     }
 
     &.active {
       font-weight: 600;
       color: #9499ff;
+      background: rgba(148, 153, 255, 0.1);
+
+      &::before {
+        transform: translateX(0);
+      }
     }
+
+    &:focus-visible {
+      outline: 2px solid #9499ff;
+      outline-offset: 2px;
+    }
+  }
+}
+
+.navLink {
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 1rem 1.5rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--text-color);
+  border-radius: 12px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(148, 153, 255, 0.1), rgba(100, 108, 255, 0.1));
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover {
+    color: #9499ff;
+    transform: translateX(8px);
+
+    &::before {
+      transform: translateX(0);
+    }
+  }
+
+  &.active {
+    font-weight: 600;
+    color: #9499ff;
+    background: rgba(148, 153, 255, 0.1);
+
+    &::before {
+      transform: translateX(0);
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px solid #9499ff;
+    outline-offset: 2px;
   }
 }
 
 .dropdownSection {
   overflow: hidden;
-  margin-bottom: 15px;
-  border-radius: 12px; // Increased border radius
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .dropdownLabel {
@@ -112,22 +216,41 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 15px; // Increased padding
+  padding: 1rem 1.5rem;
   cursor: pointer;
-  transition: background-color 0.2s ease;
-  color: #919198; // As specified in the requirements
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  //  border-radius: 8px; // Rounded corners
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--text-color);
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
 
-  &:hover, &.active {
-    //    background-color: rgba(255, 255, 255, 0.05);
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(148, 153, 255, 0.1), rgba(100, 108, 255, 0.1));
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover,
+  &.active {
+    color: #9499ff;
+
+    &::before {
+      transform: translateX(0);
+    }
   }
 }
 
 .dropdownArrow {
   font-size: 0.8rem;
   margin-left: 8px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #9499ff;
 
   &.open {
     transform: rotate(180deg);
@@ -139,29 +262,106 @@
   overflow: hidden;
   flex-direction: column;
   max-height: 0;
-  padding-left: 15px;
-  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding-left: 1.5rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
   &.open {
-    max-height: 500px; // Large enough to fit all items
-    padding-top: 8px;
-    padding-bottom: 8px;
+    max-height: 500px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 }
 
 .dropdownItem {
   font-size: 1rem !important;
-  margin: 4px 0; // Added margin
-  padding: 10px 15px !important; // Increased padding
-  transition: background-color 0.2s ease !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
-  border-radius: 8px !important; // Rounded corners
+  margin: 0.25rem 0;
+  padding: 0.75rem 1rem !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  border-radius: 8px !important;
+  position: relative;
+  overflow: hidden;
 
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.1) !important;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(148, 153, 255, 0.1), rgba(100, 108, 255, 0.1));
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  &:last-child {
-    border-bottom: none !important;
+  &:hover {
+    color: #9499ff !important;
+    transform: translateX(8px) !important;
+
+    &::before {
+      transform: translateX(0) !important;
+    }
+  }
+
+  &.active {
+    font-weight: 600 !important;
+    color: #9499ff !important;
+    background: rgba(148, 153, 255, 0.1) !important;
+
+    &::before {
+      transform: translateX(0) !important;
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px solid #9499ff !important;
+    outline-offset: 2px !important;
+  }
+}
+
+// Анимация появления элементов меню
+.menuContent.open {
+  a,
+  .dropdownSection {
+    animation: slideInLeft 0.4s cubic-bezier(0.4, 0, 0.2, 1) both;
+
+    @for $i from 1 through 10 {
+      &:nth-child(#{$i}) {
+        animation-delay: #{$i * 0.1}s;
+      }
+    }
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Улучшенная прокрутка
+.menuContent {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 153, 255, 0.3) transparent;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(148, 153, 255, 0.3);
+    border-radius: 3px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(148, 153, 255, 0.5);
   }
 }
