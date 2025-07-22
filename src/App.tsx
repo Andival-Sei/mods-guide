@@ -5,6 +5,8 @@ import WelcomePage from './pages/WelcomePage/WelcomePage.tsx';
 import CommonInstructionsPage from './pages/CommonInstructionsPage/CommonInstructionsPage.tsx';
 import PreInstallPage from './pages/PreInstallPage/PreInstallPage.tsx';
 import InstallModsPart1Page from './pages/InstallModsPart1Page/InstallModsPart1Page.tsx';
+import ChangelogPage from './pages/ChangelogPage/ChangelogPage.tsx';
+import ContactsPage from './pages/ContactsPage/ContactsPage.tsx';
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
             <Route path="/commoninstructions" element={<CommonInstructionsPage />} />
             <Route path="/preinstall" element={<PreInstallPage />} />
             <Route path="/installmodspart1" element={<InstallModsPart1Page />} />
+            <Route path="/changelog" element={<ChangelogPage />} />
+            <Route path="/contacts" element={<ContactsPage />} />
           </Route>
         </Routes>
       </BrowserRouter>

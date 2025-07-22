@@ -17,8 +17,8 @@ const Header = () => {
         { to: '/preinstall', label: 'Предустановки' },
       ],
     },
-    { to: '/', label: 'Изменения' },
-    { to: '/', label: 'Контакты' },
+    { to: '/changelog', label: 'Изменения' },
+    { to: '/contacts', label: 'Контакты' },
   ];
 
   return (
@@ -39,8 +39,8 @@ const Header = () => {
             { to: '/installmodspart1', label: '  Установка модов — Часть 1' },
           ]}
         />
-        <Link to="/">Изменения</Link>
-        <Link to="/">Контакты</Link>
+        <Link to="/changelog">Изменения</Link>
+        <Link to="/contacts">Контакты</Link>
       </nav>
 
       <BurgerMenu links={navLinks} />
