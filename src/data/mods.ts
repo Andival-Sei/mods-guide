@@ -3565,4 +3565,178 @@ export const modsData: ModProps[] = [
       ],
     },
   },
+  {
+    name: 'SkyUI - Ghost Item Bug Fix',
+    version: '1.0.0',
+    author: 'SkyUI Team and EdmanSA',
+    description:
+      'Это устраняет проблему, из-за которой группы избранного SkyUI могли быть неправильно экипированы при определенных обстоятельствах, например после улучшения предметов.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/49106?t',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'SkyUI - Ghost Item Bug Fix',
+        version: '1.0.0',
+      },
+    ],
+  },
+  {
+    name: 'MCM Helper',
+    version: '1.5.0',
+    author: 'Parapets',
+    description:
+      'Упрощает создание меню конфигурации мода и расширяет их новыми мощными функциями, такими как постоянные настройки INI и регистрация горячих клавиш. Авторы модов смогут писать более простые и понятные скрипты Papyrus для своих конфигов. Игроки смогут проводить меньше времени в меню.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/53000?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'MCM Helper',
+        version: '1.5.0',
+      },
+    ],
+    fomods: [
+      {
+        title: 'MCM Helper',
+        pages: [
+          {
+            title: 'Game Version',
+            sections: [
+              {
+                title: 'Game Version',
+                type: 'radio',
+                items: [
+                  {
+                    label: 'Skyrim Special Edition',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            title: 'Mod Files',
+            sections: [
+              {
+                title: 'Plugin',
+                type: 'radio',
+                items: [
+                  {
+                    label: 'ESL',
+                    checked: true,
+                  },
+                ],
+              },
+              {
+                title: 'Resources',
+                type: 'radio',
+                items: [
+                  {
+                    label: 'BSA',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    name: 'SkyUI 3D Item Offset Fix (Centered Item Card - Script Fix - Improvement)',
+    version: '1.1.0',
+    author: 'SkyUI Team - Dylan James',
+    description:
+      'Перекомпилирован скрипт SkyUI, чтобы устранить неудобство 3D-графики инвентаря предметов при запуске новых игр.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/92602',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'SkyUI 3D Item Offset Fix - MCM Helper',
+        version: '1.1.0',
+      },
+    ],
+  },
+  {
+    name: 'ESO Cursor',
+    version: '1.0',
+    author: 'jple',
+    description:
+      'Заменяет стандартный курсор мыши на минималистичный, вдохновленный Elder Scrolls Online.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/39670',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'ESO Style Cursor',
+        version: '1.0',
+      },
+    ],
+    fomods: [
+      {
+        title: 'ESO Style Cursor',
+        pages: [
+          {
+            title: 'Options',
+            sections: [
+              {
+                title: 'Choose Type',
+                type: 'radio',
+                items: [
+                  {
+                    label: 'White, Medium',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    name: "Sovngarde - Mist's Font Replacer",
+    version: '8.9',
+    author: 'mjorka',
+    description:
+      'Sovngarde — это пользовательский шрифт, созданный для поддержки многоязычной пользовательской базы и органично вписывающийся в историю Skyrim.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/386',
+    files: [
+      {
+        type: 'Main Files',
+        name: "Sovngarde - Mist's Font Replacer Bold V8.9",
+        version: '8.9',
+      },
+    ],
+    tags: ['special-instructions'],
+    specialInstructions: {
+      blocks: [
+        {
+          type: 'paragraph',
+          content:
+            'Откройте файл <fl>Interface\\fontconfig_ru.txt</fl> и удалите вторую строку: fontlib "Interface\\fonts_en.swf"',
+        },
+      ],
+    },
+  },
+  {
+    name: 'The Elder Scrolls Legends - Loading Screens',
+    version: '2.1.1',
+    author: 'Jampion',
+    description:
+      'Этот мод добавляет 56 высококачественных и дружественных к лору иллюстраций из "The Elder Scrolls: Legends" в качестве загрузочных экранов. Работает как заменитель ванили и наряду с ванильными загрузочными экранами.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/37929',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'TESL - Loading Screens - ESP and Meshes',
+        version: '2.1.1',
+      },
+      {
+        type: 'Main Files',
+        name: 'Textures - 4K',
+        version: '2.0.0',
+      },
+    ],
+  },
 ];

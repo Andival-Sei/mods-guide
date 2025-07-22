@@ -213,6 +213,16 @@ const InstallModsPart1Page: FC = () => {
 
       <Mod modName="SkyUI" />
 
+      <Mod modName="SkyUI - Ghost Item Bug Fix" />
+
+      <Mod modName="MCM Helper" />
+
+      <Mod modName="SkyUI 3D Item Offset Fix (Centered Item Card - Script Fix - Improvement)" />
+
+      <Mod modName="ESO Cursor" />
+
+      <Mod modName="Sovngarde - Mist's Font Replacer" />
+
       <NavigationControls
         prevPage={{ to: '/preinstall', name: 'Предустановки' }}
         nextPage={{ to: '/installmodspart1', name: 'Установка модов — Часть 2 (заглушка)' }}
