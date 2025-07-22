@@ -18,11 +18,14 @@ export const useTableOfContents = () => {
     return windowWidth > 1775;
   }, [windowWidth]);
 
-    // Эффект для отслеживания изменения маршрута
+  // Эффект для отслеживания изменения маршрута
   useEffect(() => {
     // Мгновенно скрываем сайдбар при изменении маршрута
     setIsLoading(true);
-    
+
+    // Очищаем старые элементы при смене страницы
+    setItems([]);
+
     // Задержка для появления нового сайдбара после загрузки контента
     const timer = setTimeout(() => {
       setIsLoading(false);

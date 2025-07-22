@@ -1,5 +1,5 @@
 import cls from './MainLayout.module.scss';
-import { Suspense, useEffect, useRef } from 'react';
+import { Suspense, useEffect, useRef, useState } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import Header from '../Header/Header.tsx';
 import TableOfContents from '../TableOfContents/TableOfContents.tsx';
@@ -10,6 +10,12 @@ const MainLayout = () => {
   const isHomePage = location.pathname === '/';
   const mainWrapperRef = useRef<HTMLDivElement>(null);
   const { items, isVisible, isLoading } = useTableOfContents();
+  const [sidebarKey, setSidebarKey] = useState(0);
+
+  // Обновляем ключ при смене маршрута для принудительного пересоздания компонента
+  useEffect(() => {
+    setSidebarKey((prev: number) => prev + 1);
+  }, [location.pathname]);
 
   useEffect(() => {
     if (mainWrapperRef.current) {
@@ -34,7 +40,7 @@ const MainLayout = () => {
       </div>
       {!isHomePage && (
         <TableOfContents
-          key={location.pathname}
+          key={sidebarKey}
           items={items}
           isVisible={isVisible}
           isLoading={isLoading}
