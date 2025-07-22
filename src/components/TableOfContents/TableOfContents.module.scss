@@ -11,13 +11,13 @@
   pointer-events: none;
   transition: opacity 0.3s ease;
 
-  @media (max-width: 1400px) {
+  @media (max-width: 1775px) {
     display: none;
   }
 
-  // Позиционируем сайдбар так, чтобы он не перекрывал центрированный контент
-  @media (min-width: 1401px) {
-    right: max(20px, calc((100vw - 1200px) / 2 - 320px));
+  // Простое позиционирование справа
+  @media (min-width: 1776px) {
+    right: 20px;
   }
 }
 
@@ -49,7 +49,6 @@
   color: var(--text-color);
   margin: 0 0 16px 0;
   padding: 0;
-  text-transform: uppercase;
   letter-spacing: 0.05em;
   opacity: 0.8;
 }

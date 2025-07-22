@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import { useLocation } from 'react-router-dom';
 
 interface TableOfContentsItem {
@@ -9,8 +9,13 @@ interface TableOfContentsItem {
 
 export const useTableOfContents = () => {
   const [items, setItems] = useState<TableOfContentsItem[]>([]);
-  const [isVisible, setIsVisible] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const location = useLocation();
+
+  // Вычисляем видимость сайдбара
+  const isVisible = useMemo(() => {
+    return windowWidth > 1775;
+  }, [windowWidth]);
 
   useEffect(() => {
     // Функция для поиска всех TitleBlock элементов
@@ -38,10 +43,9 @@ export const useTableOfContents = () => {
       return items;
     };
 
-    // Функция для проверки видимости сайдбара
-    const checkVisibility = () => {
-      const windowWidth = window.innerWidth;
-      setIsVisible(windowWidth > 1400);
+    // Функция для обновления ширины окна
+    const updateWindowWidth = () => {
+      setWindowWidth(window.innerWidth);
     };
 
     // Инициализация
@@ -50,19 +54,18 @@ export const useTableOfContents = () => {
       setTimeout(() => {
         const foundItems = findTitleBlocks();
         setItems(foundItems);
-        checkVisibility();
       }, 200);
     };
 
     // Слушатели событий
-    window.addEventListener('resize', checkVisibility);
+    window.addEventListener('resize', updateWindowWidth);
 
     // Инициализация при монтировании и при изменении маршрута
     initialize();
 
     // Очистка
     return () => {
-      window.removeEventListener('resize', checkVisibility);
+      window.removeEventListener('resize', updateWindowWidth);
     };
   }, [location.pathname]);
 

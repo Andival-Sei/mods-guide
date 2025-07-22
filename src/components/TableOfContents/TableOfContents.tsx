@@ -64,7 +64,7 @@ const TableOfContents: FC<TableOfContentsProps> = ({ items, isVisible }) => {
   }
 
   return (
-    <nav className={cls.tableOfContents}>
+    <nav className={cls.tableOfContents} data-sidebar>
       <div className={cls.container}>
         <h3 className={cls.title}>На этой странице</h3>
         <ul className={cls.list}>
