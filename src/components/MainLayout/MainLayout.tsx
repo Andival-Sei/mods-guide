@@ -9,7 +9,7 @@ const MainLayout = () => {
   const location = useLocation();
   const isHomePage = location.pathname === '/';
   const mainWrapperRef = useRef<HTMLDivElement>(null);
-  const { items, isVisible } = useTableOfContents();
+  const { items, isVisible, isLoading } = useTableOfContents();
 
   useEffect(() => {
     if (mainWrapperRef.current) {
@@ -32,7 +32,14 @@ const MainLayout = () => {
           </main>
         </div>
       </div>
-      {!isHomePage && <TableOfContents items={items} isVisible={isVisible} />}
+      {!isHomePage && (
+        <TableOfContents
+          key={location.pathname}
+          items={items}
+          isVisible={isVisible}
+          isLoading={isLoading}
+        />
+      )}
       <footer></footer>
     </div>
   );

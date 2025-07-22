@@ -10,12 +10,26 @@ interface TableOfContentsItem {
 export const useTableOfContents = () => {
   const [items, setItems] = useState<TableOfContentsItem[]>([]);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [isLoading, setIsLoading] = useState(false);
   const location = useLocation();
 
   // Вычисляем видимость сайдбара
   const isVisible = useMemo(() => {
     return windowWidth > 1775;
   }, [windowWidth]);
+
+    // Эффект для отслеживания изменения маршрута
+  useEffect(() => {
+    // Мгновенно скрываем сайдбар при изменении маршрута
+    setIsLoading(true);
+    
+    // Задержка для появления нового сайдбара после загрузки контента
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 400);
+
+    return () => clearTimeout(timer);
+  }, [location.pathname]);
 
   useEffect(() => {
     // Функция для поиска всех TitleBlock элементов
@@ -50,11 +64,11 @@ export const useTableOfContents = () => {
 
     // Инициализация
     const initialize = () => {
-      // Небольшая задержка для рендера компонентов
+      // Увеличенная задержка для полного рендера компонентов
       setTimeout(() => {
         const foundItems = findTitleBlocks();
         setItems(foundItems);
-      }, 200);
+      }, 350);
     };
 
     // Слушатели событий
@@ -69,5 +83,5 @@ export const useTableOfContents = () => {
     };
   }, [location.pathname]);
 
-  return { items, isVisible };
+  return { items, isVisible, isLoading };
 };
