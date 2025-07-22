@@ -38,15 +38,21 @@ const TableOfContents: FC<TableOfContentsProps> = ({ items, isVisible, isLoading
       const buttonRect = activeButton.getBoundingClientRect();
       const listRect = listRef.current.getBoundingClientRect();
 
-      // Вычисляем позицию относительно списка
+      // Вычисляем позицию относительно списка и центрируем линию
       const relativeTop = buttonRect.top - listRect.top;
+      const buttonHeight = buttonRect.height;
+      const lineHeight = 32; // Высота линии
+
+      // Центрируем линию по вертикали относительно кнопки
+      const centeredPosition = relativeTop + (buttonHeight - lineHeight) / 2;
 
       // Применяем CSS-переменную для плавного перемещения
-      listRef.current.style.setProperty('--line-position', `${relativeTop}px`);
+      listRef.current.style.setProperty('--line-position', `${centeredPosition}px`);
     } else {
       // Fallback: используем примерную высоту элемента
       const itemHeight = 40; // Примерная высота элемента (padding + margin + content)
-      const linePosition = activeIndex * itemHeight;
+      const lineHeight = 32; // Высота линии
+      const linePosition = activeIndex * itemHeight + (itemHeight - lineHeight) / 2;
       listRef.current.style.setProperty('--line-position', `${linePosition}px`);
     }
   }, [activeItem, items]);
