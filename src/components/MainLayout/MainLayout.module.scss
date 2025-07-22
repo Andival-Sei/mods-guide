@@ -30,7 +30,11 @@
     margin: 30px 15px;
   }
 
-
+  // На больших экранах contentWrapper остается по центру
+  @media (min-width: 1401px) {
+    margin: 30px auto;
+    max-inline-size: 1200px;
+  }
 }
 
 .homePageContent {

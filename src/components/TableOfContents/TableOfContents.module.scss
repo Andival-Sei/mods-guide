@@ -1,0 +1,134 @@
+.tableOfContents {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 280px;
+  height: 100vh;
+  padding: 100px 0 40px;
+  overflow-y: auto;
+  z-index: 10;
+  background: transparent;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+
+  @media (max-width: 1400px) {
+    display: none;
+  }
+
+  // Позиционируем сайдбар так, чтобы он не перекрывал центрированный контент
+  @media (min-width: 1401px) {
+    right: max(20px, calc((100vw - 1200px) / 2 - 320px));
+  }
+}
+
+.container {
+  pointer-events: auto;
+  background: var(--main-bg-color);
+  border-radius: 8px;
+  margin: 0 20px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin: 0 0 16px 0;
+  padding: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.8;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.listItem {
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  margin: 2px 0;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--text-color);
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  line-height: 1.4;
+  opacity: 0.7;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.05);
+    opacity: 1;
+  }
+
+  &:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.05);
+    opacity: 1;
+  }
+
+  &.active {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--accent-color, #646cff);
+    opacity: 1;
+    font-weight: 500;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 3px;
+      height: 16px;
+      background: var(--accent-color, #646cff);
+      border-radius: 0 2px 2px 0;
+    }
+  }
+}
+
+// Стилизация скроллбара
+.tableOfContents::-webkit-scrollbar {
+  width: 6px;
+}
+
+.tableOfContents::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.tableOfContents::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+.tableOfContents::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
