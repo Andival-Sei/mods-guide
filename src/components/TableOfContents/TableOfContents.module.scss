@@ -36,6 +36,7 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.1);
   animation: slideIn 0.3s ease-out;
+  position: relative; // Для позиционирования синей линии
 }
 
 @keyframes slideIn {
@@ -63,11 +64,13 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  position: relative; // Для позиционирования синей линии
 }
 
 .listItem {
   margin: 0;
   padding: 0;
+  position: relative; // Для позиционирования синей линии
 }
 
 .link {
@@ -83,11 +86,16 @@
   color: var(--text-color);
   text-align: left;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
   line-height: 1.4;
   opacity: 0.7;
   position: relative;
+
+  // Обрезание длинного текста с многоточием
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   &:hover {
     background: rgba(255, 255, 255, 0.05);
@@ -106,21 +114,22 @@
     opacity: 1;
     font-weight: 500;
     position: relative;
-
-    // Синяя полоса слева для активного элемента
-    &::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 3px;
-      height: 16px;
-      background: var(--accent-color, #646cff);
-      border-radius: 0 2px 2px 0;
-      transition: all 0.3s ease;
-    }
   }
+}
+
+// Плавно перемещающаяся синяя линия
+.list::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 32px; // Высота элемента + отступы
+  background: var(--accent-color, #646cff);
+  border-radius: 0 2px 2px 0;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(var(--line-position, 0px));
+  z-index: 1;
 }
 
 // Стилизация скроллбара
