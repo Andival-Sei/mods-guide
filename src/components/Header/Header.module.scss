@@ -7,6 +7,8 @@
   inline-size: 100%;
   block-size: 70px;
   border-block-end: 3px solid var(--contrast-bg-color);
+  position: relative;
+  z-index: 15; // Увеличиваем z-index, чтобы хедер был поверх сайдбара
 }
 
 .logoContainer {
