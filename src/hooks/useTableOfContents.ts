@@ -127,8 +127,6 @@ export const useTableOfContents = () => {
       const titleBlocks = document.querySelectorAll('[data-title-block]');
       const items: TableOfContentsItem[] = [];
 
-      console.log('Найдено элементов TitleBlock:', titleBlocks.length);
-
       titleBlocks.forEach((element, index) => {
         const titleElement = element.querySelector('h2');
         if (titleElement && element instanceof HTMLElement) {
@@ -138,8 +136,6 @@ export const useTableOfContents = () => {
           // Добавляем id к элементу для прокрутки
           element.id = id;
 
-          console.log('Добавлен элемент в сайдбар:', { id, title });
-
           items.push({
             id,
             title,
@@ -148,7 +144,6 @@ export const useTableOfContents = () => {
         }
       });
 
-      console.log('Всего элементов в сайдбаре:', items.length);
       return items;
     };
 

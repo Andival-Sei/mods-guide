@@ -59,10 +59,7 @@ const TableOfContents: FC<TableOfContentsProps> = ({ items, isVisible, isLoading
   // Плавная прокрутка к элементу с учетом высоты хедера
   const scrollToElement = (item: TableOfContentsItem) => {
     const element = item.element;
-    if (!element) {
-      console.log('Элемент не найден для скролла');
-      return;
-    }
+    if (!element) return;
 
     // Предотвращаем множественные вызовы прокрутки
     if (scrollTimeoutRef.current) {
@@ -70,16 +67,11 @@ const TableOfContents: FC<TableOfContentsProps> = ({ items, isVisible, isLoading
     }
 
     scrollTimeoutRef.current = window.setTimeout(() => {
-      console.log('Скролл к элементу:', {
-        elementId: item.id,
-        elementTitle: item.title,
-      });
-
       // Используем scrollIntoView для более надежного скролла
       element.scrollIntoView({
         behavior: 'smooth',
         block: 'start',
-        inline: 'nearest'
+        inline: 'nearest',
       });
 
       // Дополнительный отступ для хедера
@@ -91,7 +83,7 @@ const TableOfContents: FC<TableOfContentsProps> = ({ items, isVisible, isLoading
           const currentScrollTop = mainWrapper.scrollTop;
           mainWrapper.scrollTo({
             top: currentScrollTop - headerHeight - offset,
-            behavior: 'smooth'
+            behavior: 'smooth',
           });
         }
       }, 200);
@@ -113,7 +105,11 @@ const TableOfContents: FC<TableOfContentsProps> = ({ items, isVisible, isLoading
             <li key={item.id} className={cls.listItem}>
               <button
                 className={`${cls.link} ${activeItem === item.id ? cls.active : ''}`}
-                onClick={() => scrollToElement(item)}
+                onClick={(e) => {
+                  scrollToElement(item);
+                  // Убираем фокус после клика, чтобы не было выделения
+                  e.currentTarget.blur();
+                }}
                 type="button"
                 aria-current={activeItem === item.id ? 'location' : undefined}
                 aria-label={`Перейти к разделу: ${item.title}`}
