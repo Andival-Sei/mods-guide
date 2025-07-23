@@ -5207,4 +5207,31 @@ export const modsData: ModProps[] = [
       ],
     },
   },
+  {
+    name: 'Helgen Reborn',
+    version: 'V106.SSE',
+    author: 'Mike Hancho aka Balok',
+    description:
+      'Окончательный мод на квест для восстановления Хелгена! Узнайте легенду о Хранителях Хатту, воссоединив двух старых солдат и вступив в многолетнюю вражду с безжалостным и могущественным юстициаром из альдмерского доминиона.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/5673',
+    files: [
+      {
+        type: 'Optional Files',
+        name: 'Helgen Reborn SSE Version 106 With loose files',
+        version: 'V106.SSE',
+      },
+    ],
+    translation: {
+      version: '1.0',
+      author: 'SkyKatarsis',
+      downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/133405',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'Helgen Reborn SSE Version 106 RUS SkyKatarsis',
+          version: '1.0',
+        },
+      ],
+    },
+  },
 ];
