@@ -1,0 +1,13 @@
+.caoInstructions {
+  padding: 0 1rem;
+  background-color: var(--color-background-secondary);
+  border-radius: 8px;
+  border-left: 4px solid var(--color-accent);
+
+  &__title {
+    margin: 0 0 1rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+}

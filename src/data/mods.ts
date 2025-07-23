@@ -3298,7 +3298,7 @@ export const modsData: ModProps[] = [
         version: '1.2.0d',
       },
     ],
-    tags: ['classic', 'creation-kit-resave', 'cao'],
+    tags: ['classic', 'creation-kit-resave', 'bsa'],
     translation: {
       version: '1.2.0d',
       author: 'k©קaso√®',
@@ -5057,6 +5057,7 @@ export const modsData: ModProps[] = [
       },
     ],
     tags: ['bsa', 'cao'],
+    caoInstructions: "Lexy's LOTD SE - BSA",
     translation: {
       version: '2.2+',
       author: 'DARTH---ALEXIEL',
@@ -5066,15 +5067,6 @@ export const modsData: ModProps[] = [
           type: 'Main Files',
           name: 'Гугл-диск',
           version: '2.2+',
-        },
-      ],
-    },
-    specialInstructions: {
-      blocks: [
-        {
-          type: 'paragraph',
-          content:
-            "Запустите Cathedral Assets Optimizer, выберите профиль Lexy's LOTD SE - BSA из выпадающего меню, затем запустите мод через Cathedral Assets Optimizer.",
         },
       ],
     },
