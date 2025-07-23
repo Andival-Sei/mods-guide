@@ -7,7 +7,7 @@ import { useStore } from '../../stores/index';
 import SpecialInstructions, {
   type SpecialInstructionsProps,
 } from '../SpecialInstructions/SpecialInstructions';
-import CAOInstructions, { type CAOInstructionsProps } from '../CAOInstructions/CAOInstructions';
+import CAOInstructions from '../CAOInstructions/CAOInstructions';
 import Fomod from '../Fomod/Fomod'; // Импортируем Fomod синхронно
 
 export type FileType =
