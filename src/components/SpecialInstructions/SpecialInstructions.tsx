@@ -8,6 +8,7 @@ import TextHighlight from '../TextHighlight/TextHighlight';
 import CodeBlock from '../CodeBlock/CodeBlock';
 import FilePath from '../FilePath/FilePath';
 import cls from './SpecialInstructions.module.scss';
+import type { CAOMethod } from '../CAOInstructions/CAOInstructions';
 
 interface SpecialInstructionsProps {
   instructions: {
@@ -19,7 +20,7 @@ interface SpecialInstructionsProps {
       content?: string; // Строка с <hl>текст</hl> тегами
       items?: (string | { type: 'code'; language?: string; content: string })[]; // Строки или объекты кода
       // Для CAO блока
-      method?: string; // Метод CAO
+      method?: CAOMethod; // Типизированный метод CAO
       // Для MO2 Removal Tool блока
       filesToRemove?: string[]; // Массив файлов для удаления
     }>;
@@ -49,7 +50,7 @@ const SpecialInstructions = ({ instructions }: SpecialInstructionsProps) => {
   };
 
   // Компонент для CAO блока
-  const CAOBlock = ({ method }: { method: string }) => (
+  const CAOBlock = ({ method }: { method: CAOMethod }) => (
     <div className={cls.specialInstructions__caoBlock}>
       <h4 className={cls.specialInstructions__subtitle}>🔧 CAO:</h4>
       <Paragraph>
