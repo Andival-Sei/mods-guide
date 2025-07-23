@@ -1,5 +1,5 @@
 import { makeAutoObservable } from 'mobx';
-import { modsData } from '../data/mods';
+import { modsData } from '../data/modsIndex';
 import type { ModProps } from '../components/Mod/Mod';
 import type { TagType } from '../components/Tag/Tag';
 
