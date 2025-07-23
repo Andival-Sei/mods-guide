@@ -295,6 +295,10 @@ const InstallModsPart1Page: FC = () => {
 
       <Mod modName="Falskaar" />
 
+      <Mod modName="Falskaar - Addons and Patches" />
+
+      <Mod modName="Comprehensive Falskaar Fixes" />
+
       <NavigationControls
         prevPage={{ to: '/preinstall', name: 'Предустановки' }}
         nextPage={{ to: '/installmodspart1', name: 'Установка модов — Часть 2 (заглушка)' }}

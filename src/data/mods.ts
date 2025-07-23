@@ -5071,4 +5071,140 @@ export const modsData: ModProps[] = [
       ],
     },
   },
+  {
+    name: 'Falskaar - Addons and Patches',
+    version: '1.6',
+    author: 'mnikjom',
+    description: 'Этот мод представляет собой коллекцию настроек, улучшений и патчей для Falskaar.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/19454',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Falskaar - Addons and Patches 1.6',
+        version: '1.6',
+      },
+    ],
+    fomods: [
+      {
+        title: 'Falskaar - Addons and Patches 1.6',
+        pages: [
+          {
+            title: 'Core',
+            sections: [
+              {
+                title: 'Core',
+                type: 'radio',
+                items: [
+                  {
+                    label: 'Nothing',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            title: 'Patches and Addons',
+            sections: [
+              {
+                title: 'Plugin Type',
+                type: 'checkbox',
+                items: [
+                  {
+                    label: 'Boat Location Patch ESPLite',
+                    checked: true,
+                  },
+                  {
+                    label: 'Unique Region Names Addon ESPLite',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+    translation: {
+      version: '1.6',
+      author: 'DARTH---ALEXIEL',
+      downloadLink:
+        'https://gamer-mods.ru/load/skyrim_se/patchi/falskaar_addons_and_patches/153-1-0-8051',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'Основной архив (316 Kb)',
+          version: '1.6',
+        },
+      ],
+      fomods: [
+        {
+          title: 'Falskaar - Addons and Patches 1.6',
+          pages: [
+            {
+              title: 'Core',
+              sections: [
+                {
+                  title: 'Core',
+                  type: 'radio',
+                  items: [
+                    {
+                      label: 'Nothing',
+                      checked: true,
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              title: 'Patches and Addons',
+              sections: [
+                {
+                  title: 'Plugin Type',
+                  type: 'checkbox',
+                  items: [
+                    {
+                      label: 'Boat Location Patch ESPLite',
+                      checked: true,
+                    },
+                    {
+                      label: 'Unique Region Names Addon ESPLite',
+                      checked: true,
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  },
+  {
+    name: 'Comprehensive Falskaar Fixes',
+    version: '1.4.0',
+    author: 'Wartortle',
+    description:
+      'Falskaar от Alexander J Velicky — это определяющий новый мод размером с DLC, который существует уже много лет. Замечательный мод, который, к сожалению, больше не получает обновлений, и на протяжении многих лет сообщалось о множестве воспроизводимых ошибок. Этот мод перестраивает все квесты и скрипты с нуля для повышения стабильности.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/62819?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Comprehensive Falskaar Fixes',
+        version: '1.4.0',
+      },
+    ],
+    translation: {
+      version: '1.4.0',
+      author: 'Andiwahl',
+      downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/103844',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'Comprehensive Falskaar Fixes - RU',
+          version: '1.4.0',
+        },
+      ],
+    },
+  },
 ];
