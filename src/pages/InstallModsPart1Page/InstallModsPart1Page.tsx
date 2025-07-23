@@ -313,6 +313,10 @@ const InstallModsPart1Page: FC = () => {
 
       <Mod modName="Moon and Star" />
 
+      <Mod modName="Moon and Star Replacer" />
+
+      <Mod modName="Better Moon and Star Navmesh" />
+
       <NavigationControls
         prevPage={{ to: '/preinstall', name: 'Предустановки' }}
         nextPage={{ to: '/installmodspart1', name: 'Установка модов — Часть 2 (заглушка)' }}

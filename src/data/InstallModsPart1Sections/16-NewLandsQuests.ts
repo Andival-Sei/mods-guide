@@ -382,4 +382,69 @@ export const newLandsQuests: ModProps[] = [
       ],
     },
   },
+  {
+    name: 'Moon and Star Replacer',
+    version: '3.2',
+    author: 'Darkladylexy and SirJesto',
+    description:
+      'Этот мод очищает и исправляет Moon and Star. Особая благодарность SirJesto за помощь в этом.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/85672',
+    files: [
+      {
+        type: 'Optional Files',
+        name: 'Moon and Star Replacer',
+        version: '3.2',
+      },
+    ],
+    translation: {
+      version: '3.2',
+      author: 'Andiwahl',
+      downloadLink:
+        'https://drive.google.com/file/d/1r46QgDN8__i8hRGzSkSVw7qGClfJrJzN/view?usp=sharing',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'Moon and Star Replacer - RU',
+          version: '3.2',
+        },
+      ],
+    },
+  },
+  {
+    name: 'Better Moon and Star Navmesh',
+    version: '1.0.2',
+    author: 'Wartortle',
+    description:
+      'Moon and Star — отличный квестовый мод, который существует всегда. Однако навигационная сетка очень плоха и активно ломается во многих местах. Этот патч наконец-то исправляет navmesh.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/110521',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Better Moon and Star Navmesh',
+        version: '1.0.2',
+      },
+      {
+        type: 'Optional Files',
+        name: 'BetterMASNavmesh - 3DNPC patch',
+        version: '1.0.0',
+      },
+    ],
+    translation: {
+      version: '1.0.2',
+      author: 'Andiewahl',
+      downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/155380',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'Better Moon and Star Navmesh - RU',
+          version: '1.0.2',
+        },
+        {
+          type: 'Optional Files',
+          name: 'BetterMASNavmesh - 3DNPC patch - RU',
+          version: '1.0.0',
+        },
+      ],
+    },
+  },
 ];
