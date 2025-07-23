@@ -309,6 +309,10 @@ const InstallModsPart1Page: FC = () => {
 
       <Mod modName="Konahrik's Accoutrements Upscaled Textures" />
 
+      <Mod modName="Abjuration Affects Acolytes" />
+
+      <Mod modName="Moon and Star" />
+
       <NavigationControls
         prevPage={{ to: '/preinstall', name: 'Предустановки' }}
         nextPage={{ to: '/installmodspart1', name: 'Установка модов — Часть 2 (заглушка)' }}

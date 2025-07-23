@@ -5347,4 +5347,75 @@ export const modsData: ModProps[] = [
       },
     ],
   },
+  {
+    name: 'Abjuration Affects Acolytes',
+    version: '1.2',
+    author: 'Korwin',
+    description:
+      "Konahrik's Accoutrements добавляют заклинание под названием «Отречение», на которое у драконьих жрецов и нежити сильная аллергия. Этот мод также позволяет заклинанию наносить урон драконьим жрецам, добавленным DLC Dragonborn на Солстхейме.",
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/73568',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Abjuration Affects Acolytes',
+        version: '1.2',
+      },
+    ],
+    translation: {
+      version: '1.2',
+      author: 'Andiwahl',
+      downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/103850',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'Abjuration Affects Acolytes - RU',
+          version: '1.2',
+        },
+      ],
+    },
+  },
+  {
+    name: 'Moon and Star',
+    version: '3.2',
+    author: 'Gan Xingba',
+    description:
+      'В Скайриме был замечен таинственный и могущественный преступник, по следу которого идут охотники из Морровинда. Однако на карту может быть поставлено нечто большее, чем кажется, и этот преступник может быть знаком...',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/4301',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Moon and Star',
+        version: '3.2',
+      },
+    ],
+    tags: ['bsa', 'cao', 'removal-tool', 'special-instructions'],
+    translation: {
+      version: '3.2',
+      author: 'Wuzmart',
+      downloadLink: 'https://gamer-mods.ru/load/skyrim_se/kvesty/moon_and_star_se/157-1-0-12913',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'Moon And Star (SE).zip',
+          version: '3.2',
+        },
+      ],
+    },
+    specialInstructions: {
+      blocks: [
+        {
+          type: 'paragraph',
+          content: 'При установке перевода не копируйте файл MoonAndStarGoodbyes.esp.',
+        },
+        {
+          type: 'cao',
+          method: "Lexy's LOTD SE - BSA",
+        },
+        {
+          type: 'mo2_removal_tool',
+          filesToRemove: ['MoonAndStarGoodbyes.esp'],
+        },
+      ],
+    },
+  },
 ];
