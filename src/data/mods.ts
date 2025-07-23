@@ -4510,5 +4510,573 @@ export const modsData: ModProps[] = [
         ],
       },
     ],
+    translation: {
+      version: '4.0',
+      author: 'Andiewahl',
+      downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/155360',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'A Clear Map of Skyrim and Other Worlds RU',
+          version: '4.0',
+        },
+      ],
+    },
+  },
+  {
+    name: 'Dynamic snow For Map',
+    version: 'V8',
+    author: 'Hritik Vaishnav -SkyrimENB',
+    description: 'Этот мод улучшает внешний вид динамического снега на карте мира.',
+    downloadLink: 'https://www.nexusmods.com/skyrim/mods/29877',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Type 2',
+        version: 'V8',
+      },
+    ],
+  },
+  {
+    name: 'Atlas Map Markers SE - Updated with MCM',
+    version: '3.0.4',
+    author: 'Kronixx and kryptopyr',
+    description:
+      'Исследуйте Скайрим и откройте для себя скрытые и труднодоступные места, такие как лагеря в дикой природе, святилища, выходы из пещер и многое другое. Это обновление классического мода Kronixx, Atlas Map Markers. Он основан на оригинальном моде и добавляет опции MCM с полным контролем над новыми маркерами карты и всеми маркерами на ванильной карте.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/24104',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Atlas Map Markers',
+        version: '3.0.4',
+      },
+    ],
+    fomods: [
+      {
+        title: 'Atlas Map Markers',
+        pages: [
+          {
+            title: 'Atlas Map Markers - Updated with MCM',
+            sections: [
+              {
+                title: 'Main File',
+                type: 'checkbox',
+                items: [
+                  {
+                    label: 'Atlas Map Markers',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            title: 'Updated Third-Party Patches',
+            sections: [
+              {
+                title: 'Patches',
+                type: 'checkbox',
+                items: [
+                  {
+                    label: "Obscure's College of Winterhold",
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+    translation: {
+      version: '3.0.4',
+      author: 'k©קaso√®',
+      downloadLink:
+        'https://gamer-mods.ru/load/skyrim_se/interfejs/atlas_map_markers_updated_with_mcm_se_ae/154-1-0-13402',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'Здесь только переведенные файлы (esp и МСМ меню) на русский" 3.0.4. Требуется основной мод с Нексуса.',
+          version: '3.0.4',
+        },
+      ],
+      fomods: [
+        {
+          title: 'Atlas Map Markers',
+          pages: [
+            {
+              title: 'Atlas Map Markers - Updated with MCM',
+              sections: [
+                {
+                  title: 'Основной файл',
+                  type: 'checkbox',
+                  items: [
+                    {
+                      label: 'Atlas Map Markers',
+                      checked: true,
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              title: 'Обновленные сторонние патчи',
+              sections: [
+                {
+                  title: 'Патчи',
+                  type: 'checkbox',
+                  items: [
+                    {
+                      label: "Obscure's College of Winterhold",
+                      checked: true,
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  },
+  {
+    name: 'CoMAP - Common Marker Addon Project',
+    version: '4.3.0',
+    author: 'Jelidity and Parapets',
+    description:
+      'CoMAP - это фреймворк на основе SKSE, который позволяет добавлять пользовательские дизайны маркеров карты/компаса, редактировать музыку для обнаружения маркеров и изменять назначения маркеров без какой-либо необходимости в ESP. Поставляется с большим разнообразием встроенных типов маркеров для использования и готовыми файлами конфигурации для различных модов.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/56123?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'CoMAP',
+        version: '4.3.0',
+      },
+    ],
+    tags: ['special-instructions'],
+    fomods: [
+      {
+        title: 'CoMAP',
+        pages: [
+          {
+            title: 'Core Files',
+            sections: [
+              {
+                title: 'CoMAP Core Pack',
+                type: 'checkbox',
+                items: [
+                  {
+                    label: 'CoMAP for Skyrim 1.6.x',
+                    checked: true,
+                  },
+                ],
+              },
+              {
+                title: 'Configs',
+                type: 'checkbox',
+                items: [
+                  {
+                    label: 'CoMAP Config Pack',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            title: 'Undiscovered Marker Options',
+            sections: [
+              {
+                title: 'Obscured Undiscovered Options',
+                type: 'radio',
+                items: [
+                  {
+                    label: 'Obscured Undiscovered Markers - Small Diamond',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            title: 'Addons',
+            sections: [
+              {
+                title: 'Khajiit Caravan Markers',
+                type: 'radio',
+                items: [
+                  {
+                    label: 'Hidden Until Discovered',
+                    checked: true,
+                  },
+                ],
+              },
+              {
+                title: 'Jorrvaskr Map Marker',
+                type: 'radio',
+                items: [
+                  {
+                    label: 'None',
+                    checked: true,
+                  },
+                ],
+              },
+              {
+                title: 'Vigilants of Stendarr Map Marker',
+                type: 'radio',
+                items: [
+                  {
+                    label: 'None',
+                    checked: true,
+                  },
+                ],
+              },
+              {
+                title: 'Other Addons',
+                type: 'checkbox',
+                items: [
+                  {
+                    label: 'Orc Only Bandit Locations Use Orc Stronghold Marker',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            title: 'Beyond Skyrim',
+            sections: [
+              {
+                title: 'Beyond Skyrim Extensions',
+                type: 'checkbox',
+                items: [
+                  {
+                    label: 'Оставьте пустым',
+                    checked: false,
+                  },
+                ],
+              },
+              {
+                title: 'Beyond Skyrim Design Swaps',
+                type: 'checkbox',
+                items: [
+                  {
+                    label: 'Оставьте пустым',
+                    checked: false,
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+    translation: {
+      version: '4.3.0',
+      author: 'Andiewahl',
+      downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/155365',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'CoMAP RU',
+          version: '4.3.0',
+        },
+      ],
+    },
+    specialInstructions: {
+      blocks: [
+        {
+          type: 'paragraph',
+          content:
+            'После установки откройте SKSE\\Plugins\\MapMarkerFramework.ini и измените следующее:',
+        },
+        {
+          type: 'code',
+          content: ['[Hud]', 'bObscuredUndiscovered=1'].join('\n'),
+        },
+      ],
+    },
+  },
+  {
+    name: 'Atlas Map Markers Overhaul',
+    version: '1.4',
+    author: 'Almalesbian',
+    description:
+      'Цель Atlas Overhaul — привести расположение оригинальных маркеров на карте Атласа в соответствие с существующими соглашениями об именах Skyrim, уделяя особое внимание единообразию истории! Включает в себя капитальный ремонт маркеров CoMAP для Atlas.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/137793?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Atlas Map Markers Overhaul',
+        version: '1.4',
+      },
+    ],
+    fomods: [
+      {
+        title: 'Atlas Map Markers Overhaul',
+        pages: [
+          {
+            title: 'Optional Patches',
+            sections: [
+              {
+                title: 'Creations',
+                type: 'checkbox',
+                items: [
+                  {
+                    label: 'Anniversary Edition',
+                    checked: true,
+                  },
+                ],
+              },
+              {
+                title: 'Flat World Map Framework',
+                type: 'checkbox',
+                items: [
+                  {
+                    label: 'Оставьте пустым',
+                    checked: false,
+                  },
+                ],
+              },
+              {
+                title: 'Settlements',
+                type: 'checkbox',
+                items: [
+                  {
+                    label: 'The Great City of Winterhold',
+                    checked: true,
+                  },
+                ],
+              },
+              {
+                title: 'Quests and Adventures',
+                type: 'checkbox',
+                items: [
+                  {
+                    label: 'Skyrim Sewers 4',
+                    checked: true,
+                  },
+                ],
+              },
+              {
+                title: 'Miscellaneous',
+                type: 'checkbox',
+                items: [
+                  {
+                    label: 'Ordinator - Perks of Skyrim',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+    translation: {
+      version: '1.4',
+      author: 'Andiewahl',
+      downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/155368',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'Atlas Map Markers Overhaul RU',
+          version: '1.4',
+        },
+      ],
+    },
+  },
+  {
+    name: 'HD Enhanced Terrain',
+    version: 'PRO',
+    author: 'Hritik Vaishnav -SkyrimENB',
+    description:
+      'Этот мод дает более детализированный «травяной» эффект местности на дальних дистанциях (отсюда и повышенный шум) и содержит более высокую детализацию деталей.',
+    downloadLink: 'https://www.nexusmods.com/skyrim/mods/29782?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'HD Enhanced Terrain PRO - Blended Version',
+        version: 'PRO',
+      },
+    ],
+  },
+  {
+    name: 'DynDOLOD Resources SE 3',
+    version: 'Alpha-57',
+    author: 'Sheson',
+    description:
+      'DynDOLOD - это набор простых инструментов на основе xEdit/xLODGen для автоматического создания мода Skyrim на основе порядка загрузки, который добавляет удаленный LOD для объектов и деревьев в Skyrim. Объединив DynDOLOD с xLODGen, пользователи могут создать значительно улучшенный статический объект LOD + древовидный LOD и новый, опциональный динамический LOD удаленного объекта за несколько простых шагов.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/52897',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'DynDOLOD Resources SE 3.00',
+        version: 'Alpha-57',
+      },
+    ],
+    fomods: [
+      {
+        title: 'DynDOLOD Resources SE 3.00',
+        pages: [
+          {
+            title: 'Main',
+            sections: [
+              {
+                title: 'DynDOLOD Resources',
+                type: 'checkbox',
+                items: [
+                  {
+                    label: 'Core Files',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            title: 'Options',
+            sections: [
+              {
+                title: 'Visual Options',
+                type: 'checkbox',
+                items: [
+                  {
+                    label: 'Whiterun Exterior Grass',
+                    checked: true,
+                  },
+                  {
+                    label: 'Solitude Occlusion Planes',
+                    checked: true,
+                  },
+                  {
+                    label: 'High Hrothgar Window Glow',
+                    checked: true,
+                  },
+                  {
+                    label: 'DLC2 Vvardenfell 3D Plume',
+                    checked: true,
+                  },
+                ],
+              },
+              {
+                title: 'Performance Options',
+                type: 'checkbox',
+                items: [
+                  {
+                    label: 'Оставьте пустым',
+                    checked: false,
+                  },
+                ],
+              },
+              {
+                title: 'Misc Options',
+                type: 'checkbox',
+                items: [
+                  {
+                    label: 'Desync Birds of Prey',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    name: 'DynDOLOD DLL NG',
+    version: 'Alpha-36',
+    author: 'Sheson',
+    description:
+      'DynDOLOD DLL NG — это плагин SKSE64 и сопровождающие его папирусные скрипты для обходных путей больших справочных ошибок от DynDOLOD 3. Это используется вместо PapyrusUtil / DynDOLOD DLL SE/VR.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/97720?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'DynDOLOD DLL NG and Scripts 3.00',
+        version: 'Alpha-36',
+      },
+    ],
+  },
+  {
+    name: 'Far Object LOD Improvement Project SSE',
+    version: '1.1',
+    author: 'DoubleYou',
+    description:
+      'Дополнительные ресурсы LOD дальнего объекта для использования с DynDOLOD. Добавлена возможность добавления дорог на карту через объект LOD.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/79197?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Far Object LOD Improvement Project SSE',
+        version: '1.1',
+      },
+    ],
+  },
+  {
+    name: 'LOD Unloading Bug Fix',
+    version: '0.2',
+    author: 'wankingSkeever',
+    description:
+      'Исправлена ошибка, из-за которой объекты LOD не выгружались при загрузке внешнего сохранения и быстрого перемещения.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/61251?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'LOD Unloading Bug Fix',
+        version: '0.2',
+      },
+    ],
+    translation: {
+      version: '0.2',
+      author: 'AlexGreat007',
+      downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/150484',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'LOD Unloading Bug Fix',
+          version: '0.2',
+        },
+      ],
+    },
+  },
+  {
+    name: 'Falskaar',
+    version: '2.2',
+    author: 'AlexanderJVelicky',
+    description:
+      'Falskaar - это новый мод на земли, который добавляет совершенно новое мировое пространство в мир. В первый раз к нему можно добраться через подземелье, а затем на лодке. Цель Falskaar состояла в том, чтобы действовать как DLC, добавляя контент практически во всех областях. Вас ждет новая земля, места, люди, задания, подземелья и многое другое, что предстоит испытать игроку. Он добавляет примерно 20+ часов контента и отдает предпочтение всем типам персонажей.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/2057',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Falskaar V2_2',
+        version: '2.2',
+      },
+    ],
+    tags: ['bsa', 'cao'],
+    translation: {
+      version: '2.2+',
+      author: 'DARTH---ALEXIEL',
+      downloadLink: 'https://gamer-mods.ru/load/skyrim_se/kvesty/falskaar/157-1-0-6339',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'Гугл-диск',
+          version: '2.2+',
+        },
+      ],
+    },
+    specialInstructions: {
+      blocks: [
+        {
+          type: 'paragraph',
+          content:
+            "Запустите Cathedral Assets Optimizer, выберите профиль Lexy's LOTD SE - BSA из выпадающего меню, затем запустите мод через Cathedral Assets Optimizer.",
+        },
+      ],
+    },
   },
 ];

@@ -271,6 +271,30 @@ const InstallModsPart1Page: FC = () => {
 
       <Mod modName="A Clear Map of Skyrim and Other Worlds" />
 
+      <Mod modName="Dynamic snow For Map" />
+
+      <Mod modName="Atlas Map Markers SE - Updated with MCM" />
+
+      <Mod modName="CoMAP - Common Marker Addon Project" />
+
+      <Mod modName="Atlas Map Markers Overhaul" />
+
+      <TitleBlock title="Мир Скайрима - Динамические LOD" />
+
+      <Mod modName="HD Enhanced Terrain" />
+
+      <Mod modName="DynDOLOD Resources SE 3" />
+
+      <Mod modName="DynDOLOD DLL NG" />
+
+      <Mod modName="Far Object LOD Improvement Project SSE" />
+
+      <Mod modName="LOD Unloading Bug Fix" />
+
+      <TitleBlock title="Новые земли и задания" />
+
+      <Mod modName="Falskaar" />
+
       <NavigationControls
         prevPage={{ to: '/preinstall', name: 'Предустановки' }}
         nextPage={{ to: '/installmodspart1', name: 'Установка модов — Часть 2 (заглушка)' }}
