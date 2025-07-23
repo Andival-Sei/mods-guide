@@ -12,12 +12,16 @@ import cls from './SpecialInstructions.module.scss';
 interface SpecialInstructionsProps {
   instructions: {
     blocks: Array<{
-      type: 'paragraph' | 'unordered_list' | 'ordered_list' | 'code';
+      type: 'paragraph' | 'unordered_list' | 'ordered_list' | 'code' | 'cao' | 'mo2_removal_tool';
       // Добавляем поддержку блока кода на верхнем уровне
       // type: 'code' для отображения блока кода
       // content: строка с кодом
       content?: string; // Строка с <hl>текст</hl> тегами
       items?: (string | { type: 'code'; language?: string; content: string })[]; // Строки или объекты кода
+      // Для CAO блока
+      method?: string; // Метод CAO
+      // Для MO2 Removal Tool блока
+      filesToRemove?: string[]; // Массив файлов для удаления
     }>;
   };
 }
@@ -44,12 +48,37 @@ const SpecialInstructions = ({ instructions }: SpecialInstructionsProps) => {
     });
   };
 
+  // Компонент для CAO блока
+  const CAOBlock = ({ method }: { method: string }) => (
+    <div className={cls.specialInstructions__caoBlock}>
+      <h4 className={cls.specialInstructions__subtitle}>🔧 CAO:</h4>
+      <Paragraph>
+        Используйте Cathedral Assets Optimizer: метод <FilePath>{method}</FilePath>
+      </Paragraph>
+    </div>
+  );
+
+  // Компонент для MO2 Removal Tool блока
+  const MO2RemovalToolBlock = ({ filesToRemove }: { filesToRemove: string[] }) => (
+    <div className={cls.specialInstructions__mo2Block}>
+      <h4 className={cls.specialInstructions__subtitle}>🗑️ MO2 Removal Tool:</h4>
+      <Paragraph>Удалите следующие файлы и/или папки:</Paragraph>
+      <CodeBlock>{filesToRemove.join('\n')}</CodeBlock>
+    </div>
+  );
+
   return (
     <div className={cls.specialInstructions}>
       <h3 className={cls.specialInstructions__title}>Специальные инструкции:</h3>
       <TextBlock>
         {instructions.blocks.map((block, blockIndex) => {
           switch (block.type) {
+            case 'cao':
+              return block.method ? <CAOBlock key={blockIndex} method={block.method} /> : null;
+            case 'mo2_removal_tool':
+              return block.filesToRemove ? (
+                <MO2RemovalToolBlock key={blockIndex} filesToRemove={block.filesToRemove} />
+              ) : null;
             case 'code':
               // Отображаем блок кода на верхнем уровне
               return <CodeBlock key={blockIndex}>{block.content || ''}</CodeBlock>;

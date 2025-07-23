@@ -974,16 +974,12 @@ export const modsData: ModProps[] = [
         version: '11',
       },
     ],
-    tags: ['removal-tool', 'special-instructions'],
+    tags: ['removal-tool'],
     specialInstructions: {
       blocks: [
         {
-          type: 'paragraph',
-          content: 'Удалите следующие файлы:',
-        },
-        {
-          type: 'code',
-          content: [
+          type: 'mo2_removal_tool',
+          filesToRemove: [
             'SKSE\\Plugins\\versionlib-1-6-317-0.bin',
             'SKSE\\Plugins\\versionlib-1-6-318-0.bin',
             'SKSE\\Plugins\\versionlib-1-6-323-0.bin',
@@ -994,7 +990,7 @@ export const modsData: ModProps[] = [
             'SKSE\\Plugins\\versionlib-1-6-659-0.bin',
             'SKSE\\Plugins\\versionlib-1-6-1130-0.bin',
             'SKSE\\Plugins\\versionlib-1-6-1179-0.bin',
-          ].join('\n'),
+          ],
         },
       ],
     },
@@ -3714,7 +3710,7 @@ export const modsData: ModProps[] = [
         {
           type: 'paragraph',
           content:
-            'Откройте файл <fl>Interface\\fontconfig_ru.txt</fl> и удалите вторую строку: fontlib "Interface\\fonts_en.swf"',
+            'Откройте файл <fp>Interface\\fontconfig_ru.txt</fp> и удалите вторую строку: fontlib "Interface\\fonts_en.swf"',
         },
       ],
     },
@@ -5057,7 +5053,14 @@ export const modsData: ModProps[] = [
       },
     ],
     tags: ['bsa', 'cao'],
-    caoInstructions: "Lexy's LOTD SE - BSA",
+    specialInstructions: {
+      blocks: [
+        {
+          type: 'cao',
+          method: "Lexy's LOTD SE - BSA",
+        },
+      ],
+    },
     translation: {
       version: '2.2+',
       author: 'DARTH---ALEXIEL',
@@ -5221,6 +5224,21 @@ export const modsData: ModProps[] = [
         version: 'V106.SSE',
       },
     ],
+    tags: ['cao', 'removal-tool'],
+    specialInstructions: {
+      blocks: [
+        {
+          type: 'mo2_removal_tool',
+          filesToRemove: [
+            'textures\\actors\\character\\facegendata\\facetint\\helgen reborn.esp\\*.tga',
+          ],
+        },
+        {
+          type: 'cao',
+          method: "Lexy's LOTD SE - BSA",
+        },
+      ],
+    },
     translation: {
       version: '1.0',
       author: 'SkyKatarsis',

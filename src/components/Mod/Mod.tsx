@@ -7,7 +7,6 @@ import { useStore } from '../../stores/index';
 import SpecialInstructions, {
   type SpecialInstructionsProps,
 } from '../SpecialInstructions/SpecialInstructions';
-import CAOInstructions from '../CAOInstructions/CAOInstructions';
 import Fomod from '../Fomod/Fomod'; // Импортируем Fomod синхронно
 
 export type FileType =
@@ -44,8 +43,6 @@ export interface ModProps {
   // Новый блок: массив Fomod (может быть undefined или пустым)
   fomods?: import('../Fomod/FomodTypes').FomodProps[];
   specialInstructions?: SpecialInstructionsProps['instructions'];
-  // CAO инструкции для модов с тегом cao
-  caoInstructions?: string;
   // Опциональный перевод мода
   translation?: ModTranslation;
 }
@@ -77,7 +74,6 @@ const Mod = observer(({ modName }: ModComponentProps) => {
     tags = [],
     fomods = [], // добавляем fomods
     specialInstructions,
-    caoInstructions,
     translation,
   } = modData;
 
@@ -221,18 +217,20 @@ const Mod = observer(({ modName }: ModComponentProps) => {
       )}
 
       {/* Блок со специальными инструкциями - теперь в самом конце */}
-      {specialInstructions && tags.includes('special-instructions') && (
-        <SpecialInstructions instructions={specialInstructions} />
-      )}
+      {specialInstructions &&
+        (tags.includes('special-instructions') ||
+          tags.includes('cao') ||
+          tags.includes('removal-tool')) && (
+          <SpecialInstructions instructions={specialInstructions} />
+        )}
 
-      {/* Блок с CAO инструкциями для модов с тегом cao */}
-      {caoInstructions && tags.includes('cao') && (
+      {/* Блок с CAO инструкциями для модов с тегом cao - удаляем, так как теперь интегрировано в специальные инструкции */}
+      {/* {caoInstructions && tags.includes('cao') && (
         <>
-          {/* Соединительная линия перед CAO инструкциями */}
           <div className={cls.mod__translation_connector}></div>
           <CAOInstructions method={caoInstructions} />
         </>
-      )}
+      )} */}
     </article>
   );
 });
