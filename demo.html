@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Демо: Автоматические изображения модов Nexus</title>
+    <link rel="stylesheet" href="mod_cards.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .controls {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+            color: white;
+        }
+        
+        .controls h3 {
+            margin-top: 0;
+        }
+        
+        .button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+            transition: background 0.3s ease;
+        }
+        
+        .button:hover {
+            background: #0056b3;
+        }
+        
+        .button:disabled {
+            background: #6c757d;
+            cursor: not-allowed;
+        }
+        
+        .mods-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+        }
+        
+        .loading-indicator {
+            text-align: center;
+            color: white;
+            font-size: 1.1em;
+            margin: 20px 0;
+        }
+        
+        .spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎮 Автоматические изображения модов Nexus</h1>
+            <p>Демонстрация автоматического получения изображений модов с Nexus Mods</p>
+        </div>
+        
+        <div class="controls">
+            <h3>Управление</h3>
+            <button class="button" onclick="loadAllModImages()">Загрузить все изображения</button>
+            <button class="button" onclick="toggleAllBackgrounds()">Переключить фоны</button>
+            <button class="button" onclick="clearAllBackgrounds()">Очистить фоны</button>
+            <button class="button" onclick="addRandomMod()">Добавить случайный мод</button>
+        </div>
+        
+        <div id="loading" class="loading-indicator" style="display: none;">
+            <div class="spinner"></div>
+            <span>Загрузка изображений...</span>
+        </div>
+        
+        <div class="mods-grid" id="modsContainer">
+            <!-- Карточки модов будут добавлены здесь -->
+        </div>
+    </div>
+
+    <script src="nexus_image_fetcher.js"></script>
+    <script>
+        // Список модов для демонстрации
+        const demoMods = [
+            {
+                name: "Blades Sword Retexture",
+                description: "Сделал клинок немного более чистым на вид.",
+                url: "https://www.nexusmods.com/skyrim/mods/1000",
+                type: "weapon-mod"
+            },
+            {
+                name: "SkyUI",
+                description: "Полная переработка пользовательского интерфейса Skyrim.",
+                url: "https://www.nexusmods.com/skyrim/mods/3863",
+                type: "ui-mod"
+            },
+            {
+                name: "Unofficial Skyrim Special Edition Patch",
+                description: "Неофициальный патч для исправления багов в игре.",
+                url: "https://www.nexusmods.com/skyrimspecialedition/mods/266",
+                type: "patch-mod"
+            },
+            {
+                name: "Realistic Water Two",
+                description: "Реалистичная вода для Skyrim с улучшенными текстурами.",
+                url: "https://www.nexusmods.com/skyrim/mods/41076",
+                type: "texture-mod"
+            },
+            {
+                name: "Immersive Armors",
+                description: "Добавляет множество новых реалистичных доспехов в игру.",
+                url: "https://www.nexusmods.com/skyrim/mods/19733",
+                type: "armor-mod"
+            },
+            {
+                name: "Falskaar",
+                description: "Новый контент - огромный новый мир с квестами.",
+                url: "https://www.nexusmods.com/skyrim/mods/37994",
+                type: "quest-mod"
+            }
+        ];
+
+        // Создание карточки мода
+        function createModCard(mod) {
+            const card = document.createElement('div');
+            card.className = `mod-card ${mod.type} fade-in`;
+            card.setAttribute('data-mod-url', mod.url);
+            
+            card.innerHTML = `
+                <button class="mod-card-toggle-bg" onclick="toggleBackground(this)" title="Переключить фон">👁️</button>
+                <div class="mod-card-content">
+                    <h3>${mod.name}</h3>
+                    <p>${mod.description}</p>
+                    <a href="${mod.url}" target="_blank">Открыть на Nexus Mods</a>
+                </div>
+            `;
+            
+            return card;
+        }
+
+        // Инициализация страницы
+        function initializePage() {
+            const container = document.getElementById('modsContainer');
+            
+            demoMods.forEach(mod => {
+                const card = createModCard(mod);
+                container.appendChild(card);
+            });
+        }
+
+        // Загрузка всех изображений
+        async function loadAllModImages() {
+            const loading = document.getElementById('loading');
+            const cards = document.querySelectorAll('.mod-card');
+            
+            loading.style.display = 'block';
+            
+            for (let i = 0; i < cards.length; i++) {
+                const card = cards[i];
+                const modUrl = card.getAttribute('data-mod-url');
+                
+                card.classList.add('loading');
+                
+                try {
+                    const imageUrl = await getModImageFromNexus(modUrl);
+                    
+                    if (imageUrl) {
+                        card.style.setProperty('--bg-image', `url('${imageUrl}')`);
+                        card.style.setProperty('--bg-image', `url('${imageUrl}')`, 'important');
+                        
+                        // Применяем фон через CSS переменную
+                        card.style.setProperty('--bg-image', `url('${imageUrl}')`);
+                        card.style.setProperty('--bg-image', `url('${imageUrl}')`, 'important');
+                        
+                        // Альтернативный способ применения фона
+                        card.style.backgroundImage = `url('${imageUrl}')`;
+                        card.style.backgroundSize = 'cover';
+                        card.style.backgroundPosition = 'center';
+                        card.style.backgroundRepeat = 'no-repeat';
+                        
+                        console.log(`Изображение загружено для: ${modUrl}`);
+                    }
+                } catch (error) {
+                    console.error(`Ошибка загрузки изображения для ${modUrl}:`, error);
+                }
+                
+                card.classList.remove('loading');
+                
+                // Небольшая задержка между запросами
+                await new Promise(resolve => setTimeout(resolve, 200));
+            }
+            
+            loading.style.display = 'none';
+        }
+
+        // Переключение фона
+        function toggleBackground(button) {
+            const card = button.closest('.mod-card');
+            card.classList.toggle('bg-hidden');
+            
+            if (card.classList.contains('bg-hidden')) {
+                button.textContent = '👁️‍🗨️';
+                button.title = 'Показать фон';
+            } else {
+                button.textContent = '👁️';
+                button.title = 'Скрыть фон';
+            }
+        }
+
+        // Переключение всех фонов
+        function toggleAllBackgrounds() {
+            const cards = document.querySelectorAll('.mod-card');
+            const buttons = document.querySelectorAll('.mod-card-toggle-bg');
+            
+            const allHidden = Array.from(cards).every(card => card.classList.contains('bg-hidden'));
+            
+            cards.forEach(card => {
+                if (allHidden) {
+                    card.classList.remove('bg-hidden');
+                } else {
+                    card.classList.add('bg-hidden');
+                }
+            });
+            
+            buttons.forEach(button => {
+                if (allHidden) {
+                    button.textContent = '👁️';
+                    button.title = 'Скрыть фон';
+                } else {
+                    button.textContent = '👁️‍🗨️';
+                    button.title = 'Показать фон';
+                }
+            });
+        }
+
+        // Очистка всех фонов
+        function clearAllBackgrounds() {
+            const cards = document.querySelectorAll('.mod-card');
+            
+            cards.forEach(card => {
+                card.style.backgroundImage = '';
+                card.style.backgroundSize = '';
+                card.style.backgroundPosition = '';
+                card.style.backgroundRepeat = '';
+                card.classList.remove('bg-hidden');
+            });
+            
+            const buttons = document.querySelectorAll('.mod-card-toggle-bg');
+            buttons.forEach(button => {
+                button.textContent = '👁️';
+                button.title = 'Переключить фон';
+            });
+        }
+
+        // Добавление случайного мода
+        function addRandomMod() {
+            const randomMods = [
+                {
+                    name: "Enhanced Lights and FX",
+                    description: "Улучшенное освещение и эффекты для более атмосферной игры.",
+                    url: "https://www.nexusmods.com/skyrim/mods/27043",
+                    type: "lighting-mod"
+                },
+                {
+                    name: "Ordinator - Perks of Skyrim",
+                    description: "Полная переработка системы перков с сотнями новых способностей.",
+                    url: "https://www.nexusmods.com/skyrim/mods/68425",
+                    type: "gameplay-mod"
+                },
+                {
+                    name: "Apocalypse - Magic of Skyrim",
+                    description: "Добавляет 155 новых заклинаний в игру.",
+                    url: "https://www.nexusmods.com/skyrim/mods/16225",
+                    type: "magic-mod"
+                }
+            ];
+            
+            const randomMod = randomMods[Math.floor(Math.random() * randomMods.length)];
+            const card = createModCard(randomMod);
+            
+            document.getElementById('modsContainer').appendChild(card);
+        }
+
+        // Инициализация при загрузке страницы
+        document.addEventListener('DOMContentLoaded', initializePage);
+    </script>
+</body>
+</html>
