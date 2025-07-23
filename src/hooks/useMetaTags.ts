@@ -1,9 +1,15 @@
 import { useEffect } from 'react';
-import { updateMetaTags, metaConfig } from '../config/meta';
+import { updateMetaTags } from '../config/metaBrowser';
+import { metaConfig } from '../config/meta';
 
 // Хук для управления мета-тегами
 export const useMetaTags = (customConfig?: Partial<typeof metaConfig>) => {
   useEffect(() => {
+    // Проверяем, что мы в браузере
+    if (typeof window === 'undefined') {
+      return;
+    }
+
     // Обновляем мета-теги при монтировании компонента
     updateMetaTags(customConfig);
 
