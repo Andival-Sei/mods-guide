@@ -1,18 +1,35 @@
 .label {
   display: flex;
-  align-items: center;
+  align-items: center; // Возвращаем center для выравнивания по центру
   gap: 15px;
   cursor: pointer;
   position: relative;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+  // Медиа-запрос для мобильных устройств
+  @media (max-width: 768px) {
+    align-items: center;
+    gap: 12px;
+  }
 }
 
 .text {
   color: #fff;
   margin: 0;
   padding: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+  // Медиа-запрос для мобильных устройств
+  @media (max-width: 768px) {
+    white-space: normal;
+    word-break: break-word;
+    line-height: 1.4;
+  }
 }
 
-.label input[type="radio"] {
+.label input[type='radio'] {
   appearance: none;
   width: 17px;
   height: 17px;
@@ -24,7 +41,7 @@
   border: 2px solid #4d4d4d;
   cursor: pointer;
   flex-shrink: 0; // Предотвращаем сжатие radio кнопки
-  
+
   // Медиа-запрос для мобильных устройств
   @media (max-width: 768px) {
     width: 15px; // Немного уменьшаем размер на мобильных
@@ -34,21 +51,21 @@
   }
 }
 
-.label input[type="radio"]:checked {
+.label input[type='radio']:checked {
   background-color: #8799ff;
   border-color: #8799ff;
   animation: pulse 0.7s forwards;
 }
 
-.label input[type="radio"]:before {
-  content: "";
+.label input[type='radio']:before {
+  content: '';
   width: 6px;
   height: 6px;
   border-radius: 50%;
   transition: all 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
   background-color: #fff;
   transform: scale(0);
-  
+
   // Медиа-запрос для мобильных устройств
   @media (max-width: 768px) {
     width: 5px; // Уменьшаем размер внутреннего кружка
@@ -56,7 +73,7 @@
   }
 }
 
-.label input[type="radio"]:checked::before {
+.label input[type='radio']:checked::before {
   transform: scale(1);
 }
 

@@ -1,6 +1,6 @@
 .checkboxContainer {
   display: flex;
-  align-items: flex-start; // Изменяем на flex-start для лучшего выравнивания длинного текста
+  align-items: center; // Изменяем на center для выравнивания как у радиокнопок
   gap: 15px;
   cursor: pointer;
   user-select: none;
@@ -10,7 +10,7 @@
 
   // Медиа-запрос для мобильных устройств
   @media (max-width: 768px) {
-    align-items: flex-start;
+    align-items: center;
     gap: 12px;
   }
 }
