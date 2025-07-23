@@ -301,6 +301,14 @@ const InstallModsPart1Page: FC = () => {
 
       <Mod modName="Helgen Reborn" />
 
+      <Mod modName="Helgen Reborn with Level and Quest Requirement" />
+
+      <Mod modName="Konahrik's Accoutrements" />
+
+      <Mod modName="Konahrik's Accoutrements - Fixed Esp" />
+
+      <Mod modName="Konahrik's Accoutrements Upscaled Textures" />
+
       <NavigationControls
         prevPage={{ to: '/preinstall', name: 'Предустановки' }}
         nextPage={{ to: '/installmodspart1', name: 'Установка модов — Часть 2 (заглушка)' }}

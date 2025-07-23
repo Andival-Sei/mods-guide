@@ -132,11 +132,13 @@ const Mod = observer(({ modName }: ModComponentProps) => {
               >
                 {file.type}
               </span>
-              {`  —  `}
-              {file.name}
-              {`  —  `}
-              <span className={cls.mod__version_label}>Версия:</span>
-              {` ${file.version}`}
+              <span className={cls.mod__separator}>—</span>
+              <div className={cls.mod__file_info}>
+                <span className={cls.mod__file_name}>{file.name}</span>
+                <span className={cls.mod__separator}>—</span>
+                <span className={cls.mod__version_label}>Версия:</span>
+                <span className={cls.mod__version_value}>{file.version}</span>
+              </div>
             </ListItem>
           ))}
         </UnorderedList>
@@ -196,11 +198,13 @@ const Mod = observer(({ modName }: ModComponentProps) => {
                     >
                       {file.type}
                     </span>
-                    {`  —  `}
-                    {file.name}
-                    {`  —  `}
-                    <span className={cls.mod__version_label}>Версия:</span>
-                    {` ${file.version}`}
+                    <span className={cls.mod__separator}>—</span>
+                    <div className={cls.mod__file_info}>
+                      <span className={cls.mod__file_name}>{file.name}</span>
+                      <span className={cls.mod__separator}>—</span>
+                      <span className={cls.mod__version_label}>Версия:</span>
+                      <span className={cls.mod__version_value}>{file.version}</span>
+                    </div>
                   </ListItem>
                 ))}
               </UnorderedList>

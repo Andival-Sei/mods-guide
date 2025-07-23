@@ -199,6 +199,10 @@
     border-bottom: 1px solid #3a3a3a;
     word-wrap: break-word;
     overflow-wrap: break-word;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
 
     &:last-child {
       border-bottom: none;
@@ -210,10 +214,33 @@
       white-space: normal;
       word-break: break-word;
       line-height: 1.4;
-      
+
       // Добавляем отступы для лучшей читаемости
       padding: 10px 0;
+      gap: 8px;
     }
+  }
+
+  &__separator {
+    color: #6a6a6a;
+    font-weight: 500;
+    flex-shrink: 0;
+  }
+
+  &__file_info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+  }
+
+  &__file_name {
+    min-width: 0;
+  }
+
+  &__version_value {
+    color: #f1f1f1;
+    flex-shrink: 0;
   }
 
   // File type colors

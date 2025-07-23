@@ -5252,4 +5252,99 @@ export const modsData: ModProps[] = [
       ],
     },
   },
+  {
+    name: 'Helgen Reborn with Level and Quest Requirement',
+    version: '1.0',
+    author: 'ikillyou233 - feeddanoob',
+    description:
+      'Добавляет настраиваемое требование к заданию для «Возрожденного Хелгена». Курьер также дает вам книгу, когда уровень и дополнительные условия задания выполнены.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/63923?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Helgen Reborn level req MCM',
+        version: '1.0',
+      },
+    ],
+    translation: {
+      version: 'Версия',
+      author: 'Andiwahl',
+      downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/103846',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'Helgen Reborn level req MCM - RU',
+          version: 'Версия',
+        },
+      ],
+    },
+  },
+  {
+    name: "Konahrik's Accoutrements",
+    version: '5.5.3',
+    author: 'Edhelsereg',
+    description:
+      'Этот мод делает встречи с именными драконьими жрецами более сложными и полезными.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/22206?',
+    files: [
+      {
+        type: 'Main Files',
+        name: "Konahrik's Accoutrements - Dragon Priest Armory",
+        version: '5.5.3',
+      },
+    ],
+    tags: ['cao', 'removal-tool'],
+    specialInstructions: {
+      blocks: [
+        {
+          type: 'cao',
+          method: "Lexy's LOTD SE - BSA",
+        },
+        {
+          type: 'mo2_removal_tool',
+          filesToRemove: ['konahrik_accoutrements.esp'],
+        },
+      ],
+    },
+  },
+  {
+    name: "Konahrik's Accoutrements - Fixed Esp",
+    version: '1.0.1',
+    author: 'Edhelsereg and MaskedRPGFan',
+    description: "Исправленный esp для Konahrik's Accoutrements.",
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/73689',
+    files: [
+      {
+        type: 'Main Files',
+        name: "Konahrik's Accoutrements - Fixed Esp",
+        version: '1.0.1',
+      },
+    ],
+    translation: {
+      version: '1.0.1',
+      author: 'Andiwahl',
+      downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/103847',
+      files: [
+        {
+          type: 'Main Files',
+          name: "Konahrik's Accoutrements - Fixed Esp - RU",
+          version: '1.0.1',
+        },
+      ],
+    },
+  },
+  {
+    name: "Konahrik's Accoutrements Upscaled Textures",
+    version: '1',
+    author: 'kartoffel',
+    description: "Этот мод увеличивает текстуры из Konahrik's Accoutrements.",
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/34417?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'KAUP',
+        version: '1',
+      },
+    ],
+  },
 ];
