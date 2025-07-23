@@ -4158,4 +4158,357 @@ export const modsData: ModProps[] = [
       },
     ],
   },
+  {
+    name: 'Better Third Person Selection - BTPS',
+    version: '0.8.9',
+    author: 'Shrimperator',
+    description: 'Этот мод улучшает выбор предметов на полу от третьего лица.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/64339',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Better Third Person Selection (AE - SE)',
+        version: '0.8.9',
+      },
+    ],
+    translation: {
+      version: '0.8.9',
+      author: 'Pinky Tongue',
+      downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/138117',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'Better Third Person Selection - BTPS',
+          version: '0.8.9',
+        },
+      ],
+    },
+  },
+  {
+    name: 'Clutter Filter for BTPS',
+    version: '1.0.4',
+    author: 'Rasclew',
+    description:
+      'Конфигурация фильтра для лучшего выбора от третьего лица, чтобы избежать беспорядка и предметов инструмента. Исключения сохраняют в наличии квестовые предметы, материалы для крафта, подарки и другие полезные предметы. Ограниченный полным режимом выбора BTPS, вы можете переопределить фильтр, переключившись в режим выбора по умолчанию, перейдя в вид от первого лица.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/89427',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Clutter Filter for BTPS',
+        version: '1.0.4',
+      },
+    ],
+  },
+  {
+    name: 'SmoothCam',
+    version: '1.7',
+    author: 'mwilsnd',
+    description:
+      'SmoothCam — это гибко настраиваемая камера от третьего лица, с плавной интерполяцией кадров и перекрестием луча, который поможет вам прицелиться.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/41252',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'SmoothCam',
+        version: '1.7',
+      },
+    ],
+    fomods: [
+      {
+        title: 'SmoothCam',
+        pages: [
+          {
+            title: 'Version',
+            sections: [
+              {
+                title: 'Select Version',
+                type: 'radio',
+                items: [
+                  {
+                    label: 'SmoothCam AE',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            title: 'Plugin',
+            sections: [
+              {
+                title: 'Select Plugin Type',
+                type: 'radio',
+                items: [
+                  {
+                    label: 'ESL',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+    translation: {
+      version: '1.7',
+      author: 'Архив',
+      downloadLink: 'https://gamer-mods.ru/load/skyrim_se/gejmplej/smoothcam_se/158-1-0-11989',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'Здесь только переведенный МСМ меню на русский версии 1.7. Требуется основной мод с Нексуса. Читайте раздел "Установка". (перевод от Robin_Hood)',
+          version: '1.7',
+        },
+      ],
+    },
+  },
+  {
+    name: 'Improved Alternate Conversation Camera',
+    version: '1.2.0',
+    author: 'MaskedRPGFan',
+    description:
+      'Улучшенная версия альтернативной разговорной камеры от NasGorTelorCeplok с MCM, исправлениями и многим другим.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/68210',
+    files: [
+      {
+        type: 'Optional Files',
+        name: 'Improved Alternate Conversation Camera AE - Simple',
+        version: '1.2.0',
+      },
+    ],
+    translation: {
+      version: '1.2.0SE',
+      author: 'PaZZle1',
+      downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/97410',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'Improved Alternate Conversation Camera_RUS',
+          version: '1.2.0',
+        },
+      ],
+    },
+  },
+  {
+    name: 'Disable Kill Cam And Kill Moves',
+    version: '4.0',
+    author: 'reyqune',
+    description:
+      'Отключает камеру убийства, отключает приемы убийства для всех и отключает мгновенное убийство драконами.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/111190',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Disable Kill Cam And Kill Moves',
+        version: '4.0',
+      },
+    ],
+  },
+  {
+    name: 'Dynamic Activation Key',
+    version: '1.02',
+    author: 'JaySerpa',
+    description:
+      'Этот мод включает различные интуитивно понятные поведения при нажатии «Shift + Activate» (или клавиши, которую вы определяете). Он также работает на контроллерах. Используется в качестве основы для многих моих модов для включения контекстных активаций.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/96273?',
+    files: [
+      {
+        type: 'Optional Files',
+        name: 'Dynamic Activation Key - DLL NG Edition',
+        version: '1.02',
+      },
+    ],
+  },
+  {
+    name: 'Dynamic Activation Key - MCM',
+    version: '1.2.0',
+    author: 'MaskedRPGFan',
+    description:
+      'MCM для Dynamic Activation Key от JaySerpa. Позволяет легко менять сочетание клавиш в MCM без перезагрузки игры. Поддержка контроллера.',
+    downloadLink: 'Ссылка_на_мод',
+    files: [
+      {
+        type: 'Optional Files',
+        name: 'Dynamic Activation Key - DLL NG Edition - MCM',
+        version: '2.1.0',
+      },
+    ],
+  },
+  {
+    name: 'Dynamic Activation Key - Addons Collection',
+    version: '2.1.1',
+    author: 'MaskedRPGFan',
+    description:
+      'Коллекция аддонов для Dynamic Activation Key от JaySerpa. Легко торгуйте с торговцами, тренируйтесь с тренерами и получайте доступ к инвентарю для последователей или лошадей. Это еще не все!',
+    downloadLink: 'Ссылка_на_мод',
+    files: [
+      {
+        type: 'Optional Files',
+        name: 'Dynamic Activation Key - Addons Collection',
+        version: '2.2.0',
+      },
+    ],
+  },
+  {
+    name: "Lexy's LOTD - Control Map",
+    version: '1.04',
+    author: 'Darkladylexy and The Community',
+    description: 'Этот мод представляет собой пользовательскую карту управления для руководства.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/85672?',
+    files: [
+      {
+        type: 'Main Files',
+        name: "Lexy's LOTD - Control Map",
+        version: '1.04',
+      },
+    ],
+  },
+  {
+    name: 'RaceMenu',
+    version: '0.4.19.16',
+    author: 'Expired',
+    description:
+      'Полная переработка меню создания персонажа, включая новые функции персонализации, такие как несколько боевых раскрасок RGBA, краски для тела, ручные раскраски и краски для ног.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/19080',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'RaceMenu Anniversary Edition v0-4-19-16',
+        version: '0.4.19.16',
+      },
+    ],
+    translation: {
+      version: '0.4.19.16',
+      author: 'k©קaso√®',
+      downloadLink:
+        'https://gamer-mods.ru/load/skyrim_se/telo_lico_volosy/racemenu_se_ae/164-1-0-6981',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'Основной архив мода 0.4.19.16 для Skyrim АE 1.6.1170.0.8 (8.2 mb)',
+          version: '0.4.19.16',
+        },
+        {
+          type: 'Main Files',
+          name: 'Подкорректированная локализация на русский язык слайдеров и настроек в RaceMenu от kopasova. Требуется основной архив мода для SE или АЕ',
+          version: '0.4.19.16',
+        },
+      ],
+    },
+  },
+  {
+    name: 'Another RaceMenu Rotation Mod',
+    version: '1.2.1',
+    author: 'DarkMatterValkyrie',
+    description: 'Это позволяет вам легче вращать персонажа игрока в RaceMenu.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/72937',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Another Player Rotation Mod',
+        version: '1.2.1',
+      },
+    ],
+  },
+  {
+    name: 'A Clear Map of Skyrim and Other Worlds',
+    version: '4.0',
+    author: 'DoubleYou',
+    description:
+      'Четкая карта Скайрима и других миров улучшает погоду на карте для улучшения видимости, модифицирует камеру карты для оптимального просмотра и добавляет недостающие карты мира Пирамиды Душ, Забытой Долины, Черного Предела, Совнгарда и Скульдафна. Дополнительные правила DynDOLOD могут быть использованы для добавления недостающих деталей на карту. Ох. Чуть не забыл. Я также добавил дороги!',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/56367',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'A Clear Map of Skyrim and Other Worlds FOMOD',
+        version: '4.0',
+      },
+    ],
+    fomods: [
+      {
+        title: 'A Clear Map of Skyrim and Other Worlds FOMOD',
+        pages: [
+          {
+            title: 'Options',
+            sections: [
+              {
+                title: 'Core Files',
+                type: 'checkbox',
+                items: [
+                  {
+                    label: 'Core Files',
+                    checked: true,
+                  },
+                ],
+              },
+              {
+                title: 'DynDOLOD rules',
+                type: 'radio',
+                items: [
+                  {
+                    label: 'DynDOLOD 3',
+                    checked: true,
+                  },
+                ],
+              },
+              {
+                title: 'LOD Setup',
+                type: 'radio',
+                items: [
+                  {
+                    label: 'With DynDOLOD LOD32',
+                    checked: true,
+                  },
+                ],
+              },
+              {
+                title: 'Other Worlds',
+                type: 'checkbox',
+                items: [
+                  {
+                    label: 'Beyond Reach',
+                    checked: true,
+                  },
+                  {
+                    label: 'Falskaar',
+                    checked: true,
+                  },
+                  {
+                    label: 'Wyrmstooth',
+                    checked: true,
+                  },
+                ],
+              },
+              {
+                title: 'Optional Components',
+                type: 'checkbox',
+                items: [
+                  {
+                    label: 'Remove Clouds',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            title: 'Patches',
+            sections: [
+              {
+                title: 'Patches',
+                type: 'checkbox',
+                items: [
+                  {
+                    label: 'Оставьте пустым',
+                    checked: false,
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ];

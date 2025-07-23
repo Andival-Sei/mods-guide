@@ -241,6 +241,36 @@ const InstallModsPart1Page: FC = () => {
 
       <TitleBlock title="Интерфейс - Камера" />
 
+      <Mod modName="Better Third Person Selection - BTPS" />
+
+      <Mod modName="Clutter Filter for BTPS" />
+
+      <Mod modName="SmoothCam" />
+
+      <Mod modName="Improved Alternate Conversation Camera" />
+
+      <Mod modName="Disable Kill Cam And Kill Moves" />
+
+      <TitleBlock title="Интерфейс - Управление" />
+
+      <Mod modName="Dynamic Activation Key" />
+
+      <Mod modName="Dynamic Activation Key - MCM" />
+
+      <Mod modName="Dynamic Activation Key - Addons Collection" />
+
+      <Mod modName="Lexy's LOTD - Control Map" />
+
+      <TitleBlock title="Создание персонажа" />
+
+      <Mod modName="RaceMenu" />
+
+      <Mod modName="Another RaceMenu Rotation Mod" />
+
+      <TitleBlock title="Карта мира" />
+
+      <Mod modName="A Clear Map of Skyrim and Other Worlds" />
+
       <NavigationControls
         prevPage={{ to: '/preinstall', name: 'Предустановки' }}
         nextPage={{ to: '/installmodspart1', name: 'Установка модов — Часть 2 (заглушка)' }}
