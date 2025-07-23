@@ -1,6 +1,7 @@
 import type { FC } from 'react';
 import { useRef, useEffect, useCallback } from 'react';
 import cls from './TableOfContents.module.scss';
+import { getHeaderHeight } from '../../utilities/headerUtils.ts';
 
 interface TableOfContentsItem {
   id: string;
@@ -73,26 +74,40 @@ const TableOfContents: FC<TableOfContentsProps> = ({ items, isVisible, isLoading
     }
 
     scrollTimeoutRef.current = window.setTimeout(() => {
-      // Используем scrollIntoView для более надежного скролла
-      element.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-        inline: 'nearest',
-      });
+      // Ищем основной контейнер для скролла
+      const mainWrapper = document.querySelector('[data-main-wrapper]') as HTMLElement;
 
-      // Дополнительный отступ для хедера
-      setTimeout(() => {
-        const mainWrapper = document.querySelector('.mainWrapper') as HTMLElement;
-        if (mainWrapper) {
-          const headerHeight = 80;
-          const offset = 20;
-          const currentScrollTop = mainWrapper.scrollTop;
-          mainWrapper.scrollTo({
-            top: currentScrollTop - headerHeight - offset,
-            behavior: 'smooth',
-          });
-        }
-      }, 200);
+      if (mainWrapper) {
+        // Используем утилиту для получения высоты хедера
+        const headerHeight = getHeaderHeight();
+        const offset = 30; // Дополнительный отступ, чтобы заголовок был хорошо виден
+
+        // Получаем позицию элемента относительно контейнера
+        const elementRect = element.getBoundingClientRect();
+        const containerRect = mainWrapper.getBoundingClientRect();
+
+        // Вычисляем позицию элемента внутри скроллируемого контейнера
+        const elementTop = elementRect.top - containerRect.top + mainWrapper.scrollTop;
+
+        // Целевая позиция скролла с учетом высоты хедера и дополнительного отступа
+        const targetScrollTop = elementTop - headerHeight - offset;
+
+        mainWrapper.scrollTo({
+          top: Math.max(0, targetScrollTop), // Не позволяем скроллить выше начала
+          behavior: 'smooth',
+        });
+      } else {
+        // Fallback: используем старый метод, если не можем найти контейнер
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+
+        // Корректируем позицию с учетом хедера
+        setTimeout(() => {
+          window.scrollBy(0, -(getHeaderHeight() + 20));
+        }, 100);
+      }
 
       scrollTimeoutRef.current = null;
     }, 100); // Небольшая задержка для предотвращения спама

@@ -26,7 +26,7 @@ const MainLayout = () => {
   return (
     <div className={cls.mainLayout}>
       <Header />
-      <div ref={mainWrapperRef} className={cls.mainWrapper}>
+      <div ref={mainWrapperRef} className={cls.mainWrapper} data-main-wrapper>
         <div className={cls.contentArea}>
           <div
             className={`${cls.contentWrapper} ${isHomePage ? cls.homePageContent : ''}`}

@@ -1,5 +1,6 @@
 import { useEffect, useState, useMemo, useRef, useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
+import { getHeaderHeight, getScrollOffset } from '../utilities/headerUtils.ts';
 
 interface TableOfContentsItem {
   id: string;
@@ -59,8 +60,9 @@ export const useTableOfContents = () => {
     // Создаем новый Intersection Observer
     observerRef.current = new IntersectionObserver(
       (entries) => {
-        const headerHeight = 80; // Высота хедера
-        const offset = 100; // Дополнительный отступ
+        // Используем утилиты для получения высоты хедера и отступа
+        const headerHeight = getHeaderHeight();
+        const offset = 30; // Дополнительный отступ для лучшей видимости
 
         // Находим элемент, который находится в области видимости
         let currentActive = '';
@@ -101,7 +103,7 @@ export const useTableOfContents = () => {
       },
       {
         root: null, // Используем viewport
-        rootMargin: `-${80 + 100}px 0px -50% 0px`, // Учитываем высоту хедера и отступ
+        rootMargin: `-${getScrollOffset()}px 0px -50% 0px`, // Учитываем высоту хедера и отступ
         threshold: [0, 0.1, 0.5, 1], // Пороги пересечения
       }
     );
