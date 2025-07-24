@@ -447,5 +447,439 @@ export const newLandsQuests: ModProps[] = [
       ],
     },
   },
-  
+  {
+    name: 'Moonpath to Elsweyr SSE',
+    version: '1.16.1',
+    author: 'MuppetPuppet and An_Old_Sock',
+    description:
+      'Этот мод добавляет квест размером DLC, действие которого происходит в землях Эльсвейра.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/4341',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Moonpath to Elsweyr SSE',
+        version: '1.16.1',
+      },
+    ],
+    tags: ['bsa', 'cao'],
+    specialInstructions: {
+      blocks: [
+        {
+          type: 'cao',
+          method: "Lexy's LOTD SE - BSA",
+        },
+      ],
+    },
+  },
+  {
+    name: 'Unofficial Moonpath to Elsweyr Patch',
+    version: '1.5.0',
+    author: 'Joseph Russell',
+    description:
+      'Этот мод представляет собой неофициальный патч для решения различных проблем с Moonpath to Elsweyr.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/15882',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Unofficial Moonpath to Elsweyr Patch v1.5.0',
+        version: '1.5.0',
+      },
+    ],
+    translation: {
+      version: '1.5.0',
+      author: 'Andiwahl',
+      downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/103851',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'Unofficial Moonpath to Elsweyr Patch v1.5.0 - RU',
+          version: '1.5.0',
+        },
+      ],
+    },
+  },
+  {
+    name: 'Moonpath To Elsweyr Retexture SE',
+    version: '1.0',
+    author: 'Xavbio',
+    description:
+      'Этот мод переделывает большинство пользовательских текстур из Moonpath To Elsweyr.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/67295?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Moonpath To Elsweyr Retexture SE',
+        version: '1.0',
+      },
+      {
+        type: 'Optional Files',
+        name: 'Siligonder Armor - Sigil On Shoulder',
+        version: '1.1',
+      },
+    ],
+  },
+  {
+    name: 'Moonpath to Elsweyr- Hyena Replacer',
+    version: '1.0',
+    author: 'SassiestAssassin',
+    description: 'Этот мод заменяет модели гиен на новую модель',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/66116',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Moonpath Hyena Replacer',
+        version: '1.0',
+      },
+    ],
+  },
+  {
+    name: 'Moonpath to Elsweyr SSE - Music - Weather and Other Fixes',
+    version: '3.2',
+    author: 'ToosTruus',
+    description: 'Мой взгляд на исправление ситуации с Moonpath to Elsweyr SSE.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/97517',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Moonpath to Elsweyr SSE - Fixes',
+        version: '3.2',
+      },
+    ],
+    fomods: [
+      {
+        title: 'Moonpath to Elsweyr SSE - Fixes',
+        pages: [
+          {
+            title: 'Step 1',
+            sections: [
+              {
+                title: 'Main Plugin and Assets',
+                type: 'checkbox',
+                items: [
+                  {
+                    label: 'Moonpath Fixes',
+                    checked: true,
+                  },
+                ],
+              },
+              {
+                title: 'ESMyfied Plugin Replacer',
+                type: 'checkbox',
+                items: [
+                  {
+                    label: 'Recommended',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            title: 'Step 2',
+            sections: [
+              {
+                title: 'Blacksmith Forge Patch',
+                type: 'checkbox',
+                items: [
+                  {
+                    label: 'Patch',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            title: 'Step 3',
+            sections: [
+              {
+                title: 'Optional Patches',
+                type: 'checkbox',
+                items: [
+                  {
+                    label: 'Hyena Replacer Patch',
+                    checked: true,
+                  },
+                ],
+              },
+              {
+                title: 'Forest Spiders',
+                type: 'radio',
+                items: [
+                  {
+                    label: 'None',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            title: 'Step 4',
+            sections: [
+              {
+                title: 'Modern Lighting Overhaul',
+                type: 'checkbox',
+                items: [
+                  {
+                    label: 'Оставьте пустым',
+                    checked: false,
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+    translation: {
+      version: '3.2',
+      author: 'Andiewahl',
+      downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/155412',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'Moonpath to Elsweyr SSE - Fixes - RU',
+          version: '3.2',
+        },
+      ],
+    },
+  },
+  {
+    name: 'Teldryn Serious - A Teldryn Sero Backstory Quest SSE',
+    version: '7.0.0',
+    author: 'Undriel',
+    description:
+      'Этот мод представляет собой дружественный к лору, полностью озвученный квест об опасном прошлом Телдрина Серо.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/5541',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Teldryn Serious Enhanced Edition',
+        version: '7.0.0',
+      },
+    ],
+    translation: {
+      version: '7.0.0',
+      author: 'Andiewahl',
+      downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/155413',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'Teldryn Serious Enhanced Edition - RU',
+          version: '7.0.0',
+        },
+      ],
+    },
+  },
+  {
+    name: 'Teldryn Serious Patch',
+    version: '1.1.5',
+    author: 'tarlazo',
+    description:
+      'Этот мод добавляет несколько маркеров столкновений, чтобы предотвратить падение NPC в воду во время боя с кораблем и, таким образом, затруднить выполнение задания.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/32415',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Teldryn Serious Patch',
+        version: '1.1.5',
+      },
+      {
+        type: 'Update Files',
+        name: 'Daedric Shrines - Azura patches',
+        version: '1.0.0',
+      },
+    ],
+    fomods: [
+      {
+        title: 'Daedric Shrines - Azura patches',
+        pages: [
+          {
+            title: 'Установщик пакетов BAIN',
+            sections: [
+              {
+                title: 'Выберите следующее:',
+                type: 'checkbox',
+                items: [
+                  {
+                    label: 'For TSR and SoA',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+    translation: {
+      version: '1.1.5',
+      author: 'Andiewahl',
+      downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/155415',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'Teldryn Serious Patch - RU',
+          version: '1.1.5',
+        },
+      ],
+    },
+  },
+  {
+    name: 'The Forgotten City',
+    version: '1.8',
+    author: 'Nick Pearce',
+    description:
+      'The Forgotten City предлагает уникальный игровой процесс: расследование загадочного убийства, действие которого происходит в древнем подземном городе. В ней есть мрачный, нелинейный сюжет, в котором вы будете исследовать город в нескольких временных линиях, допрашивать подозреваемых, решать сложные моральные дилеммы и сражаться с новыми врагами.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/1179',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'The Forgotten City',
+        version: '1.8',
+      },
+    ],
+    tags: ['bsa', 'cao', 'xedit-qac'],
+    translation: {
+      version: '1.8',
+      author: 'Nocturn',
+      downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/86646',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'The Forgotten City RUS',
+          version: '1.8',
+        },
+      ],
+    },
+    specialInstructions: {
+      blocks: [
+        {
+          type: 'cao',
+          method: "Lexy's LOTD SE - BSA",
+        },
+      ],
+    },
+  },
+  {
+    name: 'Forgotten City Music Fixer',
+    version: '2.2',
+    author: 'Maleficus',
+    description:
+      'Этот мод исправляет печально известную ошибку с Forgotten City, из-за которой музыка продолжает играть после завершения мода.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/54019',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'The Forgotten City Music Bug Fixer - Version 2.2 (esl flagged)',
+        version: '2.2',
+      },
+    ],
+    translation: {
+      version: '2.2',
+      author: 'Andiewahl',
+      downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/155417',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'The Forgotten City Music Bug Fixer - Version 2.2 (',
+          version: '2.2',
+        },
+      ],
+    },
+  },
+  {
+    name: 'The Forgotten City - Decree of the Arbiter spell music Fix',
+    version: '1.0',
+    author: 'Arctic4161',
+    description:
+      'Это музыкальный фиксатор для заклинания Постановление арбитра. Мне нравится мощь, но музыка продолжает звучать.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/64730',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'The Forgotten City decree Music Spell Fix',
+        version: '1.0',
+      },
+    ],
+    translation: {
+      version: '1.0',
+      author: 'Andiewahl',
+      downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/155418',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'The Forgotten City decree Music Spell Fix - RU',
+          version: '1.0',
+        },
+      ],
+    },
+  },
+  {
+    name: 'The Gray Cowl of Nocturnal SE',
+    version: '1.3',
+    author: 'MannyGT',
+    description:
+      'Долгое время никто не претендовал на Серый капюшон Ноктюрнал. Последний из них был чемпионом Сиродила в последние дни Третьей эры. Но что произошло после Кризиса Обливиона? Где сейчас находится Серый капюшон? Вы вор, и во время кражи и карманных краж предметов по всему миру перед вами появляется видение. Серый капюшон зовет. Большое путешествие началось... Куда вы теперь пойдете? Вас ждет множество мест. Легендарные места, таинственные места, древние места, которые нужно очистить от песков времени. Серый капюшон хочет вас.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/4509',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'The Gray Cowl of Nocturnal',
+        version: '1.3',
+      },
+    ],
+    tags: ['bsa', 'cao'],
+    translation: {
+      version: '1.3',
+      author: 'Dalarin',
+      downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/34147',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'The Gray Cowl of Nocturnal SE RU',
+          version: '1.3',
+        },
+      ],
+    },
+    specialInstructions: {
+      blocks: [
+        {
+          type: 'cao',
+          method: "Lexy's LOTD SE - BSA",
+        },
+      ],
+    },
+  },
+  {
+    name: 'The Gray Cowl of Nocturnal - Bounty fix...and More',
+    version: '1.0',
+    author: 'Sthaagg Memnochs',
+    description:
+      'Замените manny_gf_graycowlscriptv2.pex, чтобы решить проблему с наградами. Добавляет отдельную награду за серого лиса. Объедините награду за игрока и серого лиса, если стражник заметит вас, когда вы надеваете/снимаете капюшон.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/94939?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Gray Cowl of Nocturnal - Bounty fix',
+        version: '1.0',
+      },
+    ],
+  },
+  {
+    name: 'The Gray Cowl of Nocturnal SSE - HD pack',
+    version: '1.2',
+    author: 'Salchichen',
+    description:
+      'Этот мод направлен на улучшение общего визуального качества мода Gray Cowl of Nocturnal за счет замены текстур на новые в разрешении 2k и сжатия BC7.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/7644',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'The Grey Cowl of Nocturnal SE - HD Texture pack',
+        version: '1.2',
+      },
+    ],
+  },
 ];

@@ -317,6 +317,32 @@ const InstallModsPart1Page: FC = () => {
 
       <Mod modName="Better Moon and Star Navmesh" />
 
+      <Mod modName="Moonpath to Elsweyr SSE" />
+
+      <Mod modName="Unofficial Moonpath to Elsweyr Patch" />
+
+      <Mod modName="Moonpath To Elsweyr Retexture SE" />
+
+      <Mod modName="Moonpath to Elsweyr- Hyena Replacer" />
+
+      <Mod modName="Moonpath to Elsweyr SSE - Music - Weather and Other Fixes" />
+
+      <Mod modName="Teldryn Serious - A Teldryn Sero Backstory Quest SSE" />
+
+      <Mod modName="Teldryn Serious Patch" />
+
+      <Mod modName="The Forgotten City" />
+
+      <Mod modName="Forgotten City Music Fixer" />
+
+      <Mod modName="The Forgotten City - Decree of the Arbiter spell music Fix" />
+
+      <Mod modName="The Gray Cowl of Nocturnal SE" />
+
+      <Mod modName="The Gray Cowl of Nocturnal - Bounty fix...and More" />
+
+      <Mod modName="The Gray Cowl of Nocturnal SSE - HD pack" />
+
       <NavigationControls
         prevPage={{ to: '/preinstall', name: 'Предустановки' }}
         nextPage={{ to: '/installmodspart1', name: 'Установка модов — Часть 2 (заглушка)' }}
