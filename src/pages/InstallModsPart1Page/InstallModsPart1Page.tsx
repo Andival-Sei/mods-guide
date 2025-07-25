@@ -345,6 +345,10 @@ const InstallModsPart1Page: FC = () => {
 
       <Mod modName="Gray Cowl of Nocturnal Alikr Flora Overhaul SE" />
 
+      <Mod modName="The Gray Cowl of Nocturnal SE - Addons and Patches" />
+
+      <Mod modName="Gray Cowl of Nocturnal - Various Patches" />
+
       <NavigationControls
         prevPage={{ to: '/preinstall', name: 'Предустановки' }}
         nextPage={{ to: '/installmodspart1', name: 'Установка модов — Часть 2 (заглушка)' }}

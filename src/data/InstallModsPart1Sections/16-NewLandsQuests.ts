@@ -908,4 +908,111 @@ export const newLandsQuests: ModProps[] = [
       ],
     },
   },
+  {
+    name: 'The Gray Cowl of Nocturnal SE - Addons and Patches',
+    version: '1.3',
+    author: 'mnikjom',
+    description:
+      'Этот мод представляет собой коллекцию настроек, улучшений и патчей для The Grey Cowl of Nocturnal.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/19724',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'The Gray Cowl of Nocturnal SE - Addons and Patches 1.3',
+        version: '1.3',
+      },
+    ],
+    fomods: [
+      {
+        title: 'The Gray Cowl of Nocturnal SE - Addons and Patches 1.3',
+        pages: [
+          {
+            title: 'Patches',
+            sections: [
+              {
+                title: 'Core',
+                type: 'checkbox',
+                items: [
+                  {
+                    label: 'Unofficial Skyrim Special Edition Patch',
+                    checked: true,
+                  },
+                  {
+                    label: 'Delayed Start Patch',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+    translation: {
+      version: '1.3',
+      author: 'DARTH---ALEXIEL',
+      downloadLink:
+        'https://gamer-mods.ru/load/skyrim_se/patchi/the_gray_cowl_of_nocturnal_se_addons_and_patches/153-1-0-7872',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'Аддоны и патчи (456 Kb)',
+          version: '1.3',
+        },
+      ],
+      fomods: [
+        {
+          title: 'Аддоны и патчи (456 Kb)',
+          pages: [
+            {
+              title: 'Patches',
+              sections: [
+                {
+                  title: 'Core',
+                  type: 'checkbox',
+                  items: [
+                    {
+                      label: 'Unofficial Skyrim Special Edition Patch',
+                      checked: true,
+                    },
+                    {
+                      label: 'Delayed Start Patch',
+                      checked: true,
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  },
+  {
+    name: 'Gray Cowl of Nocturnal - Various Patches',
+    version: '1.0',
+    author: 'MannyGT et al and LordMithro',
+    description:
+      "Этот мод предоставляет различные патчи, связанные с MannyGT's Grey Cowl of Nocturnal (GCON).",
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/65623?',
+    files: [
+      {
+        type: 'Optional Files',
+        name: 'GCON - Tamriel Landscape Fix',
+        version: '1.0',
+      },
+    ],
+    translation: {
+      version: '1.0',
+      author: 'Andiewahl',
+      downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/155472',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'GCON - Tamriel Landscape Fix - RU',
+          version: '1.0',
+        },
+      ],
+    },
+  },
 ];
