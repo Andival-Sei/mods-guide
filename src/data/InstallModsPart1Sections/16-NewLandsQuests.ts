@@ -882,4 +882,30 @@ export const newLandsQuests: ModProps[] = [
       },
     ],
   },
+  {
+    name: 'Gray Cowl of Nocturnal Alikr Flora Overhaul SE',
+    version: '1.7se',
+    author: 'sa547',
+    description: 'Дополнительная пустынная флора для The Gray Cowl of Nocturnal MannyGT',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/10141',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Gray Cowl of Nocturnal - Alikr Flora Overhaul (LOOSE)',
+        version: '1.7se',
+      },
+    ],
+    translation: {
+      version: '1.7se',
+      author: 'Andiewahl',
+      downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/155470',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'Gray Cowl of Nocturnal - Alikr Flora Overhaul - RU',
+          version: '1.7se',
+        },
+      ],
+    },
+  },
 ];
