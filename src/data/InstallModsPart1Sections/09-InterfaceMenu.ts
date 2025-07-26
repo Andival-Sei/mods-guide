@@ -737,4 +737,31 @@ export const interfaceMenu: ModProps[] = [
       ],
     },
   },
+  {
+    name: 'Menu Maid 2 - MCM manager',
+    version: '2.2.3',
+    author: 'MaskedRPGFan',
+    description:
+      'Этот мод позволяет скрывать, переименовывать и переупорядочивать любое из неограниченных меню настройки модов, которые вы можете иметь с помощью этого менеджера.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/67556?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Menu Maid 2 - MCM manager',
+        version: '2.2.3',
+      },
+    ],
+    translation: {
+      version: '2.2.3',
+      author: 'MrFlit',
+      downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/149362',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'Menu Maid 2 - MCM manager Russia',
+          version: '2.2.3',
+        },
+      ],
+    },
+  },
 ];

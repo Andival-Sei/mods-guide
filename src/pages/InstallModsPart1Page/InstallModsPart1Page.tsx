@@ -231,6 +231,8 @@ const InstallModsPart1Page: FC = () => {
 
       <Mod modName="MCM Helper" />
 
+      <Mod modName="Menu Maid 2 - MCM manager" />
+
       <Mod modName="SkyUI 3D Item Offset Fix (Centered Item Card - Script Fix - Improvement)" />
 
       <Mod modName="ESO Cursor" />
