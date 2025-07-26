@@ -147,6 +147,8 @@ const InstallModsPart1Page: FC = () => {
 
       <TitleBlock title="Основные исправления ошибок" />
 
+      <Mod modName="Alain Dufont - Delayed Spawn" />
+
       <Mod modName="Bard Instrumentals Mostly - Sing Rarely" />
 
       <Mod modName="Beard Mask Fix - Beards Use Slot 44 SKSE Plugin" />
@@ -186,6 +188,8 @@ const InstallModsPart1Page: FC = () => {
       <Mod modName="Word Wall Transparency Fix for ENB" />
 
       <Mod modName="World Encounter Hostility Fix" />
+
+      <Mod modName="World Encounter Noble Riding Horse Fix - WERoad02" />
 
       <Mod modName="Zero Bounty Hostility Fix" />
 

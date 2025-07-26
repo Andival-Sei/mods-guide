@@ -501,4 +501,45 @@ export const basicBugFixes: ModProps[] = [
       },
     ],
   },
+  {
+    name: 'Alain Dufont - Delayed Spawn',
+    version: '1',
+    author: 'Soranotsora',
+    description:
+      'Этот мод просто откладывает появление Алена Дюфона до тех пор, пока вы не начнете задание «Траур никогда не наступает», чтобы вы не пропустили дополнительную цель — убить Нильсин и награду за кольцо Муири.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/149988',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Alain Dufont',
+        version: '1',
+      },
+    ],
+    translation: {
+      version: '1',
+      author: 'Andiewahl',
+      downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/155529',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'Alain Dufont - RU',
+          version: '1',
+        },
+      ],
+    },
+  },
+  {
+    name: 'World Encounter Noble Riding Horse Fix - WERoad02',
+    version: '0.1.1',
+    author: 'wankingSkeever',
+    description: 'Исправлена ошибка, из-за которой дворяне бросали свою лошадь.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/150951?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'World Encounter Noble Riding Horse Fix - WERoad02',
+        version: '0.1.1',
+      },
+    ],
+  },
 ];
