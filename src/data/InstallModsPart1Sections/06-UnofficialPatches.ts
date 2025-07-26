@@ -340,4 +340,19 @@ export const unofficialPatches: ModProps[] = [
       ],
     },
   },
+  {
+    name: 'USSEP Nemesis or Pandora Patch',
+    version: '1.1',
+    author: 'Blackread',
+    description:
+      'Патч Nemesis/Pandora для исправлений поведения в USSEP, чтобы вы могли объединить их с выводом Nemesis/Pandora.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/139572?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'USSEP Behaviour Patch',
+        version: '1.1',
+      },
+    ],
+  },
 ];

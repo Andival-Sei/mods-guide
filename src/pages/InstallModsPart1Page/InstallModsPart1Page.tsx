@@ -139,6 +139,8 @@ const InstallModsPart1Page: FC = () => {
 
       <Mod modName="Unofficial Skyrim Special Edition Patch - USSEP" />
 
+      <Mod modName="USSEP Nemesis or Pandora Patch" />
+
       <Mod modName="Navigator - Navmesh Fixes" />
 
       <Mod modName="Unofficial Skyrim Modder's Patch - USMP SE" />
