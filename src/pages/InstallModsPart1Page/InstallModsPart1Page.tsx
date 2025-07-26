@@ -73,15 +73,27 @@ const InstallModsPart1Page: FC = () => {
 
       <Mod modName="Dynamic String Distributor (DSD)" />
 
+      <Mod modName="Essential Favorites" />
+
+      <Mod modName="Essential Favorites Support Equipped Items" />
+
       <Mod modName="FormList Manipulator - FLM" />
 
       <Mod modName="Favorite Misc Items" />
+
+      <Mod modName="Inventory Interface Information Injector" />
+
+      <Mod modName="Inventory Interface Information Injector - Alchemy Fix" />
 
       <Mod modName="MergeMapper" />
 
       <Mod modName="Object Categorization Framework" />
 
+      <Mod modName="Object Categorization Framework - Some KID Patches - I4 - OCF" />
+
       <Mod modName="PAPER" />
+
+      <Mod modName="Papyrus Ini Manipulator" />
 
       <Mod modName="Regional Save Names" />
 
@@ -133,8 +145,6 @@ const InstallModsPart1Page: FC = () => {
 
       <Mod modName="Skyrim Extended Cut - Saints and Seducers" />
 
-      <Mod modName="Skyrim Extended Cut Saints and Seducers - Quest Patch" />
-
       <TitleBlock title="Основные исправления ошибок" />
 
       <Mod modName="Bard Instrumentals Mostly - Sing Rarely" />
@@ -142,8 +152,6 @@ const InstallModsPart1Page: FC = () => {
       <Mod modName="Beard Mask Fix - Beards Use Slot 44 SKSE Plugin" />
 
       <Mod modName="Better Jumping SE" />
-
-      <Mod modName="College of Winterhold Quest Start Fixes" />
 
       <Mod modName="Combat Music Fix - Papyrus" />
 
@@ -344,8 +352,6 @@ const InstallModsPart1Page: FC = () => {
       <Mod modName="The Gray Cowl of Nocturnal SSE - HD pack" />
 
       <Mod modName="Gray Cowl of Nocturnal Alikr Flora Overhaul SE" />
-
-      <Mod modName="The Gray Cowl of Nocturnal SE - Addons and Patches" />
 
       <Mod modName="Gray Cowl of Nocturnal - Various Patches" />
 

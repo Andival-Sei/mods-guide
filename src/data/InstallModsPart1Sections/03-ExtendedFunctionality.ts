@@ -588,4 +588,214 @@ export const extendedFunctionality: ModProps[] = [
       },
     ],
   },
+  {
+    name: 'Essential Favorites',
+    version: '2.3.0',
+    author: 'powerofthree',
+    description:
+      'Плагин SKSE, который предотвращает продажу, распыление или выпадение избранных предметов.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/42997?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Essential Favorites',
+        version: '2.3.0',
+      },
+    ],
+    fomods: [
+      {
+        title: 'Essential Favorites',
+        pages: [
+          {
+            title: 'Main',
+            sections: [
+              {
+                title: 'DLL',
+                type: 'radio',
+                items: [
+                  {
+                    label: 'SSE v1.6.629+ ("Anniversary Edition")',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    name: 'Essential Favorites Support Equipped Items',
+    version: '0.2.3',
+    author: 'powerofthree and jon2023',
+    description:
+      'Плагин SKSE, который предотвращает продажу, обезвреживание, распыление или выпадение экипированных предметов.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/142140',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'EssentialFavoritesSupportEquippedItems-AE',
+        version: '0.2.3',
+      },
+    ],
+  },
+  {
+    name: 'Inventory Interface Information Injector',
+    version: '1.1.0',
+    author: 'Parapets and Jelidity',
+    description:
+      'Эта среда позволяет внедрять новую информацию, в том числе пользовательские значки, в меню инвентаризации и избранного SkyUI без редактирования SWF-файлов. Это означает, что многие различные моды могут настраивать то, как их элементы должны отображаться в интерфейсе SkyUI, оставаясь при этом совместимыми друг с другом.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/85702?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Inventory Interface Information Injector (SE)',
+        version: '1.1.0',
+      },
+    ],
+    translation: {
+      version: '1.1.0',
+      author: 'PinkyTongue',
+      downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/138028',
+      files: [
+        {
+          type: 'Main Files',
+          name: 'Interface Information Injector 1.1.0 (RUS)',
+          version: '1.1.0',
+        },
+      ],
+    },
+  },
+  {
+    name: 'Inventory Interface Information Injector - Alchemy Fix',
+    version: '1.1.0-AF',
+    author: 'Parapets',
+    description:
+      'Форк информационного инжектора интерфейса инвентаря, который позволяет сопоставлять ключевые слова в меню алхимии, исправляя поведение иконок в модах, таких как AIT и KIT.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/141883?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'I4 Alchemy Fix (AE)',
+        version: '1.1.0-AF',
+      },
+    ],
+  },
+  {
+    name: 'Object Categorization Framework - Some KID Patches - I4 - OCF',
+    version: '2.6',
+    author: 'monkeyangie',
+    description:
+      'Этот мод патчит некоторые моды для использования значков Object Categorisation Framework.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/99726',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'OCF - Some KID Patches FOMOD',
+        version: '2.6',
+      },
+    ],
+    fomods: [
+      {
+        title: 'OCF - Some KID Patches FOMOD',
+        pages: [
+          {
+            title: 'General',
+            sections: [
+              {
+                title: 'General',
+                type: 'checkbox',
+                items: [
+                  {
+                    label: 'Beyond Reach',
+                    checked: true,
+                  },
+                  {
+                    label: 'Frogs',
+                    checked: true,
+                  },
+                  {
+                    label: 'Gore',
+                    checked: true,
+                  },
+                  {
+                    label: 'HFs - Diverse (BOS) Inkwell and Quill',
+                    checked: true,
+                  },
+                  {
+                    label: 'Inigo',
+                    checked: true,
+                  },
+                  {
+                    label: "JK's Misc Items",
+                    checked: true,
+                  },
+                  {
+                    label: 'JS Dwarven Oil',
+                    checked: true,
+                  },
+                  {
+                    label: 'Lucien',
+                    checked: true,
+                  },
+                  {
+                    label: 'Pigeons',
+                    checked: true,
+                  },
+                  {
+                    label: 'Pinecones',
+                    checked: true,
+                  },
+                  {
+                    label: 'Remiel',
+                    checked: true,
+                  },
+                  {
+                    label: 'Skyrim Immersive Creatures Special Edition',
+                    checked: true,
+                  },
+                  {
+                    label: 'slightly Better Honey in a Jar',
+                    checked: true,
+                  },
+                  {
+                    label: 'Tales of Skyrim - Berserkyr',
+                    checked: true,
+                  },
+                  {
+                    label: 'Vigilant',
+                    checked: true,
+                  },
+                  {
+                    label: 'Wyrmstooth',
+                    checked: true,
+                  },
+                  {
+                    label: 'Xelzaz',
+                    checked: true,
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    name: 'Papyrus Ini Manipulator',
+    version: '1.9.7',
+    author: 'Meridiano',
+    description:
+      'Плагин SKSE, который добавляет возможность чтения и записи ini файлов с помощью скриптов Papyrus.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/65634?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'Papyrus Ini Manipulator',
+        version: '1.9.7',
+      },
+    ],
+  },
 ];
