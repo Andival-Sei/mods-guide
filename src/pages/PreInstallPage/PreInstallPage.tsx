@@ -1496,6 +1496,20 @@ const PreInstallPage = () => {
         </OrderedList>
       </TextBlock>
 
+      <TextBlock>
+        <Paragraph>
+          <TextEmphasis>Настройки ini</TextEmphasis>
+        </Paragraph>
+
+        <Paragraph>
+          Зайдите в инструментах MO2 в редактор ini и измените следующее в Skyrim.ini:
+        </Paragraph>
+        <CodeBlock>
+          {`[General]
+uInterior Cell Buffer=0`}
+        </CodeBlock>
+      </TextBlock>
+
       <TitleBlock title="Конфигурация xEdit" />
 
       <TextBlock>
