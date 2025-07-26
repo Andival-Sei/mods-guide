@@ -255,6 +255,14 @@ const InstallModsPart1Page: FC = () => {
 
       <Mod modName="TrueHUD - HUD Additions" />
 
+      <Mod modName="TrueHUD Curated Bosses" />
+
+      <Mod modName="TrueHUD - HUD Additions - Gray Cowl of Nocturnal Boss Ini Tweaks" />
+
+      <Mod modName="TrueHUD - HUD Additions - Legacy of the Dragonborn SSE Boss Ini Tweaks" />
+
+      <Mod modName="TrueHUD - HUD Additions - Moonpath to Elsweyr SSE Boss Ini Tweaks" />
+
       <TitleBlock title="Интерфейс - Камера" />
 
       <Mod modName="Better Third Person Selection - BTPS" />

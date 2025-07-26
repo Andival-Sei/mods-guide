@@ -311,4 +311,49 @@ export const interfaceHUD: ModProps[] = [
       },
     ],
   },
+  {
+    name: 'TrueHUD - HUD Additions - Gray Cowl of Nocturnal Boss Ini Tweaks',
+    version: '1.1',
+    author: 'lordkenyonkmp',
+    description:
+      'Я просмотрел все локации и NPC в The Grey Cowl of Nocturnal и занес в черный список "боссов" граждан и боссов для использования в True Directional Movement - Modernized Third Person Gameplay',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/53265?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'True Directional Movement - Gray Cowl Boss Ini Tweaks',
+        version: '1.1',
+      },
+    ],
+  },
+  {
+    name: 'TrueHUD - HUD Additions - Legacy of the Dragonborn SSE Boss Ini Tweaks',
+    version: '1.1',
+    author: 'lordkenyonkmp',
+    description:
+      'Я просмотрел все локации и NPC Legacy of the Dragonborn SSE и занес в черный список "боссов" граждан и боссов для использования в True Directional Movement - Modernized Third Person Gameplay',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/53545?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'True Directional Movement - LotD Boss Init Tweaks',
+        version: '1.1',
+      },
+    ],
+  },
+  {
+    name: 'TrueHUD - HUD Additions - Moonpath to Elsweyr SSE Boss Ini Tweaks',
+    version: '1.0',
+    author: 'lordkenyonkmp',
+    description:
+      'Добавляет боссов мода в белый список для использования с полосками здоровья босса True Directional Movement.',
+    downloadLink: 'https://www.nexusmods.com/skyrimspecialedition/mods/53319?',
+    files: [
+      {
+        type: 'Main Files',
+        name: 'True Directional Movement - Moonpath Boss Ini Tweaks',
+        version: '1.0',
+      },
+    ],
+  },
 ];
