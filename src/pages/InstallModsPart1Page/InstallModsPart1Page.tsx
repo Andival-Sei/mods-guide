@@ -263,6 +263,14 @@ const InstallModsPart1Page: FC = () => {
 
       <Mod modName="TrueHUD - HUD Additions - Moonpath to Elsweyr SSE Boss Ini Tweaks" />
 
+      <TitleBlock title="Интерфейс - Иконки" />
+
+      <Mod modName="B.O.O.B.I.E.S (aka Immersive Icons)" />
+
+      <Mod modName="The Handy Icon Collection Collective" />
+
+      <Mod modName="Aura's Inventory Tweaks (More SkyUI Icons Sorting Options and Columns)" />
+
       <TitleBlock title="Интерфейс - Камера" />
 
       <Mod modName="Better Third Person Selection - BTPS" />
